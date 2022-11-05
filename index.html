@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+  </head>
+
+  <body>
+    <header class="top-header" id="header">
+      <nav
+        class="navbar navbar-expand-sm menu"
+        style="background: #ffffff !important; padding: 10px"
+      >
+        <!-- Links -->
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#"
+          ><img src="./assets/img/logo.png" alt="" width="125"
+        /></a>
+
+        <ul class="navbar-nav mr-auto d-none d-md-flex">
+          <li class="item-menu">
+            <a class="item-nav-link" href="#">Nhà đất bán</a>
+            <!-- Sub-Menu -->
+            <ul class="sub-menu">
+              <li>
+                <a href="#">Bán căn hộ chung cư</a>
+              </li>
+              <li>
+                <a href="#">Bán nhà riêng</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="item-menu">
+            <a class="item-nav-link" href="#">Nhà đất cho thuê</a>
+
+            <ul class="sub-menu">
+              <li>
+                <a href="#">Cho thuê căn hộ chung cư</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item-menu">
+            <a class="item-nav-link" href="#">Dự án</a>
+          </li>
+          <li class="item-menu">
+            <a class="item-nav-link" href="#">Tin tức</a>
+          </li>
+          <li class="item-menu">
+            <a class="item-nav-link" href="#"> Bản Đồ </a>
+          </li>
+          <li class="item-menu">
+            <a class="item-nav-link" href="#"> Thuật Ngữ </a>
+          </li>
+          <li class="item-menu">
+            <img
+              src="./assets/img/threedot.svg"
+              alt=""
+              style="cursor: pointer"
+            />
+          </li>
+        </ul>
+
+        <ul class="navbar-nav d-none d-md-flex">
+          <li
+            class="item-menu"
+            style="
+              padding: 8px 12px;
+              border-radius: 24px;
+              border: 1px solid #ecedf1;
+              box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <img
+              style="width: 24px; cursor: pointer"
+              src="./assets/img/menu.svg"
+              alt=""
+            />
+            <img
+              style="width: 24px; cursor: pointer"
+              src="./assets/img/profile-circle.svg"
+              alt=""
+            />
+          </li>
+          <li
+            class="item-menu"
+            style="padding: 8px 12px; background: #d1193f; border-radius: 24px"
+          >
+            <a href="#">
+              <span
+                style="
+                  color: #ffffff;
+                  font-weight: 600;
+                  font-size: 14px;
+                  line-height: 22px;
+                "
+                >Đăng Tin</span
+              >
+              <img
+                style="width: 20px"
+                src="./assets/img/edit-header.svg"
+                alt=""
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="main" class="mt-4 container">
+      <h2 class="mb-3">Chào mừng đến với Homeup!</h2>
+      <div class="d-flex desc" style="gap: 16px">
+        <span>Tìm nhà phố, dự án, cho thuê và nhiều hơn nữa</span>
+        <span>Nhà riêng Đống Đa</span>
+        <span>Nhà riêng Đống Đa</span>
+        <span>Nhà riêng Đống Đa</span>
+      </div>
+      <div class="main-radio d-flex gap-24 align-items-center mt-4">
+        <div class="form-radio d-flex align-items-center gap-8">
+          <input
+            type="radio"
+            id="home-radio1"
+            name="home-radio"
+            class="custom-radio"
+            checked
+          />
+          <label for="home-radio1" class="mb-0">Nhà đất bán</label>
+        </div>
+        <div class="form-radio d-flex align-items-center gap-8">
+          <input
+            type="radio"
+            id="home-radio2"
+            name="home-radio"
+            class="custom-radio"
+          />
+          <label for="home-radio2" class="mb-0">Cho thuê</label>
+        </div>
+        <div class="form-radio d-flex align-items-center gap-8">
+          <input
+            type="radio"
+            id="home-radio3"
+            name="home-radio"
+            class="custom-radio"
+          />
+          <label for="home-radio3" class="mb-0">Sang nhượng</label>
+        </div>
+      </div>
+      <div class="main-search-container"></div>
+    </div>
+    <div id="danhmuc-container " class="container mt-4">
+      <h3 class="title">Tìm trong danh mục</h3>
+      <div class="swiper danhmuc-swiper">
+        <div class="swiper-wrapper">
+          <a href="#" class="swiper-slide">
+            <div class="danhmuc-item">
+              <div>
+                <img src="./assets/img/house-owner 2.png" alt="" />
+              </div>
+              <div>
+                <h5>Nhà riêng</h5>
+                <span>2635</span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="danhmuc-item">
+              <div>
+                <img src="./assets/img/house-owner 2.png" alt="" />
+              </div>
+              <div>
+                <h5>Nhà riêng</h5>
+                <span>2635</span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="danhmuc-item">
+              <div>
+                <img src="./assets/img/house-owner 2.png" alt="" />
+              </div>
+              <div>
+                <h5>Nhà riêng</h5>
+                <span>2635</span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="danhmuc-item">
+              <div>
+                <img src="./assets/img/house-owner 2.png" alt="" />
+              </div>
+              <div>
+                <h5>Nhà riêng</h5>
+                <span>2635</span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="danhmuc-item">
+              <div>
+                <img src="./assets/img/house-owner 2.png" alt="" />
+              </div>
+              <div>
+                <h5>Nhà riêng</h5>
+                <span>2635</span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="danhmuc-item">
+              <div>
+                <img src="./assets/img/house-owner 2.png" alt="" />
+              </div>
+              <div>
+                <h5>Nhà riêng</h5>
+                <span>2635</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="tinhthanh-container" class="container">
+      <h3 class="title">Tìm tỉnh thành</h3>
+      <div class="row row-cols-2 row-cols-md-4">
+        <div class="col">
+          <a href="#" class="tinhthanh-item">
+            <img src="./assets/img/Rectangle 73.png" alt="" />
+            <h5>Hà Nội</h5>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="tinhthanh-item">
+            <img src="./assets/img/Rectangle 73.png" alt="" />
+            <h5>Hà Nội</h5>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="tinhthanh-item">
+            <img src="./assets/img/Rectangle 73.png" alt="" />
+            <h5>Hà Nội</h5>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="tinhthanh-item">
+            <img src="./assets/img/Rectangle 73.png" alt="" />
+            <h5>Hà Nội</h5>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="tinhthanh-item">
+            <img src="./assets/img/Rectangle 73.png" alt="" />
+            <h5>Hà Nội</h5>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="tinhthanh-item">
+            <img src="./assets/img/Rectangle 73.png" alt="" />
+            <h5>Hà Nội</h5>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="tinhthanh-item">
+            <img src="./assets/img/Rectangle 73.png" alt="" />
+            <h5>Hà Nội</h5>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="tinhthanh-item">
+            <img src="./assets/img/Rectangle 73.png" alt="" />
+            <h5>Hà Nội</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="batdongsannoibat">
+      <div class="container">
+        <div class="swiper batdongsannoibat-swiper">
+          <div class="swiper-controls">
+            <h3 class="title mb-0 mr-auto align-self-end">
+              Bất động sản nổi bật
+            </h3>
+            <button class="batdongsannoibat-swiper-prev prev">
+              <img src="./assets/icon/arrow-left.svg" alt="" />
+            </button>
+            <button class="batdongsannoibat-swiper-next next">
+              <img src="./assets/icon/arrow-right.svg" alt="" />
+            </button>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="d-flex flex-column gap-4" style="gap: 24px">
+                <a href="#" class="main-item noi-bat"
+                  ><div href="#">
+                    <div class="image-item">
+                      <img
+                        class="avatar ls-is-cached lazyloaded"
+                        src="./assets/img/property.png"
+                        alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                        style="
+                          height: 100%;
+                          object-fit: cover;
+                          width: 100%;
+                          border-radius: 6px !important;
+                        "
+                      />
+                      <div class="list-img">
+                        <img src="./assets/img/camera.png" alt="" />
+                        <span class="qty">4</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h3 class="title">
+                      Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                    </h3>
+                    <div class="price-area">
+                      <span class="price">
+                        <img src="./assets/img/price.png" alt="" />
+                        <span style="margin-left: 5px"> 2 tỷ 600 triệu </span>
+                      </span>
+
+                      <span class="area">
+                        <img src="./assets/img/area.png" alt="" />
+                        <span style="margin-left: 5px">80m²</span>
+                      </span>
+                    </div>
+                    <div class="address">Thanh Xuân, Hà Nội</div>
+                    <div class="rate-and-like">
+                      <div class="rate">
+                        <span class="average">5</span>
+                        <span class="list-star">
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                        </span>
+
+                        <span class="qty"> (1 rating) </span>
+                      </div>
+                      <div class="heart">
+                        <img src="./assets/img/heartIcon.png" alt="" />
+                      </div>
+                    </div></div
+                ></a>
+                <a href="#" class="main-item noi-bat"
+                  ><div href="#">
+                    <div class="image-item">
+                      <img
+                        class="avatar ls-is-cached lazyloaded"
+                        src="./assets/img/property.png"
+                        alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                        style="
+                          height: 100%;
+                          object-fit: cover;
+                          width: 100%;
+                          border-radius: 6px !important;
+                        "
+                      />
+                      <div class="list-img">
+                        <img src="./assets/img/camera.png" alt="" />
+                        <span class="qty">4</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h3 class="title">
+                      Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                    </h3>
+                    <div class="price-area">
+                      <span class="price">
+                        <img src="./assets/img/price.png" alt="" />
+                        <span style="margin-left: 5px"> 2 tỷ 600 triệu </span>
+                      </span>
+
+                      <span class="area">
+                        <img src="./assets/img/area.png" alt="" />
+                        <span style="margin-left: 5px">80m²</span>
+                      </span>
+                    </div>
+                    <div class="address">Thanh Xuân, Hà Nội</div>
+                    <div class="rate-and-like">
+                      <div class="rate">
+                        <span class="average">5</span>
+                        <span class="list-star">
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                        </span>
+
+                        <span class="qty"> (1 rating) </span>
+                      </div>
+                      <div class="heart">
+                        <img src="./assets/img/heartIcon.png" alt="" />
+                      </div>
+                    </div></div
+                ></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="d-flex flex-column gap-4" style="gap: 24px">
+                <a href="#" class="main-item noi-bat"
+                  ><div href="#">
+                    <div class="image-item">
+                      <img
+                        class="avatar ls-is-cached lazyloaded"
+                        src="./assets/img/property.png"
+                        alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                        style="
+                          height: 100%;
+                          object-fit: cover;
+                          width: 100%;
+                          border-radius: 6px !important;
+                        "
+                      />
+                      <div class="list-img">
+                        <img src="./assets/img/camera.png" alt="" />
+                        <span class="qty">4</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h3 class="title">
+                      Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                    </h3>
+                    <div class="price-area">
+                      <span class="price">
+                        <img src="./assets/img/price.png" alt="" />
+                        <span style="margin-left: 5px"> 2 tỷ 600 triệu </span>
+                      </span>
+
+                      <span class="area">
+                        <img src="./assets/img/area.png" alt="" />
+                        <span style="margin-left: 5px">80m²</span>
+                      </span>
+                    </div>
+                    <div class="address">Thanh Xuân, Hà Nội</div>
+                    <div class="rate-and-like">
+                      <div class="rate">
+                        <span class="average">5</span>
+                        <span class="list-star">
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                        </span>
+
+                        <span class="qty"> (1 rating) </span>
+                      </div>
+                      <div class="heart">
+                        <img src="./assets/img/heartIcon.png" alt="" />
+                      </div>
+                    </div></div
+                ></a>
+                <a href="#" class="main-item noi-bat"
+                  ><div href="#">
+                    <div class="image-item">
+                      <img
+                        class="avatar ls-is-cached lazyloaded"
+                        src="./assets/img/property.png"
+                        alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                        style="
+                          height: 100%;
+                          object-fit: cover;
+                          width: 100%;
+                          border-radius: 6px !important;
+                        "
+                      />
+                      <div class="list-img">
+                        <img src="./assets/img/camera.png" alt="" />
+                        <span class="qty">4</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h3 class="title">
+                      Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                    </h3>
+                    <div class="price-area">
+                      <span class="price">
+                        <img src="./assets/img/price.png" alt="" />
+                        <span style="margin-left: 5px"> 2 tỷ 600 triệu </span>
+                      </span>
+
+                      <span class="area">
+                        <img src="./assets/img/area.png" alt="" />
+                        <span style="margin-left: 5px">80m²</span>
+                      </span>
+                    </div>
+                    <div class="address">Thanh Xuân, Hà Nội</div>
+                    <div class="rate-and-like">
+                      <div class="rate">
+                        <span class="average">5</span>
+                        <span class="list-star">
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                        </span>
+
+                        <span class="qty"> (1 rating) </span>
+                      </div>
+                      <div class="heart">
+                        <img src="./assets/img/heartIcon.png" alt="" />
+                      </div>
+                    </div></div
+                ></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="d-flex flex-column gap-4" style="gap: 24px">
+                <a href="#" class="main-item noi-bat"
+                  ><div href="#">
+                    <div class="image-item">
+                      <img
+                        class="avatar ls-is-cached lazyloaded"
+                        src="./assets/img/property.png"
+                        alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                        style="
+                          height: 100%;
+                          object-fit: cover;
+                          width: 100%;
+                          border-radius: 6px !important;
+                        "
+                      />
+                      <div class="list-img">
+                        <img src="./assets/img/camera.png" alt="" />
+                        <span class="qty">4</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h3 class="title">
+                      Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                    </h3>
+                    <div class="price-area">
+                      <span class="price">
+                        <img src="./assets/img/price.png" alt="" />
+                        <span style="margin-left: 5px"> 2 tỷ 600 triệu </span>
+                      </span>
+
+                      <span class="area">
+                        <img src="./assets/img/area.png" alt="" />
+                        <span style="margin-left: 5px">80m²</span>
+                      </span>
+                    </div>
+                    <div class="address">Thanh Xuân, Hà Nội</div>
+                    <div class="rate-and-like">
+                      <div class="rate">
+                        <span class="average">5</span>
+                        <span class="list-star">
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                        </span>
+
+                        <span class="qty"> (1 rating) </span>
+                      </div>
+                      <div class="heart">
+                        <img src="./assets/img/heartIcon.png" alt="" />
+                      </div>
+                    </div></div
+                ></a>
+                <a href="#" class="main-item noi-bat"
+                  ><div href="#">
+                    <div class="image-item">
+                      <img
+                        class="avatar ls-is-cached lazyloaded"
+                        src="./assets/img/property.png"
+                        alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                        style="
+                          height: 100%;
+                          object-fit: cover;
+                          width: 100%;
+                          border-radius: 6px !important;
+                        "
+                      />
+                      <div class="list-img">
+                        <img src="./assets/img/camera.png" alt="" />
+                        <span class="qty">4</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h3 class="title">
+                      Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                    </h3>
+                    <div class="price-area">
+                      <span class="price">
+                        <img src="./assets/img/price.png" alt="" />
+                        <span style="margin-left: 5px"> 2 tỷ 600 triệu </span>
+                      </span>
+
+                      <span class="area">
+                        <img src="./assets/img/area.png" alt="" />
+                        <span style="margin-left: 5px">80m²</span>
+                      </span>
+                    </div>
+                    <div class="address">Thanh Xuân, Hà Nội</div>
+                    <div class="rate-and-like">
+                      <div class="rate">
+                        <span class="average">5</span>
+                        <span class="list-star">
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                        </span>
+
+                        <span class="qty"> (1 rating) </span>
+                      </div>
+                      <div class="heart">
+                        <img src="./assets/img/heartIcon.png" alt="" />
+                      </div>
+                    </div></div
+                ></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="d-flex flex-column gap-4" style="gap: 24px">
+                <a href="#" class="main-item noi-bat"
+                  ><div href="#">
+                    <div class="image-item">
+                      <img
+                        class="avatar ls-is-cached lazyloaded"
+                        src="./assets/img/property.png"
+                        alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                        style="
+                          height: 100%;
+                          object-fit: cover;
+                          width: 100%;
+                          border-radius: 6px !important;
+                        "
+                      />
+                      <div class="list-img">
+                        <img src="./assets/img/camera.png" alt="" />
+                        <span class="qty">4</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h3 class="title">
+                      Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                    </h3>
+                    <div class="price-area">
+                      <span class="price">
+                        <img src="./assets/img/price.png" alt="" />
+                        <span style="margin-left: 5px"> 2 tỷ 600 triệu </span>
+                      </span>
+
+                      <span class="area">
+                        <img src="./assets/img/area.png" alt="" />
+                        <span style="margin-left: 5px">80m²</span>
+                      </span>
+                    </div>
+                    <div class="address">Thanh Xuân, Hà Nội</div>
+                    <div class="rate-and-like">
+                      <div class="rate">
+                        <span class="average">5</span>
+                        <span class="list-star">
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                        </span>
+
+                        <span class="qty"> (1 rating) </span>
+                      </div>
+                      <div class="heart">
+                        <img src="./assets/img/heartIcon.png" alt="" />
+                      </div>
+                    </div></div
+                ></a>
+                <a href="#" class="main-item noi-bat"
+                  ><div href="#">
+                    <div class="image-item">
+                      <img
+                        class="avatar ls-is-cached lazyloaded"
+                        src="./assets/img/property.png"
+                        alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                        style="
+                          height: 100%;
+                          object-fit: cover;
+                          width: 100%;
+                          border-radius: 6px !important;
+                        "
+                      />
+                      <div class="list-img">
+                        <img src="./assets/img/camera.png" alt="" />
+                        <span class="qty">4</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h3 class="title">
+                      Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                    </h3>
+                    <div class="price-area">
+                      <span class="price">
+                        <img src="./assets/img/price.png" alt="" />
+                        <span style="margin-left: 5px"> 2 tỷ 600 triệu </span>
+                      </span>
+
+                      <span class="area">
+                        <img src="./assets/img/area.png" alt="" />
+                        <span style="margin-left: 5px">80m²</span>
+                      </span>
+                    </div>
+                    <div class="address">Thanh Xuân, Hà Nội</div>
+                    <div class="rate-and-like">
+                      <div class="rate">
+                        <span class="average">5</span>
+                        <span class="list-star">
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                        </span>
+
+                        <span class="qty"> (1 rating) </span>
+                      </div>
+                      <div class="heart">
+                        <img src="./assets/img/heartIcon.png" alt="" />
+                      </div>
+                    </div></div
+                ></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="d-flex flex-column gap-4" style="gap: 24px">
+                <a href="#" class="main-item noi-bat"
+                  ><div href="#">
+                    <div class="image-item">
+                      <img
+                        class="avatar ls-is-cached lazyloaded"
+                        src="./assets/img/property.png"
+                        alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                        style="
+                          height: 100%;
+                          object-fit: cover;
+                          width: 100%;
+                          border-radius: 6px !important;
+                        "
+                      />
+                      <div class="list-img">
+                        <img src="./assets/img/camera.png" alt="" />
+                        <span class="qty">4</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h3 class="title">
+                      Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                    </h3>
+                    <div class="price-area">
+                      <span class="price">
+                        <img src="./assets/img/price.png" alt="" />
+                        <span style="margin-left: 5px"> 2 tỷ 600 triệu </span>
+                      </span>
+
+                      <span class="area">
+                        <img src="./assets/img/area.png" alt="" />
+                        <span style="margin-left: 5px">80m²</span>
+                      </span>
+                    </div>
+                    <div class="address">Thanh Xuân, Hà Nội</div>
+                    <div class="rate-and-like">
+                      <div class="rate">
+                        <span class="average">5</span>
+                        <span class="list-star">
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                        </span>
+
+                        <span class="qty"> (1 rating) </span>
+                      </div>
+                      <div class="heart">
+                        <img src="./assets/img/heartIcon.png" alt="" />
+                      </div>
+                    </div></div
+                ></a>
+                <a href="#" class="main-item noi-bat"
+                  ><div href="#">
+                    <div class="image-item">
+                      <img
+                        class="avatar ls-is-cached lazyloaded"
+                        src="./assets/img/property.png"
+                        alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                        style="
+                          height: 100%;
+                          object-fit: cover;
+                          width: 100%;
+                          border-radius: 6px !important;
+                        "
+                      />
+                      <div class="list-img">
+                        <img src="./assets/img/camera.png" alt="" />
+                        <span class="qty">4</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <h3 class="title">
+                      Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                    </h3>
+                    <div class="price-area">
+                      <span class="price">
+                        <img src="./assets/img/price.png" alt="" />
+                        <span style="margin-left: 5px"> 2 tỷ 600 triệu </span>
+                      </span>
+
+                      <span class="area">
+                        <img src="./assets/img/area.png" alt="" />
+                        <span style="margin-left: 5px">80m²</span>
+                      </span>
+                    </div>
+                    <div class="address">Thanh Xuân, Hà Nội</div>
+                    <div class="rate-and-like">
+                      <div class="rate">
+                        <span class="average">5</span>
+                        <span class="list-star">
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                          <img src="./assets/img/star.png" alt="" />
+                        </span>
+
+                        <span class="qty"> (1 rating) </span>
+                      </div>
+                      <div class="heart">
+                        <img src="./assets/img/heartIcon.png" alt="" />
+                      </div>
+                    </div></div
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="two-img" class="container mt-5">
+      <div class="row row-cols-md-2 row-cols-1">
+        <div class="col">
+          <img class="rounded" src="./assets/img/Rectangle 7.png" alt="" />
+        </div>
+        <div class="col">
+          <img class="rounded" src="./assets/img/Rectangle 8.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div id="duanmoi-container" class="container mt-5">
+      <div class="swiper-controls">
+        <h3 class="title mb-0 mr-auto align-self-end">Dự án mới</h3>
+        <button class="duanmoi-swiper-prev prev">
+          <img src="./assets/icon/arrow-left.svg" alt="" />
+        </button>
+        <button class="duanmoi-swiper-next next">
+          <img src="./assets/icon/arrow-right.svg" alt="" />
+        </button>
+      </div>
+      <div class="swiper duanmoi-swiper">
+        <div class="swiper-wrapper">
+          <a href="#" class="swiper-slide">
+            <div class="duanmoi-item sap-mo-ban">
+              <img src="./assets/img/item.png" alt="" />
+              <div>
+                <h4>Sun Case Central</h4>
+                <p>38 triệu/m2 <span></span> 1.7 ha</p>
+                <p>Tân Uyên, Bình Dương</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="duanmoi-item">
+              <img src="./assets/img/item.png" alt="" />
+              <div>
+                <h4>Sun Case Central</h4>
+                <p>38 triệu/m2 <span></span> 1.7 ha</p>
+                <p>Tân Uyên, Bình Dương</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="duanmoi-item">
+              <img src="./assets/img/item.png" alt="" />
+              <div>
+                <h4>Sun Case Central</h4>
+                <p>38 triệu/m2 <span></span> 1.7 ha</p>
+                <p>Tân Uyên, Bình Dương</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="duanmoi-item">
+              <img src="./assets/img/item.png" alt="" />
+              <div>
+                <h4>Sun Case Central</h4>
+                <p>38 triệu/m2 <span></span> 1.7 ha</p>
+                <p>Tân Uyên, Bình Dương</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="duanmoi-item">
+              <img src="./assets/img/item.png" alt="" />
+              <div>
+                <h4>Sun Case Central</h4>
+                <p>38 triệu/m2 <span></span> 1.7 ha</p>
+                <p>Tân Uyên, Bình Dương</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="duanmoi-item">
+              <img src="./assets/img/item.png" alt="" />
+              <div>
+                <h4>Sun Case Central</h4>
+                <p>38 triệu/m2 <span></span> 1.7 ha</p>
+                <p>Tân Uyên, Bình Dương</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="duanmoi-item">
+              <img src="./assets/img/item.png" alt="" />
+              <div>
+                <h4>Sun Case Central</h4>
+                <p>38 triệu/m2 <span></span> 1.7 ha</p>
+                <p>Tân Uyên, Bình Dương</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="duanmoi-item">
+              <img src="./assets/img/item.png" alt="" />
+              <div>
+                <h4>Sun Case Central</h4>
+                <p>38 triệu/m2 <span></span> 1.7 ha</p>
+                <p>Tân Uyên, Bình Dương</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="duanmoi-item">
+              <img src="./assets/img/item.png" alt="" />
+              <div>
+                <h4>Sun Case Central</h4>
+                <p>38 triệu/m2 <span></span> 1.7 ha</p>
+                <p>Tân Uyên, Bình Dương</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="danhgiatot" class="container mt-5">
+      <div class="swiper danhgiatot-swiper">
+        <div class="swiper-controls">
+          <h3 class="title mb-0 mr-auto align-self-end">Đánh giá tốt</h3>
+          <button class="danhgiatot-swiper-prev prev">
+            <img src="./assets/icon/arrow-left.svg" alt="" />
+          </button>
+          <button class="danhgiatot-swiper-next next">
+            <img src="./assets/icon/arrow-right.svg" alt="" />
+          </button>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="d-flex flex-column gap-4" style="gap: 24px">
+              <a href="#" class="main-item danh-gia-tot"
+                ><div href="#">
+                  <div class="image-item">
+                    <img
+                      class="avatar ls-is-cached lazyloaded"
+                      src="./assets/img/property.png"
+                      alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                      style="
+                        height: 100%;
+                        object-fit: cover;
+                        width: 100%;
+                        border-radius: 6px !important;
+                      "
+                    />
+                    <div class="list-img">
+                      <img src="./assets/img/camera.png" alt="" />
+                      <span class="qty">4</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info">
+                  <h3 class="title">
+                    Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                  </h3>
+                  <div class="price-area">
+                    <span class="price">
+                      <img src="./assets/img/price.png" alt="" />
+                      <span style="margin-left: 5px"> 2 tỷ 600 triệu </span>
+                    </span>
+
+                    <span class="area">
+                      <img src="./assets/img/area.png" alt="" />
+                      <span style="margin-left: 5px">80m²</span>
+                    </span>
+                  </div>
+                  <div class="address">Thanh Xuân, Hà Nội</div>
+                  <div class="rate-and-like">
+                    <div class="rate">
+                      <span class="average">5</span>
+                      <span class="list-star">
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                      </span>
+
+                      <span class="qty"> (1 rating) </span>
+                    </div>
+                    <div class="heart">
+                      <img src="./assets/img/heartIcon.png" alt="" />
+                    </div>
+                  </div></div
+              ></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="d-flex flex-column gap-4" style="gap: 24px">
+              <a href="#" class="main-item danh-gia-tot"
+                ><div href="#">
+                  <div class="image-item">
+                    <img
+                      class="avatar ls-is-cached lazyloaded"
+                      src="./assets/img/property.png"
+                      alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                      style="
+                        height: 100%;
+                        object-fit: cover;
+                        width: 100%;
+                        border-radius: 6px !important;
+                      "
+                    />
+                    <div class="list-img">
+                      <img src="./assets/img/camera.png" alt="" />
+                      <span class="qty">4</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info">
+                  <h3 class="title">
+                    Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                  </h3>
+                  <div class="price-area">
+                    <span class="price">
+                      <img src="./assets/img/price.png" alt="" />
+                      <span style="margin-left: 5px"> 2 tỷ 600 triệu </span>
+                    </span>
+
+                    <span class="area">
+                      <img src="./assets/img/area.png" alt="" />
+                      <span style="margin-left: 5px">80m²</span>
+                    </span>
+                  </div>
+                  <div class="address">Thanh Xuân, Hà Nội</div>
+                  <div class="rate-and-like">
+                    <div class="rate">
+                      <span class="average">5</span>
+                      <span class="list-star">
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                      </span>
+
+                      <span class="qty"> (1 rating) </span>
+                    </div>
+                    <div class="heart">
+                      <img src="./assets/img/heartIcon.png" alt="" />
+                    </div>
+                  </div></div
+              ></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="d-flex flex-column gap-4" style="gap: 24px">
+              <a href="#" class="main-item danh-gia-tot"
+                ><div href="#">
+                  <div class="image-item">
+                    <img
+                      class="avatar ls-is-cached lazyloaded"
+                      src="./assets/img/property.png"
+                      alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                      style="
+                        height: 100%;
+                        object-fit: cover;
+                        width: 100%;
+                        border-radius: 6px !important;
+                      "
+                    />
+                    <div class="list-img">
+                      <img src="./assets/img/camera.png" alt="" />
+                      <span class="qty">4</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info">
+                  <h3 class="title">
+                    Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                  </h3>
+                  <div class="price-area">
+                    <span class="price">
+                      <img src="./assets/img/price.png" alt="" />
+                      <span style="margin-left: 5px"> 2 tỷ 600 triệu </span>
+                    </span>
+
+                    <span class="area">
+                      <img src="./assets/img/area.png" alt="" />
+                      <span style="margin-left: 5px">80m²</span>
+                    </span>
+                  </div>
+                  <div class="address">Thanh Xuân, Hà Nội</div>
+                  <div class="rate-and-like">
+                    <div class="rate">
+                      <span class="average">5</span>
+                      <span class="list-star">
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                      </span>
+
+                      <span class="qty"> (1 rating) </span>
+                    </div>
+                    <div class="heart">
+                      <img src="./assets/img/heartIcon.png" alt="" />
+                    </div>
+                  </div></div
+              ></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="d-flex flex-column gap-4" style="gap: 24px">
+              <a href="#" class="main-item danh-gia-tot"
+                ><div href="#">
+                  <div class="image-item">
+                    <img
+                      class="avatar ls-is-cached lazyloaded"
+                      src="./assets/img/property.png"
+                      alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                      style="
+                        height: 100%;
+                        object-fit: cover;
+                        width: 100%;
+                        border-radius: 6px !important;
+                      "
+                    />
+                    <div class="list-img">
+                      <img src="./assets/img/camera.png" alt="" />
+                      <span class="qty">4</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info">
+                  <h3 class="title">
+                    Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                  </h3>
+                  <div class="price-area">
+                    <span class="price">
+                      <img src="./assets/img/price.png" alt="" />
+                      <span style="margin-left: 5px"> 2 tỷ 600 triệu </span>
+                    </span>
+
+                    <span class="area">
+                      <img src="./assets/img/area.png" alt="" />
+                      <span style="margin-left: 5px">80m²</span>
+                    </span>
+                  </div>
+                  <div class="address">Thanh Xuân, Hà Nội</div>
+                  <div class="rate-and-like">
+                    <div class="rate">
+                      <span class="average">5</span>
+                      <span class="list-star">
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                      </span>
+
+                      <span class="qty"> (1 rating) </span>
+                    </div>
+                    <div class="heart">
+                      <img src="./assets/img/heartIcon.png" alt="" />
+                    </div>
+                  </div></div
+              ></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="d-flex flex-column gap-4" style="gap: 24px">
+              <a href="#" class="main-item danh-gia-tot"
+                ><div href="#">
+                  <div class="image-item">
+                    <img
+                      class="avatar ls-is-cached lazyloaded"
+                      src="./assets/img/property.png"
+                      alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                      style="
+                        height: 100%;
+                        object-fit: cover;
+                        width: 100%;
+                        border-radius: 6px !important;
+                      "
+                    />
+                    <div class="list-img">
+                      <img src="./assets/img/camera.png" alt="" />
+                      <span class="qty">4</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info">
+                  <h3 class="title">
+                    Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                  </h3>
+                  <div class="price-area">
+                    <span class="price">
+                      <img src="./assets/img/price.png" alt="" />
+                      <span style="margin-left: 5px"> 2 tỷ 600 triệu </span>
+                    </span>
+
+                    <span class="area">
+                      <img src="./assets/img/area.png" alt="" />
+                      <span style="margin-left: 5px">80m²</span>
+                    </span>
+                  </div>
+                  <div class="address">Thanh Xuân, Hà Nội</div>
+                  <div class="rate-and-like">
+                    <div class="rate">
+                      <span class="average">5</span>
+                      <span class="list-star">
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                        <img src="./assets/img/star.png" alt="" />
+                      </span>
+
+                      <span class="qty"> (1 rating) </span>
+                    </div>
+                    <div class="heart">
+                      <img src="./assets/img/heartIcon.png" alt="" />
+                    </div>
+                  </div></div
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="home-pta1-container" class="container">
+      <div class="swiper home-pta1-swiper">
+        <div class="home-pta1-pagination mb-4"></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="home-pta1-item">
+              <h3 class="d-none d-lg-block">Thị trường</h3>
+              <a href="#" class="main">
+                <img src="./assets/img/item.png" alt="" />
+                <p>
+                  Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất, ô
+                  t...Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất
+                </p>
+              </a>
+              <div class="sub-container">
+                <a href="#" class="sub">
+                  <img src="./assets/img/item.png" alt="" />
+                  <p>
+                    Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất, ô
+                    t...Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất
+                  </p>
+                </a>
+                <a href="#" class="sub">
+                  <img src="./assets/img/item.png" alt="" />
+                  <p>
+                    Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất, ô
+                    t...Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="home-pta1-item">
+              <h3 class="d-none d-lg-block">Thị trường</h3>
+              <a href="#" class="main">
+                <img src="./assets/img/item.png" alt="" />
+                <p>
+                  Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất, ô
+                  t...Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất
+                </p>
+              </a>
+              <div class="sub-container">
+                <a href="#" class="sub">
+                  <img src="./assets/img/item.png" alt="" />
+                  <p>
+                    Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất, ô
+                    t...Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất
+                  </p>
+                </a>
+                <a href="#" class="sub">
+                  <img src="./assets/img/item.png" alt="" />
+                  <p>
+                    Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất, ô
+                    t...Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="home-pta1-item">
+              <h3 class="d-none d-lg-block">Thị trường</h3>
+              <a href="#" class="main">
+                <img src="./assets/img/item.png" alt="" />
+                <p>
+                  Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất, ô
+                  t...Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất
+                </p>
+              </a>
+              <div class="sub-container">
+                <a href="#" class="sub">
+                  <img src="./assets/img/item.png" alt="" />
+                  <p>
+                    Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất, ô
+                    t...Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất
+                  </p>
+                </a>
+                <a href="#" class="sub">
+                  <img src="./assets/img/item.png" alt="" />
+                  <p>
+                    Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất, ô
+                    t...Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="home-pta1-item">
+              <h3 class="d-none d-lg-block">Thị trường</h3>
+              <a href="#" class="main">
+                <img src="./assets/img/item.png" alt="" />
+                <p>
+                  Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất, ô
+                  t...Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất
+                </p>
+              </a>
+              <div class="sub-container">
+                <a href="#" class="sub">
+                  <img src="./assets/img/item.png" alt="" />
+                  <p>
+                    Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất, ô
+                    t...Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất
+                  </p>
+                </a>
+                <a href="#" class="sub">
+                  <img src="./assets/img/item.png" alt="" />
+                  <p>
+                    Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất, ô
+                    t...Bán gấp nhà mặt phố Khương Trung, kinh doanh sầm uất
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tien-ich-container" class="container mt-5">
+      <h3 class="title">Hỗ trợ tiện ích</h3>
+      <div class="row row-cols-2 row-cols-md-4">
+        <div class="col">
+          <a href="#" class="tien-ich-item">
+            <img src="./assets/img/search 1.png" alt="" />
+            <span>Xem tuổi xây nhà</span>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="tien-ich-item">
+            <img src="./assets/img/search 1.png" alt="" />
+            <span>Xem tuổi xây nhà</span>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="tien-ich-item">
+            <img src="./assets/img/search 1.png" alt="" />
+            <span>Xem tuổi xây nhà</span>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="tien-ich-item">
+            <img src="./assets/img/search 1.png" alt="" />
+            <span>Xem tuổi xây nhà</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="bao-tri-container" class="container mt-5">
+      <h3 class="title">Báo chí nói về chúng tôi</h3>
+      <div class="swiper bao-tri-swiper">
+        <div class="swiper-wrapper">
+          <a href="#" class="swiper-slide">
+            <div class="bao-tri-item">
+              <span>ZingNews</span>
+              <p>Trứng cuộn tôm hấp - món ăn bổ dưỡng cho cả nhà trọn vị</p>
+              <div></div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="bao-tri-item">
+              <span>ZingNews</span>
+              <p>Trứng cuộn tôm hấp - món ăn bổ dưỡng cho cả nhà trọn vị</p>
+              <div></div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="bao-tri-item">
+              <span>ZingNews</span>
+              <p>Trứng cuộn tôm hấp - món ăn bổ dưỡng cho cả nhà trọn vị</p>
+              <div></div>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide">
+            <div class="bao-tri-item">
+              <span>ZingNews</span>
+              <p>Trứng cuộn tôm hấp - món ăn bổ dưỡng cho cả nhà trọn vị</p>
+              <div></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="ft-t" class="container">
+      <h4 class="title">NHÀ ĐẤT BÁN</h4>
+      <div class="row row-cols-2 row-cols-md-4">
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="ft-t-2" class="container">
+      <h4 class="title">NHÀ ĐẤT BÁN</h4>
+      <div class="row row-cols-2 row-cols-md-4">
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer style="background: #ecedf1">
+      <div class="footer container pt-1 gap-w">
+        <div class="footer-top row">
+          <div class="col-md-4 text-center">
+            <a href="">
+              <img src="./assets/img/logo-footer.png" alt="" />
+            </a>
+          </div>
+
+          <div class="col-md-2 col-5">
+            <div class="item d-flex gap-1 align-items-center">
+              <div class="img" style="float: left">
+                <img src="./assets/img/call-calling.png" alt="" />
+              </div>
+              <div class="text">
+                <div class="text-top">Hotline 24/7</div>
+                <div class="text-bot">1900 1881</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-7">
+            <div class="item d-flex gap-1 align-items-center">
+              <div class="img" style="float: left">
+                <img src="./assets/img/message-question.png" alt="" />
+              </div>
+              <div class="text">
+                <div class="text-top">Hỗ trợ khách hàng</div>
+                <div class="text-bot">contact@homeup.vn</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="item d-flex gap-1 align-items-center text-right">
+              <div class="img" style="float: left">
+                <img src="./assets/img/cham-soc-kh.png" alt="" />
+              </div>
+              <div class="text">
+                <div class="text-top">Chăm sóc khách hàng</div>
+                <div class="text-bot">contact@homeup.vn</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row footer-top2">
+          <div class="col-md-2 col-6 item">
+            <ul>
+              <li>
+                <p>Company</p>
+              </li>
+              <li>
+                <a href="#"> About </a>
+              </li>
+              <li>
+                <a href="#"> Jobs</a>
+              </li>
+              <li>
+                <a href="#"> Press </a>
+              </li>
+              <li>
+                <a href="#">Investor Relatión </a>
+              </li>
+              <li>
+                <a href="#"> Management Team </a>
+              </li>
+              <li>
+                <a href="#"> In Your Company </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-6 item">
+            <ul>
+              <li>
+                <p>Work with Homeup</p>
+              </li>
+
+              <li>
+                <a href="#"> Join the Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Run a Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Learn About Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Affiliate Program </a>
+              </li>
+              <li>
+                <a href="#"> Vendor Code </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 item">
+            <ul>
+              <li>
+                <p>Work with Homeup</p>
+              </li>
+
+              <li>
+                <a href="#"> Join the Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Run a Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Learn About Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Affiliate Program </a>
+              </li>
+              <li>
+                <a href="#"> Vendor Code </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 item">
+            <ul>
+              <li>
+                <a href="" style="color: #646d84"> Ngôn ngữ </a>
+              </li>
+              <li>
+                <select name="" class="select-lang w-100 w-md-unset">
+                  <option value="">Tiếng Việt</option>
+                  <option value="">Tiếng Anh</option>
+                </select>
+              </li>
+              <li>
+                <p style="color: #646d84">Cộng đồng</p>
+              </li>
+              <div class="list-social">
+                <a href="" class="item">
+                  <span>
+                    <img src="./assets/img/icon-fb.png" alt="" />
+                  </span>
+                </a>
+                <a href="" class="item">
+                  <span>
+                    <img src="./assets/img/icon-zalo.png" alt="" />
+                  </span>
+                </a>
+                <a href="" class="item">
+                  <span>
+                    <img src="./assets/img/icon-ticktok.png" alt="" />
+                  </span>
+                </a>
+              </div>
+            </ul>
+          </div>
+          <div
+            class="col-md-2 item list-app d-flex d-md-block justify-content-center gap-3"
+          >
+            <div class="app">
+              <a href=""> </a>
+              <div class="content">
+                <a href="">
+                  <div class="img">
+                    <img src="./assets/img/icon-phone.png" alt="" />
+                  </div>
+                </a>
+                <div class="text">
+                  <a href=""> <span>Tải ngay ứng dụng</span><br /> </a
+                  ><a href="" class="link-homeup"
+                    >Homeup App
+                    <i
+                      class="fas fa-caret-right"
+                      style="margin-left: 5px; margin-top: 2px"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="app mt-0 mt-md-3">
+              <a href=""> </a>
+              <div class="content" style="padding: 18px 12px">
+                <a href="">
+                  <div class="img" style="margin-right: 6px">
+                    <img src="./assets/img/sms-edit.png" alt="" />
+                  </div>
+                </a>
+                <div class="text">
+                  <a href="">
+                    <span>Gia nhập Homeup!</span>
+                    <span> </span></a
+                  ><a href="" class="link-homeup"
+                    >Ứng tuyển
+                    <i
+                      class="fas fa-caret-right"
+                      style="margin-left: 5px; margin-top: 2px"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <hr /> -->
+        <div class="row footer-local mat-48">
+          <div class="col-md-12">
+            <h2 class="title">Incredible Deals on Local Experiences</h2>
+            <ul class="flex-wrap">
+              <li>Homeup Gift Ideas</li>
+              <li>Valentine’s Day Gifts</li>
+              <li>Mother’s Day Gifts</li>
+              <li>Father’s Day Gifts</li>
+              <li>Things to Do</li>
+            </ul>
+          </div>
+          <div class="col-md-12 mat-48">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row item-baseline gap-14">
+                  <div class="mal-16">
+                    <img src="./assets/img/Rectangle70.png" />
+                  </div>
+                  <div>
+                    <ul>
+                      <li>Space Capital Group</li>
+                      <li>></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-md-6 rg-img text-md-right text-center my-3 my-md-0"
+              >
+                <img src="./assets/img/sub2.png" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <ul class="flex-wrap">
+              <li>Copyright © 2022 HomeUp, All rights reserved.</li>
+              <li>Terrms of Use</li>
+              <li>Privacy Statement</li>
+              <li>License</li>
+              <li>Accesibility</li>
+              <li>Do Not Sell My Personal Information</li>
+            </ul>
+          </div>
+          <div class="col-md-12 mat-42">
+            <ul class="flex-wrap">
+              <li>Chịu trách nhiệm nội dung: Trần Mạnh Ninh</li>
+              <li>Công ty Cổ phần Homeup Việt Nam 2022</li>
+              <li>Địa chỉ: Số 114 Mễ Trì Hạ, Nam Từ Liêm, Hà Nội</li>
+              <li>Số điện thoại: 04862715675</li>
+              <li>MST: 031329999</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/index.js" />
+  </body>
+</html>
