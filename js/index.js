@@ -18,6 +18,7 @@
       992: {
         slidesPerView: 4,
         spaceBetween: 32,
+        slidesPerGroup: 4,
       },
     },
   });
@@ -56,6 +57,7 @@
       992: {
         slidesPerView: 4,
         spaceBetween: 16,
+        slidesPerGroup: 4,
       },
     },
   });
@@ -78,6 +80,7 @@
       992: {
         slidesPerView: 4,
         spaceBetween: 16,
+        slidesPerGroup: 4,
       },
     },
   });
@@ -99,6 +102,7 @@
       992: {
         slidesPerView: 4,
         spaceBetween: 16,
+        slidesPerGroup: 4,
       },
     },
   });
@@ -118,6 +122,7 @@
       992: {
         slidesPerView: 4,
         spaceBetween: 16,
+        slidesPerGroup: 4,
       },
     },
     pagination: {
@@ -229,18 +234,6 @@ const MIN_PROPERTY = '--value-a';
 const MAX_PROPERTY = '--value-b';
 // Slice Range
 (() => {
-  const formatValueToPrice = (value) => {
-    if (value < 10)
-      if (value == 0) return '0 Triệu';
-      else return value + '00 Triệu';
-    return Number(value) / 10 + ' Tỷ';
-  };
-
-  const formatValueToArea = (value) => {
-    if (value == 0) return '0 m²';
-    else return value + ' m²';
-  };
-
   const setStyleProperty = (node, property, value) => {
     if (node) node.style.setProperty(property, value);
   };
@@ -253,154 +246,118 @@ const MAX_PROPERTY = '--value-b';
       if (activeNode) activeNode.classList.remove('active');
     }
   };
-
-  const priceFilter = document.querySelector('.price-filter');
-  if (priceFilter) {
-    const priceRangeEl = priceFilter.querySelector('.range-slider-home-price');
-    const inputMin = priceFilter.querySelector('.input-min');
-    const inputMax = priceFilter.querySelector('.input-max');
-    const minDisplayValueEl = priceFilter.querySelector('.from-value');
-    const maxDisplayValueEl = priceFilter.querySelector('.to-value');
-    const selecteListEl = priceFilter.querySelectorAll('.value-item');
-    const applyBtn = priceFilter.querySelector('.form-close');
-    const filterValue = priceFilter.querySelector('.price-filter-value');
-    const resetBtn = priceFilter.querySelector('.form-checkbox-resetall');
+  const rangeSlideEvent = (options) => {
+    const {
+      parentNode,
+      formatFunction,
+      defaultText,
+      minValue,
+      maxValue,
+      selectRangesArr,
+    } = options;
+    const priceRangeEl = parentNode.querySelector('.range-slider-home-price');
+    const inputMin = parentNode.querySelector('.input-min');
+    const inputMax = parentNode.querySelector('.input-max');
+    const minDisplayValueEl = parentNode.querySelector('.from-value');
+    const maxDisplayValueEl = parentNode.querySelector('.to-value');
+    const selecteListEl = parentNode.querySelectorAll('.value-item');
+    const applyBtn = parentNode.querySelector('.form-close');
+    const filterValue = parentNode.querySelector('.price-filter-value');
+    const resetBtn = parentNode.querySelector('.form-checkbox-resetall');
+    const switchBtn = parentNode.querySelector('.switch');
     applyBtn.addEventListener('click', () => {
       filterValue.innerText =
-        formatValueToPrice(inputMin.value) +
+        formatFunction(inputMin.value) +
         ' đến ' +
-        formatValueToPrice(inputMax.value);
+        formatFunction(inputMax.value);
     });
     resetBtn.addEventListener('click', () => {
-      inputMin.value = MIN;
+      inputMin.value = minValue;
       setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);
-      setInnerText(minDisplayValueEl, formatValueToPrice(inputMin.value));
-      removeActivedClassOfEl(priceFilter, '.value-item');
+      setInnerText(minDisplayValueEl, formatFunction(inputMin.value));
+      removeActivedClassOfEl(parentNode, '.value-item');
 
-      inputMax.value = MAX;
+      inputMax.value = maxValue;
       setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
-      setInnerText(maxDisplayValueEl, formatValueToPrice(inputMax.value));
-      filterValue.innerText = 'Mức giá';
+      setInnerText(maxDisplayValueEl, formatFunction(inputMax.value));
+      filterValue.innerText = defaultText;
     });
     inputMin.oninput = () => {
       setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);
-      setInnerText(minDisplayValueEl, formatValueToPrice(inputMin.value));
-      removeActivedClassOfEl(priceFilter, '.value-item');
+      setInnerText(minDisplayValueEl, formatFunction(inputMin.value));
+      removeActivedClassOfEl(parentNode, '.value-item');
     };
     inputMax.oninput = () => {
       setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
-      setInnerText(maxDisplayValueEl, formatValueToPrice(inputMax.value));
-      removeActivedClassOfEl(priceFilter, '.value-item');
+      setInnerText(maxDisplayValueEl, formatFunction(inputMax.value));
+      removeActivedClassOfEl(parentNode, '.value-item');
     };
     selecteListEl.forEach((item, index) => {
       item.onclick = () => {
-        removeActivedClassOfEl(priceFilter, '.value-item');
+        removeActivedClassOfEl(parentNode, '.value-item');
         item.classList.add('active');
-        inputMin.value = SELECT_RANGES_PRICE[index].MIN;
-        setInnerText(minDisplayValueEl, formatValueToPrice(inputMin.value));
+        inputMin.value = selectRangesArr[index].MIN;
+        setInnerText(minDisplayValueEl, formatFunction(inputMin.value));
         setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);
-        inputMax.value = SELECT_RANGES_PRICE[index].MAX;
-        setInnerText(maxDisplayValueEl, formatValueToPrice(inputMax.value));
+        inputMax.value = selectRangesArr[index].MAX;
+        setInnerText(maxDisplayValueEl, formatFunction(inputMax.value));
         setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
+        filterValue.innerText =
+          formatFunction(inputMin.value) +
+          ' đến ' +
+          formatFunction(inputMax.value);
+        switchBtn.checked = false;
       };
     });
-  }
-})();
-
-const setStyleProperty = (node, property, value) => {
-  if (node) node.style.setProperty(property, value);
-};
-const setInnerText = (node, text) => {
-  if (node) node.innerText = text;
-};
-const removeActivedClassOfEl = (parentNode, classSelector) => {
-  if (parentNode) {
-    const activeNode = parentNode.querySelector(`${classSelector}.active`);
-    if (activeNode) activeNode.classList.remove('active');
-  }
-};
-const parentNode = document.querySelector('.area-filter');
-const formatFunction = (value) => {
-  if (value == 0) return '0 m²';
-  else return value + ' m²';
-};
-const defaultText = 'Diện tích';
-const minValue = MIN_AREA;
-const maxValue = MAX_AREA;
-const selectRangesArr = SELECT_RANGES_AREAS;
-const options = {
-  parentNode,
-  formatFunction,
-  defaultText,
-  minValue,
-  maxValue,
-  selectRangesArr,
-};
-const rangeSlideEvent = (options) => {
-  const {
-    parentNode,
-    formatFunction,
-    defaultText,
-    minValue,
-    maxValue,
-    selectRangesArr,
-  } = options;
-  const priceRangeEl = parentNode.querySelector('.range-slider-home-price');
-  const inputMin = parentNode.querySelector('.input-min');
-  const inputMax = parentNode.querySelector('.input-max');
-  const minDisplayValueEl = parentNode.querySelector('.from-value');
-  const maxDisplayValueEl = parentNode.querySelector('.to-value');
-  const selecteListEl = parentNode.querySelectorAll('.value-item');
-  const applyBtn = parentNode.querySelector('.form-close');
-  const filterValue = parentNode.querySelector('.price-filter-value');
-  const resetBtn = parentNode.querySelector('.form-checkbox-resetall');
-  applyBtn.addEventListener('click', () => {
-    filterValue.innerText =
-      formatFunction(inputMin.value) + ' đến ' + formatFunction(inputMax.value);
-  });
-  resetBtn.addEventListener('click', () => {
-    inputMin.value = minValue;
-    setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);
-    setInnerText(minDisplayValueEl, formatFunction(inputMin.value));
-    removeActivedClassOfEl(parentNode, '.value-item');
-
-    inputMax.value = maxValue;
-    setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
-    setInnerText(maxDisplayValueEl, formatFunction(inputMax.value));
-    filterValue.innerText = defaultText;
-  });
-  inputMin.oninput = () => {
-    setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);
-    setInnerText(minDisplayValueEl, formatFunction(inputMin.value));
-    removeActivedClassOfEl(parentNode, '.value-item');
   };
-  inputMax.oninput = () => {
-    setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
-    setInnerText(maxDisplayValueEl, formatFunction(inputMax.value));
-    removeActivedClassOfEl(parentNode, '.value-item');
+
+  const areaOptions = {
+    parentNode: document.querySelector('.area-filter'),
+    formatFunction: (value) => {
+      if (value == 0) return '0 m²';
+      else return value + ' m²';
+    },
+    defaultText: 'Diện tích',
+    minValue: MIN_AREA,
+    maxValue: MAX_AREA,
+    selectRangesArr: SELECT_RANGES_AREAS,
   };
-  selecteListEl.forEach((item, index) => {
-    item.onclick = () => {
-      removeActivedClassOfEl(parentNode, '.value-item');
-      item.classList.add('active');
-      inputMin.value = selectRangesArr[index].MIN;
-      setInnerText(minDisplayValueEl, formatFunction(inputMin.value));
-      setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);
-      inputMax.value = selectRangesArr[index].MAX;
-      setInnerText(maxDisplayValueEl, formatFunction(inputMax.value));
-      setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
+  const priceOptions = {
+    parentNode: document.querySelector('.price-filter'),
+    formatFunction: (value) => {
+      if (value < 10)
+        if (value == 0) return '0 Triệu';
+        else return value + '00 Triệu';
+      return Number(value) / 10 + ' Tỷ';
+    },
+    defaultText: 'Mức giá',
+    minValue: MIN,
+    maxValue: MAX,
+    selectRangesArr: SELECT_RANGES_PRICE,
+  };
+  rangeSlideEvent(areaOptions);
+  rangeSlideEvent(priceOptions);
+
+  const filterResetAllbtn = document.querySelector('.filter-reset-btn');
+  if (filterResetAllbtn) {
+    filterResetAllbtn.onclick = () => {
+      const parentFilter = filterResetAllbtn.closest('.filter-container');
+      parentFilter
+        .querySelectorAll('.form-checkbox-resetall')
+        .forEach((item) => item.click());
+    };
+  }
+
+  const checkboxList = document.querySelectorAll('.filter-container .switch');
+  checkboxList.forEach((item) => {
+    item.onchange = () => {
+      checkboxList.forEach((itemz) => {
+        if (itemz !== item) {
+          // itemz.checked = false;
+          const applyBtn = itemz.parentNode.querySelector('.form-close');
+          if (itemz.checked === true) applyBtn.click();
+        }
+      });
     };
   });
-};
-
-rangeSlideEvent(options);
-
-const filterResetAllbtn = document.querySelector('.filter-reset-btn');
-if (filterResetAllbtn) {
-  filterResetAllbtn.onclick = () => {
-    const parentFilter = filterResetAllbtn.closest('.filter-container');
-    parentFilter
-      .querySelectorAll('.form-checkbox-resetall')
-      .forEach((item) => item.click());
-  };
-}
+})();

@@ -461,6 +461,13 @@ label[dir=rtl] .range-slider {
   background: #FFFFFF;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
   padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* select starting stylings ------------------------------*/
+  /* Remove focus */
+  /* Use custom arrow */
+  /* active state */
 }
 .filter-cm .btn-secondary:not(:disabled):not(.disabled).active,
 .filter-cm .btn-secondary:not(:disabled):not(.disabled):active,
@@ -469,7 +476,11 @@ label[dir=rtl] .range-slider {
   background-color: #D1193F;
   border-color: #D1193F;
 }
+.filter-cm .btn {
+  border-radius: 8px;
+}
 .filter-cm .btn-secondary {
+  height: 36px;
   color: #B0B5C1;
   background: #ECEDF1;
 }
@@ -479,6 +490,7 @@ label[dir=rtl] .range-slider {
 }
 .filter-cm .input-search {
   position: relative;
+  min-width: 300px;
 }
 .filter-cm .input-search .input {
   height: 36px;
@@ -494,6 +506,81 @@ label[dir=rtl] .range-slider {
   position: absolute;
   right: 32px;
   top: 12px;
+}
+.filter-cm .filter-select {
+  display: flex;
+  gap: 16px;
+}
+.filter-cm .btn-filter {
+  display: flex;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-left: 1px solid #ECEDF1;
+  align-items: center;
+  cursor: pointer;
+}
+.filter-cm .wrap {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  left: 0;
+  margin: 0 auto;
+}
+.filter-cm li {
+  position: relative;
+}
+.filter-cm li:after {
+  content: "";
+  width: 1px;
+  height: 40px;
+  position: absolute;
+  background: #ECEDF1;
+  top: 25%;
+}
+.filter-cm .select {
+  position: relative;
+  width: 180px;
+}
+.filter-cm .select-text {
+  position: relative;
+  color: #9399A9;
+  background-color: transparent;
+  padding: 10px 10px 10px 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+}
+.filter-cm .select-text:focus {
+  outline: none;
+  border: none;
+}
+.filter-cm .select .select-text {
+  appearance: none;
+  -webkit-appearance: none;
+  color: gray;
+}
+.filter-cm .select-label {
+  color: rgba(0, 0, 0, 0.26);
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  padding: 0 5px;
+  left: 5px;
+  top: 12px;
+  transition: 0.2s ease all;
+}
+.filter-cm .select-text:focus ~ .select-label,
+.filter-cm .select-text:valid ~ .select-label {
+  top: -8px;
+  transition: 0.2s ease all;
+  font-size: 14px;
+}
+.filter-cm .select-text:valid:not(focus) ~ .select-label {
+  color: rgba(0, 0, 0, 0.26);
 }
 
 .chuyenmuc .title {
@@ -590,6 +677,60 @@ label[dir=rtl] .range-slider {
   background: #ECEDF1;
   text-align: center;
   line-height: 32px;
+}
+.chuyenmuc .search-word {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.chuyenmuc .description-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #646D84;
+}
+.chuyenmuc .paging {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-key {
+  position: relative;
+}
+.tag-key input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.tag-key .key-text {
+  padding: 8px 16px;
+  font-weight: 400;
+  font-size: 14px;
+  background: #ECEDF1;
+  border-radius: 19px;
+  height: 36px;
+  text-align: center;
+  color: #646D84;
+}
+.tag-key input:checked + .key-text {
+  color: #D1193F;
+  background: #F6D1D9;
+}
+
+.fl-column {
+  flex-direction: column;
+}
+
+.body {
+  position: relative;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 .main-item {
