@@ -17,6 +17,11 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"
     />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/custom.css" />
@@ -126,10 +131,10 @@
     <div id="main" class="mt-4 container">
       <h2 class="mb-3">Chào mừng đến với Homeup!</h2>
       <div class="d-flex desc" style="gap: 16px">
-        <span>Tìm nhà phố, dự án, cho thuê và nhiều hơn nữa</span>
-        <span>Nhà riêng Đống Đa</span>
-        <span>Nhà riêng Đống Đa</span>
-        <span>Nhà riêng Đống Đa</span>
+        <a>Tìm nhà phố, dự án, cho thuê và nhiều hơn nữa</a>
+        <a>Nhà riêng Đống Đa</a>
+        <a>Nhà riêng Đống Đa</a>
+        <a>Nhà riêng Đống Đa</a>
       </div>
       <div class="main-radio d-flex gap-24 align-items-center mt-4">
         <div class="form-radio d-flex align-items-center gap-8">
@@ -161,7 +166,400 @@
           <label for="home-radio3" class="mb-0">Sang nhượng</label>
         </div>
       </div>
-      <div class="main-search-container"></div>
+      <div class="main-search-container">
+        <div class="dropdown-main filter-dropdown">
+          <input type="checkbox" />
+          <button>
+            <div>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22 22.75H2C1.59 22.75 1.25 22.41 1.25 22C1.25 21.59 1.59 21.25 2 21.25H22C22.41 21.25 22.75 21.59 22.75 22C22.75 22.41 22.41 22.75 22 22.75Z"
+                />
+                <path
+                  d="M3.7002 22H2.2002L2.25019 9.96996C2.25019 9.11996 2.6402 8.32998 3.3102 7.80998L10.3102 2.35997C11.3002 1.58997 12.6902 1.58997 13.6902 2.35997L20.6902 7.79997C21.3502 8.31997 21.7502 9.12996 21.7502 9.96996V22H20.2502V9.97997C20.2502 9.59997 20.0702 9.22998 19.7702 8.98998L12.7702 3.54997C12.3202 3.19997 11.6902 3.19997 11.2302 3.54997L4.23019 8.99999C3.93019 9.22999 3.75019 9.59997 3.75019 9.97997L3.7002 22Z"
+                />
+                <path
+                  d="M14.5 22.75H9.5C9.09 22.75 8.75 22.41 8.75 22V18.5C8.75 17.26 9.76 16.25 11 16.25H13C14.24 16.25 15.25 17.26 15.25 18.5V22C15.25 22.41 14.91 22.75 14.5 22.75ZM10.25 21.25H13.75V18.5C13.75 18.09 13.41 17.75 13 17.75H11C10.59 17.75 10.25 18.09 10.25 18.5V21.25Z"
+                />
+                <path
+                  d="M9.5 14.5H7.5C6.54 14.5 5.75 13.71 5.75 12.75V11.25C5.75 10.29 6.54 9.5 7.5 9.5H9.5C10.46 9.5 11.25 10.29 11.25 11.25V12.75C11.25 13.71 10.46 14.5 9.5 14.5ZM7.5 11C7.36 11 7.25 11.11 7.25 11.25V12.75C7.25 12.89 7.36 13 7.5 13H9.5C9.64 13 9.75 12.89 9.75 12.75V11.25C9.75 11.11 9.64 11 9.5 11H7.5Z"
+                />
+                <path
+                  d="M16.5 14.5H14.5C13.54 14.5 12.75 13.71 12.75 12.75V11.25C12.75 10.29 13.54 9.5 14.5 9.5H16.5C17.46 9.5 18.25 10.29 18.25 11.25V12.75C18.25 13.71 17.46 14.5 16.5 14.5ZM14.5 11C14.36 11 14.25 11.11 14.25 11.25V12.75C14.25 12.89 14.36 13 14.5 13H16.5C16.64 13 16.75 12.89 16.75 12.75V11.25C16.75 11.11 16.64 11 16.5 11H14.5Z"
+                />
+                <path
+                  d="M19.0001 7.75C18.5901 7.75 18.2501 7.42001 18.2501 7.01001L18.2301 4.75H14.5801C14.1701 4.75 13.8301 4.41 13.8301 4C13.8301 3.59 14.1701 3.25 14.5801 3.25H18.9801C19.3901 3.25 19.7301 3.57999 19.7301 3.98999L19.7601 6.98999C19.7501 7.40999 19.4201 7.75 19.0001 7.75C19.0101 7.75 19.0001 7.75 19.0001 7.75Z"
+                />
+              </svg>
+              <span>Loại nhà đất</span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="ml-auto"
+              >
+                <path
+                  d="M12 16.7999C11.3 16.7999 10.6 16.5299 10.07 15.9999L3.55002 9.47989C3.26002 9.18989 3.26002 8.70989 3.55002 8.41989C3.84002 8.12989 4.32002 8.12989 4.61002 8.41989L11.13 14.9399C11.61 15.4199 12.39 15.4199 12.87 14.9399L19.39 8.41989C19.68 8.12989 20.16 8.12989 20.45 8.41989C20.74 8.70989 20.74 9.18989 20.45 9.47989L13.93 15.9999C13.4 16.5299 12.7 16.7999 12 16.7999Z"
+                />
+              </svg>
+            </div>
+            <ul class="dropdown-container form-checkbox-container">
+              <li class="form-checkbox">
+                <label for="main-checkbox-1">Tất cả nhà đất</label>
+                <input id="main-checkbox-1" type="checkbox" />
+              </li>
+              <li class="form-checkbox">
+                <label for="main-checkbox-2">Tất cả nhà đất</label>
+                <input id="main-checkbox-2" type="checkbox" />
+              </li>
+              <li class="form-checkbox">
+                <label for="main-checkbox-3">Tất cả nhà đất</label>
+                <input id="main-checkbox-3" type="checkbox" />
+              </li>
+              <li class="form-checkbox">
+                <label for="main-checkbox-4">Tất cả nhà đất</label>
+                <input id="main-checkbox-4" type="checkbox" />
+              </li>
+              <li class="form-checkbox">
+                <label for="main-checkbox-5">Tất cả nhà đất</label>
+                <input id="main-checkbox-5" type="checkbox" />
+              </li>
+              <li class="form-checkbox sub-checkbox">
+                <label for="main-checkbox-6">Tất cả nhà đất</label>
+                <input id="main-checkbox-6" type="checkbox" />
+              </li>
+              <li class="form-checkbox sub-checkbox">
+                <label for="main-checkbox-7">Tất cả nhà đất</label>
+                <input id="main-checkbox-7" type="checkbox" />
+              </li>
+              <li class="form-checkbox sub-checkbox">
+                <label for="main-checkbox-8">Tất cả nhà đất</label>
+                <input id="main-checkbox-8" type="checkbox" />
+              </li>
+              <li class="form-checkbox sub-checkbox">
+                <label for="main-checkbox-9">Tất cả nhà đất</label>
+                <input id="main-checkbox-9" type="checkbox" />
+              </li>
+              <li class="form-checkbox">
+                <label for="main-checkbox-10">Tất cả nhà đất</label>
+                <input id="main-checkbox-10" type="checkbox" />
+              </li>
+              <li class="form-footer">
+                <p class="form-checkbox-resetall">
+                  <img src="./assets/img/refresh-2.svg" alt="" />
+                  Đặt lại
+                </p>
+                <span class="form-close">Áp dụng</span>
+              </li>
+            </ul>
+          </button>
+        </div>
+        <form class="search-main">
+          <input type="text" placeholder="Tìm kiếm địa chỉ, khu vực..." />
+          <button>
+            <img src="./assets/img/search-normal.svg" alt="" />
+          </button>
+        </form>
+      </div>
+      <div class="filter-container filter-dropdown d-flex gap-24">
+        <div class="row row-cols-4" style="flex: 1">
+          <div class="col">
+            <div class="location-filter">
+              <input type="checkbox" />
+              <div class="dropdown-btn">
+                <p>
+                  <span class="location-filter-value">Toàn quốc</span>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="ml-auto"
+                  >
+                    <path
+                      d="M12 16.7999C11.3 16.7999 10.6 16.5299 10.07 15.9999L3.55002 9.47989C3.26002 9.18989 3.26002 8.70989 3.55002 8.41989C3.84002 8.12989 4.32002 8.12989 4.61002 8.41989L11.13 14.9399C11.61 15.4199 12.39 15.4199 12.87 14.9399L19.39 8.41989C19.68 8.12989 20.16 8.12989 20.45 8.41989C20.74 8.70989 20.74 9.18989 20.45 9.47989L13.93 15.9999C13.4 16.5299 12.7 16.7999 12 16.7999Z"
+                    />
+                  </svg>
+                </p>
+                <ul class="dropdown-location-menu">
+                  <span>Khu vực & Dự án</span>
+                  <li>
+                    <select
+                      title="Tỉnh/Thành"
+                      class="selectpicker"
+                      id="select-tinh-thanh"
+                      data-live-search="true"
+                      data-live-search-placeholder="Tìm tỉnh thành"
+                    >
+                      <option>Hải Phòng</option>
+                      <option>Thái Bình</option>
+                      <option>Nam Định</option>
+                    </select>
+                  </li>
+                  <li>
+                    <select
+                      title="Tỉnh/Thành"
+                      class="selectpicker"
+                      data-live-search="true"
+                      data-live-search-placeholder="Tìm tỉnh thành"
+                    >
+                      <option>Hải Phòng</option>
+                      <option>Thái Bình</option>
+                      <option>Nam Định</option>
+                    </select>
+                  </li>
+                  <li>
+                    <select
+                      title="Tỉnh/Thành"
+                      class="selectpicker"
+                      data-live-search="true"
+                      data-live-search-placeholder="Tìm tỉnh thành"
+                    >
+                      <option>Hải Phòng</option>
+                      <option>Thái Bình</option>
+                      <option>Nam Định</option>
+                    </select>
+                  </li>
+                  <li class="form-footer">
+                    <p class="form-checkbox-resetall">
+                      <img src="./assets/img/refresh-2.svg" alt="" />
+                      Đặt lại
+                    </p>
+                    <span class="form-close">Áp dụng</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="price-filter filter-dropdown">
+              <input type="checkbox" />
+              <div class="dropdown-btn">
+                <p>
+                  <span class="price-filter-value">Mức giá</span>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="ml-auto"
+                  >
+                    <path
+                      d="M12 16.7999C11.3 16.7999 10.6 16.5299 10.07 15.9999L3.55002 9.47989C3.26002 9.18989 3.26002 8.70989 3.55002 8.41989C3.84002 8.12989 4.32002 8.12989 4.61002 8.41989L11.13 14.9399C11.61 15.4199 12.39 15.4199 12.87 14.9399L19.39 8.41989C19.68 8.12989 20.16 8.12989 20.45 8.41989C20.74 8.70989 20.74 9.18989 20.45 9.47989L13.93 15.9999C13.4 16.5299 12.7 16.7999 12 16.7999Z"
+                    />
+                  </svg>
+                </p>
+                <ul class="dropdown-location-menu">
+                  <div class="output-value">
+                    <p class="item">
+                      Từ <span class="from-value">0 Triệu</span>
+                    </p>
+                    <p class="item">Đến <span class="to-value">60 Tỷ</span></p>
+                  </div>
+                  <div
+                    class="range-slider range-slider-home-price"
+                    data-ticks-position="top"
+                    style="
+                      --min: 0;
+                      --max: 600;
+                      --value-a: 0;
+                      --value-b: 400;
+                      --suffix: '%';
+                      --text-value-a: '0 Triệu';
+                      --text-value-b: '60 Tỷ';
+                    "
+                  >
+                    <input
+                      class="input-min"
+                      type="range"
+                      min="0"
+                      max="600"
+                      value="0"
+                    />
+                    <input
+                      type="range"
+                      class="input-max"
+                      min="0"
+                      max="600"
+                      value="400"
+                      oninput="this.parentNode.style.setProperty('--value-b',this.value); this.parentNode.style.setProperty('--text-value-b', JSON.stringify(this.value))"
+                    />
+                    <div class="range-slider__progress"></div>
+                  </div>
+                  <ul class="list-value">
+                    <li class="value-item active">< 500 triệu</li>
+                    <li class="value-item">< 500 triệu</li>
+                    <li class="value-item">< 500 triệu</li>
+                    <li class="value-item">< 500 triệu</li>
+                    <li class="value-item">< 500 triệu</li>
+                    <li class="value-item">< 500 triệu</li>
+                    <li class="form-footer">
+                      <p class="form-checkbox-resetall">
+                        <img src="./assets/img/refresh-2.svg" alt="" />
+                        Đặt lại
+                      </p>
+                      <span class="form-close">Áp dụng</span>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="price-filter filter-dropdown area-filter">
+              <input type="checkbox" />
+              <div class="dropdown-btn">
+                <p>
+                  <span class="price-filter-value">Diện tích</span>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="ml-auto"
+                  >
+                    <path
+                      d="M12 16.7999C11.3 16.7999 10.6 16.5299 10.07 15.9999L3.55002 9.47989C3.26002 9.18989 3.26002 8.70989 3.55002 8.41989C3.84002 8.12989 4.32002 8.12989 4.61002 8.41989L11.13 14.9399C11.61 15.4199 12.39 15.4199 12.87 14.9399L19.39 8.41989C19.68 8.12989 20.16 8.12989 20.45 8.41989C20.74 8.70989 20.74 9.18989 20.45 9.47989L13.93 15.9999C13.4 16.5299 12.7 16.7999 12 16.7999Z"
+                    />
+                  </svg>
+                </p>
+                <ul class="dropdown-location-menu">
+                  <div class="output-value">
+                    <p class="item">Từ <span class="from-value">0 m²</span></p>
+                    <p class="item">Đến <span class="to-value">500 m²</span></p>
+                  </div>
+                  <div
+                    class="range-slider range-slider-home-price"
+                    data-ticks-position="top"
+                    style="
+                      --min: 0;
+                      --max: 500;
+                      --value-a: 0;
+                      --value-b: 500;
+                      --suffix: '%';
+                      --text-value-a: '0 Triệu';
+                      --text-value-b: '60 Tỷ';
+                    "
+                  >
+                    <input
+                      class="input-min"
+                      type="range"
+                      min="0"
+                      max="500"
+                      value="0"
+                    />
+                    <input
+                      type="range"
+                      class="input-max"
+                      min="0"
+                      max="500"
+                      value="500"
+                    />
+                    <div class="range-slider__progress"></div>
+                  </div>
+                  <ul class="list-value">
+                    <li class="value-item active">
+                      <span style="color: inherit">&#8804;</span> 30
+                    </li>
+                    <li class="value-item">30 - 50 m²</li>
+                    <li class="value-item">50 - 80 m²</li>
+                    <li class="value-item">80 - 100 m²</li>
+                    <li class="value-item">100 - 150 m²</li>
+                    <li class="form-footer">
+                      <p class="form-checkbox-resetall">
+                        <img src="./assets/img/refresh-2.svg" alt="" />
+                        Đặt lại
+                      </p>
+                      <span class="form-close">Áp dụng</span>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="price-filter filter-dropdown addition-filter">
+              <input type="checkbox" />
+              <div class="dropdown-btn">
+                <p>
+                  <span class="price-filter-value">Xem Thêm</span>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="ml-auto"
+                  >
+                    <path
+                      d="M12 16.7999C11.3 16.7999 10.6 16.5299 10.07 15.9999L3.55002 9.47989C3.26002 9.18989 3.26002 8.70989 3.55002 8.41989C3.84002 8.12989 4.32002 8.12989 4.61002 8.41989L11.13 14.9399C11.61 15.4199 12.39 15.4199 12.87 14.9399L19.39 8.41989C19.68 8.12989 20.16 8.12989 20.45 8.41989C20.74 8.70989 20.74 9.18989 20.45 9.47989L13.93 15.9999C13.4 16.5299 12.7 16.7999 12 16.7999Z"
+                    />
+                  </svg>
+                </p>
+                <ul class="dropdown-location-menu form-checkbox-container">
+                  <li>
+                    <span class="title">Số phòng ngủ</span>
+                    <div class="checkbox-container">
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">2</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">3</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">4</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">5</label>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="title">Số phòng ngủ</span>
+                    <div class="checkbox-container">
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">2</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">3</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">4</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">5</label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="form-footer">
+                    <p class="form-checkbox-resetall">
+                      <img src="./assets/img/refresh-2.svg" alt="" />
+                      Đặt lại
+                    </p>
+                    <span class="form-close">Áp dụng</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter-reset-btn">
+          <img src="./assets/img/refresh-2.svg" alt="" />
+        </div>
+      </div>
     </div>
     <div id="danhmuc-container " class="container mt-4">
       <h3 class="title">Tìm trong danh mục</h3>
@@ -1621,7 +2019,7 @@
     <footer style="background: #ecedf1">
       <div class="footer container pt-1 gap-w">
         <div class="footer-top row">
-          <div class="col-md-4 text-center">
+          <div class="col-md-4 text-center text-md-left">
             <a href="">
               <img src="./assets/img/logo-footer.png" alt="" />
             </a>
@@ -1650,7 +2048,9 @@
             </div>
           </div>
           <div class="col-md-3">
-            <div class="item d-flex gap-1 align-items-center text-right">
+            <div
+              class="item d-flex gap-1 align-items-center justify-content-md-end text-right text-md-left"
+            >
               <div class="img" style="float: left">
                 <img src="./assets/img/cham-soc-kh.png" alt="" />
               </div>
@@ -1768,7 +2168,7 @@
             </ul>
           </div>
           <div
-            class="col-md-2 item list-app d-flex d-md-block justify-content-center gap-3"
+            class="col-md-3 item list-app d-flex justify-content-center justify-content-md-start gap-3 align-items-md-end flex-md-column"
           >
             <div class="app">
               <a href=""> </a>
@@ -1779,7 +2179,8 @@
                   </div>
                 </a>
                 <div class="text">
-                  <a href=""> <span>Tải ngay ứng dụng</span><br /> </a
+                  <a href="">
+                    <span style="color: #fff">Tải ngay ứng dụng</span><br /> </a
                   ><a href="" class="link-homeup"
                     >Homeup App
                     <i
@@ -1801,7 +2202,7 @@
                 </a>
                 <div class="text">
                   <a href="">
-                    <span>Gia nhập Homeup!</span>
+                    <span style="color: #fff">Gia nhập Homeup!</span>
                     <span> </span></a
                   ><a href="" class="link-homeup"
                     >Ứng tuyển
@@ -1882,6 +2283,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
     <script src="./js/index.js" />
   </body>
 </html>
