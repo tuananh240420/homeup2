@@ -11,12 +11,17 @@
 a:hover {
   text-decoration: none;
 }
+
 @import 'custom';
 @import 'header';
 @import 'footer';
 @import 'chuyenmuc';
 @import 'content';
 @import 'duanmoi';
+@import 'loctheobanggia';
+@import 'dangtin';
+@import 'subfilter';
+@import 'home.mobile';
 
 .gap-8 {
   gap: 8px;

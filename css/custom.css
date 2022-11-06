@@ -1296,9 +1296,9 @@ body {
     z-index: 100;
 }
 
-.menu ul li:hover ul {
+/* .menu ul li:hover ul {
     display: block;
-}
+} */
 
 .navbar-nav .sub-menu li {
     list-style: none;

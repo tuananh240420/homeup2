@@ -280,7 +280,7 @@ const MAX_PROPERTY = '--value-b';
       inputMax.value = maxValue;
       setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
       setInnerText(maxDisplayValueEl, formatFunction(inputMax.value));
-      filterValue.innerText = defaultText;
+      filterValue.innerText = filterValue.dataset.default || defaultText;
     });
     inputMin.oninput = () => {
       setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);

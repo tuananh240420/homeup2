@@ -1,328 +1,322 @@
 .filter-cm {
-    min-height: 52px;
-    width: 100%;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
-    padding: 8px 24px;
+  min-height: 52px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .btn-secondary:not(:disabled):not(.disabled).active,
+  .btn-secondary:not(:disabled):not(.disabled):active,
+  .show > .btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #d1193f;
+    border-color: #d1193f;
+  }
+
+  .btn {
+    border-radius: 8px;
+  }
+
+  .btn-secondary {
+    height: 36px;
+    color: #b0b5c1;
+    background: #ecedf1;
+  }
+
+  .icon-search {
+    width: 14px;
+    height: 14px;
+  }
+
+  .input-search {
+    position: relative;
+    min-width: 300px;
+
+    .input {
+      height: 36px;
+      background: #ffffff;
+      padding: 16px;
+      /* anvuinew/gray40 */
+      width: 100%;
+      border: 1px solid #ecedf1;
+      border-radius: 18px;
+      outline: none;
+    }
+
+    img {
+      position: absolute;
+      right: 32px;
+      top: 12px;
+    }
+  }
+
+  .filter-select {
     display: flex;
-    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .btn-filter {
+    display: flex;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-left: 1px solid #ecedf1;
     align-items: center;
+    cursor: pointer;
+  }
 
-    .btn-secondary:not(:disabled):not(.disabled).active,
-    .btn-secondary:not(:disabled):not(.disabled):active,
-    .show>.btn-secondary.dropdown-toggle {
-        color: #fff;
-        background-color: #D1193F;
-        border-color: #D1193F;
-    }
+  .wrap {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    left: 0;
+    margin: 0 auto;
+  }
 
-    .btn {
-        border-radius: 8px;
-    }
+  li {
+    position: relative;
+  }
 
-    .btn-secondary {
-        height: 36px;
-        color: #B0B5C1;
-        background: #ECEDF1;
-    }
+  li:after {
+    content: "";
+    width: 1px;
+    height: 40px;
+    position: absolute;
+    background: #ecedf1;
+    top: 25%;
+  }
 
-    .icon-search {
-        width: 14px;
-        height: 14px;
-    }
+  /* select starting stylings ------------------------------*/
+  .select {
+    position: relative;
+    width: 180px;
+  }
 
-    .input-search {
-        position: relative;
-        min-width: 300px;
+  .select-text {
+    position: relative;
+    color: #9399a9;
+    background-color: transparent;
+    padding: 10px 10px 10px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+  }
 
-        .input {
-            height: 36px;
-            background: #FFFFFF;
-            padding: 16px;
-            /* anvuinew/gray40 */
-            width: 100%;
-            border: 1px solid #ECEDF1;
-            border-radius: 18px;
-            outline: none;
-        }
+  /* Remove focus */
+  .select-text:focus {
+    outline: none;
+    border: none;
+  }
 
-        img {
-            position: absolute;
-            right: 32px;
-            top: 12px;
-        }
-    }
+  /* Use custom arrow */
+  .select .select-text {
+    appearance: none;
+    -webkit-appearance: none;
+    color: gray;
+  }
 
-    .filter-select {
-        display: flex;
-        gap: 16px;
-    }
+  .select-label {
+    color: rgba(0, 0, 0, 0.26);
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    padding: 0 5px;
+    left: 5px;
+    top: 12px;
+    transition: 0.2s ease all;
+  }
 
-    .btn-filter {
-        display: flex;
-        gap: 8px;
-        font-weight: 400;
-        font-size: 14px;
-        padding: 8px 16px;
-        border-left: 1px solid #ECEDF1;
-        align-items: center;
-        cursor: pointer;
-    }
+  /* active state */
+  .select-text:focus ~ .select-label,
+  .select-text:valid ~ .select-label {
+    top: -8px;
+    transition: 0.2s ease all;
+    font-size: 14px;
+  }
 
-    .wrap {
-        position: absolute;
-        right: 0;
-        top: 40%;
-        left: 0;
-        margin: 0 auto;
-    }
-
-    li {
-        position: relative;
-    }
-
-    li:after {
-        content: '';
-        width: 1px;
-        height: 40px;
-        position: absolute;
-        background: #ECEDF1;
-        top: 25%;
-
-    }
-
-    /* select starting stylings ------------------------------*/
-    .select {
-        position: relative;
-        width: 180px;
-    }
-
-    .select-text {
-        position: relative;
-        color: #9399A9;
-        background-color: transparent;
-        padding: 10px 10px 10px 10px;
-        font-size: 16px;
-        border-radius: 4px;
-        border: none;
-    }
-
-    /* Remove focus */
-    .select-text:focus {
-        outline: none;
-        border: none;
-    }
-
-    /* Use custom arrow */
-    .select .select-text {
-        appearance: none;
-        -webkit-appearance: none;
-        color: gray;
-    }
-
-
-    .select-label {
-        color: rgba(0, 0, 0, 0.26);
-        background-color: transparent;
-        font-size: 18px;
-        font-weight: normal;
-        position: absolute;
-        pointer-events: none;
-        padding: 0 5px;
-        left: 5px;
-        top: 12px;
-        transition: 0.2s ease all;
-    }
-
-
-    /* active state */
-    .select-text:focus~.select-label,
-    .select-text:valid~.select-label {
-        top: -8px;
-        transition: 0.2s ease all;
-        font-size: 14px;
-    }
-
-    .select-text:valid:not(focus)~.select-label {
-        color: rgba(0, 0, 0, 0.26);
-    }
-
+  .select-text:valid:not(focus) ~ .select-label {
+    color: rgba(0, 0, 0, 0.26);
+  }
+}
+.right-element {
+  min-width: 250px;
 }
 
 .chuyenmuc {
-    .title {
+  .title {
+    font-size: 12px;
+    font-weight: 400;
+    color: #383f47;
+    line-height: 18px;
+  }
+
+  .sp-b {
+    justify-content: space-between;
+  }
+
+  .card-cm {
+    width: 100%;
+    height: 206px;
+    background: #ffffff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    display: flex;
+
+    .card-image {
+      position: relative;
+      height: 100%;
+      width: 240px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .see {
+        position: absolute;
+        width: 52px;
+        height: 24px;
+        background: rgba(56, 63, 71, 0.3);
+        border-radius: 12px;
+        display: flex;
+        padding: 4px 8px;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 8px;
+        gap: 4px;
+        right: 10px;
+        bottom: 10px;
+      }
+    }
+
+    .card-content {
+      height: 100%;
+      width: calc(100% - 240px);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+
+      .title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #383f47;
+      }
+
+      .description {
         font-size: 12px;
         font-weight: 400;
-        color: #383F47;
+        color: #383f47;
         line-height: 18px;
-    }
+      }
 
-    .sp-b {
-        justify-content: space-between;
-    }
-
-
-    .card-cm {
-        width: 100%;
-        height: 206px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-        border-radius: 8px;
-        display: flex;
-
-        .card-image {
-            position: relative;
-            height: 100%;
-            width: 240px;
-
-            img {
-                width: 100%;
-                height: 100%;
-            }
-
-            .see {
-                position: absolute;
-                width: 52px;
-                height: 24px;
-                background: rgba(56, 63, 71, 0.3);
-                border-radius: 12px;
-                display: flex;
-                padding: 4px 8px;
-                justify-content: center;
-                align-items: center;
-                padding: 4px 8px;
-                gap: 4px;
-                right: 10px;
-                bottom: 10px;
-            }
-        }
-
-        .card-content {
-            height: 100%;
-            width: calc(100% - 240px);
-            padding: 16px;
-            display: flex;
-            flex-direction: column;
-            row-gap: 16px;
-
-            .title {
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 24px;
-                color: #383F47;
-            }
-
-            .description {
-                font-size: 12px;
-                font-weight: 400;
-                color: #383F47;
-                line-height: 18px;
-            }
-
-            .description-tag {
-                font-weight: 600;
-                font-size: 14px;
-                line-height: 20px;
-                color: #383F47;
-                display: flex;
-                gap: 24px;
-
-            }
-
-            .content-footer {
-                display: flex;
-                justify-content: space-between;
-
-                .price {
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 22px;
-                    color: #0091FE;
-                }
-
-                .time {
-                    font-weight: 400;
-                    font-size: 12px;
-                    line-height: 18px;
-                    color: #646D84;
-                }
-
-                .like {
-                    margin-top: 16px;
-                    cursor: pointer;
-                    width: 32px;
-                    height: 32px;
-                    border-radius: 50%;
-                    background: #ECEDF1;
-                    text-align: center;
-                    line-height: 32px;
-                }
-            }
-
-            // width: 100%;
-        }
-    }
-
-    .search-word {
-        margin-top: 24px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-
-    .description-text {
-        font-weight: 400;
+      .description-tag {
+        font-weight: 600;
         font-size: 14px;
-        line-height: 22px;
-        color: #646D84;
-    }
-
-    .paging {
-        width: 100%;
+        line-height: 20px;
+        color: #383f47;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        gap: 24px;
+      }
+
+      .content-footer {
+        display: flex;
+        justify-content: space-between;
+
+        .price {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          color: #0091fe;
+        }
+
+        .time {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 18px;
+          color: #646d84;
+        }
+
+        .like {
+          margin-top: 16px;
+          cursor: pointer;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background: #ecedf1;
+          text-align: center;
+          line-height: 32px;
+        }
+      }
+
+      // width: 100%;
     }
+  }
+
+  .description-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #646d84;
+  }
+
+  .paging {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.search-word {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .tag-key {
-    position: relative;
+  position: relative;
 
-    input {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        opacity: 0;
-    }
+  input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
 
-    .key-text {
-        padding: 8px 16px;
-        font-weight: 400;
-        font-size: 14px;
-        background: #ECEDF1;
-        border-radius: 19px;
-        height: 36px;
-        text-align: center;
-        color: #646D84;
+  .key-text {
+    padding: 8px 16px;
+    font-weight: 400;
+    font-size: 14px;
+    background: #ecedf1;
+    border-radius: 19px;
+    height: 36px;
+    text-align: center;
+    color: #646d84;
+  }
 
-    }
-
-    input:checked+.key-text {
-        color: #D1193F;
-        background: #F6D1D9;
-
-    }
+  input:checked + .key-text {
+    color: #d1193f;
+    background: #f6d1d9;
+  }
 }
 
 .fl-column {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .body {
-    position: relative;
-    font-family:
-        'Roboto', 'Helvetica', 'Arial', sans-serif;
+  position: relative;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }

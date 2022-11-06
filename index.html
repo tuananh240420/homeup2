@@ -25,65 +25,110 @@
     />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/custom.css" />
+    <script src="./js/chuyenmuc.js"></script>
   </head>
 
   <body>
     <header class="top-header" id="header">
       <nav
-        class="navbar navbar-expand-sm menu"
+        class="navbar navbar-expand-sm menu navbar-light bg-light justify-content-md-start justify-content-center"
         style="background: #ffffff !important; padding: 10px"
       >
         <!-- Links -->
         <!-- Brand/logo -->
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand ml-md-0 ml-auto" href="#"
           ><img src="./assets/img/logo.png" alt="" width="125"
         /></a>
+        <img
+          class="d-md-none d-block ml-4"
+          src="./assets/img/like-bt.png"
+          alt=""
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto d-md-flex">
+            <li class="item-menu dropdown">
+              <a
+                class="nav-link dropdown-toggle item-nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Nhà đất bán</a
+              >
+              <!-- Sub-Menu -->
+              <ul
+                class="sub-menu dropdown-menu"
+                aria-labelledby="navbarDropdown"
+              >
+                <li class="dropdown-item">
+                  <a href="#">Bán căn hộ chung cư</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#">Bán nhà riêng</a>
+                </li>
+              </ul>
+            </li>
 
-        <ul class="navbar-nav mr-auto d-none d-md-flex">
-          <li class="item-menu">
-            <a class="item-nav-link" href="#">Nhà đất bán</a>
-            <!-- Sub-Menu -->
-            <ul class="sub-menu">
-              <li>
-                <a href="#">Bán căn hộ chung cư</a>
-              </li>
-              <li>
-                <a href="#">Bán nhà riêng</a>
-              </li>
-            </ul>
-          </li>
+            <li class="item-menu dropdown">
+              <a
+                class="nav-link dropdown-toggle item-nav-link"
+                href="#"
+                id="navbarDropdown2"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Nhà đất cho thuê</a
+              >
 
-          <li class="item-menu">
-            <a class="item-nav-link" href="#">Nhà đất cho thuê</a>
-
-            <ul class="sub-menu">
-              <li>
-                <a href="#">Cho thuê căn hộ chung cư</a>
-              </li>
-            </ul>
-          </li>
-          <li class="item-menu">
-            <a class="item-nav-link" href="#">Dự án</a>
-          </li>
-          <li class="item-menu">
-            <a class="item-nav-link" href="#">Tin tức</a>
-          </li>
-          <li class="item-menu">
-            <a class="item-nav-link" href="#"> Bản Đồ </a>
-          </li>
-          <li class="item-menu">
-            <a class="item-nav-link" href="#"> Thuật Ngữ </a>
-          </li>
-          <li class="item-menu">
-            <img
-              src="./assets/img/threedot.svg"
-              alt=""
-              style="cursor: pointer"
-            />
-          </li>
-        </ul>
-
-        <ul class="navbar-nav d-none d-md-flex">
+              <ul
+                class="sub-menu dropdown-menu"
+                aria-labelledby="navbarDropdown2"
+              >
+                <li class="dropdown-item">
+                  <a href="#">Cho thuê căn hộ chung cư</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item-menu">
+              <a class="item-nav-link" href="#">Dự án</a>
+            </li>
+            <li class="item-menu">
+              <a class="item-nav-link" href="#">Tin tức</a>
+            </li>
+            <li class="item-menu">
+              <a class="item-nav-link" href="#"> Bản Đồ </a>
+            </li>
+            <li class="item-menu">
+              <a class="item-nav-link" href="#"> Thuật Ngữ </a>
+            </li>
+            <li class="item-menu">
+              <img
+                src="./assets/img/threedot.svg"
+                alt=""
+                style="cursor: pointer"
+              />
+            </li>
+          </ul>
+        </div>
+        <ul
+          class="navbar-nav d-none d-md-flex"
+          onclick="clickShowSubmenu()"
+          style="display: none"
+        >
           <li
             class="item-menu"
             style="
@@ -93,16 +138,29 @@
               box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
             "
           >
-            <img
-              style="width: 24px; cursor: pointer"
-              src="./assets/img/menu.svg"
-              alt=""
-            />
-            <img
-              style="width: 24px; cursor: pointer"
-              src="./assets/img/profile-circle.svg"
-              alt=""
-            />
+            <a href="#">
+              <img
+                style="width: 24px; cursor: pointer"
+                src="./assets/img/menu.svg"
+                alt=""
+              />
+              <img
+                style="width: 24px; cursor: pointer"
+                src="./assets/img/profile-circle.svg"
+                alt=""
+              />
+            </a>
+            <ul class="sub-menu" id="profile-submenu" style="display: none">
+              <li>
+                <a href="#" style="background: #ffffff">Đăng nhập</a>
+              </li>
+              <li>
+                <a href="#" style="background: #ffffff">Tạo tài khoản mới</a>
+              </li>
+              <li style="border-top: 1px solid #ecedf1">
+                <a href="#" style="background: #ffffff">Trợ giúp</a>
+              </li>
+            </ul>
           </li>
           <li
             class="item-menu"
@@ -128,7 +186,7 @@
         </ul>
       </nav>
     </header>
-    <div id="main" class="mt-4 container">
+    <div id="main" class="mt-4 container d-none">
       <h2 class="mb-3">Chào mừng đến với Homeup!</h2>
       <div class="d-flex desc" style="gap: 16px">
         <a>Tìm nhà phố, dự án, cho thuê và nhiều hơn nữa</a>
@@ -706,8 +764,8 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="d-flex flex-column gap-4" style="gap: 24px">
-                <a href="#" class="main-item noi-bat"
-                  ><div href="#">
+                <a href="#" class="main-item noi-bat">
+                  <div href="#">
                     <div class="image-item">
                       <img
                         class="avatar ls-is-cached lazyloaded"
@@ -954,7 +1012,6 @@
                       </div>
                     </div>
                   </div>
-
                   <div class="info">
                     <h3 class="title">
                       Bán gấp nhà mặt phố Khương Trung, kinh doanh...
