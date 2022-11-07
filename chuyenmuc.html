@@ -28,7 +28,6 @@
   </head>
 
   <body>
-    <!-- start header -->
     <header class="top-header" id="header">
       <nav
         class="navbar navbar-expand-sm menu navbar-light bg-light justify-content-md-start justify-content-center"
@@ -596,743 +595,634 @@
         </div>
       </div>
     </div>
-
-    <!-- end filter -->
-    <!-- start dangtin -->
-    <div class="container dangtin">
-      <!-- Swiper -->
-
-      <div class="row">
-        <div class="col-md-9">
-          <div class="slide" data-zoom="1">
-            <div class="controls">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-zoom-out"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
-                />
-                <path
-                  d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z"
-                />
-                <path
-                  fill-rule="evenodd"
-                  d="M3 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-zoom-in"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
-                />
-                <path
-                  d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z"
-                />
-                <path
-                  fill-rule="evenodd"
-                  d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5z"
-                />
-              </svg>
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-x-circle close-btn"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-                />
-                <path
-                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                />
-              </svg>
-            </div>
-            <div
-              style="
-                --swiper-navigation-color: #fff;
-                --swiper-pagination-color: #fff;
-              "
-              data-zoom="1"
-              class="swiper mySwiper2"
-            >
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="./assets/img/slide_dangtin.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/img/slide_dangtin.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/img/slide_dangtin.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/img/slide_dangtin.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/img/slide_dangtin.png" />
-                </div>
-                >
+    <!-- start chuyemuc -->
+    <div class="chuyenmuc container mt-4" id="danhmuc">
+      <div class="row fl-column">
+        <div class="title">Bán / Tất cả BĐS trên toàn quốc</div>
+        <div class="">
+          <h4>Bán nhà đất trên toàn quốc</h4>
+        </div>
+        <div class="title">Hiện có 231,242 bất động sản</div>
+      </div>
+      <div class="row mt-4" class="danhmuc-main">
+        <div class="col-md-9 col-sm-12 left-element">
+          <div class="row sp-b">
+            <div class="type-sort">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-light active">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option1"
+                    autocomplete="off"
+                    checked
+                  />
+                  <img src="./assets/img/row-vertical.svg" />
+                </label>
+                <label class="btn btn-light">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option3"
+                    autocomplete="off"
+                  />
+                  <img src="./assets/img/map.svg" />
+                </label>
               </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
             </div>
-            <div thumbsSlider="" class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="./assets/img/slide_dangtin.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/img/slide_dangtin.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/img/slide_dangtin.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/img/slide_dangtin.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/img/slide_dangtin.png" />
-                </div>
+            <div>
+              <div class="form-group">
+                <select class="selectpicker" title="Sắp xếp">
+                  <option>Mustard</option>
+                  <option>Ketchup</option>
+                  <option>Relish</option>
+                </select>
               </div>
             </div>
           </div>
-
-          <div class="row mt-2">
-            <div class="slide-description col-md-12">
-              <div class="title mb-3">
-                Bán căn hộ chung cư/Hà Nội/Cầu Giấy/Bán căn hộ chung cư tại 30
-                Phạm Văn Đồng
-              </div>
-              <div class="content">
-                Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
-              </div>
-              <div class="content-phone">0968364060</div>
-              <div class="footer">
-                Dự án Fiato Premier, Thủ Đức, Hồ Chí Minh
-              </div>
-              <div class="box mt-3">
-                <div class="box-text">
-                  <div>
-                    <div class="label">Mức giá</div>
-                    <div class="value">60 triệu</div>
-                  </div>
-                  <div>
-                    <div class="label">Diện tích</div>
-                    <div class="value">8m2</div>
-                  </div>
-                  <div>
-                    <div class="label">Phòng ngủ</div>
-                    <div class="value">2 Phòng ngủ</div>
-                  </div>
-                </div>
-                <div class="box-icon">
-                  <div>
-                    <img
-                      src="./assets/icon/ant-design_share-alt-outlined.svg"
-                    />
-                  </div>
-                  <div><img src="./assets/icon/warning-2.svg" /></div>
-                  <div><img src="./assets/icon/heart.svg" /></div>
+          <div class="row gap-24">
+            <a href="#" class="card-cm">
+              <div class="card-image">
+                <img src="assets/img/property.png" />
+                <div class="see">
+                  <div><img src="./assets/img/camera.svg" /></div>
+                  <div>24</div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="row box-see-more mt-3">
-            <div class="col-md-12 lable">Thông tin mô tả</div>
-            <div class="col-md-12 text">
-              <p>
-                1. Căn hộ thuộc tòa P1, P2, P4 mới mở bán của phân khu Ocean
-                View: + 1PN + 1: DT 48m2 giá từ 1.5 tỷ. + 2PN 2WC: DT 61m2 giá
-                từ 1.9 tỷ. + 2PN 2WC góc: DT 68m2 giá từ 2 tỷ. + 3PN: DT từ
-                80m2: Giá từ 3.2 tỷ. - Căn hộ bàn giao gồm: Điều hòa multi 2
-                chiều, thiết bị vệ sinh, sàn gỗ full từ phòng ngủ ra phòng
-                khách, có kính khu vực tắm đứng. Hoàn thiện sơn tường, trần
-                thạch cao. - Tòa P4 là tòa hình chữ T mật độ thoáng chỉ 19
-                căn/sàn, 7 thang máy. - Hướng view thoáng, ban công view nội khu
-                hồ cảnh quan hoặc view ngoại khu thoáng rộng. - Đặc biệt là phân
-                khu duy nhất xây 2 tầng
-                <span id="dots">...</span>
-              </p>
-              <p id="more" style="display: none">
-                2. Căn hộ thuộc tòa P1, P2, P4 mới mở bán của phân khu Ocean
-                View: + 1PN + 1: DT 48m2 giá từ 1.5 tỷ. + 2PN 2WC: DT 61m2 giá
-                từ 1.9 tỷ. + 2PN 2WC góc: DT 68m2 giá từ 2 tỷ. + 3PN: DT từ
-                80m2: Giá từ 3.2 tỷ. - Căn hộ bàn giao gồm: Điều hòa multi 2
-                chiều, thiết bị vệ sinh, sàn gỗ full từ phòng ngủ ra phòng
-                khách, có kính khu vực tắm đứng. Hoàn thiện sơn tường, trần
-                thạch cao. - Tòa P4 là tòa hình chữ T mật độ thoáng chỉ 19
-                căn/sàn, 7 thang máy. - Hướng view thoáng, ban công view nội khu
-                hồ cảnh quan hoặc view ngoại khu thoáng rộng. - Đặc biệt là phân
-                khu duy nhất xây 2 tầng
-              </p>
-            </div>
-            <div class="btn-see-more col-md-12">
-              <p href="" onclick="myFunction()" id="myBtn">Xem Thêm</p>
-            </div>
-          </div>
-          <div class="box-characteristics row">
-            <div class="col-md-12 title">Đặc điểm bất động sản</div>
-            <div class="col-md-12 label">
-              Loại tin đăng: Bán căn hộ chung cư
-            </div>
-            <div class="col-md-12 content">
-              <div class="row">
-                <div>
-                  <div class="line">
-                    <div class="line-label">
-                      <img src="./assets/icon/picture-frame.svg" /> Diện tích
-                    </div>
-                    <div class="line-text">70 m2</div>
+              <div class="card-content">
+                <div class="title">
+                  <div>
+                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
                   </div>
-                  <div class="line">
-                    <div class="line-label">
-                      <img src="./assets/icon/map.svg" />Hướng nhà
-                    </div>
-                    <div class="line-text">Bắc</div>
-                  </div>
-                  <div class="line">
-                    <div class="line-label">
-                      <img src="./assets/icon/tabler_sofa.svg" />Số phòng ngủ
-                    </div>
-                    <div class="line-text">2 phòng</div>
-                  </div>
-                  <div class="line">
-                    <div class="line-label">
-                      <img src="./assets/icon/document-text.svg" /> Pháp lý
-                    </div>
-                    <div class="line-text">Sổ đỏ/ Sổ hồng</div>
-                  </div>
+                  <div>0968364060</div>
                 </div>
                 <div>
-                  <div class="line">
-                    <div class="line-label">
-                      <img src="./assets/icon/moneys.svg" />Mức giá
-                    </div>
-                    <div class="line-text">60 triệu</div>
+                  <div class="description">Thanh Xuân, Hà Nội</div>
+                  <div class="description-tag">
+                    <div class="description-item">2942m2</div>
+                    <div class="description-item">3 Phòng ngủ</div>
+                    <div class="description-item">2 WC</div>
                   </div>
-                  <div class="line">
-                    <div class="line-label">
-                      <img src="./assets/icon/route-square.svg" />Hướng ban công
-                    </div>
-                    <div class="line-text">Nam</div>
+                </div>
+                <div class="content-footer">
+                  <div>
+                    <div class="price">2 tỷ 250 triệu</div>
+                    <div class="time">Hôm nay</div>
                   </div>
-                  <div class="line">
-                    <div class="line-label">
-                      <img src="./assets/icon/uil_bath.svg" />Số toilet
-                    </div>
-                    <div class="line-text">2 phòng</div>
-                  </div>
-                  <div class="line">
-                    <div class="line-label">
-                      <img src="./assets/icon/cil_sofa.svg" />Nội thất
-                    </div>
-                    <div class="line-text">Nội thất cao cấp</div>
+                  <div>
+                    <div class="like"><img src="./assets/img/heart.svg" /></div>
                   </div>
                 </div>
               </div>
+            </a>
+            <a href="#" class="card-cm">
+              <div class="card-image">
+                <img src="assets/img/property.png" />
+                <div class="see">
+                  <div><img src="./assets/img/camera.svg" /></div>
+                  <div>24</div>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="title">
+                  <div>
+                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
+                  </div>
+                  <div>0968364060</div>
+                </div>
+                <div>
+                  <div class="description">Thanh Xuân, Hà Nội</div>
+                  <div class="description-tag">
+                    <div class="description-item">2942m2</div>
+                    <div class="description-item">3 Phòng ngủ</div>
+                    <div class="description-item">2 WC</div>
+                  </div>
+                </div>
+                <div class="content-footer">
+                  <div>
+                    <div class="price">2 tỷ 250 triệu</div>
+                    <div class="time">Hôm nay</div>
+                  </div>
+                  <div>
+                    <div class="like"><img src="./assets/img/heart.svg" /></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card-cm">
+              <div class="card-image">
+                <img src="assets/img/property.png" />
+                <div class="see">
+                  <div><img src="./assets/img/camera.svg" /></div>
+                  <div>24</div>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="title">
+                  <div>
+                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
+                  </div>
+                  <div>0968364060</div>
+                </div>
+                <div>
+                  <div class="description">Thanh Xuân, Hà Nội</div>
+                  <div class="description-tag">
+                    <div class="description-item">2942m2</div>
+                    <div class="description-item">3 Phòng ngủ</div>
+                    <div class="description-item">2 WC</div>
+                  </div>
+                </div>
+                <div class="content-footer">
+                  <div>
+                    <div class="price">2 tỷ 250 triệu</div>
+                    <div class="time">Hôm nay</div>
+                  </div>
+                  <div>
+                    <div class="like"><img src="./assets/img/heart.svg" /></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card-cm">
+              <div class="card-image">
+                <img src="assets/img/property.png" />
+                <div class="see">
+                  <div><img src="./assets/img/camera.svg" /></div>
+                  <div>24</div>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="title">
+                  <div>
+                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
+                  </div>
+                  <div>0968364060</div>
+                </div>
+                <div>
+                  <div class="description">Thanh Xuân, Hà Nội</div>
+                  <div class="description-tag">
+                    <div class="description-item">2942m2</div>
+                    <div class="description-item">3 Phòng ngủ</div>
+                    <div class="description-item">2 WC</div>
+                  </div>
+                </div>
+                <div class="content-footer">
+                  <div>
+                    <div class="price">2 tỷ 250 triệu</div>
+                    <div class="time">Hôm nay</div>
+                  </div>
+                  <div>
+                    <div class="like"><img src="./assets/img/heart.svg" /></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card-cm">
+              <div class="card-image">
+                <img src="assets/img/property.png" />
+                <div class="see">
+                  <div><img src="./assets/img/camera.svg" /></div>
+                  <div>24</div>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="title">
+                  <div>
+                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
+                  </div>
+                  <div>0968364060</div>
+                </div>
+                <div>
+                  <div class="description">Thanh Xuân, Hà Nội</div>
+                  <div class="description-tag">
+                    <div class="description-item">2942m2</div>
+                    <div class="description-item">3 Phòng ngủ</div>
+                    <div class="description-item">2 WC</div>
+                  </div>
+                </div>
+                <div class="content-footer">
+                  <div>
+                    <div class="price">2 tỷ 250 triệu</div>
+                    <div class="time">Hôm nay</div>
+                  </div>
+                  <div>
+                    <div class="like"><img src="./assets/img/heart.svg" /></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card-cm">
+              <div class="card-image">
+                <img src="assets/img/property.png" />
+                <div class="see">
+                  <div><img src="./assets/img/camera.svg" /></div>
+                  <div>24</div>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="title">
+                  <div>
+                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
+                  </div>
+                  <div>0968364060</div>
+                </div>
+                <div>
+                  <div class="description">Thanh Xuân, Hà Nội</div>
+                  <div class="description-tag">
+                    <div class="description-item">2942m2</div>
+                    <div class="description-item">3 Phòng ngủ</div>
+                    <div class="description-item">2 WC</div>
+                  </div>
+                </div>
+                <div class="content-footer">
+                  <div>
+                    <div class="price">2 tỷ 250 triệu</div>
+                    <div class="time">Hôm nay</div>
+                  </div>
+                  <div>
+                    <div class="like"><img src="./assets/img/heart.svg" /></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="card-cm">
+              <div class="card-image">
+                <img src="assets/img/property.png" />
+                <div class="see">
+                  <div><img src="./assets/img/camera.svg" /></div>
+                  <div>24</div>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="title">
+                  <div>
+                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
+                  </div>
+                  <div>0968364060</div>
+                </div>
+                <div>
+                  <div class="description">Thanh Xuân, Hà Nội</div>
+                  <div class="description-tag">
+                    <div class="description-item">2942m2</div>
+                    <div class="description-item">3 Phòng ngủ</div>
+                    <div class="description-item">2 WC</div>
+                  </div>
+                </div>
+                <div class="content-footer">
+                  <div>
+                    <div class="price">2 tỷ 250 triệu</div>
+                    <div class="time">Hôm nay</div>
+                  </div>
+                  <div>
+                    <div class="like"><img src="./assets/img/heart.svg" /></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="paging">
+              <nav aria-label=" Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">...</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">50</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
           <div class="row mat-42">
-            <div class="col-md-12">
-              <h5>Tìm kiếm theo từ khoá</h5>
+            <h5>Tìm kiếm theo từ khoá</h5>
+          </div>
+          <div class="search-word row">
+            <div class="tag-key">
+              <input type="checkbox" value="thuduc" />
+              <div class="key-text">Bán đất gần làng đại học Thủ Đức</div>
             </div>
-            <div class="search-word">
-              <div class="tag-key">
-                <input type="checkbox" value="thuduc" />
-                <div class="key-text">Bán đất gần làng đại học Thủ Đức</div>
-              </div>
-              <div class="tag-key">
-                <input type="checkbox" value="thuduc" />
-                <div class="key-text">Bán nhà gần công viên Lê Thị Riêng</div>
-              </div>
-              <div class="tag-key">
-                <input type="checkbox" value="thuduc" />
-                <div class="key-text">Bán nhà ngõ Quỳnh</div>
-              </div>
-              <div class="tag-key">
-                <input type="checkbox" value="thuduc" />
-                <div class="key-text">Bán nhà ngõ Quỳnh Hai Bà Trưng</div>
-              </div>
-              <div class="tag-key">
-                <input type="checkbox" value="thuduc" />
-                <div class="key-text">Bán đất giá rẻ</div>
-              </div>
-              <div class="tag-key">
-                <input type="checkbox" value="thuduc" />
-                <div class="key-text">Bán đất gần cầu Đông Trù</div>
-              </div>
+            <div class="tag-key">
+              <input type="checkbox" value="thuduc" />
+              <div class="key-text">Bán nhà gần công viên Lê Thị Riêng</div>
+            </div>
+            <div class="tag-key">
+              <input type="checkbox" value="thuduc" />
+              <div class="key-text">Bán nhà ngõ Quỳnh</div>
+            </div>
+            <div class="tag-key">
+              <input type="checkbox" value="thuduc" />
+              <div class="key-text">Bán nhà ngõ Quỳnh Hai Bà Trưng</div>
+            </div>
+            <div class="tag-key">
+              <input type="checkbox" value="thuduc" />
+              <div class="key-text">Bán đất giá rẻ</div>
+            </div>
+            <div class="tag-key">
+              <input type="checkbox" value="thuduc" />
+              <div class="key-text">Bán đất gần cầu Đông Trù</div>
             </div>
           </div>
-          <div class="row mat-42">
-            <div class="box col-md-12">
-              <div class="box-text row row-cols-4 gap-0 flex-grow-1">
-                <div class="col">
-                  <div class="label">Ngày đăng</div>
-                  <div class="value">12/07/2022</div>
-                </div>
-                <div class="col">
-                  <div class="label">Ngày hết hạn</div>
-                  <div class="value">22/07/2022</div>
-                </div>
-                <div class="col">
-                  <div class="label">Loại tin</div>
-                  <div class="value">Tin Vip đặc biệt</div>
-                </div>
-                <div class="col">
-                  <div class="label">Mã tin</div>
-                  <div class="value">34446544</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-5">
-            <div id="batdongsannoibat" class="container">
-              <div>
-                <div class="swiper batdongsannoibat2-swiper">
-                  <div class="swiper-controls">
-                    <h3 class="title mb-0 mr-auto align-self-end">
-                      Bất động sản dành cho bạn
-                    </h3>
-                    <button class="batdongsannoibat2-swiper-prev prev">
-                      <img src="./assets/icon/arrow-left.svg" alt="" />
-                    </button>
-                    <button class="batdongsannoibat2-swiper-next next">
-                      <img src="./assets/icon/arrow-right.svg" alt="" />
-                    </button>
-                  </div>
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="d-flex flex-column" style="gap: 24px">
-                        <a href="#" class="main-item noi-bat">
-                          <div href="#">
-                            <div class="image-item">
-                              <img
-                                class="avatar ls-is-cached lazyloaded"
-                                src="./assets/img/property.png"
-                                alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
-                                style="
-                                  height: 100%;
-                                  object-fit: cover;
-                                  width: 100%;
-                                  border-radius: 6px !important;
-                                "
-                              />
-                              <div class="list-img">
-                                <img src="./assets/img/camera.png" alt="" />
-                                <span class="qty">4</span>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="info">
-                            <h3 class="title">
-                              Bán gấp nhà mặt phố Khương Trung, kinh doanh...
-                            </h3>
-                            <div class="price-area">
-                              <span class="price">
-                                <img src="./assets/img/price.png" alt="" />
-                                <span style="margin-left: 5px">
-                                  2 tỷ 600 triệu
-                                </span>
-                              </span>
-
-                              <span class="area">
-                                <img src="./assets/img/area.png" alt="" />
-                                <span style="margin-left: 5px">80m²</span>
-                              </span>
-                            </div>
-                            <div class="address">Thanh Xuân, Hà Nội</div>
-                            <div class="rate-and-like">
-                              <div class="rate">
-                                <span class="average">5</span>
-                                <span class="list-star">
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                </span>
-
-                                <span class="qty"> (1 rating) </span>
-                              </div>
-                              <div class="heart">
-                                <img src="./assets/img/heartIcon.png" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="d-flex flex-column gap-4" style="gap: 24px">
-                        <a href="#" class="main-item noi-bat">
-                          <div href="#">
-                            <div class="image-item">
-                              <img
-                                class="avatar ls-is-cached lazyloaded"
-                                src="./assets/img/property.png"
-                                alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
-                                style="
-                                  height: 100%;
-                                  object-fit: cover;
-                                  width: 100%;
-                                  border-radius: 6px !important;
-                                "
-                              />
-                              <div class="list-img">
-                                <img src="./assets/img/camera.png" alt="" />
-                                <span class="qty">4</span>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="info">
-                            <h3 class="title">
-                              Bán gấp nhà mặt phố Khương Trung, kinh doanh...
-                            </h3>
-                            <div class="price-area">
-                              <span class="price">
-                                <img src="./assets/img/price.png" alt="" />
-                                <span style="margin-left: 5px">
-                                  2 tỷ 600 triệu
-                                </span>
-                              </span>
-
-                              <span class="area">
-                                <img src="./assets/img/area.png" alt="" />
-                                <span style="margin-left: 5px">80m²</span>
-                              </span>
-                            </div>
-                            <div class="address">Thanh Xuân, Hà Nội</div>
-                            <div class="rate-and-like">
-                              <div class="rate">
-                                <span class="average">5</span>
-                                <span class="list-star">
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                </span>
-
-                                <span class="qty"> (1 rating) </span>
-                              </div>
-                              <div class="heart">
-                                <img src="./assets/img/heartIcon.png" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="d-flex flex-column gap-4" style="gap: 24px">
-                        <a href="#" class="main-item noi-bat">
-                          <div href="#">
-                            <div class="image-item">
-                              <img
-                                class="avatar ls-is-cached lazyloaded"
-                                src="./assets/img/property.png"
-                                alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
-                                style="
-                                  height: 100%;
-                                  object-fit: cover;
-                                  width: 100%;
-                                  border-radius: 6px !important;
-                                "
-                              />
-                              <div class="list-img">
-                                <img src="./assets/img/camera.png" alt="" />
-                                <span class="qty">4</span>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="info">
-                            <h3 class="title">
-                              Bán gấp nhà mặt phố Khương Trung, kinh doanh...
-                            </h3>
-                            <div class="price-area">
-                              <span class="price">
-                                <img src="./assets/img/price.png" alt="" />
-                                <span style="margin-left: 5px">
-                                  2 tỷ 600 triệu
-                                </span>
-                              </span>
-
-                              <span class="area">
-                                <img src="./assets/img/area.png" alt="" />
-                                <span style="margin-left: 5px">80m²</span>
-                              </span>
-                            </div>
-                            <div class="address">Thanh Xuân, Hà Nội</div>
-                            <div class="rate-and-like">
-                              <div class="rate">
-                                <span class="average">5</span>
-                                <span class="list-star">
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                </span>
-
-                                <span class="qty"> (1 rating) </span>
-                              </div>
-                              <div class="heart">
-                                <img src="./assets/img/heartIcon.png" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="d-flex flex-column gap-4" style="gap: 24px">
-                        <a href="#" class="main-item noi-bat">
-                          <div href="#">
-                            <div class="image-item">
-                              <img
-                                class="avatar ls-is-cached lazyloaded"
-                                src="./assets/img/property.png"
-                                alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
-                                style="
-                                  height: 100%;
-                                  object-fit: cover;
-                                  width: 100%;
-                                  border-radius: 6px !important;
-                                "
-                              />
-                              <div class="list-img">
-                                <img src="./assets/img/camera.png" alt="" />
-                                <span class="qty">4</span>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="info">
-                            <h3 class="title">
-                              Bán gấp nhà mặt phố Khương Trung, kinh doanh...
-                            </h3>
-                            <div class="price-area">
-                              <span class="price">
-                                <img src="./assets/img/price.png" alt="" />
-                                <span style="margin-left: 5px">
-                                  2 tỷ 600 triệu
-                                </span>
-                              </span>
-
-                              <span class="area">
-                                <img src="./assets/img/area.png" alt="" />
-                                <span style="margin-left: 5px">80m²</span>
-                              </span>
-                            </div>
-                            <div class="address">Thanh Xuân, Hà Nội</div>
-                            <div class="rate-and-like">
-                              <div class="rate">
-                                <span class="average">5</span>
-                                <span class="list-star">
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                </span>
-
-                                <span class="qty"> (1 rating) </span>
-                              </div>
-                              <div class="heart">
-                                <img src="./assets/img/heartIcon.png" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="d-flex flex-column gap-4" style="gap: 24px">
-                        <a href="#" class="main-item noi-bat">
-                          <div href="#">
-                            <div class="image-item">
-                              <img
-                                class="avatar ls-is-cached lazyloaded"
-                                src="./assets/img/property.png"
-                                alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
-                                style="
-                                  height: 100%;
-                                  object-fit: cover;
-                                  width: 100%;
-                                  border-radius: 6px !important;
-                                "
-                              />
-                              <div class="list-img">
-                                <img src="./assets/img/camera.png" alt="" />
-                                <span class="qty">4</span>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="info">
-                            <h3 class="title">
-                              Bán gấp nhà mặt phố Khương Trung, kinh doanh...
-                            </h3>
-                            <div class="price-area">
-                              <span class="price">
-                                <img src="./assets/img/price.png" alt="" />
-                                <span style="margin-left: 5px">
-                                  2 tỷ 600 triệu
-                                </span>
-                              </span>
-
-                              <span class="area">
-                                <img src="./assets/img/area.png" alt="" />
-                                <span style="margin-left: 5px">80m²</span>
-                              </span>
-                            </div>
-                            <div class="address">Thanh Xuân, Hà Nội</div>
-                            <div class="rate-and-like">
-                              <div class="rate">
-                                <span class="average">5</span>
-                                <span class="list-star">
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                  <img src="./assets/img/star.png" alt="" />
-                                </span>
-
-                                <span class="qty"> (1 rating) </span>
-                              </div>
-                              <div class="heart">
-                                <img src="./assets/img/heartIcon.png" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row text footer-text">
-            <p>
-              Quý vị đang xem nội dung tin rao "Fiato Premier mặt tiền TP Thủ
-              Đức 80m2/2PN chỉ thanh toán 1,1 tỷ nhận nhà, chiết khấu lên đến
-              15%" - Mã tin 34446544. Mọi thông tin, nội dung liên quan tới tin
-              rao này là do người đăng tin đăng tải và chịu trách nhiệm.
-              Batdongsan.com.vn luôn cố gắng để các thông tin được hữu ích nhất
-              cho quý vị tuy nhiên Batdongsan.com.vn không đảm bảo và không chịu
-              trách nhiệm về bất kỳ thông tin, nội dung nào liên quan tới tin
-              rao này. Trường hợp phát hiện nội dung tin đăng không chính xác,
-              Quý vị hãy thông báo và cung cấp thông tin cho Ban quản trị
-              Batdongsan.com.vn theo Hotline 19001881 để được hỗ trợ nhanh và
-              kịp thời nhất.
+          <hr />
+          <div class="description-text row mt-4 pb-4">
+            <p class="mb-3">
+              Hàng nghìn tin đăng mua bán nhà đất tại Việt Nam được rao trên
+              Homeup.vn với đầy đủ các tiêu chí tìm kiếm của người mua và bán.
+              Các thông tin mua bán nhà đất khu vực Việt Nam được tổng hợp từ
+              các nguồn tin rao về nhà đất bao gồm tin đăng chính chủ và tin
+              đăng qua môi giới, giúp đa dạng nguồn thông tin và sự lựa chọn đối
+              với bất động sản đang quan tâm. Bằng những tiện ích mà Homeup.vn
+              mang đến cho người dùng, bạn có thể dễ dàng thao tác và tìm kiếm
+              thông tin bất động sản bạn đang quan tâm chỉ trong vài click
+              chuột. Batdongsan.com.vn sẽ là cầu nối giúp bạn tương tác và trao
+              đổi với nhà cung cấp bất động sản bằng việc cung cấp thông tin
+              chính xác, nhanh chóng..., cùng với đó là đội ngũ nhân viên tư vấn
+              chuyên nghiệp. Chắc chắn bạn sẽ thực sự hài lòng về kênh thông tin
+              và dịch vụ của Homeup.vn!
             </p>
           </div>
         </div>
-
-        <div class="col-md-3 left-element">
-          <div class="profile-element">
-            <div class="profile-avatar">
-              <img src="./assets/img/Group 102.png" alt="" />
-              <span class="upload-by">Được đăng bởi</span>
-              <span class="name">Trương Quang Việt</span>
+        <div class="col-md-3 col-sm-12 right-element">
+          <div class="form-contrainer">
+            <div class="filter-container">
+              <div class="intro-filter">Lọc theo khoảng giá</div>
             </div>
-            <div class="detail-container">
-              <div
-                class="btn"
-                data-show="0978 123 456 - Ẩn số"
-                data-hide="0978 123 *** - Hiện số"
-                data-isShow="true"
-                style="
-                  background: #c8f1df;
-                  border-radius: 8px;
-                  font-weight: 600;
-                  font-size: 14px;
-                  line-height: 22px;
-                "
-                onclick=" this.innerText = this.classList.contains('show') ? this.dataset.show : this.dataset.hide; this.classList.toggle('show')"
-              >
-                0978 123 *** - Hiện số
+            <div>
+              <div id="listResults">
+                <div class="col-xs-12">
+                  <div class="col-xs-2 text-center">
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check">
+                        <div class="checked"></div>
+                        <div class="un-checked"></div>
+                      </div>
+                      <div class="label-value">Tất cả</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">Thỏa thuận</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">< 500 triệu</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">500-800 triệu</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">800 triệu -1 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">1 - 2 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">2 - 3 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">3 - 5 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">5 - 7 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">7 - 10 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">10 - 20 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">20 -30 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">30 - 40 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">40 - 60 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">> 60 tỷ</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <button class="btn">Gửi email</button>
-              <button class="btn">Yêu cầu liên hệ lại</button>
             </div>
           </div>
-          <div class="list-bds">
-            <div class="title">
-              Bán căn hộ chung cư theo dự án tại Thành phố Thủ Đức
+          <div class="form-contrainer">
+            <div class="filter-container">
+              <div class="intro-filter">Lọc theo khoảng giá</div>
             </div>
-            <div class="link-bds">
-              <a href="#">4S Riverside Linh Đông (59)</a>
-              <a href="#">Fiato Premier (52)</a>
-              <a href="#">Flora Novia (56)</a>
-              <a href="#">King Crown Infinity (50)</a>
-              <a href="#">Lavita Charm (105)</a>
-              <a href="#">Lavita Garden (32)</a>
-              <a href="#">Moonlight Residences (29)</a>
-              <a href="#">Opal Garden (33)</a>
-              <a href="#">Phố Đông Village (26)</a>
-              <a href="#">Sunview Town (35)</a>
+            <div>
+              <div id="listResults">
+                <div class="col-xs-12">
+                  <div class="col-xs-2 text-center">
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check">
+                        <div class="checked"></div>
+                        <div class="un-checked"></div>
+                      </div>
+                      <div class="label-value">Tất cả</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">Thỏa thuận</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">< 500 triệu</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">500-800 triệu</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">800 triệu -1 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">1 - 2 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">2 - 3 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">3 - 5 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">5 - 7 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">7 - 10 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">10 - 20 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">20 -30 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">30 - 40 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">40 - 60 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">> 60 tỷ</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="list-bds">
-            <div class="title">
-              Bán căn hộ chung cư theo dự án tại Thành phố Thủ Đức
+          <div class="form-contrainer">
+            <div class="filter-container">
+              <div class="intro-filter">Lọc theo khoảng giá</div>
             </div>
-            <div class="link-bds">
-              <a href="#">4S Riverside Linh Đông (59)</a>
-              <a href="#">Fiato Premier (52)</a>
-              <a href="#">Flora Novia (56)</a>
-              <a href="#">King Crown Infinity (50)</a>
-              <a href="#">Lavita Charm (105)</a>
-              <a href="#">Lavita Garden (32)</a>
-              <a href="#">Moonlight Residences (29)</a>
-              <a href="#">Opal Garden (33)</a>
-              <a href="#">Phố Đông Village (26)</a>
-              <a href="#">Sunview Town (35)</a>
-            </div>
-          </div>
-          <div class="list-bds">
-            <div class="title">
-              Bán căn hộ chung cư theo dự án tại Thành phố Thủ Đức
-            </div>
-            <div class="link-bds">
-              <a href="#">4S Riverside Linh Đông (59)</a>
-              <a href="#">Fiato Premier (52)</a>
-              <a href="#">Flora Novia (56)</a>
-              <a href="#">King Crown Infinity (50)</a>
-              <a href="#">Lavita Charm (105)</a>
-              <a href="#">Lavita Garden (32)</a>
-              <a href="#">Moonlight Residences (29)</a>
-              <a href="#">Opal Garden (33)</a>
-              <a href="#">Phố Đông Village (26)</a>
-              <a href="#">Sunview Town (35)</a>
+            <div>
+              <div id="listResults">
+                <div class="col-xs-12">
+                  <div class="col-xs-2 text-center">
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check">
+                        <div class="checked"></div>
+                        <div class="un-checked"></div>
+                      </div>
+                      <div class="label-value">Tất cả</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">Thỏa thuận</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">< 500 triệu</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">500-800 triệu</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">800 triệu -1 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">1 - 2 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">2 - 3 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">3 - 5 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">5 - 7 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">7 - 10 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">10 - 20 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">20 -30 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">30 - 40 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">40 - 60 tỷ</div>
+                    </div>
+                    <div class="checkbox-circle">
+                      <input id="checkbox1" type="checkbox" />
+                      <div class="check"></div>
+                      <div class="label-value">> 60 tỷ</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- end dangtin -->
-    <!-- start footer -->
+    <!-- end chuyen muc -->
     <footer style="background: #ecedf1">
       <div class="footer container pt-1 gap-w">
         <div class="footer-top row">
@@ -1590,26 +1480,6 @@
       </div>
     </footer>
 
-    <script>
-      function myFunction() {
-        var dots = document.getElementById('dots');
-        var moreText = document.getElementById('more');
-        var btnText = document.getElementById('myBtn');
-
-        if (dots.style.display === 'none') {
-          dots.style.display = 'inline';
-          btnText.innerHTML = 'Xem Thêm';
-          moreText.style.display = 'none';
-        } else {
-          dots.style.display = 'none';
-          btnText.innerHTML = 'Ẩn bớt';
-          moreText.style.display = 'inline';
-        }
-      }
-    </script>
-
-    <!-- end footer -->
-    <!-- Swiper JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -1621,68 +1491,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper('.mySwiper', {
-        loop: true,
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-      });
-      var swiper2 = new Swiper('.mySwiper2', {
-        loop: true,
-        spaceBetween: 10,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        thumbs: {
-          swiper: swiper,
-        },
-      });
-      new Swiper('.batdongsannoibat2-swiper', {
-        navigation: {
-          nextEl: '.batdongsannoibat2-swiper-next',
-          prevEl: '.batdongsannoibat2-swiper-prev',
-        },
-        breakpoints: {
-          // when window width is >= 320px
-          320: {
-            slidesPerView: 1.5,
-            spaceBetween: 20,
-          },
-          480: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          992: {
-            slidesPerView: 3,
-            spaceBetween: 16,
-            slidesPerGroup: 3,
-          },
-        },
-      });
-      const activedSlide = document.querySelectorAll(
-        '.slide .mySwiper2 .swiper-wrapper > .swiper-slide  img'
-      );
-      if (activedSlide) {
-        activedSlide.forEach((item) => {
-          item.onclick = () => {
-            document.querySelector('.slide').classList.add('show');
-          };
-        });
-      }
-      document.querySelector('.slide > .controls .close-btn').onclick = () =>
-        document.querySelector('.slide').classList.remove('show');
 
-      document.querySelector('.slide > .controls .bi-zoom-in').onclick = () => {
-        document.querySelector('.slide').dataset.zoom = '1.5';
-      };
-      document.querySelector('.slide > .controls .bi-zoom-out').onclick =
-        () => {
-          document.querySelector('.slide').dataset.zoom = '1';
-        };
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 
     <!-- (Optional) Latest compiled and minified JavaScript translation files -->

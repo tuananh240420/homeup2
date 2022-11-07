@@ -360,4 +360,12 @@ const MAX_PROPERTY = '--value-b';
       });
     };
   });
+
+  window.addEventListener('click', (e) => {
+    if (!e.target.closest('.filter-container')) {
+      document
+        .querySelectorAll('.filter-container .switch')
+        .forEach((item) => (item.checked = false));
+    }
+  });
 })();

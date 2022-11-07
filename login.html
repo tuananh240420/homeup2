@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="conteiner">
+      <div
+        class="row login-page"
+        style="
+          height: 100vh;
+          width: 100%;
+          overflow: hidden;
+          margin-right: 0;
+          margin-left: 0;
+        "
+      >
+        <div class="col-md-4 login-form">
+          <div class="">
+            <div class="logo">
+              <img src="./assets/img/logo.png" alt="error" />
+            </div>
+          </div>
+          <div class="">
+            <div class="col-12 title">Đăng nhập</div>
+          </div>
+          <div class="center" data-type="phone">
+            <div class="topnav">
+              <span
+                class="active nav-email"
+                onclick="this.classList.add('active'); document.querySelector('.nav-phone').classList.remove('active'); this.parentNode.parentNode.dataset.type='email' "
+                >Email</span
+              >
+              <span
+                class="nav-phone"
+                onclick="this.classList.add('active'); document.querySelector('.nav-email').classList.remove('active');this.parentNode.parentNode.dataset.type='phone' "
+                >Số điện thoại</span
+              >
+            </div>
+          </div>
+          <div class="form">
+            <form>
+              <div class="form-group email">
+                <label for="email">Email:</label>
+                <input type="email" name="email" />
+              </div>
+              <div class="form-group phone">
+                <label for="phone">Số điện thoại:</label>
+                <input type="text" name="phone" />
+              </div>
+              <div class="form-group mat-16">
+                <label for="pwd">Password:</label>
+                <input type="password" name="pswd" />
+              </div>
+              <div class="form-group form-check">
+                <a href="#" class="form-check-label"> Quên mật khẩu </a>
+              </div>
+              <button type="submit" class="btn btn-submit">Submit</button>
+              <button type="button" class="btn">
+                <img src="./assets/icon/google.svg" />Đăng nhập bằng Google
+              </button>
+              <button type="button" class="btn">
+                <img src="./assets/icon/facebook.svg" />Đăng nhập bằng Facebook
+              </button>
+              <div class="">
+                <div class="dangky">
+                  Chưa có tài khoản? <a href="#">Đăng ký</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-8 login-bg">
+          <div class="login-img">
+            <div><img src="./assets/img/Frame 320.png" /></div>
+            <div>
+              <label
+                >Ngập tràn khuyến mại khi đăng tin trên
+                <span>Homeup!</span></label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
