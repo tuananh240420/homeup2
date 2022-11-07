@@ -93,12 +93,26 @@
       }
     }
     @media screen and (max-width: 1440px) {
-      width: 150px;
+      width: 220px;
       gap: 4px;
+      .btn-filter {
+        padding: 0 8px;
+      }
     }
   }
 
   //
+
+  .row {
+    @media screen and (max-width: 1440px) {
+      margin-left: -8px;
+      margin-right: -8px;
+      & > col {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+  }
 
   .filter-container {
     flex: 1;
@@ -123,6 +137,11 @@
             background: #ffffff;
             box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
             border-radius: 20px;
+            @media screen and (max-width: 1440px) {
+              box-shadow: none;
+              border-radius: 0;
+            }
+
             p {
               border-bottom-left-radius: 0;
               border-bottom-right-radius: 0;
@@ -158,6 +177,11 @@
           font-weight: 500;
           font-size: 14px;
           line-height: 20px;
+          border-radius: 0;
+          border-right: 1px solid #ecedf1;
+          @media screen and (max-width: 1440px) {
+            padding-left: 0;
+          }
           .title-container {
             display: flex;
             svg {
@@ -182,6 +206,14 @@
           flex-direction: column;
           padding: 16px 16px 8px;
           gap: 8px;
+          @media screen and (max-width: 1440px) {
+            min-width: 300px;
+            background-color: #fff;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 16px;
+          }
           & > span {
             font-weight: 500;
             font-size: 12px;
@@ -270,6 +302,9 @@
     //     opacity: 0.8;
     //   }
     // }
+    .area-filter .dropdown-btn > p {
+      border: none;
+    }
     .price-filter {
       .price-filter-value {
         overflow: hidden;
@@ -278,6 +313,7 @@
         white-space: nowrap;
         max-width: 100%;
       }
+
       .output-value {
         display: flex;
         justify-content: space-between;
@@ -392,6 +428,15 @@
     z-index: 99;
     width: 100%;
     flex-direction: column;
+    @media screen and (max-width: 1440px) {
+      min-width: 300px;
+      min-width: 300px;
+      background-color: #fff;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 16px;
+    }
     li {
       display: flex;
       // padding: 0 16px;
