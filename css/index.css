@@ -1421,8 +1421,10 @@ label[dir=rtl] .range-slider {
   width: 100%;
 }
 .danhmuc-item:hover {
-  color: #d1193f;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+}
+.danhmuc-item:hover h5 {
+  color: #d1193f;
 }
 .danhmuc-item > div {
   height: 50%;
