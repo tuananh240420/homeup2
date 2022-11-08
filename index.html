@@ -31,16 +31,16 @@
   <body>
     <header class="top-header" id="header">
       <nav
-        class="navbar navbar-expand-sm menu navbar-light bg-light justify-content-md-start justify-content-center"
+        class="navbar navbar-expand-lg menu navbar-light bg-light justify-content-lg-start justify-content-center"
         style="background: #ffffff !important; padding: 10px"
       >
         <!-- Links -->
         <!-- Brand/logo -->
-        <a class="navbar-brand ml-md-0 ml-auto" href="#"
+        <a class="navbar-brand ml-lg-0 ml-auto" href="#"
           ><img src="./assets/img/logo.png" alt="" width="125"
         /></a>
         <img
-          class="d-md-none d-block ml-4"
+          class="d-lg-none d-block ml-lg-4 ml-auto"
           src="./assets/img/like-bt.png"
           alt=""
         />
@@ -56,7 +56,14 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto d-md-flex">
+          <div class="nav-mobile-header d-flex d-lg-none">
+            <div>
+              <a href="#" class="btn btn-primary">Đăng nhập</a>
+              <a href="#" class="btn btn-outline-secondary">Đăng kí</a>
+            </div>
+            <a href="#" class="btn btn-outline-secondary">Đăng tin</a>
+          </div>
+          <ul class="navbar-nav mr-auto d-lg-flex">
             <li class="item-menu dropdown">
               <a
                 class="nav-link dropdown-toggle item-nav-link"
@@ -115,7 +122,7 @@
             <li class="item-menu">
               <a class="item-nav-link" href="#"> Thuật Ngữ </a>
             </li>
-            <li class="item-menu">
+            <li class="item-menu d-none d-lg-flex">
               <img
                 src="./assets/img/threedot.svg"
                 alt=""
@@ -124,8 +131,12 @@
             </li>
           </ul>
         </div>
+        <div
+          class="nav-overlay"
+          onclick="this.previousElementSibling.previousElementSibling.click()"
+        ></div>
         <ul
-          class="navbar-nav d-none d-md-flex"
+          class="navbar-nav d-none d-lg-flex"
           onclick="clickShowSubmenu()"
           style="display: none"
         >
@@ -187,14 +198,14 @@
       </nav>
     </header>
     <div id="main" class="mt-4 container">
-      <h2 class="mb-3">Chào mừng đến với Homeup!</h2>
-      <div class="d-flex desc" style="gap: 16px">
+      <h2 class="mb-3 d-none d-sm-block">Chào mừng đến với Homeup!</h2>
+      <div class="desc d-none d-sm-flex" style="gap: 16px">
         <a>Tìm nhà phố, dự án, cho thuê và nhiều hơn nữa</a>
         <a>Nhà riêng Đống Đa</a>
         <a>Nhà riêng Đống Đa</a>
         <a>Nhà riêng Đống Đa</a>
       </div>
-      <div class="main-radio d-flex gap-24 align-items-center mt-4">
+      <div class="main-radio d-none d-sm-flex gap-24 align-items-center mt-4">
         <div class="form-radio d-flex align-items-center gap-8">
           <input
             type="radio"
@@ -224,7 +235,7 @@
           <label for="home-radio3" class="mb-0">Sang nhượng</label>
         </div>
       </div>
-      <div class="main-search-container">
+      <div class="main-search-container d-none d-sm-flex">
         <div class="dropdown-main filter-dropdown">
           <input type="checkbox" />
           <button>
@@ -325,9 +336,163 @@
           </button>
         </form>
       </div>
+      <div
+        class="search-mobile-main d-flex d-sm-none"
+        onclick="this.nextElementSibling .classList.add('show')"
+      >
+        <input type="text" placeholder="Tìm kiếm địa chỉ, khu vực..." />
+        <button>
+          <img src="./assets/img/search-normal.svg" alt="" />
+        </button>
+      </div>
       <div class="filter-container filter-dropdown d-flex gap-24">
-        <div class="row row-cols-4" style="flex: 1">
-          <div class="col">
+        <div class="mobile-header d-flex d-sm-none">
+          <h4>Tìm kiếm bất động sản</h4>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+            onclick="this.closest('.filter-container.show').classList.remove('show')"
+          >
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+        <ul class="nav nav-tabs mobile-nav d-flex d-sm-none" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              href="#profile"
+              role="tab"
+              data-toggle="tab"
+              >Nhà đất bán</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#buzz" role="tab" data-toggle="tab"
+              >Cho thuê</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#references" role="tab" data-toggle="tab"
+              >Sang nhượng</a
+            >
+          </li>
+        </ul>
+        <div class="search-mobile-main d-flex d-sm-none">
+          <input type="text" placeholder="Tìm kiếm địa chỉ, khu vực..." />
+          <button>
+            <img src="./assets/img/search-normal.svg" alt="" />
+          </button>
+        </div>
+        <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1" style="flex: 1">
+          <div class="col d-block d-sm-none">
+            <label class="mobile-filter-label d-flex d-sm-none"
+              >Loại nhà đất</label
+            >
+            <div class="location-filter">
+              <input class="switch" type="checkbox" />
+              <div class="dropdown-btn">
+                <p>
+                  <span
+                    data-default="Tất cả"
+                    class="location-filter-value price-filter-value"
+                    >Tất cả</span
+                  >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="ml-auto"
+                  >
+                    <path
+                      d="M12 16.7999C11.3 16.7999 10.6 16.5299 10.07 15.9999L3.55002 9.47989C3.26002 9.18989 3.26002 8.70989 3.55002 8.41989C3.84002 8.12989 4.32002 8.12989 4.61002 8.41989L11.13 14.9399C11.61 15.4199 12.39 15.4199 12.87 14.9399L19.39 8.41989C19.68 8.12989 20.16 8.12989 20.45 8.41989C20.74 8.70989 20.74 9.18989 20.45 9.47989L13.93 15.9999C13.4 16.5299 12.7 16.7999 12 16.7999Z"
+                    />
+                  </svg>
+                </p>
+                <ul
+                  class="dropdown-container dropdown-location-menu form-checkbox-container dropdown-menu-mobile"
+                >
+                  <div class="dropdown-menu-mobile-header d-flex d-sm-none">
+                    <label>Loại nhà đất bán</label>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="currentColor"
+                      class="bi bi-x"
+                      viewBox="0 0 16 16"
+                      onclick="this.parentNode.parentNode.querySelector('.form-close').click()"
+                    >
+                      <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                      />
+                    </svg>
+                  </div>
+                  <li class="form-checkbox">
+                    <label for="main-checkbox-sub-1">Tất cả nhà đất</label>
+                    <input id="main-checkbox-sub-1" type="checkbox" />
+                  </li>
+                  <li class="form-checkbox">
+                    <label for="main-checkbox-sub-2">Tất cả nhà đất</label>
+                    <input id="main-checkbox-sub-2" type="checkbox" />
+                  </li>
+                  <li class="form-checkbox">
+                    <label for="main-checkbox-sub-3">Tất cả nhà đất</label>
+                    <input id="main-checkbox-sub-3" type="checkbox" />
+                  </li>
+                  <li class="form-checkbox">
+                    <label for="main-checkbox-sub-4">Tất cả nhà đất</label>
+                    <input id="main-checkbox-sub-4" type="checkbox" />
+                  </li>
+                  <li class="form-checkbox">
+                    <label for="main-checkbox-sub-5">Tất cả nhà đất</label>
+                    <input id="main-checkbox-sub-5" type="checkbox" />
+                  </li>
+                  <li class="form-checkbox sub-checkbox">
+                    <label for="main-checkbox-sub-6">Tất cả nhà đất</label>
+                    <input id="main-checkbox-sub-6" type="checkbox" />
+                  </li>
+                  <li class="form-checkbox sub-checkbox">
+                    <label for="main-checkbox-sub-7">Tất cả nhà đất</label>
+                    <input id="main-checkbox-sub-7" type="checkbox" />
+                  </li>
+                  <li class="form-checkbox sub-checkbox">
+                    <label for="main-checkbox-sub-8">Tất cả nhà đất</label>
+                    <input id="main-checkbox-sub-8" type="checkbox" />
+                  </li>
+                  <li class="form-checkbox sub-checkbox">
+                    <label for="main-checkbox-sub-9">Tất cả nhà đất</label>
+                    <input id="main-checkbox-sub-9" type="checkbox" />
+                  </li>
+                  <li class="form-checkbox">
+                    <label for="main-checkbox-sub-10">Tất cả nhà đất</label>
+                    <input id="main-checkbox-sub-10" type="checkbox" />
+                  </li>
+                  <li class="form-footer">
+                    <p class="form-checkbox-resetall">
+                      <img src="./assets/img/refresh-2.svg" alt="" />
+                      Đặt lại
+                    </p>
+                    <span class="form-close">Áp dụng</span>
+                  </li>
+                </ul>
+                <div
+                  class="overlay"
+                  onclick="this.previousElementSibling.querySelector('.form-close').click()"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-none d-sm-block">
+            <label class="mobile-filter-label d-flex d-sm-none"
+              >Loại nhà đất</label
+            >
             <div class="location-filter">
               <input class="switch" type="checkbox" />
               <div class="dropdown-btn">
@@ -345,7 +510,7 @@
                     />
                   </svg>
                 </p>
-                <ul class="dropdown-location-menu">
+                <ul class="dropdown-location-menu dropdown-menu-mobile">
                   <span>Khu vực & Dự án</span>
                   <li>
                     <select
@@ -392,10 +557,16 @@
                     <span class="form-close">Áp dụng</span>
                   </li>
                 </ul>
+                <div
+                  class="overlay"
+                  onclick="this.previousElementSibling.querySelector('.form-close').click()"
+                ></div>
               </div>
             </div>
           </div>
           <div class="col">
+            <label class="mobile-filter-label d-flex d-sm-none">Mức giá</label>
+
             <div class="price-filter filter-dropdown">
               <input class="switch" type="checkbox" />
               <div class="dropdown-btn">
@@ -413,7 +584,23 @@
                     />
                   </svg>
                 </p>
-                <ul class="dropdown-location-menu">
+                <ul class="dropdown-location-menu dropdown-menu-mobile">
+                  <div class="dropdown-menu-mobile-header d-flex d-sm-none">
+                    <label>Loại nhà đất bán</label>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="currentColor"
+                      class="bi bi-x"
+                      viewBox="0 0 16 16"
+                      onclick="this.parentNode.parentNode.querySelector('.form-close').click()"
+                    >
+                      <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                      />
+                    </svg>
+                  </div>
                   <div class="output-value">
                     <p class="item">
                       Từ <span class="from-value">0 Triệu</span>
@@ -466,10 +653,18 @@
                     </li>
                   </ul>
                 </ul>
+                <div
+                  class="overlay"
+                  onclick="this.previousElementSibling.querySelector('.form-close').click()"
+                ></div>
               </div>
             </div>
           </div>
           <div class="col">
+            <label class="mobile-filter-label d-flex d-sm-none"
+              >Diện tích</label
+            >
+
             <div class="price-filter filter-dropdown area-filter">
               <input class="switch" type="checkbox" />
               <div class="dropdown-btn">
@@ -487,7 +682,23 @@
                     />
                   </svg>
                 </p>
-                <ul class="dropdown-location-menu">
+                <ul class="dropdown-location-menu dropdown-menu-mobile">
+                  <div class="dropdown-menu-mobile-header d-flex d-sm-none">
+                    <label>Loại nhà đất bán</label>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="currentColor"
+                      class="bi bi-x"
+                      viewBox="0 0 16 16"
+                      onclick="this.parentNode.parentNode.querySelector('.form-close').click()"
+                    >
+                      <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                      />
+                    </svg>
+                  </div>
                   <div class="output-value">
                     <p class="item">Từ <span class="from-value">0 m²</span></p>
                     <p class="item">Đến <span class="to-value">500 m²</span></p>
@@ -538,6 +749,10 @@
                     </li>
                   </ul>
                 </ul>
+                <div
+                  class="overlay"
+                  onclick="this.previousElementSibling.querySelector('.form-close').click()"
+                ></div>
               </div>
             </div>
           </div>
@@ -614,7 +829,19 @@
             </div>
           </div>
         </div>
-        <div class="filter-reset-btn">
+        <div class="filter-mobile-footer d-flex d-sm-none">
+          <div class="filter-reset-btn">
+            <img src="./assets/img/refresh-2.svg" alt="" />
+            <span>Đặt lại</span>
+          </div>
+          <button
+            onclick="this.closest('.filter-container.show').classList.remove('show')"
+            class="apply-all-btn"
+          >
+            Áp dụng
+          </button>
+        </div>
+        <div class="filter-reset-btn d-none d-sm-flex">
           <img src="./assets/img/refresh-2.svg" alt="" />
         </div>
       </div>
@@ -2076,13 +2303,13 @@
     <footer style="background: #ecedf1">
       <div class="footer container pt-1 gap-w">
         <div class="footer-top row">
-          <div class="col-md-4 text-center text-md-left">
+          <div class="col-lg-4 text-center text-lg-left">
             <a href="">
               <img src="./assets/img/logo-footer.png" alt="" />
             </a>
           </div>
 
-          <div class="col-md-2 col-5">
+          <div class="col-lg-2 col-5">
             <div class="item d-flex gap-1 align-items-center">
               <div class="img" style="float: left">
                 <img src="./assets/img/call-calling.png" alt="" />
@@ -2093,7 +2320,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 col-7">
+          <div class="col-lg-3 col-7">
             <div class="item d-flex gap-1 align-items-center">
               <div class="img" style="float: left">
                 <img src="./assets/img/message-question.png" alt="" />
@@ -2104,9 +2331,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3">
             <div
-              class="item d-flex gap-1 align-items-center justify-content-md-end text-right text-md-left"
+              class="item d-flex gap-1 align-items-center justify-content-lg-end text-right text-lg-left"
             >
               <div class="img" style="float: left">
                 <img src="./assets/img/cham-soc-kh.png" alt="" />
@@ -2120,7 +2347,7 @@
         </div>
 
         <div class="row footer-top2">
-          <div class="col-md-2 col-6 item">
+          <div class="col-lg-2 col-6 item">
             <ul>
               <li>
                 <p>Company</p>
@@ -2145,7 +2372,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-2 col-6 item">
+          <div class="col-lg-2 col-6 item">
             <ul>
               <li>
                 <p>Work with Homeup</p>
@@ -2168,7 +2395,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-2 item">
+          <div class="col-lg-2 item">
             <ul>
               <li>
                 <p>Work with Homeup</p>
@@ -2191,9 +2418,9 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-3 item">
+          <div class="col-lg-3 item">
             <ul>
-              <li>
+              <li class="text-left text-sm-center text-lg-left">
                 <a href="" style="color: #646d84"> Ngôn ngữ </a>
               </li>
               <li>
@@ -2202,10 +2429,10 @@
                   <option value="">Tiếng Anh</option>
                 </select>
               </li>
-              <li>
+              <li class="text-left text-sm-center text-lg-left">
                 <p style="color: #646d84">Cộng đồng</p>
               </li>
-              <div class="list-social">
+              <div class="list-social text-left text-sm-center text-lg-left">
                 <a href="" class="item">
                   <span>
                     <img src="./assets/img/icon-fb.png" alt="" />
@@ -2225,7 +2452,7 @@
             </ul>
           </div>
           <div
-            class="col-md-3 item list-app d-flex justify-content-center justify-content-md-start gap-3 align-items-md-end flex-md-column"
+            class="col-lg-3 item list-app d-flex justify-content-center justify-content-lg-start gap-3 align-items-md-end flex-column flex-sm-row flex-lg-column"
           >
             <div class="app">
               <a href=""> </a>
@@ -2274,7 +2501,7 @@
           </div>
         </div>
         <!-- <hr /> -->
-        <div class="row footer-local mat-48">
+        <div class="row footer-local mt-lg-5 mt-4">
           <div class="col-md-12">
             <h2 class="title">Incredible Deals on Local Experiences</h2>
             <ul class="flex-wrap">
@@ -2285,9 +2512,9 @@
               <li>Things to Do</li>
             </ul>
           </div>
-          <div class="col-md-12 mat-48">
+          <div class="col-md-12 mt-lg-5 mt-4">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 d-flex align-items-center">
                 <div class="row item-baseline gap-14">
                   <div class="mal-16">
                     <img src="./assets/img/Rectangle70.png" />
@@ -2300,14 +2527,12 @@
                   </div>
                 </div>
               </div>
-              <div
-                class="col-md-6 rg-img text-md-right text-center my-3 my-md-0"
-              >
+              <div class="col-md-6 rg-img text-md-right text-left my-3 my-md-0">
                 <img src="./assets/img/sub2.png" />
               </div>
             </div>
           </div>
-          <div class="col-md-12">
+          <div class="col-md-12 mt-lg-0 mt-4">
             <ul class="flex-wrap">
               <li>Copyright © 2022 HomeUp, All rights reserved.</li>
               <li>Terrms of Use</li>

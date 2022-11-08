@@ -169,7 +169,9 @@
     function (e, clickedIndex, isSelected, previousValue) {
       const selected = $(e.currentTarget).val();
       document.querySelector('.location-filter-value').innerText =
-        selected || 'Toàn quốc';
+        selected ||
+        document.querySelector('.location-filter-value').dataset.default ||
+        'Toàn quốc';
     }
   );
 })();
@@ -276,7 +278,6 @@ const MAX_PROPERTY = '--value-b';
       setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);
       setInnerText(minDisplayValueEl, formatFunction(inputMin.value));
       removeActivedClassOfEl(parentNode, '.value-item');
-
       inputMax.value = maxValue;
       setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
       setInnerText(maxDisplayValueEl, formatFunction(inputMax.value));
@@ -362,10 +363,28 @@ const MAX_PROPERTY = '--value-b';
   });
 
   window.addEventListener('click', (e) => {
+    // console.log(e.target);
     if (!e.target.closest('.filter-container')) {
       document
         .querySelectorAll('.filter-container .switch')
         .forEach((item) => (item.checked = false));
     }
   });
+})();
+
+// Resposive
+
+(() => {
+  const width = screen.width;
+  // is mobile
+  if (width < 576) {
+    console.log(
+      document
+        .querySelectorAll('.price-filter.filter-dropdown .price-filter-value')
+        .forEach((item) => {
+          item.innerText = 'Tất cả';
+          item.dataset.default = 'Tất cả';
+        })
+    );
+  }
 })();

@@ -508,3 +508,26 @@
     }
   }
 }
+
+// Responsive
+@media screen and (max-width: 992px) {
+  #sub-filter {
+    flex-wrap: wrap;
+    height: auto;
+    & > .btn-group.btn-group-toggle {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    & > .search-main {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .sub-filter-swiper {
+      width: 100%;
+      flex: 1;
+    }
+  }
+}

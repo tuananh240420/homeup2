@@ -1,6 +1,10 @@
 #header {
   border-bottom: 1px solid #ecedf1;
   height: 64px;
+  padding-left: 40px;
+  @media screen and (max-width: 992px) {
+    padding-left: 0;
+  }
   .navbar {
     height: 100%;
     .item-menu {
