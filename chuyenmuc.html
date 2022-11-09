@@ -134,13 +134,10 @@
           class="nav-overlay"
           onclick="this.previousElementSibling.previousElementSibling.click()"
         ></div>
-        <ul
-          class="navbar-nav d-none d-lg-flex"
-          onclick="clickShowSubmenu()"
-          style="display: none"
-        >
+        <ul class="navbar-nav d-none d-lg-flex" style="display: none">
           <li
             class="item-menu"
+            onclick="clickShowSubmenu()"
             style="
               padding: 8px 12px;
               border-radius: 24px;
@@ -251,44 +248,44 @@
                     class="dropdown-container dropdown-location-menu form-checkbox-container"
                   >
                     <li class="form-checkbox">
-                      <label for="main-checkbox-1">Tất cả nhà đất</label>
-                      <input id="main-checkbox-1" type="checkbox" />
+                      <label for="main-checkbox-sub-m-1">Tất cả nhà đất</label>
+                      <input id="main-checkbox-sub-m-1" type="checkbox" />
                     </li>
                     <li class="form-checkbox">
-                      <label for="main-checkbox-2">Tất cả nhà đất</label>
-                      <input id="main-checkbox-2" type="checkbox" />
+                      <label for="main-checkbox-sub-m-2">Căn hộ chung cư</label>
+                      <input id="main-checkbox-sub-m-2" type="checkbox" />
                     </li>
                     <li class="form-checkbox">
-                      <label for="main-checkbox-3">Tất cả nhà đất</label>
-                      <input id="main-checkbox-3" type="checkbox" />
-                    </li>
-                    <li class="form-checkbox">
-                      <label for="main-checkbox-4">Tất cả nhà đất</label>
-                      <input id="main-checkbox-4" type="checkbox" />
-                    </li>
-                    <li class="form-checkbox">
-                      <label for="main-checkbox-5">Tất cả nhà đất</label>
-                      <input id="main-checkbox-5" type="checkbox" />
+                      <label for="main-checkbox-sub-m-3"
+                        >Các loại nhà bán</label
+                      >
+                      <input id="main-checkbox-sub-m-3" type="checkbox" />
                     </li>
                     <li class="form-checkbox sub-checkbox">
-                      <label for="main-checkbox-6">Tất cả nhà đất</label>
-                      <input id="main-checkbox-6" type="checkbox" />
+                      <label for="main-checkbox-sub-m-4">Nhà riêng</label>
+                      <input id="main-checkbox-sub-m-4" type="checkbox" />
                     </li>
                     <li class="form-checkbox sub-checkbox">
-                      <label for="main-checkbox-7">Tất cả nhà đất</label>
-                      <input id="main-checkbox-7" type="checkbox" />
+                      <label for="main-checkbox-sub-m-5"
+                        >Biệt thự liền kề</label
+                      >
+                      <input id="main-checkbox-sub-m-5" type="checkbox" />
                     </li>
                     <li class="form-checkbox sub-checkbox">
-                      <label for="main-checkbox-8">Tất cả nhà đất</label>
-                      <input id="main-checkbox-8" type="checkbox" />
+                      <label for="main-checkbox-sub-m-6">Nhà mặt phố</label>
+                      <input id="main-checkbox-sub-m-6" type="checkbox" />
                     </li>
                     <li class="form-checkbox sub-checkbox">
-                      <label for="main-checkbox-9">Tất cả nhà đất</label>
-                      <input id="main-checkbox-9" type="checkbox" />
+                      <label for="main-checkbox-sub-m-7"
+                        >Shopehouse, nhà phố thương mại</label
+                      >
+                      <input id="main-checkbox-sub-m-7" type="checkbox" />
                     </li>
                     <li class="form-checkbox">
-                      <label for="main-checkbox-10">Tất cả nhà đất</label>
-                      <input id="main-checkbox-10" type="checkbox" />
+                      <label for="main-checkbox-sub-m-8"
+                        >Các loại đất bán</label
+                      >
+                      <input id="main-checkbox-sub-m-8" type="checkbox" />
                     </li>
                     <li class="form-footer">
                       <p class="form-checkbox-resetall">
@@ -341,10 +338,11 @@
                     </li>
                     <li>
                       <select
-                        title="Tỉnh/Thành"
+                        title="Quận/Huyện"
                         class="selectpicker"
                         data-live-search="true"
-                        data-live-search-placeholder="Tìm tỉnh thành"
+                        multiple
+                        data-live-search-placeholder="Tìm Quận/Huyện"
                       >
                         <option>Hải Phòng</option>
                         <option>Thái Bình</option>
@@ -353,10 +351,36 @@
                     </li>
                     <li>
                       <select
-                        title="Tỉnh/Thành"
+                        title="Phương/Xã"
+                        class="selectpicker"
+                        multiple
+                        data-live-search="true"
+                        data-live-search-placeholder="Tìm Phương/Xã"
+                      >
+                        <option>Hải Phòng</option>
+                        <option>Thái Bình</option>
+                        <option>Nam Định</option>
+                      </select>
+                    </li>
+                    <li>
+                      <select
+                        title="Đường/Phố"
                         class="selectpicker"
                         data-live-search="true"
-                        data-live-search-placeholder="Tìm tỉnh thành"
+                        data-live-search-placeholder="Tìm Đường/Phố"
+                      >
+                        <option>Hải Phòng</option>
+                        <option>Thái Bình</option>
+                        <option>Nam Định</option>
+                      </select>
+                    </li>
+                    <li>
+                      <select
+                        title="Dự án"
+                        class="selectpicker"
+                        data-live-search="true"
+                        multiple
+                        data-live-search-placeholder="Tìm Dự án"
                       >
                         <option>Hải Phòng</option>
                         <option>Thái Bình</option>
@@ -437,12 +461,11 @@
                       <div class="range-slider__progress"></div>
                     </div>
                     <ul class="list-value">
-                      <li class="value-item active">< 500 triệu</li>
                       <li class="value-item">< 500 triệu</li>
-                      <li class="value-item">< 500 triệu</li>
-                      <li class="value-item">< 500 triệu</li>
-                      <li class="value-item">< 500 triệu</li>
-                      <li class="value-item">< 500 triệu</li>
+                      <li class="value-item">500 - 800 triệu</li>
+                      <li class="value-item">800 triệu - 1 tỷ</li>
+                      <li class="value-item">1 - 2 tỷ</li>
+                      <li class="value-item">2 - 3 tỷ</li>
                       <li class="form-footer">
                         <p class="form-checkbox-resetall">
                           <img src="./assets/img/refresh-2.svg" alt="" />
@@ -565,28 +588,61 @@
                         </div>
                         <div class="form-custom-checkbox form-checkbox">
                           <input type="checkbox" />
-                          <label for="">5</label>
+                          <label for="">5+</label>
                         </div>
                       </div>
                     </li>
                     <li>
-                      <span class="title">Số phòng ngủ</span>
+                      <span class="title">Hướng nhà</span>
                       <div class="checkbox-container">
                         <div class="form-custom-checkbox form-checkbox">
                           <input type="checkbox" />
-                          <label for="">2</label>
+                          <label for="">Đông</label>
                         </div>
                         <div class="form-custom-checkbox form-checkbox">
                           <input type="checkbox" />
-                          <label for="">3</label>
+                          <label for="">Tây</label>
                         </div>
                         <div class="form-custom-checkbox form-checkbox">
                           <input type="checkbox" />
-                          <label for="">4</label>
+                          <label for="">Nam</label>
                         </div>
                         <div class="form-custom-checkbox form-checkbox">
                           <input type="checkbox" />
-                          <label for="">5</label>
+                          <label for="">Bắc</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Đông - Bắc</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Tây - Bắc</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Tây - Nam</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Đông - Nam</label>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="title">Nội dung tin có</span>
+                      <div class="checkbox-container">
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Hình ảnh</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Video</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">3D & 360o</label>
                         </div>
                       </div>
                     </li>
@@ -634,28 +690,61 @@
                       </div>
                       <div class="form-custom-checkbox form-checkbox">
                         <input type="checkbox" />
-                        <label for="">5</label>
+                        <label for="">5+</label>
                       </div>
                     </div>
                   </li>
                   <li>
-                    <span class="title">Số phòng ngủ</span>
+                    <span class="title">Hướng nhà</span>
                     <div class="checkbox-container">
                       <div class="form-custom-checkbox form-checkbox">
                         <input type="checkbox" />
-                        <label for="">2</label>
+                        <label for="">Đông</label>
                       </div>
                       <div class="form-custom-checkbox form-checkbox">
                         <input type="checkbox" />
-                        <label for="">3</label>
+                        <label for="">Tây</label>
                       </div>
                       <div class="form-custom-checkbox form-checkbox">
                         <input type="checkbox" />
-                        <label for="">4</label>
+                        <label for="">Nam</label>
                       </div>
                       <div class="form-custom-checkbox form-checkbox">
                         <input type="checkbox" />
-                        <label for="">5</label>
+                        <label for="">Bắc</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Đông - Bắc</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Tây - Bắc</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Tây - Nam</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Đông - Nam</label>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="title">Nội dung tin có</span>
+                    <div class="checkbox-container">
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Hình ảnh</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Video</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">3D & 360o</label>
                       </div>
                     </div>
                   </li>
@@ -679,16 +768,16 @@
 
     <!-- start chuyemuc -->
     <div class="chuyenmuc container mt-4" id="danhmuc">
-      <div class="row fl-column">
+      <div class="fl-column">
         <div class="title">Bán / Tất cả BĐS trên toàn quốc</div>
         <div class="">
-          <h4>Bán nhà đất trên toàn quốc</h4>
+          <h4 class="mb-2 mb-sm-3">Bán nhà đất trên toàn quốc</h4>
         </div>
         <div class="title">Hiện có 231,242 bất động sản</div>
       </div>
-      <div class="row mt-4" class="danhmuc-main">
+      <div class="row mt-sm-4 mt-3" class="danhmuc-main">
         <div class="col-md-9 col-sm-12 left-element">
-          <div class="row sp-b">
+          <div class="sp-b d-flex">
             <div class="type-sort">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
                 <label class="btn btn-light active">
@@ -722,7 +811,7 @@
               </div>
             </div>
           </div>
-          <div class="row gap-24">
+          <div class="gap-24 d-flex flex-column card-container">
             <a href="#" class="card-cm">
               <div class="card-image">
                 <img src="assets/img/property.png" />
@@ -734,9 +823,9 @@
               <div class="card-content">
                 <div class="title">
                   <div>
-                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
+                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th,
+                    LH:0968364060
                   </div>
-                  <div>0968364060</div>
                 </div>
                 <div>
                   <div class="description">Thanh Xuân, Hà Nội</div>
@@ -768,9 +857,9 @@
               <div class="card-content">
                 <div class="title">
                   <div>
-                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
+                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th,
+                    LH:0968364060
                   </div>
-                  <div>0968364060</div>
                 </div>
                 <div>
                   <div class="description">Thanh Xuân, Hà Nội</div>
@@ -802,9 +891,9 @@
               <div class="card-content">
                 <div class="title">
                   <div>
-                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
+                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th,
+                    LH:0968364060
                   </div>
-                  <div>0968364060</div>
                 </div>
                 <div>
                   <div class="description">Thanh Xuân, Hà Nội</div>
@@ -836,9 +925,9 @@
               <div class="card-content">
                 <div class="title">
                   <div>
-                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
+                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th,
+                    LH:0968364060
                   </div>
-                  <div>0968364060</div>
                 </div>
                 <div>
                   <div class="description">Thanh Xuân, Hà Nội</div>
@@ -870,9 +959,9 @@
               <div class="card-content">
                 <div class="title">
                   <div>
-                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
+                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th,
+                    LH:0968364060
                   </div>
-                  <div>0968364060</div>
                 </div>
                 <div>
                   <div class="description">Thanh Xuân, Hà Nội</div>
@@ -904,9 +993,9 @@
               <div class="card-content">
                 <div class="title">
                   <div>
-                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
+                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th,
+                    LH:0968364060
                   </div>
-                  <div>0968364060</div>
                 </div>
                 <div>
                   <div class="description">Thanh Xuân, Hà Nội</div>
@@ -938,9 +1027,9 @@
               <div class="card-content">
                 <div class="title">
                   <div>
-                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
+                    Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th,
+                    LH:0968364060
                   </div>
-                  <div>0968364060</div>
                 </div>
                 <div>
                   <div class="description">Thanh Xuân, Hà Nội</div>
@@ -979,10 +1068,10 @@
               </nav>
             </div>
           </div>
-          <div class="row mat-42">
+          <div class="mat-42">
             <h5>Tìm kiếm theo từ khoá</h5>
           </div>
-          <div class="search-word row">
+          <div class="search-word">
             <div class="tag-key">
               <input type="checkbox" value="thuduc" />
               <div class="key-text">Bán đất gần làng đại học Thủ Đức</div>
@@ -1009,7 +1098,7 @@
             </div>
           </div>
           <hr />
-          <div class="description-text row mt-4 pb-4">
+          <div class="description-text mt-4 pb-4">
             <p class="mb-3">
               Hàng nghìn tin đăng mua bán nhà đất tại Việt Nam được rao trên
               Homeup.vn với đầy đủ các tiêu chí tìm kiếm của người mua và bán.
@@ -1027,7 +1116,7 @@
             </p>
           </div>
         </div>
-        <div class="col-md-3 col-sm-12 right-element">
+        <div class="col-md-3 d-none d-lg-block col-sm-12 right-element">
           <div class="form-contrainer">
             <div class="filter-container">
               <div class="intro-filter">Lọc theo khoảng giá</div>
@@ -1301,6 +1390,128 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div id="ft-t" class="container mt-3">
+      <h4 class="title">NHÀ ĐẤT BÁN</h4>
+      <div class="row row-cols-2 row-cols-md-4">
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="ft-t-2" class="container">
+      <h4 class="title">NHÀ ĐẤT BÁN</h4>
+      <div class="row row-cols-2 row-cols-md-4">
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
         </div>
       </div>
     </div>
