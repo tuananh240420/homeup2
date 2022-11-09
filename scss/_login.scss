@@ -105,6 +105,18 @@
     font-size: 14px;
     line-height: 20px;
   }
+  @media screen and (max-width: 576px) {
+    padding: 24px 16px;
+    .topnav {
+      display: flex;
+      & > span {
+        padding: 0;
+        width: 50%;
+        max-width: 50%;
+        min-width: unset;
+      }
+    }
+  }
 }
 .login-page {
   .col-md-8 {

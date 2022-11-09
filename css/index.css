@@ -317,6 +317,9 @@ label[dir=rtl] .range-slider {
   border-radius: 8px;
   position: relative !important;
 }
+.ptanh-custom-select.dropdown.bootstrap-select > select {
+  left: 0;
+}
 .ptanh-custom-select.dropdown.bootstrap-select > button {
   padding: 10px 16px;
   background: #f9fafc;
@@ -3513,6 +3516,20 @@ label[dir=rtl] .range-slider {
   font-size: 14px;
   line-height: 20px;
 }
+@media screen and (max-width: 576px) {
+  .login-form {
+    padding: 24px 16px;
+  }
+  .login-form .topnav {
+    display: flex;
+  }
+  .login-form .topnav > span {
+    padding: 0;
+    width: 50%;
+    max-width: 50%;
+    min-width: unset;
+  }
+}
 
 .login-page .col-md-8 {
   padding-right: 0 !important;
@@ -3640,8 +3657,8 @@ body#dangtintuc .row-bds .count-container .btn-plus {
   position: relative;
   cursor: pointer;
 }
-body#dangtintuc .row-bds .count-container .btn-minus:hover,
-body#dangtintuc .row-bds .count-container .btn-plus:hover {
+body#dangtintuc .row-bds .count-container .btn-minus.active,
+body#dangtintuc .row-bds .count-container .btn-plus.active {
   background: #d1193f;
 }
 body#dangtintuc .row-bds .count-container .btn-minus:after,
@@ -4012,6 +4029,29 @@ body#dangtintuc .container-left-side .hotline .hotline-number {
   display: none;
 }
 
+@media screen and (max-width: 576px) {
+  .col-lg-9.col-sm-12.left-element {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: auto;
+  }
+  .row-element,
+.row-bds {
+    row-gap: 24px;
+  }
+  .drag-area.select .visible {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .pta-row {
+    row-gap: 24px;
+  }
+  .pta-row + .row {
+    row-gap: 24px;
+  }
+}
 @media screen and (max-width: 576px) {
   #danhmuc .card-container {
     gap: 16px;

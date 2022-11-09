@@ -414,8 +414,14 @@ label[dir='rtl'] .range-slider {
   // position: relative;
   border: 1px solid #ecedf1;
   background: #f9fafc;
+
+  // overflow: hidden;
   border-radius: 8px;
   position: relative !important;
+  & > select {
+    // display: none !important;
+    left: 0;
+  }
   & > button {
     padding: 10px 16px;
     background: #f9fafc;

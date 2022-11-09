@@ -84,8 +84,8 @@ body#dangtintuc {
         position: relative;
         cursor: pointer;
       }
-      .btn-minus:hover,
-      .btn-plus:hover {
+      .btn-minus.active,
+      .btn-plus.active {
         background: #d1193f;
       }
       .btn-minus:after,
@@ -482,5 +482,31 @@ body#dangtintuc {
   .card .drag-area .on-drop,
   .card .drag-area.dragover .visible {
     display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .col-lg-9.col-sm-12.left-element {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: auto;
+  }
+  .row-element,
+  .row-bds {
+    row-gap: 24px;
+  }
+  .drag-area.select {
+    .visible {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+  }
+  .pta-row {
+    row-gap: 24px;
+    & + .row {
+      row-gap: 24px;
+    }
   }
 }

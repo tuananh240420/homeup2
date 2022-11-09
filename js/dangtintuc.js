@@ -32,11 +32,22 @@ function countBedroom() {
 class CountBtn {
   count = 0;
   minus(id) {
-    if (this.count === 0) return;
+    if (this.count === 0) {
+      return;
+    }
+    if (this.count === 1)
+      document
+        .getElementById(id)
+        .previousElementSibling.classList.remove('active');
+    else
+      document
+        .getElementById(id)
+        .previousElementSibling.classList.add('active');
     this.count--;
     document.getElementById(id).innerHTML = this.count;
   }
   plus(id) {
+    document.getElementById(id).previousElementSibling.classList.add('active');
     this.count++;
     document.getElementById(id).innerHTML = this.count;
   }

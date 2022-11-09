@@ -199,11 +199,11 @@
 
     <!-- start dang tin tuc -->
     <div class="dangtintuc container mat-42">
-      <div class="row fl-column">
+      <div class="d-flex fl-column">
         <div class="title">Đăng tin</div>
       </div>
-      <div id="dangtin-main" class="row mt-3">
-        <div class="col-md-9 col-sm-12 left-element">
+      <div id="dangtin-main" class="mt-3">
+        <div class="col-lg-9 col-sm-12 left-element">
           <div class="row row-container-element">
             <div class="card-body">
               <div class="collapse-box">
@@ -660,7 +660,7 @@
                                 >0</span
                               >
                               <div
-                                class="btn-plus"
+                                class="btn-plus active"
                                 onclick="bedroom.plus('count-bedroom')"
                               ></div>
                             </div>
@@ -689,7 +689,7 @@
                                 >0</span
                               >
                               <div
-                                class="btn-plus"
+                                class="btn-plus active"
                                 onclick="bathroom.plus('count-bathroom')"
                               ></div>
                             </div>
@@ -716,7 +716,7 @@
                                 >0</span
                               >
                               <div
-                                class="btn-plus"
+                                class="btn-plus active"
                                 onclick="flat.plus('count-flat')"
                               ></div>
                             </div>
@@ -1011,7 +1011,7 @@
                       class="dropdown-divider mt-4 mb-3"
                       style="margin-bottom: 16px"
                     ></div>
-                    <div class="row" style="margin-bottom: 24px">
+                    <div class="row pta-row" style="margin-bottom: 24px">
                       <div class="col-md-3">
                         <div class="dangtintuc-image active">
                           <span class="title-imgage">Tin thường</span>
@@ -1024,9 +1024,9 @@
                       </div>
                       <div class="col-md-3">
                         <div class="dangtintuc-image">
-                          <span class="title-imgage">Tin thường</span>
+                          <span class="title-imgage">Tin VIP 1</span>
                           <img
-                            src="./assets/img/chuyenmuc-house.svg"
+                            src="./assets/img/Frame.png"
                             alt=""
                             style="width: 90px; height: 80px"
                           />
@@ -1034,9 +1034,9 @@
                       </div>
                       <div class="col-md-3">
                         <div class="dangtintuc-image">
-                          <span class="title-imgage">Tin thường</span>
+                          <span class="title-imgage">Tin VIP 2</span>
                           <img
-                            src="./assets/img/chuyenmuc-house.svg"
+                            src="./assets/img/Frame-1.png"
                             alt=""
                             style="width: 90px; height: 80px"
                           />
@@ -1044,9 +1044,9 @@
                       </div>
                       <div class="col-md-3">
                         <div class="dangtintuc-image">
-                          <span class="title-imgage">Tin thường</span>
+                          <span class="title-imgage">Tin VIP 3</span>
                           <img
-                            src="./assets/img/chuyenmuc-house.svg"
+                            src="./assets/img/Frame-1.png"
                             alt=""
                             style="width: 90px; height: 80px"
                           />
@@ -1122,7 +1122,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-12 right-element">
+        <div class="col-md-3 col-sm-12 right-element d-none d-lg-block">
           <div class="container-left-side">
             <div class="chart-container">
               <div class="title" style="margin-top: 24px; margin-bottom: 24px">
@@ -1259,7 +1259,7 @@
         </div>
       </div>
     </div>
-    <div id="ft-t" class="container" style="padding: 0">
+    <div id="ft-t" class="container">
       <h4 class="title">NHÀ ĐẤT BÁN</h4>
       <div class="row row-cols-2 row-cols-md-4">
         <div class="col">
@@ -1320,7 +1320,7 @@
         </div>
       </div>
     </div>
-    <div id="ft-t-2" class="container" style="padding: 0">
+    <div id="ft-t-2" class="container">
       <h4 class="title">NHÀ ĐẤT BÁN</h4>
       <div class="row row-cols-2 row-cols-md-4">
         <div class="col">
@@ -1383,15 +1383,15 @@
     </div>
     <!-- end dang tin tuc-->
     <footer style="background: #ecedf1">
-      <div class="footer container pt-1 gap-w" style="padding: 0">
+      <div class="footer container pt-1 gap-w">
         <div class="footer-top row">
-          <div class="col-md-4 text-center text-md-left">
+          <div class="col-lg-4 text-center text-lg-left">
             <a href="">
               <img src="./assets/img/logo-footer.png" alt="" />
             </a>
           </div>
 
-          <div class="col-md-2 col-5">
+          <div class="col-lg-2 col-5">
             <div class="item d-flex gap-1 align-items-center">
               <div class="img" style="float: left">
                 <img src="./assets/img/call-calling.png" alt="" />
@@ -1402,7 +1402,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 col-7">
+          <div class="col-lg-3 col-7">
             <div class="item d-flex gap-1 align-items-center">
               <div class="img" style="float: left">
                 <img src="./assets/img/message-question.png" alt="" />
@@ -1413,9 +1413,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3">
             <div
-              class="item d-flex gap-1 align-items-center justify-content-md-end text-right text-md-left"
+              class="item d-flex gap-1 align-items-center justify-content-lg-end text-right text-lg-left"
             >
               <div class="img" style="float: left">
                 <img src="./assets/img/cham-soc-kh.png" alt="" />
@@ -1429,7 +1429,7 @@
         </div>
 
         <div class="row footer-top2">
-          <div class="col-md-2 col-6 item">
+          <div class="col-lg-2 col-6 item">
             <ul>
               <li>
                 <p>Company</p>
@@ -1454,7 +1454,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-2 col-6 item">
+          <div class="col-lg-2 col-6 item">
             <ul>
               <li>
                 <p>Work with Homeup</p>
@@ -1477,7 +1477,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-2 item">
+          <div class="col-lg-2 item">
             <ul>
               <li>
                 <p>Work with Homeup</p>
@@ -1500,9 +1500,9 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-3 item">
+          <div class="col-lg-3 item">
             <ul>
-              <li>
+              <li class="text-left text-sm-center text-lg-left">
                 <a href="" style="color: #646d84"> Ngôn ngữ </a>
               </li>
               <li>
@@ -1511,10 +1511,10 @@
                   <option value="">Tiếng Anh</option>
                 </select>
               </li>
-              <li>
+              <li class="text-left text-sm-center text-lg-left">
                 <p style="color: #646d84">Cộng đồng</p>
               </li>
-              <div class="list-social">
+              <div class="list-social text-left text-sm-center text-lg-left">
                 <a href="" class="item">
                   <span>
                     <img src="./assets/img/icon-fb.png" alt="" />
@@ -1534,7 +1534,7 @@
             </ul>
           </div>
           <div
-            class="col-md-3 item list-app d-flex justify-content-center justify-content-md-start gap-3 align-items-md-end flex-md-column"
+            class="col-lg-3 item list-app d-flex justify-content-center justify-content-lg-start gap-3 align-items-md-end flex-column flex-sm-row flex-lg-column"
           >
             <div class="app">
               <a href=""> </a>
@@ -1583,7 +1583,7 @@
           </div>
         </div>
         <!-- <hr /> -->
-        <div class="row footer-local mat-48">
+        <div class="row footer-local mt-lg-5 mt-4">
           <div class="col-md-12">
             <h2 class="title">Incredible Deals on Local Experiences</h2>
             <ul class="flex-wrap">
@@ -1594,9 +1594,9 @@
               <li>Things to Do</li>
             </ul>
           </div>
-          <div class="col-md-12 mat-48">
+          <div class="col-md-12 mt-lg-5 mt-4">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 d-flex align-items-center">
                 <div class="row item-baseline gap-14">
                   <div class="mal-16">
                     <img src="./assets/img/Rectangle70.png" />
@@ -1609,14 +1609,12 @@
                   </div>
                 </div>
               </div>
-              <div
-                class="col-md-6 rg-img text-md-right text-center my-3 my-md-0"
-              >
+              <div class="col-md-6 rg-img text-md-right text-left my-3 my-md-0">
                 <img src="./assets/img/sub2.png" />
               </div>
             </div>
           </div>
-          <div class="col-md-12">
+          <div class="col-md-12 mt-lg-0 mt-4">
             <ul class="flex-wrap">
               <li>Copyright © 2022 HomeUp, All rights reserved.</li>
               <li>Terrms of Use</li>
