@@ -536,7 +536,7 @@ label[dir=rtl] .range-slider {
 .footer-top2 {
   row-gap: 24px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .footer-top .list-app,
 .footer-top2 .list-app {
     gap: 16px;
@@ -1899,7 +1899,7 @@ label[dir=rtl] .range-slider {
   margin-left: -15px;
   margin-right: -15px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .dangtin #batdongsannoibat {
     margin-left: 0;
     margin-right: 0;
@@ -2138,7 +2138,7 @@ label[dir=rtl] .range-slider {
 .dangtin .box .box-icon img {
   cursor: pointer;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .dangtin .box .box-icon {
     justify-content: flex-start;
   }
@@ -2206,7 +2206,7 @@ label[dir=rtl] .range-slider {
   width: 320px;
   padding: 14px 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .dangtin .box-characteristics .content .line {
     width: 100%;
   }
@@ -2334,7 +2334,7 @@ label[dir=rtl] .range-slider {
     justify-content: flex-end;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992) {
   .row.rows-col-1.row-cols-sm-2 > .col:nth-child(even) {
     display: flex;
     justify-content: flex-end;
