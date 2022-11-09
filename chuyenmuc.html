@@ -30,16 +30,16 @@
   <body>
     <header class="top-header" id="header">
       <nav
-        class="navbar navbar-expand-sm menu navbar-light bg-light justify-content-md-start justify-content-center"
+        class="navbar navbar-expand-lg menu navbar-light bg-light justify-content-lg-start justify-content-center"
         style="background: #ffffff !important; padding: 10px"
       >
         <!-- Links -->
         <!-- Brand/logo -->
-        <a class="navbar-brand ml-md-0 ml-auto" href="#"
+        <a class="navbar-brand ml-lg-0 ml-auto" href="#"
           ><img src="./assets/img/logo.png" alt="" width="125"
         /></a>
         <img
-          class="d-md-none d-block ml-4"
+          class="d-lg-none d-block ml-lg-4 ml-auto"
           src="./assets/img/like-bt.png"
           alt=""
         />
@@ -55,7 +55,14 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto d-md-flex">
+          <div class="nav-mobile-header d-flex d-lg-none">
+            <div>
+              <a href="#" class="btn btn-primary">Đăng nhập</a>
+              <a href="#" class="btn btn-outline-secondary">Đăng kí</a>
+            </div>
+            <a href="#" class="btn btn-primary">Đăng tin</a>
+          </div>
+          <ul class="navbar-nav mr-auto d-lg-flex">
             <li class="item-menu dropdown">
               <a
                 class="nav-link dropdown-toggle item-nav-link"
@@ -114,7 +121,7 @@
             <li class="item-menu">
               <a class="item-nav-link" href="#"> Thuật Ngữ </a>
             </li>
-            <li class="item-menu">
+            <li class="item-menu d-none d-lg-flex">
               <img
                 src="./assets/img/threedot.svg"
                 alt=""
@@ -123,8 +130,12 @@
             </li>
           </ul>
         </div>
+        <div
+          class="nav-overlay"
+          onclick="this.previousElementSibling.previousElementSibling.click()"
+        ></div>
         <ul
-          class="navbar-nav d-none d-md-flex"
+          class="navbar-nav d-none d-lg-flex"
           onclick="clickShowSubmenu()"
           style="display: none"
         >
@@ -214,7 +225,7 @@
       </form>
       <div class="right-container">
         <div class="filter-container filter-dropdown d-flex gap-24">
-          <div class="row row-cols-4" style="flex: 1">
+          <div class="row row-cols-sm-4 row-cols-2-5" style="flex: 1">
             <div class="col">
               <div class="filter-dropdown category-filter">
                 <input class="switch" type="checkbox" />
@@ -525,8 +536,78 @@
                 </div>
               </div>
             </div>
+            <div
+              class="fl d-flex d-lg-none col form-inline my-2 my-lg-0 ml-auto right-controls"
+            >
+              <div class="price-filter filter-dropdown addition-filter">
+                <input class="switch" type="checkbox" />
+                <div class="dropdown-btn">
+                  <div>
+                    <div class="btn-filter">
+                      <img src="./assets/img/setting-5.svg" />Lọc thêm
+                    </div>
+                  </div>
+                  <ul class="dropdown-location-menu form-checkbox-container">
+                    <li>
+                      <span class="title">Số phòng ngủ</span>
+                      <div class="checkbox-container">
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">2</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">3</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">4</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">5</label>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="title">Số phòng ngủ</span>
+                      <div class="checkbox-container">
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">2</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">3</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">4</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">5</label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="form-footer">
+                      <p class="form-checkbox-resetall">
+                        <img src="./assets/img/refresh-2.svg" alt="" />
+                        Đặt lại
+                      </p>
+                      <span class="form-close">Áp dụng</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="btn-filter filter-reset-btn d-none d-lg-flex">
+                <img src="./assets/img/refresh-2.png" />Đặt lại
+              </div>
+            </div>
           </div>
-          <div class="fl form-inline my-2 my-lg-0 ml-auto right-controls">
+          <div
+            class="fl d-none d-lg-flex form-inline my-2 my-lg-0 ml-auto right-controls"
+          >
             <div class="price-filter filter-dropdown addition-filter">
               <input class="switch" type="checkbox" />
               <div class="dropdown-btn">
@@ -595,6 +676,7 @@
         </div>
       </div>
     </div>
+
     <!-- start chuyemuc -->
     <div class="chuyenmuc container mt-4" id="danhmuc">
       <div class="row fl-column">

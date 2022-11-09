@@ -174,6 +174,19 @@
         'Toàn quốc';
     }
   );
+  $('#select-tinh-thanh').on(
+    'changed.bs.select',
+    function (e, clickedIndex, isSelected, previousValue) {
+      console.log(e.currentTarget);
+      const selected = $(e.currentTarget).val();
+      document.querySelectorAll('.location-filter-value').forEach((item) => {
+        item.innerText =
+          selected ||
+          document.querySelector('.location-filter-value').dataset.default ||
+          'Toàn quốc';
+      });
+    }
+  );
 })();
 const SELECT_RANGES_PRICE = [
   {
@@ -339,24 +352,31 @@ const MAX_PROPERTY = '--value-b';
   rangeSlideEvent(areaOptions);
   rangeSlideEvent(priceOptions);
 
-  const filterResetAllbtn = document.querySelector('.filter-reset-btn');
+  const filterResetAllbtn = document.querySelectorAll('.filter-reset-btn');
   if (filterResetAllbtn) {
-    filterResetAllbtn.onclick = () => {
-      const parentFilter = filterResetAllbtn.closest('.filter-container');
-      parentFilter
-        .querySelectorAll('.form-checkbox-resetall')
-        .forEach((item) => item.click());
-    };
+    filterResetAllbtn.forEach(
+      (item) =>
+        (item.onclick = () => {
+          const parentFilter = item.closest('.filter-container');
+          console.log(parentFilter);
+          parentFilter
+            .querySelectorAll('.form-checkbox-resetall')
+            .forEach((item) => item.click());
+        })
+    );
   }
 
   const checkboxList = document.querySelectorAll('.filter-container .switch');
   checkboxList.forEach((item) => {
     item.onchange = () => {
+      // console.log(item);
       checkboxList.forEach((itemz) => {
         if (itemz !== item) {
           // itemz.checked = false;
           const applyBtn = itemz.parentNode.querySelector('.form-close');
-          if (itemz.checked === true) applyBtn.click();
+          if (itemz.checked === true) {
+            applyBtn.click();
+          }
         }
       });
     };
@@ -364,10 +384,16 @@ const MAX_PROPERTY = '--value-b';
 
   window.addEventListener('click', (e) => {
     // console.log(e.target);
+
     if (!e.target.closest('.filter-container')) {
       document
         .querySelectorAll('.filter-container .switch')
         .forEach((item) => (item.checked = false));
+    }
+    if (!e.target.closest('.main-search-container > .dropdown-main')) {
+      document.querySelector(
+        '.main-search-container > .dropdown-main > input[type="checkbox"]'
+      ).checked = false;
     }
   });
 })();
@@ -378,13 +404,11 @@ const MAX_PROPERTY = '--value-b';
   const width = screen.width;
   // is mobile
   if (width < 576) {
-    console.log(
-      document
-        .querySelectorAll('.price-filter.filter-dropdown .price-filter-value')
-        .forEach((item) => {
-          item.innerText = 'Tất cả';
-          item.dataset.default = 'Tất cả';
-        })
-    );
+    document
+      .querySelectorAll('.price-filter.filter-dropdown .price-filter-value')
+      .forEach((item) => {
+        item.innerText = 'Tất cả';
+        item.dataset.default = 'Tất cả';
+      });
   }
 })();

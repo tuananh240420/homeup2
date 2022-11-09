@@ -529,5 +529,51 @@
       width: 100%;
       flex: 1;
     }
+    #sub-filter {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .search-main {
+      margin-left: 0 !important;
+    }
+    .right-container {
+      width: 100%;
+      // ov
+      & > .filter-container {
+        overflow-x: scroll;
+        margin-left: 0 !important;
+        overflow-y: hidden;
+        height: auto !important;
+        & > .row {
+          // width: 100%;
+          min-width: 150%;
+          overflow: visible;
+          .dropdown-btn > ul {
+            position: fixed !important;
+            left: 0 !important;
+            right: 0 !important;
+          }
+        }
+      }
+      .right-controls {
+        margin: 0 !important;
+        border-left: 1px solid #ecedf1;
+        .dropdown-btn {
+          padding-top: 0 !important;
+          .btn-filter {
+            border-left: none !important;
+          }
+        }
+      }
+    }
+  }
+  .row-cols-2-5 {
+    flex-wrap: nowrap;
+    height: 40px;
+    & > * {
+      -ms-flex: 0 0 30%;
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
   }
 }
