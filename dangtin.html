@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+    <script src="./js/chuyenmuc.js"></script>
+  </head>
+
+  <body>
+    <!-- start header -->
+    <header class="top-header" id="header">
+      <nav
+        class="navbar navbar-expand-lg menu navbar-light bg-light justify-content-lg-start justify-content-center"
+        style="background: #ffffff !important; padding: 10px"
+      >
+        <!-- Links -->
+        <!-- Brand/logo -->
+        <a class="navbar-brand ml-lg-0 ml-auto" href="#"
+          ><img src="./assets/img/logo.png" alt="" width="125"
+        /></a>
+        <img
+          class="d-lg-none d-block ml-lg-4 ml-auto"
+          src="./assets/img/like-bt.png"
+          alt=""
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="nav-mobile-header d-flex d-lg-none">
+            <div>
+              <a href="#" class="btn btn-primary">Đăng nhập</a>
+              <a href="#" class="btn btn-outline-secondary">Đăng kí</a>
+            </div>
+            <a href="#" class="btn btn-primary">Đăng tin</a>
+          </div>
+          <ul class="navbar-nav mr-auto d-lg-flex">
+            <li class="item-menu dropdown">
+              <a
+                class="nav-link dropdown-toggle item-nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Nhà đất bán</a
+              >
+              <!-- Sub-Menu -->
+              <ul
+                class="sub-menu dropdown-menu"
+                aria-labelledby="navbarDropdown"
+              >
+                <li class="dropdown-item">
+                  <a href="#">Bán căn hộ chung cư</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#">Bán nhà riêng</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="item-menu dropdown">
+              <a
+                class="nav-link dropdown-toggle item-nav-link"
+                href="#"
+                id="navbarDropdown2"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Nhà đất cho thuê</a
+              >
+
+              <ul
+                class="sub-menu dropdown-menu"
+                aria-labelledby="navbarDropdown2"
+              >
+                <li class="dropdown-item">
+                  <a href="#">Cho thuê căn hộ chung cư</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item-menu">
+              <a class="item-nav-link" href="#">Dự án</a>
+            </li>
+            <li class="item-menu">
+              <a class="item-nav-link" href="#">Tin tức</a>
+            </li>
+            <li class="item-menu">
+              <a class="item-nav-link" href="#"> Bản Đồ </a>
+            </li>
+            <li class="item-menu">
+              <a class="item-nav-link" href="#"> Thuật Ngữ </a>
+            </li>
+            <li class="item-menu d-none d-lg-flex">
+              <img
+                src="./assets/img/threedot.svg"
+                alt=""
+                style="cursor: pointer"
+              />
+            </li>
+          </ul>
+        </div>
+        <div
+          class="nav-overlay"
+          onclick="this.previousElementSibling.previousElementSibling.click()"
+        ></div>
+        <ul class="navbar-nav d-none d-lg-flex" style="display: none">
+          <li
+            class="item-menu"
+            onclick="clickShowSubmenu()"
+            style="
+              padding: 8px 12px;
+              border-radius: 24px;
+              border: 1px solid #ecedf1;
+              box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <a href="#">
+              <img
+                style="width: 24px; cursor: pointer"
+                src="./assets/img/menu.svg"
+                alt=""
+              />
+              <img
+                style="width: 24px; cursor: pointer"
+                src="./assets/img/profile-circle.svg"
+                alt=""
+              />
+            </a>
+            <ul class="sub-menu" id="profile-submenu" style="display: none">
+              <li>
+                <a href="#" style="background: #ffffff">Đăng nhập</a>
+              </li>
+              <li>
+                <a href="#" style="background: #ffffff">Tạo tài khoản mới</a>
+              </li>
+              <li style="border-top: 1px solid #ecedf1">
+                <a href="#" style="background: #ffffff">Trợ giúp</a>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="item-menu"
+            style="padding: 8px 12px; background: #d1193f; border-radius: 24px"
+          >
+            <a href="#">
+              <span
+                style="
+                  color: #ffffff;
+                  font-weight: 600;
+                  font-size: 14px;
+                  line-height: 22px;
+                "
+                >Đăng Tin</span
+              >
+              <img
+                style="width: 20px"
+                src="./assets/img/edit-header.svg"
+                alt=""
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- end header -->
+    <!-- start filter -->
+    <div id="sub-filter">
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+          <input
+            type="radio"
+            name="options"
+            id="option1"
+            autocomplete="off"
+            checked
+          />
+          Bán
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option3" autocomplete="off" />
+          Cho thuê
+        </label>
+      </div>
+
+      <form class="search-main">
+        <input type="text" placeholder="Tìm kiếm địa chỉ, khu vực..." />
+        <button>
+          <img src="./assets/img/search-normal.svg" alt="" />
+        </button>
+      </form>
+      <div class="right-container">
+        <div class="filter-container filter-dropdown d-flex gap-24">
+          <div class="row row-cols-sm-4 row-cols-2-5" style="flex: 1">
+            <div class="col">
+              <div class="filter-dropdown category-filter">
+                <input class="switch" type="checkbox" />
+                <div class="dropdown-btn">
+                  <p>
+                    <span class="title-container">
+                      <span class="title">Loại dự án</span>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ml-auto"
+                      >
+                        <path
+                          d="M12 16.7999C11.3 16.7999 10.6 16.5299 10.07 15.9999L3.55002 9.47989C3.26002 9.18989 3.26002 8.70989 3.55002 8.41989C3.84002 8.12989 4.32002 8.12989 4.61002 8.41989L11.13 14.9399C11.61 15.4199 12.39 15.4199 12.87 14.9399L19.39 8.41989C19.68 8.12989 20.16 8.12989 20.45 8.41989C20.74 8.70989 20.74 9.18989 20.45 9.47989L13.93 15.9999C13.4 16.5299 12.7 16.7999 12 16.7999Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="category-filter-value">Tất cả</span>
+                  </p>
+                  <ul
+                    class="dropdown-container dropdown-location-menu form-checkbox-container"
+                  >
+                    <li class="form-checkbox">
+                      <label for="main-checkbox-sub-m-1">Tất cả nhà đất</label>
+                      <input id="main-checkbox-sub-m-1" type="checkbox" />
+                    </li>
+                    <li class="form-checkbox">
+                      <label for="main-checkbox-sub-m-2">Căn hộ chung cư</label>
+                      <input id="main-checkbox-sub-m-2" type="checkbox" />
+                    </li>
+                    <li class="form-checkbox" data-subcount="0">
+                      <label for="main-checkbox-sub-m-3"
+                        >Các loại nhà bán</label
+                      >
+                      <input id="main-checkbox-sub-m-3" type="checkbox" />
+                    </li>
+                    <li class="form-checkbox sub-checkbox">
+                      <label for="main-checkbox-sub-m-4">Nhà riêng</label>
+                      <input id="main-checkbox-sub-m-4" type="checkbox" />
+                    </li>
+                    <li class="form-checkbox sub-checkbox">
+                      <label for="main-checkbox-sub-m-5"
+                        >Biệt thự liền kề</label
+                      >
+                      <input id="main-checkbox-sub-m-5" type="checkbox" />
+                    </li>
+                    <li class="form-checkbox sub-checkbox">
+                      <label for="main-checkbox-sub-m-6">Nhà mặt phố</label>
+                      <input id="main-checkbox-sub-m-6" type="checkbox" />
+                    </li>
+                    <li class="form-checkbox sub-checkbox">
+                      <label for="main-checkbox-sub-m-7"
+                        >Shopehouse, nhà phố thương mại</label
+                      >
+                      <input id="main-checkbox-sub-m-7" type="checkbox" />
+                    </li>
+                    <li class="form-checkbox">
+                      <label for="main-checkbox-sub-m-8"
+                        >Các loại đất bán</label
+                      >
+                      <input id="main-checkbox-sub-m-8" type="checkbox" />
+                    </li>
+                    <li class="form-footer">
+                      <p class="form-checkbox-resetall">
+                        <img src="./assets/img/refresh-2.svg" alt="" />
+                        Đặt lại
+                      </p>
+                      <span class="form-close">Áp dụng</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="location-filter filter-dropdown">
+                <input class="switch" type="checkbox" />
+                <div class="dropdown-btn">
+                  <p>
+                    <span class="title-container">
+                      <span class="title">Khu vực & Dự án</span>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ml-auto"
+                      >
+                        <path
+                          d="M12 16.7999C11.3 16.7999 10.6 16.5299 10.07 15.9999L3.55002 9.47989C3.26002 9.18989 3.26002 8.70989 3.55002 8.41989C3.84002 8.12989 4.32002 8.12989 4.61002 8.41989L11.13 14.9399C11.61 15.4199 12.39 15.4199 12.87 14.9399L19.39 8.41989C19.68 8.12989 20.16 8.12989 20.45 8.41989C20.74 8.70989 20.74 9.18989 20.45 9.47989L13.93 15.9999C13.4 16.5299 12.7 16.7999 12 16.7999Z"
+                        />
+                      </svg>
+                    </span>
+                    <span data-default="Toàn quốc" class="location-filter-value"
+                      >Toàn quốc</span
+                    >
+                  </p>
+                  <ul class="dropdown-location-menu">
+                    <span>Khu vực & Dự án</span>
+                    <li>
+                      <select
+                        title="Tỉnh/Thành"
+                        class="selectpicker"
+                        id="select-tinh-thanh"
+                        data-live-search="true"
+                        data-live-search-placeholder="Tìm tỉnh thành"
+                      >
+                        <option>Hải Phòng</option>
+                        <option>Thái Bình</option>
+                        <option>Nam Định</option>
+                      </select>
+                    </li>
+                    <li>
+                      <select
+                        title="Quận/Huyện"
+                        class="selectpicker"
+                        data-live-search="true"
+                        multiple
+                        data-live-search-placeholder="Tìm Quận/Huyện"
+                      >
+                        <option>Hải Phòng</option>
+                        <option>Thái Bình</option>
+                        <option>Nam Định</option>
+                      </select>
+                    </li>
+                    <li>
+                      <select
+                        title="Phương/Xã"
+                        class="selectpicker"
+                        multiple
+                        data-live-search="true"
+                        data-live-search-placeholder="Tìm Phương/Xã"
+                      >
+                        <option>Hải Phòng</option>
+                        <option>Thái Bình</option>
+                        <option>Nam Định</option>
+                      </select>
+                    </li>
+                    <li>
+                      <select
+                        title="Đường/Phố"
+                        class="selectpicker"
+                        data-live-search="true"
+                        data-live-search-placeholder="Tìm Đường/Phố"
+                      >
+                        <option>Hải Phòng</option>
+                        <option>Thái Bình</option>
+                        <option>Nam Định</option>
+                      </select>
+                    </li>
+                    <li>
+                      <select
+                        title="Dự án"
+                        class="selectpicker"
+                        data-live-search="true"
+                        multiple
+                        data-live-search-placeholder="Tìm Dự án"
+                      >
+                        <option>Hải Phòng</option>
+                        <option>Thái Bình</option>
+                        <option>Nam Định</option>
+                      </select>
+                    </li>
+                    <li class="form-footer">
+                      <p class="form-checkbox-resetall">
+                        <img src="./assets/img/refresh-2.svg" alt="" />
+                        Đặt lại
+                      </p>
+                      <span class="form-close">Áp dụng</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="price-filter filter-dropdown">
+                <input class="switch" type="checkbox" />
+                <div class="dropdown-btn">
+                  <p>
+                    <span class="title-container">
+                      <span class="title">Mức giá</span>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ml-auto"
+                      >
+                        <path
+                          d="M12 16.7999C11.3 16.7999 10.6 16.5299 10.07 15.9999L3.55002 9.47989C3.26002 9.18989 3.26002 8.70989 3.55002 8.41989C3.84002 8.12989 4.32002 8.12989 4.61002 8.41989L11.13 14.9399C11.61 15.4199 12.39 15.4199 12.87 14.9399L19.39 8.41989C19.68 8.12989 20.16 8.12989 20.45 8.41989C20.74 8.70989 20.74 9.18989 20.45 9.47989L13.93 15.9999C13.4 16.5299 12.7 16.7999 12 16.7999Z"
+                        />
+                      </svg>
+                    </span>
+                    <span data-default="Tất cả" class="price-filter-value"
+                      >Tất cả</span
+                    >
+                  </p>
+                  <ul class="dropdown-location-menu">
+                    <div class="output-value">
+                      <p class="item">
+                        Từ <span class="from-value">0 Triệu</span>
+                      </p>
+                      <p class="item">
+                        Đến <span class="to-value">60 Tỷ</span>
+                      </p>
+                    </div>
+                    <div
+                      class="range-slider range-slider-home-price"
+                      data-ticks-position="top"
+                      style="
+                        --min: 0;
+                        --max: 600;
+                        --value-a: 0;
+                        --value-b: 400;
+                        --suffix: '%';
+                        --text-value-a: '0 Triệu';
+                        --text-value-b: '60 Tỷ';
+                      "
+                    >
+                      <input
+                        class="input-min"
+                        type="range"
+                        min="0"
+                        max="600"
+                        value="0"
+                      />
+                      <input
+                        type="range"
+                        class="input-max"
+                        min="0"
+                        max="600"
+                        value="400"
+                        oninput="this.parentNode.style.setProperty('--value-b',this.value); this.parentNode.style.setProperty('--text-value-b', JSON.stringify(this.value))"
+                      />
+                      <div class="range-slider__progress"></div>
+                    </div>
+                    <ul class="list-value">
+                      <li class="value-item">< 500 triệu</li>
+                      <li class="value-item">500 - 800 triệu</li>
+                      <li class="value-item">800 triệu - 1 tỷ</li>
+                      <li class="value-item">1 - 2 tỷ</li>
+                      <li class="value-item">2 - 3 tỷ</li>
+                      <li class="form-footer">
+                        <p class="form-checkbox-resetall">
+                          <img src="./assets/img/refresh-2.svg" alt="" />
+                          Đặt lại
+                        </p>
+                        <span class="form-close">Áp dụng</span>
+                      </li>
+                    </ul>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="price-filter filter-dropdown area-filter">
+                <input class="switch" type="checkbox" />
+                <div class="dropdown-btn">
+                  <p>
+                    <span class="title-container">
+                      <span class="title">Diện tích</span>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ml-auto"
+                      >
+                        <path
+                          d="M12 16.7999C11.3 16.7999 10.6 16.5299 10.07 15.9999L3.55002 9.47989C3.26002 9.18989 3.26002 8.70989 3.55002 8.41989C3.84002 8.12989 4.32002 8.12989 4.61002 8.41989L11.13 14.9399C11.61 15.4199 12.39 15.4199 12.87 14.9399L19.39 8.41989C19.68 8.12989 20.16 8.12989 20.45 8.41989C20.74 8.70989 20.74 9.18989 20.45 9.47989L13.93 15.9999C13.4 16.5299 12.7 16.7999 12 16.7999Z"
+                        />
+                      </svg>
+                    </span>
+                    <span data-default="Tất cả" class="price-filter-value"
+                      >Tất cả</span
+                    >
+                  </p>
+                  <ul class="dropdown-location-menu">
+                    <div class="output-value">
+                      <p class="item">
+                        Từ <span class="from-value">0 m²</span>
+                      </p>
+                      <p class="item">
+                        Đến <span class="to-value">500 m²</span>
+                      </p>
+                    </div>
+                    <div
+                      class="range-slider range-slider-home-price"
+                      data-ticks-position="top"
+                      style="
+                        --min: 0;
+                        --max: 500;
+                        --value-a: 0;
+                        --value-b: 500;
+                        --suffix: '%';
+                        --text-value-a: '0 Triệu';
+                        --text-value-b: '60 Tỷ';
+                      "
+                    >
+                      <input
+                        class="input-min"
+                        type="range"
+                        min="0"
+                        max="500"
+                        value="0"
+                      />
+                      <input
+                        type="range"
+                        class="input-max"
+                        min="0"
+                        max="500"
+                        value="500"
+                      />
+                      <div class="range-slider__progress"></div>
+                    </div>
+                    <ul class="list-value">
+                      <li class="value-item active">
+                        <span style="color: inherit">&#8804;</span> 30
+                      </li>
+                      <li class="value-item">30 - 50 m²</li>
+                      <li class="value-item">50 - 80 m²</li>
+                      <li class="value-item">80 - 100 m²</li>
+                      <li class="value-item">100 - 150 m²</li>
+                      <li class="form-footer">
+                        <p class="form-checkbox-resetall">
+                          <img src="./assets/img/refresh-2.svg" alt="" />
+                          Đặt lại
+                        </p>
+                        <span class="form-close">Áp dụng</span>
+                      </li>
+                    </ul>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              class="fl d-flex d-lg-none col form-inline my-2 my-lg-0 ml-auto right-controls"
+            >
+              <div class="price-filter filter-dropdown addition-filter">
+                <input class="switch" type="checkbox" />
+                <div class="dropdown-btn">
+                  <div>
+                    <div class="btn-filter">
+                      <img src="./assets/img/setting-5.svg" />Lọc thêm
+                    </div>
+                  </div>
+                  <ul class="dropdown-location-menu form-checkbox-container">
+                    <li>
+                      <span class="title">Số phòng ngủ</span>
+                      <div class="checkbox-container">
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">2</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">3</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">4</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">5+</label>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="title">Hướng nhà</span>
+                      <div class="checkbox-container">
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Đông</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Tây</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Nam</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Bắc</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Đông - Bắc</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Tây - Bắc</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Tây - Nam</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Đông - Nam</label>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="title">Nội dung tin có</span>
+                      <div class="checkbox-container">
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Hình ảnh</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">Video</label>
+                        </div>
+                        <div class="form-custom-checkbox form-checkbox">
+                          <input type="checkbox" />
+                          <label for="">3D & 360o</label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="form-footer">
+                      <p class="form-checkbox-resetall">
+                        <img src="./assets/img/refresh-2.svg" alt="" />
+                        Đặt lại
+                      </p>
+                      <span class="form-close">Áp dụng</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="btn-filter filter-reset-btn d-none d-lg-flex">
+                <img src="./assets/img/refresh-2.png" />Đặt lại
+              </div>
+            </div>
+          </div>
+          <div
+            class="fl d-none d-lg-flex form-inline my-2 my-lg-0 ml-auto right-controls"
+          >
+            <div class="price-filter filter-dropdown addition-filter">
+              <input class="switch" type="checkbox" />
+              <div class="dropdown-btn">
+                <div>
+                  <div class="btn-filter">
+                    <img src="./assets/img/setting-5.svg" />Lọc thêm
+                  </div>
+                </div>
+                <ul class="dropdown-location-menu form-checkbox-container">
+                  <li>
+                    <span class="title">Số phòng ngủ</span>
+                    <div class="checkbox-container">
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">2</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">3</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">4</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">5+</label>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="title">Hướng nhà</span>
+                    <div class="checkbox-container">
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Đông</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Tây</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Nam</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Bắc</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Đông - Bắc</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Tây - Bắc</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Tây - Nam</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Đông - Nam</label>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="title">Nội dung tin có</span>
+                    <div class="checkbox-container">
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Hình ảnh</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">Video</label>
+                      </div>
+                      <div class="form-custom-checkbox form-checkbox">
+                        <input type="checkbox" />
+                        <label for="">3D & 360o</label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="form-footer">
+                    <p class="form-checkbox-resetall">
+                      <img src="./assets/img/refresh-2.svg" alt="" />
+                      Đặt lại
+                    </p>
+                    <span class="form-close">Áp dụng</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="btn-filter filter-reset-btn">
+              <img src="./assets/img/refresh-2.png" />Đặt lại
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end filter -->
+    <!-- start dangtin -->
+    <div class="container dangtin">
+      <!-- Swiper -->
+
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="slide" data-zoom="1">
+            <div class="controls">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-zoom-out"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
+                />
+                <path
+                  d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M3 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-zoom-in"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
+                />
+                <path
+                  d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-x-circle close-btn"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                />
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </div>
+            <div
+              style="
+                --swiper-navigation-color: #fff;
+                --swiper-pagination-color: #fff;
+              "
+              data-zoom="1"
+              class="swiper mySwiper2"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./assets/img/slide_dangtin.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/slide_dangtin.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/slide_dangtin.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/slide_dangtin.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/slide_dangtin.png" />
+                </div>
+                >
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./assets/img/slide_dangtin.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/slide_dangtin.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/slide_dangtin.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/slide_dangtin.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/slide_dangtin.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-2">
+            <div class="slide-description col-md-12">
+              <div class="title mb-3">
+                Bán căn hộ chung cư/Hà Nội/Cầu Giấy/Bán căn hộ chung cư tại 30
+                Phạm Văn Đồng
+              </div>
+              <div class="content">
+                Cần cho thuê CC Dlusso 2PN giá cả hạt dẻ chỉ 8tr/th, LH:
+              </div>
+              <div class="content-phone">0968364060</div>
+              <div class="footer">
+                Dự án Fiato Premier, Thủ Đức, Hồ Chí Minh
+              </div>
+              <div class="box mt-3 pta">
+                <div class="box-text">
+                  <div>
+                    <div class="label">Mức giá</div>
+                    <div class="value">60 triệu</div>
+                  </div>
+                  <div>
+                    <div class="label">Diện tích</div>
+                    <div class="value">8m2</div>
+                  </div>
+                  <div>
+                    <div class="label">Phòng ngủ</div>
+                    <div class="value">2 Phòng ngủ</div>
+                  </div>
+                </div>
+                <div class="box-icon">
+                  <div>
+                    <img
+                      src="./assets/icon/ant-design_share-alt-outlined.svg"
+                    />
+                  </div>
+                  <div><img src="./assets/icon/warning-2.svg" /></div>
+                  <div><img src="./assets/icon/heart.svg" /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row box-see-more mt-3">
+            <div class="col-md-12 lable">Thông tin mô tả</div>
+            <div class="col-md-12 text">
+              <p>
+                1. Căn hộ thuộc tòa P1, P2, P4 mới mở bán của phân khu Ocean
+                View: + 1PN + 1: DT 48m2 giá từ 1.5 tỷ. + 2PN 2WC: DT 61m2 giá
+                từ 1.9 tỷ. + 2PN 2WC góc: DT 68m2 giá từ 2 tỷ. + 3PN: DT từ
+                80m2: Giá từ 3.2 tỷ. - Căn hộ bàn giao gồm: Điều hòa multi 2
+                chiều, thiết bị vệ sinh, sàn gỗ full từ phòng ngủ ra phòng
+                khách, có kính khu vực tắm đứng. Hoàn thiện sơn tường, trần
+                thạch cao. - Tòa P4 là tòa hình chữ T mật độ thoáng chỉ 19
+                căn/sàn, 7 thang máy. - Hướng view thoáng, ban công view nội khu
+                hồ cảnh quan hoặc view ngoại khu thoáng rộng. - Đặc biệt là phân
+                khu duy nhất xây 2 tầng
+                <span id="dots">...</span>
+              </p>
+              <p id="more" style="display: none">
+                2. Căn hộ thuộc tòa P1, P2, P4 mới mở bán của phân khu Ocean
+                View: + 1PN + 1: DT 48m2 giá từ 1.5 tỷ. + 2PN 2WC: DT 61m2 giá
+                từ 1.9 tỷ. + 2PN 2WC góc: DT 68m2 giá từ 2 tỷ. + 3PN: DT từ
+                80m2: Giá từ 3.2 tỷ. - Căn hộ bàn giao gồm: Điều hòa multi 2
+                chiều, thiết bị vệ sinh, sàn gỗ full từ phòng ngủ ra phòng
+                khách, có kính khu vực tắm đứng. Hoàn thiện sơn tường, trần
+                thạch cao. - Tòa P4 là tòa hình chữ T mật độ thoáng chỉ 19
+                căn/sàn, 7 thang máy. - Hướng view thoáng, ban công view nội khu
+                hồ cảnh quan hoặc view ngoại khu thoáng rộng. - Đặc biệt là phân
+                khu duy nhất xây 2 tầng
+              </p>
+            </div>
+            <div class="btn-see-more col-md-12">
+              <p href="" onclick="myFunction()" id="myBtn">Xem Thêm</p>
+            </div>
+          </div>
+          <div class="box-characteristics row">
+            <div class="col-md-12 title">Đặc điểm bất động sản</div>
+            <div class="col-md-12 label">
+              Loại tin đăng: Bán căn hộ chung cư
+            </div>
+            <div class="col-md-12 content">
+              <div class="">
+                <div class="row rows-col-1 row-cols-sm-2">
+                  <div class="col">
+                    <div class="line">
+                      <div class="line-label">
+                        <img src="./assets/icon/picture-frame.svg" /> Diện tích
+                      </div>
+                      <div class="line-text">70 m2</div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="line">
+                      <div class="line-label">
+                        <img src="./assets/icon/map.svg" />Hướng nhà
+                      </div>
+                      <div class="line-text">Bắc</div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="line">
+                      <div class="line-label">
+                        <img src="./assets/icon/tabler_sofa.svg" />Số phòng ngủ
+                      </div>
+                      <div class="line-text">2 phòng</div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="line">
+                      <div class="line-label">
+                        <img src="./assets/icon/document-text.svg" /> Pháp lý
+                      </div>
+                      <div class="line-text">Sổ đỏ/ Sổ hồng</div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="line">
+                      <div class="line-label">
+                        <img src="./assets/icon/moneys.svg" />Mức giá
+                      </div>
+                      <div class="line-text">60 triệu</div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="line">
+                      <div class="line-label">
+                        <img src="./assets/icon/route-square.svg" />Hướng ban
+                        công
+                      </div>
+                      <div class="line-text">Nam</div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="line">
+                      <div class="line-label">
+                        <img src="./assets/icon/uil_bath.svg" />Số toilet
+                      </div>
+                      <div class="line-text">2 phòng</div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="line">
+                      <div class="line-label">
+                        <img src="./assets/icon/cil_sofa.svg" />Nội thất
+                      </div>
+                      <div class="line-text">Nội thất cao cấp</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mat-42">
+            <div class="col-md-12">
+              <h5>Tìm kiếm theo từ khoá</h5>
+            </div>
+            <div class="search-word">
+              <div class="tag-key">
+                <input type="checkbox" value="thuduc" />
+                <div class="key-text">Bán đất gần làng đại học Thủ Đức</div>
+              </div>
+              <div class="tag-key">
+                <input type="checkbox" value="thuduc" />
+                <div class="key-text">Bán nhà gần công viên Lê Thị Riêng</div>
+              </div>
+              <div class="tag-key">
+                <input type="checkbox" value="thuduc" />
+                <div class="key-text">Bán nhà ngõ Quỳnh</div>
+              </div>
+              <div class="tag-key">
+                <input type="checkbox" value="thuduc" />
+                <div class="key-text">Bán nhà ngõ Quỳnh Hai Bà Trưng</div>
+              </div>
+              <div class="tag-key">
+                <input type="checkbox" value="thuduc" />
+                <div class="key-text">Bán đất giá rẻ</div>
+              </div>
+              <div class="tag-key">
+                <input type="checkbox" value="thuduc" />
+                <div class="key-text">Bán đất gần cầu Đông Trù</div>
+              </div>
+            </div>
+          </div>
+          <div class="row mat-42">
+            <div class="box col-md-12">
+              <div
+                class="box-text row row-cols-2 row-cols-md-4 gap-0 flex-grow-1"
+              >
+                <div class="col">
+                  <div class="label">Ngày đăng</div>
+                  <div class="value">12/07/2022</div>
+                </div>
+                <div class="col">
+                  <div class="label">Ngày hết hạn</div>
+                  <div class="value">22/07/2022</div>
+                </div>
+                <div class="col">
+                  <div class="label">Loại tin</div>
+                  <div class="value">Tin Vip đặc biệt</div>
+                </div>
+                <div class="col">
+                  <div class="label">Mã tin</div>
+                  <div class="value">34446544</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div id="batdongsannoibat" class="container">
+              <div>
+                <div class="swiper batdongsannoibat2-swiper">
+                  <div class="swiper-controls">
+                    <h3 class="title mb-0 mr-auto align-self-end">
+                      Bất động sản dành cho bạn
+                    </h3>
+                    <button class="batdongsannoibat2-swiper-prev prev">
+                      <img src="./assets/icon/arrow-left.svg" alt="" />
+                    </button>
+                    <button class="batdongsannoibat2-swiper-next next">
+                      <img src="./assets/icon/arrow-right.svg" alt="" />
+                    </button>
+                  </div>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="d-flex flex-column" style="gap: 24px">
+                        <a href="#" class="main-item noi-bat">
+                          <div href="#">
+                            <div class="image-item">
+                              <img
+                                class="avatar ls-is-cached lazyloaded"
+                                src="./assets/img/property.png"
+                                alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                                style="
+                                  height: 100%;
+                                  object-fit: cover;
+                                  width: 100%;
+                                  border-radius: 6px !important;
+                                "
+                              />
+                              <div class="list-img">
+                                <img src="./assets/img/camera.png" alt="" />
+                                <span class="qty">4</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="info">
+                            <h3 class="title">
+                              Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                            </h3>
+                            <div class="price-area">
+                              <span class="price">
+                                <img src="./assets/img/price.png" alt="" />
+                                <span style="margin-left: 5px">
+                                  2 tỷ 600 triệu
+                                </span>
+                              </span>
+
+                              <span class="area">
+                                <img src="./assets/img/area.png" alt="" />
+                                <span style="margin-left: 5px">80m²</span>
+                              </span>
+                            </div>
+                            <div class="address">Thanh Xuân, Hà Nội</div>
+                            <div class="rate-and-like">
+                              <div class="rate">
+                                <span class="average">5</span>
+                                <span class="list-star">
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                </span>
+
+                                <span class="qty"> (1 rating) </span>
+                              </div>
+                              <div class="heart">
+                                <img src="./assets/img/heartIcon.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="d-flex flex-column gap-4" style="gap: 24px">
+                        <a href="#" class="main-item noi-bat">
+                          <div href="#">
+                            <div class="image-item">
+                              <img
+                                class="avatar ls-is-cached lazyloaded"
+                                src="./assets/img/property.png"
+                                alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                                style="
+                                  height: 100%;
+                                  object-fit: cover;
+                                  width: 100%;
+                                  border-radius: 6px !important;
+                                "
+                              />
+                              <div class="list-img">
+                                <img src="./assets/img/camera.png" alt="" />
+                                <span class="qty">4</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="info">
+                            <h3 class="title">
+                              Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                            </h3>
+                            <div class="price-area">
+                              <span class="price">
+                                <img src="./assets/img/price.png" alt="" />
+                                <span style="margin-left: 5px">
+                                  2 tỷ 600 triệu
+                                </span>
+                              </span>
+
+                              <span class="area">
+                                <img src="./assets/img/area.png" alt="" />
+                                <span style="margin-left: 5px">80m²</span>
+                              </span>
+                            </div>
+                            <div class="address">Thanh Xuân, Hà Nội</div>
+                            <div class="rate-and-like">
+                              <div class="rate">
+                                <span class="average">5</span>
+                                <span class="list-star">
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                </span>
+
+                                <span class="qty"> (1 rating) </span>
+                              </div>
+                              <div class="heart">
+                                <img src="./assets/img/heartIcon.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="d-flex flex-column gap-4" style="gap: 24px">
+                        <a href="#" class="main-item noi-bat">
+                          <div href="#">
+                            <div class="image-item">
+                              <img
+                                class="avatar ls-is-cached lazyloaded"
+                                src="./assets/img/property.png"
+                                alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                                style="
+                                  height: 100%;
+                                  object-fit: cover;
+                                  width: 100%;
+                                  border-radius: 6px !important;
+                                "
+                              />
+                              <div class="list-img">
+                                <img src="./assets/img/camera.png" alt="" />
+                                <span class="qty">4</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="info">
+                            <h3 class="title">
+                              Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                            </h3>
+                            <div class="price-area">
+                              <span class="price">
+                                <img src="./assets/img/price.png" alt="" />
+                                <span style="margin-left: 5px">
+                                  2 tỷ 600 triệu
+                                </span>
+                              </span>
+
+                              <span class="area">
+                                <img src="./assets/img/area.png" alt="" />
+                                <span style="margin-left: 5px">80m²</span>
+                              </span>
+                            </div>
+                            <div class="address">Thanh Xuân, Hà Nội</div>
+                            <div class="rate-and-like">
+                              <div class="rate">
+                                <span class="average">5</span>
+                                <span class="list-star">
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                </span>
+
+                                <span class="qty"> (1 rating) </span>
+                              </div>
+                              <div class="heart">
+                                <img src="./assets/img/heartIcon.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="d-flex flex-column gap-4" style="gap: 24px">
+                        <a href="#" class="main-item noi-bat">
+                          <div href="#">
+                            <div class="image-item">
+                              <img
+                                class="avatar ls-is-cached lazyloaded"
+                                src="./assets/img/property.png"
+                                alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                                style="
+                                  height: 100%;
+                                  object-fit: cover;
+                                  width: 100%;
+                                  border-radius: 6px !important;
+                                "
+                              />
+                              <div class="list-img">
+                                <img src="./assets/img/camera.png" alt="" />
+                                <span class="qty">4</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="info">
+                            <h3 class="title">
+                              Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                            </h3>
+                            <div class="price-area">
+                              <span class="price">
+                                <img src="./assets/img/price.png" alt="" />
+                                <span style="margin-left: 5px">
+                                  2 tỷ 600 triệu
+                                </span>
+                              </span>
+
+                              <span class="area">
+                                <img src="./assets/img/area.png" alt="" />
+                                <span style="margin-left: 5px">80m²</span>
+                              </span>
+                            </div>
+                            <div class="address">Thanh Xuân, Hà Nội</div>
+                            <div class="rate-and-like">
+                              <div class="rate">
+                                <span class="average">5</span>
+                                <span class="list-star">
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                </span>
+
+                                <span class="qty"> (1 rating) </span>
+                              </div>
+                              <div class="heart">
+                                <img src="./assets/img/heartIcon.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="d-flex flex-column gap-4" style="gap: 24px">
+                        <a href="#" class="main-item noi-bat">
+                          <div href="#">
+                            <div class="image-item">
+                              <img
+                                class="avatar ls-is-cached lazyloaded"
+                                src="./assets/img/property.png"
+                                alt="Bán gấp nhà mặt phố Khương Trung, kinh doanh..."
+                                style="
+                                  height: 100%;
+                                  object-fit: cover;
+                                  width: 100%;
+                                  border-radius: 6px !important;
+                                "
+                              />
+                              <div class="list-img">
+                                <img src="./assets/img/camera.png" alt="" />
+                                <span class="qty">4</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="info">
+                            <h3 class="title">
+                              Bán gấp nhà mặt phố Khương Trung, kinh doanh...
+                            </h3>
+                            <div class="price-area">
+                              <span class="price">
+                                <img src="./assets/img/price.png" alt="" />
+                                <span style="margin-left: 5px">
+                                  2 tỷ 600 triệu
+                                </span>
+                              </span>
+
+                              <span class="area">
+                                <img src="./assets/img/area.png" alt="" />
+                                <span style="margin-left: 5px">80m²</span>
+                              </span>
+                            </div>
+                            <div class="address">Thanh Xuân, Hà Nội</div>
+                            <div class="rate-and-like">
+                              <div class="rate">
+                                <span class="average">5</span>
+                                <span class="list-star">
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                  <img src="./assets/img/star.png" alt="" />
+                                </span>
+
+                                <span class="qty"> (1 rating) </span>
+                              </div>
+                              <div class="heart">
+                                <img src="./assets/img/heartIcon.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row text footer-text mb-4">
+            <p>
+              Quý vị đang xem nội dung tin rao "Fiato Premier mặt tiền TP Thủ
+              Đức 80m2/2PN chỉ thanh toán 1,1 tỷ nhận nhà, chiết khấu lên đến
+              15%" - Mã tin 34446544. Mọi thông tin, nội dung liên quan tới tin
+              rao này là do người đăng tin đăng tải và chịu trách nhiệm.
+              Batdongsan.com.vn luôn cố gắng để các thông tin được hữu ích nhất
+              cho quý vị tuy nhiên Batdongsan.com.vn không đảm bảo và không chịu
+              trách nhiệm về bất kỳ thông tin, nội dung nào liên quan tới tin
+              rao này. Trường hợp phát hiện nội dung tin đăng không chính xác,
+              Quý vị hãy thông báo và cung cấp thông tin cho Ban quản trị
+              Batdongsan.com.vn theo Hotline 19001881 để được hỗ trợ nhanh và
+              kịp thời nhất.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-3 left-element d-lg-block d-none">
+          <div class="profile-element">
+            <div class="profile-avatar">
+              <img src="./assets/img/Group 102.png" alt="" />
+              <span class="upload-by">Được đăng bởi</span>
+              <span class="name">Trương Quang Việt</span>
+            </div>
+            <div class="detail-container">
+              <div
+                class="btn"
+                data-show="0978 123 456 - Ẩn số"
+                data-hide="0978 123 *** - Hiện số"
+                data-isShow="true"
+                style="
+                  background: #c8f1df;
+                  border-radius: 8px;
+                  font-weight: 600;
+                  font-size: 14px;
+                  line-height: 22px;
+                "
+                onclick=" this.innerText = this.classList.contains('show') ? this.dataset.show : this.dataset.hide; this.classList.toggle('show')"
+              >
+                0978 123 *** - Hiện số
+              </div>
+              <button class="btn">Gửi email</button>
+              <button class="btn">Yêu cầu liên hệ lại</button>
+            </div>
+          </div>
+          <div class="list-bds">
+            <div class="title">
+              Bán căn hộ chung cư theo dự án tại Thành phố Thủ Đức
+            </div>
+            <div class="link-bds">
+              <a href="#">4S Riverside Linh Đông (59)</a>
+              <a href="#">Fiato Premier (52)</a>
+              <a href="#">Flora Novia (56)</a>
+              <a href="#">King Crown Infinity (50)</a>
+              <a href="#">Lavita Charm (105)</a>
+              <a href="#">Lavita Garden (32)</a>
+              <a href="#">Moonlight Residences (29)</a>
+              <a href="#">Opal Garden (33)</a>
+              <a href="#">Phố Đông Village (26)</a>
+              <a href="#">Sunview Town (35)</a>
+            </div>
+          </div>
+          <div class="list-bds">
+            <div class="title">
+              Bán căn hộ chung cư theo dự án tại Thành phố Thủ Đức
+            </div>
+            <div class="link-bds">
+              <a href="#">4S Riverside Linh Đông (59)</a>
+              <a href="#">Fiato Premier (52)</a>
+              <a href="#">Flora Novia (56)</a>
+              <a href="#">King Crown Infinity (50)</a>
+              <a href="#">Lavita Charm (105)</a>
+              <a href="#">Lavita Garden (32)</a>
+              <a href="#">Moonlight Residences (29)</a>
+              <a href="#">Opal Garden (33)</a>
+              <a href="#">Phố Đông Village (26)</a>
+              <a href="#">Sunview Town (35)</a>
+            </div>
+          </div>
+          <div class="list-bds">
+            <div class="title">
+              Bán căn hộ chung cư theo dự án tại Thành phố Thủ Đức
+            </div>
+            <div class="link-bds">
+              <a href="#">4S Riverside Linh Đông (59)</a>
+              <a href="#">Fiato Premier (52)</a>
+              <a href="#">Flora Novia (56)</a>
+              <a href="#">King Crown Infinity (50)</a>
+              <a href="#">Lavita Charm (105)</a>
+              <a href="#">Lavita Garden (32)</a>
+              <a href="#">Moonlight Residences (29)</a>
+              <a href="#">Opal Garden (33)</a>
+              <a href="#">Phố Đông Village (26)</a>
+              <a href="#">Sunview Town (35)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end dangtin -->
+
+    <div id="ft-t" class="container mt-5">
+      <h4 class="title">NHÀ ĐẤT BÁN</h4>
+      <div class="row row-cols-2 row-cols-md-4">
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="ft-t-2" class="container">
+      <h4 class="title">NHÀ ĐẤT BÁN</h4>
+      <div class="row row-cols-2 row-cols-md-4">
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- start footer -->
+    <footer style="background: #ecedf1">
+      <div class="footer container pt-1 gap-w">
+        <div class="footer-top row">
+          <div class="col-lg-4 text-center text-lg-left">
+            <a href="">
+              <img src="./assets/img/logo-footer.png" alt="" />
+            </a>
+          </div>
+
+          <div class="col-lg-2 col-5">
+            <div class="item d-flex gap-1 align-items-center">
+              <div class="img" style="float: left">
+                <img src="./assets/img/call-calling.png" alt="" />
+              </div>
+              <div class="text">
+                <div class="text-top">Hotline 24/7</div>
+                <div class="text-bot">1900 1881</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-7">
+            <div class="item d-flex gap-1 align-items-center">
+              <div class="img" style="float: left">
+                <img src="./assets/img/message-question.png" alt="" />
+              </div>
+              <div class="text">
+                <div class="text-top">Hỗ trợ khách hàng</div>
+                <div class="text-bot">contact@homeup.vn</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div
+              class="item d-flex gap-1 align-items-center justify-content-lg-end text-right text-lg-left"
+            >
+              <div class="img" style="float: left">
+                <img src="./assets/img/cham-soc-kh.png" alt="" />
+              </div>
+              <div class="text">
+                <div class="text-top">Chăm sóc khách hàng</div>
+                <div class="text-bot">contact@homeup.vn</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row footer-top2">
+          <div class="col-lg-2 col-6 item">
+            <ul>
+              <li>
+                <p>Company</p>
+              </li>
+              <li>
+                <a href="#"> About </a>
+              </li>
+              <li>
+                <a href="#"> Jobs</a>
+              </li>
+              <li>
+                <a href="#"> Press </a>
+              </li>
+              <li>
+                <a href="#">Investor Relatión </a>
+              </li>
+              <li>
+                <a href="#"> Management Team </a>
+              </li>
+              <li>
+                <a href="#"> In Your Company </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-6 item">
+            <ul>
+              <li>
+                <p>Work with Homeup</p>
+              </li>
+
+              <li>
+                <a href="#"> Join the Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Run a Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Learn About Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Affiliate Program </a>
+              </li>
+              <li>
+                <a href="#"> Vendor Code </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 item">
+            <ul>
+              <li>
+                <p>Work with Homeup</p>
+              </li>
+
+              <li>
+                <a href="#"> Join the Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Run a Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Learn About Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Affiliate Program </a>
+              </li>
+              <li>
+                <a href="#"> Vendor Code </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 item">
+            <ul>
+              <li class="text-left text-sm-center text-lg-left">
+                <a href="" style="color: #646d84"> Ngôn ngữ </a>
+              </li>
+              <li>
+                <select name="" class="select-lang w-100 w-md-unset">
+                  <option value="">Tiếng Việt</option>
+                  <option value="">Tiếng Anh</option>
+                </select>
+              </li>
+              <li class="text-left text-sm-center text-lg-left">
+                <p style="color: #646d84">Cộng đồng</p>
+              </li>
+              <div class="list-social text-left text-sm-center text-lg-left">
+                <a href="" class="item">
+                  <span>
+                    <img src="./assets/img/icon-fb.png" alt="" />
+                  </span>
+                </a>
+                <a href="" class="item">
+                  <span>
+                    <img src="./assets/img/icon-zalo.png" alt="" />
+                  </span>
+                </a>
+                <a href="" class="item">
+                  <span>
+                    <img src="./assets/img/icon-ticktok.png" alt="" />
+                  </span>
+                </a>
+              </div>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 item list-app d-flex justify-content-center justify-content-lg-start gap-3 align-items-md-end flex-column flex-sm-row flex-lg-column"
+          >
+            <div class="app">
+              <a href=""> </a>
+              <div class="content">
+                <a href="">
+                  <div class="img">
+                    <img src="./assets/img/icon-phone.png" alt="" />
+                  </div>
+                </a>
+                <div class="text">
+                  <a href="">
+                    <span style="color: #fff">Tải ngay ứng dụng</span><br /> </a
+                  ><a href="" class="link-homeup"
+                    >Homeup App
+                    <i
+                      class="fas fa-caret-right"
+                      style="margin-left: 5px; margin-top: 2px"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="app mt-0 mt-md-3">
+              <a href=""> </a>
+              <div class="content" style="padding: 18px 12px">
+                <a href="">
+                  <div class="img" style="margin-right: 6px">
+                    <img src="./assets/img/sms-edit.png" alt="" />
+                  </div>
+                </a>
+                <div class="text">
+                  <a href="">
+                    <span style="color: #fff">Gia nhập Homeup!</span>
+                    <span> </span></a
+                  ><a href="" class="link-homeup"
+                    >Ứng tuyển
+                    <i
+                      class="fas fa-caret-right"
+                      style="margin-left: 5px; margin-top: 2px"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <hr /> -->
+        <div class="row footer-local mt-lg-5 mt-4">
+          <div class="col-md-12">
+            <h2 class="title">Incredible Deals on Local Experiences</h2>
+            <ul class="flex-wrap">
+              <li>Homeup Gift Ideas</li>
+              <li>Valentine’s Day Gifts</li>
+              <li>Mother’s Day Gifts</li>
+              <li>Father’s Day Gifts</li>
+              <li>Things to Do</li>
+            </ul>
+          </div>
+          <div class="col-md-12 mt-lg-5 mt-4">
+            <div class="row">
+              <div class="col-md-6 d-flex align-items-center">
+                <div class="row item-baseline gap-14">
+                  <div class="mal-16">
+                    <img src="./assets/img/Rectangle70.png" />
+                  </div>
+                  <div>
+                    <ul>
+                      <li>Space Capital Group</li>
+                      <li>></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 rg-img text-md-right text-left my-3 my-md-0">
+                <img src="./assets/img/sub2.png" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 mt-lg-0 mt-4">
+            <ul class="flex-wrap">
+              <li>Copyright © 2022 HomeUp, All rights reserved.</li>
+              <li>Terrms of Use</li>
+              <li>Privacy Statement</li>
+              <li>License</li>
+              <li>Accesibility</li>
+              <li>Do Not Sell My Personal Information</li>
+            </ul>
+          </div>
+          <div class="col-md-12 mat-42">
+            <ul class="flex-wrap">
+              <li>Chịu trách nhiệm nội dung: Trần Mạnh Ninh</li>
+              <li>Công ty Cổ phần Homeup Việt Nam 2022</li>
+              <li>Địa chỉ: Số 114 Mễ Trì Hạ, Nam Từ Liêm, Hà Nội</li>
+              <li>Số điện thoại: 04862715675</li>
+              <li>MST: 031329999</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function myFunction() {
+        var dots = document.getElementById('dots');
+        var moreText = document.getElementById('more');
+        var btnText = document.getElementById('myBtn');
+
+        if (dots.style.display === 'none') {
+          dots.style.display = 'inline';
+          btnText.innerHTML = 'Xem Thêm';
+          moreText.style.display = 'none';
+        } else {
+          dots.style.display = 'none';
+          btnText.innerHTML = 'Ẩn bớt';
+          moreText.style.display = 'inline';
+        }
+      }
+    </script>
+
+    <!-- end footer -->
+    <!-- Swiper JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper('.mySwiper2', {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+      new Swiper('.batdongsannoibat2-swiper', {
+        navigation: {
+          nextEl: '.batdongsannoibat2-swiper-next',
+          prevEl: '.batdongsannoibat2-swiper-prev',
+        },
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+          },
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 16,
+            slidesPerGroup: 3,
+          },
+        },
+      });
+      const activedSlide = document.querySelectorAll(
+        '.slide .mySwiper2 .swiper-wrapper > .swiper-slide  img'
+      );
+      if (activedSlide) {
+        activedSlide.forEach((item) => {
+          item.onclick = () => {
+            document.querySelector('.slide').classList.add('show');
+          };
+        });
+      }
+      document.querySelector('.slide > .controls .close-btn').onclick = () =>
+        document.querySelector('.slide').classList.remove('show');
+
+      document.querySelector('.slide > .controls .bi-zoom-in').onclick = () => {
+        document.querySelector('.slide').dataset.zoom = '1.5';
+      };
+      document.querySelector('.slide > .controls .bi-zoom-out').onclick =
+        () => {
+          document.querySelector('.slide').dataset.zoom = '1';
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script> -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>

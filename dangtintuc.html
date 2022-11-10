@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+    <script src="./js/chuyenmuc.js"></script>
+  </head>
+  <body id="dangtintuc">
+    <header class="top-header" id="header">
+      <nav
+        class="navbar navbar-expand-lg menu navbar-light bg-light justify-content-lg-start justify-content-center"
+        style="background: #ffffff !important; padding: 10px"
+      >
+        <!-- Links -->
+        <!-- Brand/logo -->
+        <a class="navbar-brand ml-lg-0 ml-auto" href="#"
+          ><img src="./assets/img/logo.png" alt="" width="125"
+        /></a>
+        <img
+          class="d-lg-none d-block ml-lg-4 ml-auto"
+          src="./assets/img/like-bt.png"
+          alt=""
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="nav-mobile-header d-flex d-lg-none">
+            <div>
+              <a href="#" class="btn btn-primary">Đăng nhập</a>
+              <a href="#" class="btn btn-outline-secondary">Đăng kí</a>
+            </div>
+            <a href="#" class="btn btn-primary">Đăng tin</a>
+          </div>
+          <ul class="navbar-nav mr-auto d-lg-flex">
+            <li class="item-menu dropdown">
+              <a
+                class="nav-link dropdown-toggle item-nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Nhà đất bán</a
+              >
+              <!-- Sub-Menu -->
+              <ul
+                class="sub-menu dropdown-menu"
+                aria-labelledby="navbarDropdown"
+              >
+                <li class="dropdown-item">
+                  <a href="#">Bán căn hộ chung cư</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#">Bán nhà riêng</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="item-menu dropdown">
+              <a
+                class="nav-link dropdown-toggle item-nav-link"
+                href="#"
+                id="navbarDropdown2"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Nhà đất cho thuê</a
+              >
+
+              <ul
+                class="sub-menu dropdown-menu"
+                aria-labelledby="navbarDropdown2"
+              >
+                <li class="dropdown-item">
+                  <a href="#">Cho thuê căn hộ chung cư</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item-menu">
+              <a class="item-nav-link" href="#">Dự án</a>
+            </li>
+            <li class="item-menu">
+              <a class="item-nav-link" href="#">Tin tức</a>
+            </li>
+            <li class="item-menu">
+              <a class="item-nav-link" href="#"> Bản Đồ </a>
+            </li>
+            <li class="item-menu">
+              <a class="item-nav-link" href="#"> Thuật Ngữ </a>
+            </li>
+            <li class="item-menu d-none d-lg-flex">
+              <img
+                src="./assets/img/threedot.svg"
+                alt=""
+                style="cursor: pointer"
+              />
+            </li>
+          </ul>
+        </div>
+        <div
+          class="nav-overlay"
+          onclick="this.previousElementSibling.previousElementSibling.click()"
+        ></div>
+        <ul
+          class="navbar-nav d-none d-lg-flex"
+          onclick="clickShowSubmenu()"
+          style="display: none"
+        >
+          <li
+            class="item-menu"
+            style="
+              padding: 8px 12px;
+              border-radius: 24px;
+              border: 1px solid #ecedf1;
+              box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <a href="#">
+              <img
+                style="width: 24px; cursor: pointer"
+                src="./assets/img/menu.svg"
+                alt=""
+              />
+              <img
+                style="width: 24px; cursor: pointer"
+                src="./assets/img/profile-circle.svg"
+                alt=""
+              />
+            </a>
+            <ul class="sub-menu" id="profile-submenu" style="display: none">
+              <li>
+                <a href="#" style="background: #ffffff">Đăng nhập</a>
+              </li>
+              <li>
+                <a href="#" style="background: #ffffff">Tạo tài khoản mới</a>
+              </li>
+              <li style="border-top: 1px solid #ecedf1">
+                <a href="#" style="background: #ffffff">Trợ giúp</a>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="item-menu"
+            style="padding: 8px 12px; background: #d1193f; border-radius: 24px"
+          >
+            <a href="#">
+              <span
+                style="
+                  color: #ffffff;
+                  font-weight: 600;
+                  font-size: 14px;
+                  line-height: 22px;
+                "
+                >Đăng Tin</span
+              >
+              <img
+                style="width: 20px"
+                src="./assets/img/edit-header.svg"
+                alt=""
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- start dang tin tuc -->
+    <div class="dangtintuc container mat-42">
+      <div class="d-flex fl-column">
+        <div class="title">Đăng tin</div>
+      </div>
+      <div id="dangtin-main" class="mt-3">
+        <div class="row">
+          <div class="col-12 col-lg-9 left-element">
+            <div class="row row-container-element">
+              <div class="card-body">
+                <div class="collapse-box">
+                  <div class="form-container">
+                    <div class="form-item-intro">
+                      <div class="title-collapse">
+                        <div class="introduce">Thông tin cơ bản</div>
+                        <p class="thugon">
+                          <a
+                            class="text-collapse thugon"
+                            data-toggle="collapse"
+                            href="#collapseExample"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="collapseExample"
+                          >
+                            Thu gọn
+                          </a>
+                        </p>
+                      </div>
+
+                      <div class="collapse show" id="collapseExample">
+                        <div
+                          class="card card-body"
+                          style="
+                            box-shadow: none !important;
+                            border: none;
+                            padding: 0;
+                          "
+                        >
+                          <div class="detail">
+                            <div class="thongtin">
+                              Thông tin có dấu (<span class="batbuoc">*</span>)
+                              là bắt buộc, không đăng lại tin đã đăng trên
+                              Homeup.vn
+                            </div>
+                            <div class="tabs tab-list">
+                              <ul
+                                class="nav nav-tabs mobile-nav row rows-col-3 d-flex"
+                                role="tablist"
+                              >
+                                <li class="nav-item col">
+                                  <a
+                                    class="nav-link active"
+                                    href="#profile"
+                                    role="tab"
+                                    data-toggle="tab"
+                                    >Bán</a
+                                  >
+                                </li>
+                                <li class="nav-item col">
+                                  <a
+                                    class="nav-link"
+                                    href="#buzz"
+                                    role="tab"
+                                    data-toggle="tab"
+                                    >Cho thuê</a
+                                  >
+                                </li>
+                                <li class="nav-item col">
+                                  <a
+                                    class="nav-link"
+                                    href="#references"
+                                    role="tab"
+                                    data-toggle="tab"
+                                    >Sang nhượng</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="row row-element">
+                              <div class="col-md-12 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Loại bất động sản
+                                </label>
+                                <select
+                                  class="selectpicker ptanh-custom-select form-control"
+                                  title="VD: Nhà riêng"
+                                  data-live-search="true"
+                                >
+                                  <option data-tokens="ketchup mustard">
+                                    Hot Dog, Fries and a Soda
+                                  </option>
+                                  <option data-tokens="mustard">
+                                    Burger, Shake and a Smile
+                                  </option>
+                                  <option data-tokens="frosting">
+                                    Sugar, Spice and all things nice
+                                  </option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="row row-element">
+                              <div
+                                class="col"
+                                style="
+                                  font-weight: 500;
+                                  font-size: 12px;
+                                  line-height: 18px;
+                                  text-transform: uppercase;
+                                "
+                              >
+                                Địa chỉ
+                              </div>
+                            </div>
+
+                            <div class="row row-element">
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Tinh, thành phố <span class="batbuoc">*</span>
+                                </label>
+                                <select
+                                  class="selectpicker ptanh-custom-select form-control"
+                                  title="VD: Nhà riêng"
+                                  data-live-search="true"
+                                  required
+                                >
+                                  <option data-tokens="ketchup mustard">
+                                    Hot Dog, Fries and a Soda
+                                  </option>
+                                  <option data-tokens="mustard">
+                                    Burger, Shake and a Smile
+                                  </option>
+                                  <option data-tokens="frosting">
+                                    Sugar, Spice and all things nice
+                                  </option>
+                                </select>
+                              </div>
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Quận, huyện <span class="batbuoc">*</span>
+                                </label>
+                                <select
+                                  class="selectpicker ptanh-custom-select form-control"
+                                  title="VD: Nhà riêng"
+                                  data-live-search="true"
+                                  required
+                                >
+                                  <option data-tokens="ketchup mustard">
+                                    Hot Dog, Fries and a Soda
+                                  </option>
+                                  <option data-tokens="mustard">
+                                    Burger, Shake and a Smile
+                                  </option>
+                                  <option data-tokens="frosting">
+                                    Sugar, Spice and all things nice
+                                  </option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row row-element">
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Phường, xã <span class="batbuoc">*</span>
+                                </label>
+                                <select
+                                  class="selectpicker ptanh-custom-select form-control"
+                                  title="VD: Nhà riêng"
+                                  data-live-search="true"
+                                  required
+                                >
+                                  <option data-tokens="ketchup mustard">
+                                    Hot Dog, Fries and a Soda
+                                  </option>
+                                  <option data-tokens="mustard">
+                                    Burger, Shake and a Smile
+                                  </option>
+                                  <option data-tokens="frosting">
+                                    Sugar, Spice and all things nice
+                                  </option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Đường, phố
+                                </label>
+                                <select
+                                  class="selectpicker ptanh-custom-select form-control"
+                                  title="VD: Nhà riêng"
+                                  data-live-search="true"
+                                  required
+                                >
+                                  <option data-tokens="ketchup mustard">
+                                    Hot Dog, Fries and a Soda
+                                  </option>
+                                  <option data-tokens="mustard">
+                                    Burger, Shake and a Smile
+                                  </option>
+                                  <option data-tokens="frosting">
+                                    Sugar, Spice and all things nice
+                                  </option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Địa chỉ hiển thị trên tin đăng
+                                </label>
+                                <input
+                                  type="text"
+                                  class="ptanh-custom-input form-control"
+                                />
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row row-container-element">
+              <div class="card-body">
+                <div class="">
+                  <div class="form-container">
+                    <div class="form-item-intro">
+                      <div class="title-collapse">
+                        <div class="introduce">Thông tin bài viết</div>
+                        <p class="thugon">
+                          <a
+                            class="thugon"
+                            data-toggle="collapse"
+                            href="#thongtinbaiviet"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="thongtinbaiviet"
+                          >
+                            Thu gọn
+                          </a>
+                        </p>
+                      </div>
+                      <div class="collapse show" id="thongtinbaiviet">
+                        <div
+                          class="card card-body"
+                          style="box-shadow: none; border: none; padding: 0"
+                        >
+                          <div class="detail">
+                            <div class="thongtin">
+                              Không gộp nhiều bất động sản trong một tin rao, để
+                              quá trình đăng tin và duyệt nhanh hơn, xin lưu ý:
+                              gõ tiếng Việt có dấu và không viết tắt...
+                            </div>
+                          </div>
+                          <div class="dropdown-divider"></div>
+                          <form class="was-validated">
+                            <div class="mb-3 mt-4">
+                              <label for="validationTextarea" class="form-label"
+                                >Tiêu đề <span class="batbuoc">*</span></label
+                              >
+                              <textarea
+                                rows="2"
+                                id="validationTextarea"
+                                class="ptanh-text-area-custom form-control"
+                                placeholder="VD: Bán nhà riêng 50m2 chính chủ tại Cầu Giấy"
+                              ></textarea>
+
+                              <p class="desc-required mt-2 mb-4">
+                                Tối thiểu 30 ký tự, tối đa 99 ký tự
+                              </p>
+                            </div>
+                          </form>
+                          <form class="was-validated">
+                            <div class="mb-3">
+                              <label
+                                for="validationTextarea2"
+                                class="form-label"
+                                >Mô tả <span class="batbuoc">*</span></label
+                              >
+                              <textarea
+                                rows="5"
+                                id="validationTextarea2"
+                                class="ptanh-text-area-custom form-control"
+                                placeholder="Nhập mô tả chung về bất động sản của bạn. Ví dụ: Khu nhà có vị trí thuận lợi, gần công viên, gần trường học ... "
+                              ></textarea>
+                              <p class="desc-required mt-2">
+                                Tối thiểu 30 ký tự, tối đa 3.000 ký tự
+                              </p>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row row-container-element">
+              <div class="card-body">
+                <div class="">
+                  <div class="form-container">
+                    <div class="form-item-intro">
+                      <div class="title-collapse">
+                        <div class="introduce">Thông tin bất động sản</div>
+                        <p class="thugon">
+                          <a
+                            class="thugon"
+                            data-toggle="collapse"
+                            href="#thongtinbatdongsan"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="thongtinbatdongsan"
+                          >
+                            Thu gọn
+                          </a>
+                        </p>
+                      </div>
+                      <div class="collapse show" id="thongtinbatdongsan">
+                        <div
+                          class="card card-body"
+                          style="box-shadow: none; border: none; padding: 0"
+                        >
+                          <div class="dropdown-divider mt-4"></div>
+                          <div class="row row-bds mt-4">
+                            <div class="col-md-12">
+                              <label class="form-label">
+                                Diện tích <span class="batbuoc">*</span>
+                              </label>
+                              <div
+                                style="
+                                  display: flex;
+                                  background: #f9fafc;
+                                  border: 1px solid #ecedf1;
+                                  border-radius: 8px;
+                                "
+                              >
+                                <div class="col-md-11" style="padding: 0">
+                                  <input
+                                    style="border-right: none !important"
+                                    type="text"
+                                    class="ptanh-custom-input form-control has-icon-after"
+                                    placeholder="Nhập diện tích"
+                                  />
+                                </div>
+                                <div
+                                  class="col-md-1"
+                                  style="padding: 0; display: flex"
+                                >
+                                  <img
+                                    src="./assets/img/m2.svg"
+                                    alt=""
+                                    style="
+                                      width: 19px;
+                                      height: 20px;
+                                      margin: auto;
+                                    "
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row row-bds">
+                            <div
+                              class="col-md-9"
+                              style="display: flex; flex-direction: column"
+                            >
+                              <label
+                                class="form-label"
+                                style="padding-top: 3px"
+                              >
+                                Mức giá <span class="batbuoc">*</span>
+                              </label>
+                              <input
+                                type="text"
+                                class="ptanh-custom-input form-control"
+                                placeholder="Nhập giá"
+                              />
+                            </div>
+                            <div class="col-md-3">
+                              <label class="form-label"> Đơn vị </label>
+                              <select
+                                class="selectpicker ptanh-custom-select form-control"
+                                title="Chọn đơn vị"
+                                data-live-search="true"
+                              >
+                                <option selected data-tokens="ketchup mustard">
+                                  Thỏa thuận
+                                </option>
+                                <option data-tokens="mustard">
+                                  Burger, Shake and a Smile
+                                </option>
+                                <option data-tokens="frosting">
+                                  Sugar, Spice and all things nice
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="row row-bds">
+                            <div class="col-md-12">
+                              <label class="form-label">
+                                Giấy tờ pháp lý
+                              </label>
+                              <select
+                                class="selectpicker ptanh-custom-select form-control"
+                                data-live-search="true"
+                              >
+                                <option selected data-tokens="ketchup mustard">
+                                  Không
+                                </option>
+                                <option data-tokens="mustard">
+                                  Burger, Shake and a Smile
+                                </option>
+                                <option data-tokens="frosting">
+                                  Sugar, Spice and all things nice
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                          <div
+                            class="dropdown-divider"
+                            style="margin: 0 0 24px 0"
+                          ></div>
+                          <div class="row row-bds">
+                            <div class="col-md-9 title-count">Số phòng ngủ</div>
+                            <div class="col-md-3">
+                              <div
+                                class="count-container"
+                                style="
+                                  background: #ecedf1;
+                                  display: flex;
+                                  padding: 3px 3px;
+                                  border: 1px solid #ecedf1;
+                                  border-radius: 8px;
+                                "
+                              >
+                                <div
+                                  class="btn-minus"
+                                  onclick="bedroom.minus('count-bedroom')"
+                                ></div>
+                                <span style="margin: auto" id="count-bedroom"
+                                  >0</span
+                                >
+                                <div
+                                  class="btn-plus active"
+                                  onclick="bedroom.plus('count-bedroom')"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row row-bds">
+                            <div class="col-md-9 title-count">
+                              Số phòng tắm, vệ sinh
+                            </div>
+                            <div class="col-md-3">
+                              <div
+                                class="count-container"
+                                style="
+                                  background: #ecedf1;
+                                  display: flex;
+                                  padding: 3px 3px;
+                                  border: 1px solid #ecedf1;
+                                  border-radius: 8px;
+                                "
+                              >
+                                <div
+                                  class="btn-minus"
+                                  onclick="bathroom.minus('count-bathroom')"
+                                ></div>
+                                <span style="margin: auto" id="count-bathroom"
+                                  >0</span
+                                >
+                                <div
+                                  class="btn-plus active"
+                                  onclick="bathroom.plus('count-bathroom')"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row row-bds">
+                            <div class="col-md-9 title-count">Số tầng</div>
+                            <div class="col-md-3">
+                              <div
+                                class="count-container"
+                                style="
+                                  background: #ecedf1;
+                                  display: flex;
+                                  padding: 3px 3px;
+                                  border: 1px solid #ecedf1;
+                                  border-radius: 8px;
+                                "
+                              >
+                                <div
+                                  class="btn-minus"
+                                  onclick="flat.minus('count-flat')"
+                                ></div>
+                                <span style="margin: auto" id="count-flat"
+                                  >0</span
+                                >
+                                <div
+                                  class="btn-plus active"
+                                  onclick="flat.plus('count-flat')"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row row-bds">
+                            <div
+                              class="col-md-12"
+                              style="
+                                font-weight: 500;
+                                font-size: 12px;
+                                line-height: 18px;
+                                color: #646d84;
+                                text-transform: uppercase;
+                              "
+                            >
+                              Mô tả bổ sung
+                            </div>
+                          </div>
+                          <div class="row row-bds">
+                            <div class="col-md-6">
+                              <label class="form-label">Hướng nhà</label>
+                              <select
+                                class="selectpicker ptanh-custom-select form-control"
+                                data-live-search="true"
+                                title="Chọn hướng"
+                              >
+                                <option data-tokens="mustard">
+                                  Burger, Shake and a Smile
+                                </option>
+                                <option data-tokens="frosting">
+                                  Sugar, Spice and all things nice
+                                </option>
+                              </select>
+                            </div>
+                            <div class="col-md-6">
+                              <label class="form-label">Hướng ban công</label>
+                              <select
+                                class="selectpicker ptanh-custom-select form-control"
+                                data-live-search="true"
+                                title="Chọn hướng"
+                              >
+                                <option data-tokens="mustard">
+                                  Burger, Shake and a Smile
+                                </option>
+                                <option data-tokens="frosting">
+                                  Sugar, Spice and all things nice
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="row row-bds">
+                            <div
+                              class="col-md-12"
+                              style="display: flex; flex-direction: column"
+                            >
+                              <label
+                                class="form-label"
+                                style="padding-top: 3px"
+                              >
+                                Nội thất
+                              </label>
+                              <input
+                                type="text"
+                                class="ptanh-custom-input form-control"
+                                placeholder="Mô tả"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row row-container-element">
+              <div class="card-body">
+                <div class="">
+                  <div class="form-container">
+                    <div class="form-item-intro">
+                      <div class="title-collapse">
+                        <div class="introduce">Hình ảnh & Video</div>
+                        <p class="thugon">
+                          <a
+                            class="thugon"
+                            data-toggle="collapse"
+                            href="#hinhanh"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="hinhanh"
+                          >
+                            Thu gọn
+                          </a>
+                        </p>
+                      </div>
+                      <div class="collapse show" id="hinhanh">
+                        <div
+                          class="card card-body"
+                          style="box-shadow: none; border: none; padding: 0"
+                        >
+                          <div class="detail">
+                            <div class="thongtin" style="margin: 0">
+                              Tin rao có ảnh sẽ được xem nhiều hơn gấp 10 lần và
+                              được nhiều người gọi gấp 5 lần so với tin rao
+                              không có ảnh. Hãy đăng ảnh để được giao dịch nhanh
+                              chóng!
+                            </div>
+                            <span
+                              style="
+                                margin-bottom: 23px;
+                                color: #646d84;
+                                font-weight: 400;
+                                font-size: 12px;
+                              "
+                              >Xem thêm
+                              <a
+                                href="#"
+                                style="
+                                  color: #d1193f;
+                                  text-decoration: none;
+                                  font-weight: 400;
+                                  font-size: 12px;
+                                "
+                                >Quy định đăng tin</a
+                              >
+                              Quy định đăng tin để biết thêm chi tiết.</span
+                            >
+                          </div>
+                          <div class="dropdown-divider my-4"></div>
+                          <div id="upload-img">
+                            <div class="card">
+                              <div class="drag-area select" role="button">
+                                <span class="visible">
+                                  <img
+                                    src="./assets/img/gallery-add.png"
+                                    alt=""
+                                    class="mr-2"
+                                  />
+                                  Bấm để chọn ảnh tải lên hoặc kéo thả ảnh vào
+                                </span>
+                                <span class="on-drop">Drop images here</span>
+                                <input
+                                  name="file"
+                                  type="file"
+                                  class="file"
+                                  multiple
+                                />
+                              </div>
+
+                              <!-- IMAGE PREVIEW CONTAINER -->
+                              <div class="img-container pb-3"></div>
+                              <div class="drag-area select mt-4" role="button">
+                                <span class="visible">
+                                  <img
+                                    src="./assets/img/youtube.png"
+                                    alt=""
+                                    class="mr-2"
+                                  />
+                                  Tải video từ Youttube
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row row-container-element">
+              <div class="card-body">
+                <div class="">
+                  <div class="form-container">
+                    <div class="form-item-intro">
+                      <div class="title-collapse">
+                        <div class="introduce">Thông tin liên hệ</div>
+                        <p class="thugon">
+                          <a
+                            class="thugon"
+                            data-toggle="collapse"
+                            href="#thongtinlienhe"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="thongtinlienhe"
+                          >
+                            Thu gọn
+                          </a>
+                        </p>
+                      </div>
+                      <div class="collapse" id="thongtinlienhe">
+                        <div
+                          class="card card-body"
+                          style="box-shadow: none; border: none; padding: 0"
+                        >
+                          <div class="dropdown-divider"></div>
+                          <div class="col-md-12" style="padding: 0">
+                            <div class="row row-element">
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Tên liên hệ <span class="batbuoc">*</span>
+                                </label>
+                                <input
+                                  type="text"
+                                  class="ptanh-custom-input form-control"
+                                  placeholder="Nhập giá"
+                                />
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Số điện thoại <span class="batbuoc">*</span>
+                                </label>
+                                <input
+                                  type="text"
+                                  class="ptanh-custom-input form-control"
+                                  placeholder="Nhập giá"
+                                />
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row row-element">
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Email <span class="batbuoc">*</span>
+                                </label>
+                                <input
+                                  type="text"
+                                  class="ptanh-custom-input form-control"
+                                  placeholder="Nhập giá"
+                                />
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Website
+                                </label>
+                                <input
+                                  type="text"
+                                  class="ptanh-custom-input form-control"
+                                  placeholder="Nhập giá"
+                                />
+                              </div>
+                            </div>
+                            <div class="row row-element">
+                              <div class="col-md-12 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Địa chỉ
+                                </label>
+                                <input
+                                  type="text"
+                                  class="ptanh-custom-input form-control"
+                                  placeholder="Nhập giá"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row row-container-element">
+              <div class="card-body">
+                <div class="">
+                  <div class="form-container">
+                    <div class="form-item-intro">
+                      <div class="title-collapse">
+                        <span class="introduce">Chọn gói tin đăng</span>
+                      </div>
+                      <div
+                        class="dropdown-divider mt-4 mb-3"
+                        style="margin-bottom: 16px"
+                      ></div>
+                      <div class="row pta-row" style="margin-bottom: 24px">
+                        <div class="col-md-3">
+                          <div class="dangtintuc-image active">
+                            <span class="title-imgage">Tin thường</span>
+                            <img
+                              src="./assets/img/chuyenmuc-house.svg"
+                              alt=""
+                              style="width: 90px; height: 80px"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="dangtintuc-image">
+                            <span class="title-imgage">Tin VIP 1</span>
+                            <img
+                              src="./assets/img/Frame.png"
+                              alt=""
+                              style="width: 90px; height: 80px"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="dangtintuc-image">
+                            <span class="title-imgage">Tin VIP 2</span>
+                            <img
+                              src="./assets/img/Frame-1.png"
+                              alt=""
+                              style="width: 90px; height: 80px"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="dangtintuc-image">
+                            <span class="title-imgage">Tin VIP 3</span>
+                            <img
+                              src="./assets/img/Frame-1.png"
+                              alt=""
+                              style="width: 90px; height: 80px"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                          <label for="validationCustom04" class="form-label">
+                            Số ngày đăng
+                          </label>
+                          <select
+                            class="selectpicker ptanh-custom-select form-control"
+                            data-live-search="true"
+                          >
+                            <option selected data-tokens="ketchup mustard">
+                              10 ngày
+                            </option>
+                            <option data-tokens="mustard">
+                              Burger, Shake and a Smile
+                            </option>
+                            <option data-tokens="frosting">
+                              Sugar, Spice and all things nice
+                            </option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="validationCustom04" class="form-label">
+                            Số ngày đăng
+                          </label>
+                          <div
+                            class="md-form md-outline input-with-post-icon datepicker"
+                            id="accLabels"
+                          >
+                            <input
+                              type="date"
+                              class="ptanh-custom-input form-control"
+                              height="42"
+                              style="height: 42px"
+                              placeholder="02/08/2022"
+                              value=""
+                              min="1997-01-01"
+                              max="2030-12-31"
+                            />
+                            <i
+                              class="fas fa-calendar input-prefix"
+                              tabindex="0"
+                            ></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row row-container-element">
+              <div class="btn-footer-watching">
+                <div
+                  style="display: flex; align-items: center"
+                  class="btn-container"
+                >
+                  <button class="btn btn-previous">Xem trước giao diện</button>
+                  <div class="btn btn-container-footer">
+                    <button class="btn-next">Tiếp tục</button>
+                    <img
+                      src="./assets/img/btn-vector-footer.svg"
+                      alt=""
+                      style="width: 8px; height: 15px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-3 right-element d-none d-lg-block">
+            <div class="container-left-side">
+              <div class="chart-container">
+                <div
+                  class="title"
+                  style="margin-top: 24px; margin-bottom: 24px"
+                >
+                  Điểm uy tín
+                </div>
+                <div class="circular-progress">
+                  <div class="value-container">0%</div>
+                </div>
+              </div>
+              <div class="content-container" style="padding: 0 24px 24px 24px">
+                <div
+                  class="description"
+                  style="text-align: center; margin-bottom: 15px"
+                >
+                  Chưa đủ thông tin để người xem ra quyết định
+                </div>
+                <div class="accordion" id="accordionExample">
+                  <div class="card card-element">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0" style="display: flex">
+                        <button
+                          class="btn btn-link btn-block text-left btn-title"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          Thông tin cơ bản
+                        </button>
+                        <span class="title-desc">20%</span>
+                      </h2>
+                    </div>
+
+                    <div
+                      id="collapseOne"
+                      class="collapse show"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordionExample"
+                    >
+                      <div class="card card-body" style="box-shadow: none">
+                        <div class="element-collapse" style="margin-top: 24px">
+                          <p class="element-collapse-title">Nhu cầu</p>
+                          <span class="element-collapse-value">+1</span>
+                        </div>
+                        <div class="element-collapse">
+                          <p class="element-collapse-title">
+                            Loại bất động sản
+                          </p>
+                          <span class="element-collapse-value">+1</span>
+                        </div>
+                        <div class="element-collapse">
+                          <p class="element-collapse-title">Tỉnh/thành phố</p>
+                          <span class="element-collapse-value">+1</span>
+                        </div>
+                        <div class="element-collapse">
+                          <p class="element-collapse-title">Quận/huyện</p>
+                          <span class="element-collapse-value">+1</span>
+                        </div>
+                        <div class="element-collapse">
+                          <p class="element-collapse-title">Phường/xã</p>
+                          <span class="element-collapse-value">+1</span>
+                        </div>
+                        <div class="element-collapse">
+                          <p class="element-collapse-title">Đường, phố</p>
+                          <span class="element-collapse-value">+1</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card card-element">
+                    <div class="card-header" id="headingOne2">
+                      <h2 class="mb-0" style="display: flex">
+                        <button
+                          class="btn btn-link btn-block text-left btn-title"
+                          type="button"
+                          data-toggle="collapse"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          Thông tin mô tả
+                        </button>
+                        <span class="title-desc">20%</span>
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="dropdown-divider" style="margin: 0"></div>
+                  <div class="card card-element">
+                    <div class="card-header" id="headingOne3">
+                      <h2 class="mb-0" style="display: flex">
+                        <button
+                          class="btn btn-link btn-block text-left btn-title"
+                          type="button"
+                          data-toggle="collapse"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          Thông tin khác
+                        </button>
+                        <span class="title-desc">20%</span>
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="dropdown-divider" style="margin: 0"></div>
+
+                  <div class="card card-element">
+                    <div class="card-header" id="headingOne4">
+                      <h2 class="mb-0" style="display: flex">
+                        <button
+                          class="btn btn-link btn-block text-left btn-title"
+                          type="button"
+                          data-toggle="collapse"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          Thông tin liên hệ
+                        </button>
+                        <span class="title-desc">20%</span>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="description">
+                  Để tăng lượt xem tin và nâng cao tỷ lệ tiếp cận đến nhiều
+                  khách hàng, sử dụng ngay các gói TIN ĐĂNG VIP và UPTIN lên top
+                  đầu tìm kiếm
+                </div>
+                <div class="hotline">
+                  <div style="padding: 8px 16px">
+                    <p class="hotline-title">Hotline tư vấn miễn phí</p>
+                    <button class="hotline-number">0976 212 555</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="ft-t" class="container">
+      <h4 class="title">NHÀ ĐẤT BÁN</h4>
+      <div class="row row-cols-2 row-cols-md-4">
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="ft-t-2" class="container">
+      <h4 class="title">NHÀ ĐẤT BÁN</h4>
+      <div class="row row-cols-2 row-cols-md-4">
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            Nhà đất Hà Nội
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+            <li><a href="#">Bán nhà Quận 1</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end dang tin tuc-->
+    <footer style="background: #ecedf1">
+      <div class="footer container pt-1 gap-w">
+        <div class="footer-top row">
+          <div class="col-lg-4 text-center text-lg-left">
+            <a href="">
+              <img src="./assets/img/logo-footer.png" alt="" />
+            </a>
+          </div>
+
+          <div class="col-lg-2 col-5">
+            <div class="item d-flex gap-1 align-items-center">
+              <div class="img" style="float: left">
+                <img src="./assets/img/call-calling.png" alt="" />
+              </div>
+              <div class="text">
+                <div class="text-top">Hotline 24/7</div>
+                <div class="text-bot">1900 1881</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-7">
+            <div class="item d-flex gap-1 align-items-center">
+              <div class="img" style="float: left">
+                <img src="./assets/img/message-question.png" alt="" />
+              </div>
+              <div class="text">
+                <div class="text-top">Hỗ trợ khách hàng</div>
+                <div class="text-bot">contact@homeup.vn</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div
+              class="item d-flex gap-1 align-items-center justify-content-lg-end text-right text-lg-left"
+            >
+              <div class="img" style="float: left">
+                <img src="./assets/img/cham-soc-kh.png" alt="" />
+              </div>
+              <div class="text">
+                <div class="text-top">Chăm sóc khách hàng</div>
+                <div class="text-bot">contact@homeup.vn</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row footer-top2">
+          <div class="col-lg-2 col-6 item">
+            <ul>
+              <li>
+                <p>Company</p>
+              </li>
+              <li>
+                <a href="#"> About </a>
+              </li>
+              <li>
+                <a href="#"> Jobs</a>
+              </li>
+              <li>
+                <a href="#"> Press </a>
+              </li>
+              <li>
+                <a href="#">Investor Relatión </a>
+              </li>
+              <li>
+                <a href="#"> Management Team </a>
+              </li>
+              <li>
+                <a href="#"> In Your Company </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-6 item">
+            <ul>
+              <li>
+                <p>Work with Homeup</p>
+              </li>
+
+              <li>
+                <a href="#"> Join the Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Run a Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Learn About Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Affiliate Program </a>
+              </li>
+              <li>
+                <a href="#"> Vendor Code </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 item">
+            <ul>
+              <li>
+                <p>Work with Homeup</p>
+              </li>
+
+              <li>
+                <a href="#"> Join the Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Run a Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Learn About Homeup </a>
+              </li>
+              <li>
+                <a href="#"> Affiliate Program </a>
+              </li>
+              <li>
+                <a href="#"> Vendor Code </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 item">
+            <ul>
+              <li class="text-left text-sm-center text-lg-left">
+                <a href="" style="color: #646d84"> Ngôn ngữ </a>
+              </li>
+              <li>
+                <select name="" class="select-lang w-100 w-md-unset">
+                  <option value="">Tiếng Việt</option>
+                  <option value="">Tiếng Anh</option>
+                </select>
+              </li>
+              <li class="text-left text-sm-center text-lg-left">
+                <p style="color: #646d84">Cộng đồng</p>
+              </li>
+              <div class="list-social text-left text-sm-center text-lg-left">
+                <a href="" class="item">
+                  <span>
+                    <img src="./assets/img/icon-fb.png" alt="" />
+                  </span>
+                </a>
+                <a href="" class="item">
+                  <span>
+                    <img src="./assets/img/icon-zalo.png" alt="" />
+                  </span>
+                </a>
+                <a href="" class="item">
+                  <span>
+                    <img src="./assets/img/icon-ticktok.png" alt="" />
+                  </span>
+                </a>
+              </div>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 item list-app d-flex justify-content-center justify-content-lg-start gap-3 align-items-md-end flex-column flex-sm-row flex-lg-column"
+          >
+            <div class="app">
+              <a href=""> </a>
+              <div class="content">
+                <a href="">
+                  <div class="img">
+                    <img src="./assets/img/icon-phone.png" alt="" />
+                  </div>
+                </a>
+                <div class="text">
+                  <a href="">
+                    <span style="color: #fff">Tải ngay ứng dụng</span><br /> </a
+                  ><a href="" class="link-homeup"
+                    >Homeup App
+                    <i
+                      class="fas fa-caret-right"
+                      style="margin-left: 5px; margin-top: 2px"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="app mt-0 mt-md-3">
+              <a href=""> </a>
+              <div class="content" style="padding: 18px 12px">
+                <a href="">
+                  <div class="img" style="margin-right: 6px">
+                    <img src="./assets/img/sms-edit.png" alt="" />
+                  </div>
+                </a>
+                <div class="text">
+                  <a href="">
+                    <span style="color: #fff">Gia nhập Homeup!</span>
+                    <span> </span></a
+                  ><a href="" class="link-homeup"
+                    >Ứng tuyển
+                    <i
+                      class="fas fa-caret-right"
+                      style="margin-left: 5px; margin-top: 2px"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <hr /> -->
+        <div class="row footer-local mt-lg-5 mt-4">
+          <div class="col-md-12">
+            <h2 class="title">Incredible Deals on Local Experiences</h2>
+            <ul class="flex-wrap">
+              <li>Homeup Gift Ideas</li>
+              <li>Valentine’s Day Gifts</li>
+              <li>Mother’s Day Gifts</li>
+              <li>Father’s Day Gifts</li>
+              <li>Things to Do</li>
+            </ul>
+          </div>
+          <div class="col-md-12 mt-lg-5 mt-4">
+            <div class="row">
+              <div class="col-md-6 d-flex align-items-center">
+                <div class="row item-baseline gap-14">
+                  <div class="mal-16">
+                    <img src="./assets/img/Rectangle70.png" />
+                  </div>
+                  <div>
+                    <ul>
+                      <li>Space Capital Group</li>
+                      <li>></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 rg-img text-md-right text-left my-3 my-md-0">
+                <img src="./assets/img/sub2.png" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 mt-lg-0 mt-4">
+            <ul class="flex-wrap">
+              <li>Copyright © 2022 HomeUp, All rights reserved.</li>
+              <li>Terrms of Use</li>
+              <li>Privacy Statement</li>
+              <li>License</li>
+              <li>Accesibility</li>
+              <li>Do Not Sell My Personal Information</li>
+            </ul>
+          </div>
+          <div class="col-md-12 mat-42">
+            <ul class="flex-wrap">
+              <li>Chịu trách nhiệm nội dung: Trần Mạnh Ninh</li>
+              <li>Công ty Cổ phần Homeup Việt Nam 2022</li>
+              <li>Địa chỉ: Số 114 Mễ Trì Hạ, Nam Từ Liêm, Hà Nội</li>
+              <li>Số điện thoại: 04862715675</li>
+              <li>MST: 031329999</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script src="./js/dangtintuc.js"></script>
+    <script src="./js/importimage.js"></script>
+  </body>
+</html>
