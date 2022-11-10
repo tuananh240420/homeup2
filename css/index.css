@@ -1724,7 +1724,6 @@ label[dir=rtl] .range-slider {
 #bao-tri-container .bao-tri-item {
   margin-bottom: 40px;
   height: 256px;
-  background-image: url(../assets/img/unsplash_OFismyezPnY.png);
   border-radius: 8px;
   position: relative;
   padding: 16px;
@@ -1732,6 +1731,13 @@ label[dir=rtl] .range-slider {
   display: flex;
   align-items: flex-end;
   background-repeat: no-repeat;
+  position: relative;
+}
+#bao-tri-container .bao-tri-item > img {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  z-index: -1;
 }
 #bao-tri-container .bao-tri-item:hover {
   opacity: 0.8;
@@ -3610,6 +3616,27 @@ body#dangtintuc .title-collapse .thugon {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
+}
+body#dangtintuc .title-collapse .thugon.collapsed {
+  position: relative;
+  display: block;
+  width: 80px;
+  color: transparent !important;
+}
+body#dangtintuc .title-collapse .thugon.collapsed::after {
+  content: "Xem thêm";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  position: absolute;
+  inset: 0;
+  color: #0091fe;
+  text-align: right;
+  display: inline-block;
+  right: 0;
+}
+body#dangtintuc .title-collapse .thugon.collapsed:hover::after {
+  color: #d1193f;
 }
 body#dangtintuc .title-collapse .thugon .text-collapse {
   color: #0091fe;

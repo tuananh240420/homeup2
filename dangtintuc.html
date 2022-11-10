@@ -203,91 +203,416 @@
         <div class="title">Đăng tin</div>
       </div>
       <div id="dangtin-main" class="mt-3">
-        <div class="col-lg-9 col-sm-12 left-element">
-          <div class="row row-container-element">
-            <div class="card-body">
-              <div class="collapse-box">
-                <div class="form-container">
-                  <div class="form-item-intro">
-                    <div class="title-collapse">
-                      <div class="introduce">Thông tin cơ bản</div>
-                      <p class="thugon">
-                        <a
-                          class="text-collapse"
-                          data-toggle="collapse"
-                          href="#collapseExample"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="collapseExample"
-                        >
-                          Thu gọn
-                        </a>
-                      </p>
-                    </div>
+        <div class="row">
+          <div class="col-12 col-lg-9 left-element">
+            <div class="row row-container-element">
+              <div class="card-body">
+                <div class="collapse-box">
+                  <div class="form-container">
+                    <div class="form-item-intro">
+                      <div class="title-collapse">
+                        <div class="introduce">Thông tin cơ bản</div>
+                        <p class="thugon">
+                          <a
+                            class="text-collapse thugon"
+                            data-toggle="collapse"
+                            href="#collapseExample"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="collapseExample"
+                          >
+                            Thu gọn
+                          </a>
+                        </p>
+                      </div>
 
-                    <div class="collapse show" id="collapseExample">
-                      <div
-                        class="card card-body"
-                        style="
-                          box-shadow: none !important;
-                          border: none;
-                          padding: 0;
-                        "
-                      >
-                        <div class="detail">
-                          <div class="thongtin">
-                            Thông tin có dấu (<span class="batbuoc">*</span>) là
-                            bắt buộc, không đăng lại tin đã đăng trên Homeup.vn
-                          </div>
-                          <div class="tabs tab-list">
-                            <ul
-                              class="nav nav-tabs mobile-nav row rows-col-3 d-flex"
-                              role="tablist"
-                            >
-                              <li class="nav-item col">
-                                <a
-                                  class="nav-link active"
-                                  href="#profile"
-                                  role="tab"
-                                  data-toggle="tab"
-                                  >Bán</a
-                                >
-                              </li>
-                              <li class="nav-item col">
-                                <a
-                                  class="nav-link"
-                                  href="#buzz"
-                                  role="tab"
-                                  data-toggle="tab"
-                                  >Cho thuê</a
-                                >
-                              </li>
-                              <li class="nav-item col">
-                                <a
-                                  class="nav-link"
-                                  href="#references"
-                                  role="tab"
-                                  data-toggle="tab"
-                                  >Sang nhượng</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                          <div class="row row-element">
-                            <div class="col-md-12 col-sm-12">
-                              <label
-                                for="validationCustom04"
-                                class="form-label"
+                      <div class="collapse show" id="collapseExample">
+                        <div
+                          class="card card-body"
+                          style="
+                            box-shadow: none !important;
+                            border: none;
+                            padding: 0;
+                          "
+                        >
+                          <div class="detail">
+                            <div class="thongtin">
+                              Thông tin có dấu (<span class="batbuoc">*</span>)
+                              là bắt buộc, không đăng lại tin đã đăng trên
+                              Homeup.vn
+                            </div>
+                            <div class="tabs tab-list">
+                              <ul
+                                class="nav nav-tabs mobile-nav row rows-col-3 d-flex"
+                                role="tablist"
                               >
-                                Loại bất động sản
+                                <li class="nav-item col">
+                                  <a
+                                    class="nav-link active"
+                                    href="#profile"
+                                    role="tab"
+                                    data-toggle="tab"
+                                    >Bán</a
+                                  >
+                                </li>
+                                <li class="nav-item col">
+                                  <a
+                                    class="nav-link"
+                                    href="#buzz"
+                                    role="tab"
+                                    data-toggle="tab"
+                                    >Cho thuê</a
+                                  >
+                                </li>
+                                <li class="nav-item col">
+                                  <a
+                                    class="nav-link"
+                                    href="#references"
+                                    role="tab"
+                                    data-toggle="tab"
+                                    >Sang nhượng</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="row row-element">
+                              <div class="col-md-12 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Loại bất động sản
+                                </label>
+                                <select
+                                  class="selectpicker ptanh-custom-select form-control"
+                                  title="VD: Nhà riêng"
+                                  data-live-search="true"
+                                >
+                                  <option data-tokens="ketchup mustard">
+                                    Hot Dog, Fries and a Soda
+                                  </option>
+                                  <option data-tokens="mustard">
+                                    Burger, Shake and a Smile
+                                  </option>
+                                  <option data-tokens="frosting">
+                                    Sugar, Spice and all things nice
+                                  </option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="row row-element">
+                              <div
+                                class="col"
+                                style="
+                                  font-weight: 500;
+                                  font-size: 12px;
+                                  line-height: 18px;
+                                  text-transform: uppercase;
+                                "
+                              >
+                                Địa chỉ
+                              </div>
+                            </div>
+
+                            <div class="row row-element">
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Tinh, thành phố <span class="batbuoc">*</span>
+                                </label>
+                                <select
+                                  class="selectpicker ptanh-custom-select form-control"
+                                  title="VD: Nhà riêng"
+                                  data-live-search="true"
+                                  required
+                                >
+                                  <option data-tokens="ketchup mustard">
+                                    Hot Dog, Fries and a Soda
+                                  </option>
+                                  <option data-tokens="mustard">
+                                    Burger, Shake and a Smile
+                                  </option>
+                                  <option data-tokens="frosting">
+                                    Sugar, Spice and all things nice
+                                  </option>
+                                </select>
+                              </div>
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Quận, huyện <span class="batbuoc">*</span>
+                                </label>
+                                <select
+                                  class="selectpicker ptanh-custom-select form-control"
+                                  title="VD: Nhà riêng"
+                                  data-live-search="true"
+                                  required
+                                >
+                                  <option data-tokens="ketchup mustard">
+                                    Hot Dog, Fries and a Soda
+                                  </option>
+                                  <option data-tokens="mustard">
+                                    Burger, Shake and a Smile
+                                  </option>
+                                  <option data-tokens="frosting">
+                                    Sugar, Spice and all things nice
+                                  </option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row row-element">
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Phường, xã <span class="batbuoc">*</span>
+                                </label>
+                                <select
+                                  class="selectpicker ptanh-custom-select form-control"
+                                  title="VD: Nhà riêng"
+                                  data-live-search="true"
+                                  required
+                                >
+                                  <option data-tokens="ketchup mustard">
+                                    Hot Dog, Fries and a Soda
+                                  </option>
+                                  <option data-tokens="mustard">
+                                    Burger, Shake and a Smile
+                                  </option>
+                                  <option data-tokens="frosting">
+                                    Sugar, Spice and all things nice
+                                  </option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Đường, phố
+                                </label>
+                                <select
+                                  class="selectpicker ptanh-custom-select form-control"
+                                  title="VD: Nhà riêng"
+                                  data-live-search="true"
+                                  required
+                                >
+                                  <option data-tokens="ketchup mustard">
+                                    Hot Dog, Fries and a Soda
+                                  </option>
+                                  <option data-tokens="mustard">
+                                    Burger, Shake and a Smile
+                                  </option>
+                                  <option data-tokens="frosting">
+                                    Sugar, Spice and all things nice
+                                  </option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Địa chỉ hiển thị trên tin đăng
+                                </label>
+                                <input
+                                  type="text"
+                                  class="ptanh-custom-input form-control"
+                                />
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row row-container-element">
+              <div class="card-body">
+                <div class="">
+                  <div class="form-container">
+                    <div class="form-item-intro">
+                      <div class="title-collapse">
+                        <div class="introduce">Thông tin bài viết</div>
+                        <p class="thugon">
+                          <a
+                            class="thugon"
+                            data-toggle="collapse"
+                            href="#thongtinbaiviet"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="thongtinbaiviet"
+                          >
+                            Thu gọn
+                          </a>
+                        </p>
+                      </div>
+                      <div class="collapse show" id="thongtinbaiviet">
+                        <div
+                          class="card card-body"
+                          style="box-shadow: none; border: none; padding: 0"
+                        >
+                          <div class="detail">
+                            <div class="thongtin">
+                              Không gộp nhiều bất động sản trong một tin rao, để
+                              quá trình đăng tin và duyệt nhanh hơn, xin lưu ý:
+                              gõ tiếng Việt có dấu và không viết tắt...
+                            </div>
+                          </div>
+                          <div class="dropdown-divider"></div>
+                          <form class="was-validated">
+                            <div class="mb-3 mt-4">
+                              <label for="validationTextarea" class="form-label"
+                                >Tiêu đề <span class="batbuoc">*</span></label
+                              >
+                              <textarea
+                                rows="2"
+                                id="validationTextarea"
+                                class="ptanh-text-area-custom form-control"
+                                placeholder="VD: Bán nhà riêng 50m2 chính chủ tại Cầu Giấy"
+                              ></textarea>
+
+                              <p class="desc-required mt-2 mb-4">
+                                Tối thiểu 30 ký tự, tối đa 99 ký tự
+                              </p>
+                            </div>
+                          </form>
+                          <form class="was-validated">
+                            <div class="mb-3">
+                              <label
+                                for="validationTextarea2"
+                                class="form-label"
+                                >Mô tả <span class="batbuoc">*</span></label
+                              >
+                              <textarea
+                                rows="5"
+                                id="validationTextarea2"
+                                class="ptanh-text-area-custom form-control"
+                                placeholder="Nhập mô tả chung về bất động sản của bạn. Ví dụ: Khu nhà có vị trí thuận lợi, gần công viên, gần trường học ... "
+                              ></textarea>
+                              <p class="desc-required mt-2">
+                                Tối thiểu 30 ký tự, tối đa 3.000 ký tự
+                              </p>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row row-container-element">
+              <div class="card-body">
+                <div class="">
+                  <div class="form-container">
+                    <div class="form-item-intro">
+                      <div class="title-collapse">
+                        <div class="introduce">Thông tin bất động sản</div>
+                        <p class="thugon">
+                          <a
+                            class="thugon"
+                            data-toggle="collapse"
+                            href="#thongtinbatdongsan"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="thongtinbatdongsan"
+                          >
+                            Thu gọn
+                          </a>
+                        </p>
+                      </div>
+                      <div class="collapse show" id="thongtinbatdongsan">
+                        <div
+                          class="card card-body"
+                          style="box-shadow: none; border: none; padding: 0"
+                        >
+                          <div class="dropdown-divider mt-4"></div>
+                          <div class="row row-bds mt-4">
+                            <div class="col-md-12">
+                              <label class="form-label">
+                                Diện tích <span class="batbuoc">*</span>
                               </label>
+                              <div
+                                style="
+                                  display: flex;
+                                  background: #f9fafc;
+                                  border: 1px solid #ecedf1;
+                                  border-radius: 8px;
+                                "
+                              >
+                                <div class="col-md-11" style="padding: 0">
+                                  <input
+                                    style="border-right: none !important"
+                                    type="text"
+                                    class="ptanh-custom-input form-control has-icon-after"
+                                    placeholder="Nhập diện tích"
+                                  />
+                                </div>
+                                <div
+                                  class="col-md-1"
+                                  style="padding: 0; display: flex"
+                                >
+                                  <img
+                                    src="./assets/img/m2.svg"
+                                    alt=""
+                                    style="
+                                      width: 19px;
+                                      height: 20px;
+                                      margin: auto;
+                                    "
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row row-bds">
+                            <div
+                              class="col-md-9"
+                              style="display: flex; flex-direction: column"
+                            >
+                              <label
+                                class="form-label"
+                                style="padding-top: 3px"
+                              >
+                                Mức giá <span class="batbuoc">*</span>
+                              </label>
+                              <input
+                                type="text"
+                                class="ptanh-custom-input form-control"
+                                placeholder="Nhập giá"
+                              />
+                            </div>
+                            <div class="col-md-3">
+                              <label class="form-label"> Đơn vị </label>
                               <select
                                 class="selectpicker ptanh-custom-select form-control"
-                                title="VD: Nhà riêng"
+                                title="Chọn đơn vị"
                                 data-live-search="true"
                               >
-                                <option data-tokens="ketchup mustard">
-                                  Hot Dog, Fries and a Soda
+                                <option selected data-tokens="ketchup mustard">
+                                  Thỏa thuận
                                 </option>
                                 <option data-tokens="mustard">
                                   Burger, Shake and a Smile
@@ -298,37 +623,136 @@
                               </select>
                             </div>
                           </div>
-                          <div class="row row-element">
+                          <div class="row row-bds">
+                            <div class="col-md-12">
+                              <label class="form-label">
+                                Giấy tờ pháp lý
+                              </label>
+                              <select
+                                class="selectpicker ptanh-custom-select form-control"
+                                data-live-search="true"
+                              >
+                                <option selected data-tokens="ketchup mustard">
+                                  Không
+                                </option>
+                                <option data-tokens="mustard">
+                                  Burger, Shake and a Smile
+                                </option>
+                                <option data-tokens="frosting">
+                                  Sugar, Spice and all things nice
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                          <div
+                            class="dropdown-divider"
+                            style="margin: 0 0 24px 0"
+                          ></div>
+                          <div class="row row-bds">
+                            <div class="col-md-9 title-count">Số phòng ngủ</div>
+                            <div class="col-md-3">
+                              <div
+                                class="count-container"
+                                style="
+                                  background: #ecedf1;
+                                  display: flex;
+                                  padding: 3px 3px;
+                                  border: 1px solid #ecedf1;
+                                  border-radius: 8px;
+                                "
+                              >
+                                <div
+                                  class="btn-minus"
+                                  onclick="bedroom.minus('count-bedroom')"
+                                ></div>
+                                <span style="margin: auto" id="count-bedroom"
+                                  >0</span
+                                >
+                                <div
+                                  class="btn-plus active"
+                                  onclick="bedroom.plus('count-bedroom')"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row row-bds">
+                            <div class="col-md-9 title-count">
+                              Số phòng tắm, vệ sinh
+                            </div>
+                            <div class="col-md-3">
+                              <div
+                                class="count-container"
+                                style="
+                                  background: #ecedf1;
+                                  display: flex;
+                                  padding: 3px 3px;
+                                  border: 1px solid #ecedf1;
+                                  border-radius: 8px;
+                                "
+                              >
+                                <div
+                                  class="btn-minus"
+                                  onclick="bathroom.minus('count-bathroom')"
+                                ></div>
+                                <span style="margin: auto" id="count-bathroom"
+                                  >0</span
+                                >
+                                <div
+                                  class="btn-plus active"
+                                  onclick="bathroom.plus('count-bathroom')"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row row-bds">
+                            <div class="col-md-9 title-count">Số tầng</div>
+                            <div class="col-md-3">
+                              <div
+                                class="count-container"
+                                style="
+                                  background: #ecedf1;
+                                  display: flex;
+                                  padding: 3px 3px;
+                                  border: 1px solid #ecedf1;
+                                  border-radius: 8px;
+                                "
+                              >
+                                <div
+                                  class="btn-minus"
+                                  onclick="flat.minus('count-flat')"
+                                ></div>
+                                <span style="margin: auto" id="count-flat"
+                                  >0</span
+                                >
+                                <div
+                                  class="btn-plus active"
+                                  onclick="flat.plus('count-flat')"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row row-bds">
                             <div
-                              class="col"
+                              class="col-md-12"
                               style="
                                 font-weight: 500;
                                 font-size: 12px;
                                 line-height: 18px;
+                                color: #646d84;
                                 text-transform: uppercase;
                               "
                             >
-                              Địa chỉ
+                              Mô tả bổ sung
                             </div>
                           </div>
-
-                          <div class="row row-element">
-                            <div class="col-md-6 col-sm-12">
-                              <label
-                                for="validationCustom04"
-                                class="form-label"
-                              >
-                                Tinh, thành phố <span class="batbuoc">*</span>
-                              </label>
+                          <div class="row row-bds">
+                            <div class="col-md-6">
+                              <label class="form-label">Hướng nhà</label>
                               <select
                                 class="selectpicker ptanh-custom-select form-control"
-                                title="VD: Nhà riêng"
                                 data-live-search="true"
-                                required
+                                title="Chọn hướng"
                               >
-                                <option data-tokens="ketchup mustard">
-                                  Hot Dog, Fries and a Soda
-                                </option>
                                 <option data-tokens="mustard">
                                   Burger, Shake and a Smile
                                 </option>
@@ -337,22 +761,13 @@
                                 </option>
                               </select>
                             </div>
-                            <div class="col-md-6 col-sm-12">
-                              <label
-                                for="validationCustom04"
-                                class="form-label"
-                              >
-                                Quận, huyện <span class="batbuoc">*</span>
-                              </label>
+                            <div class="col-md-6">
+                              <label class="form-label">Hướng ban công</label>
                               <select
                                 class="selectpicker ptanh-custom-select form-control"
-                                title="VD: Nhà riêng"
                                 data-live-search="true"
-                                required
+                                title="Chọn hướng"
                               >
-                                <option data-tokens="ketchup mustard">
-                                  Hot Dog, Fries and a Soda
-                                </option>
                                 <option data-tokens="mustard">
                                   Burger, Shake and a Smile
                                 </option>
@@ -360,82 +775,24 @@
                                   Sugar, Spice and all things nice
                                 </option>
                               </select>
-                              <div class="invalid-feedback">
-                                Please select a valid state.
-                              </div>
                             </div>
                           </div>
-                          <div class="row row-element">
-                            <div class="col-md-6 col-sm-12">
+                          <div class="row row-bds">
+                            <div
+                              class="col-md-12"
+                              style="display: flex; flex-direction: column"
+                            >
                               <label
-                                for="validationCustom04"
                                 class="form-label"
+                                style="padding-top: 3px"
                               >
-                                Phường, xã <span class="batbuoc">*</span>
-                              </label>
-                              <select
-                                class="selectpicker ptanh-custom-select form-control"
-                                title="VD: Nhà riêng"
-                                data-live-search="true"
-                                required
-                              >
-                                <option data-tokens="ketchup mustard">
-                                  Hot Dog, Fries and a Soda
-                                </option>
-                                <option data-tokens="mustard">
-                                  Burger, Shake and a Smile
-                                </option>
-                                <option data-tokens="frosting">
-                                  Sugar, Spice and all things nice
-                                </option>
-                              </select>
-                              <div class="invalid-feedback">
-                                Please select a valid state.
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                              <label
-                                for="validationCustom04"
-                                class="form-label"
-                              >
-                                Đường, phố
-                              </label>
-                              <select
-                                class="selectpicker ptanh-custom-select form-control"
-                                title="VD: Nhà riêng"
-                                data-live-search="true"
-                                required
-                              >
-                                <option data-tokens="ketchup mustard">
-                                  Hot Dog, Fries and a Soda
-                                </option>
-                                <option data-tokens="mustard">
-                                  Burger, Shake and a Smile
-                                </option>
-                                <option data-tokens="frosting">
-                                  Sugar, Spice and all things nice
-                                </option>
-                              </select>
-                              <div class="invalid-feedback">
-                                Please select a valid state.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                              <label
-                                for="validationCustom04"
-                                class="form-label"
-                              >
-                                Địa chỉ hiển thị trên tin đăng
+                                Nội thất
                               </label>
                               <input
                                 type="text"
                                 class="ptanh-custom-input form-control"
+                                placeholder="Mô tả"
                               />
-                              <div class="invalid-feedback">
-                                Please select a valid state.
-                              </div>
                             </div>
                           </div>
                         </div>
@@ -445,435 +802,92 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row row-container-element">
-            <div class="card-body">
-              <div class="">
-                <div class="form-container">
-                  <div class="form-item-intro">
-                    <div class="title-collapse">
-                      <div class="introduce">Thông tin bài viết</div>
-                      <p class="thugon">
-                        <a
-                          class="thugon"
-                          data-toggle="collapse"
-                          href="#thongtinbaiviet"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="thongtinbaiviet"
-                        >
-                          Thu gọn
-                        </a>
-                      </p>
-                    </div>
-                    <div class="collapse show" id="thongtinbaiviet">
-                      <div
-                        class="card card-body"
-                        style="box-shadow: none; border: none; padding: 0"
-                      >
-                        <div class="detail">
-                          <div class="thongtin">
-                            Không gộp nhiều bất động sản trong một tin rao, để
-                            quá trình đăng tin và duyệt nhanh hơn, xin lưu ý: gõ
-                            tiếng Việt có dấu và không viết tắt...
-                          </div>
-                        </div>
-                        <div class="dropdown-divider"></div>
-                        <form class="was-validated">
-                          <div class="mb-3 mt-4">
-                            <label for="validationTextarea" class="form-label"
-                              >Tiêu đề <span class="batbuoc">*</span></label
-                            >
-                            <textarea
-                              rows="2"
-                              id="validationTextarea"
-                              class="ptanh-text-area-custom form-control"
-                              placeholder="VD: Bán nhà riêng 50m2 chính chủ tại Cầu Giấy"
-                            ></textarea>
-
-                            <p class="desc-required mt-2 mb-4">
-                              Tối thiểu 30 ký tự, tối đa 99 ký tự
-                            </p>
-                          </div>
-                        </form>
-                        <form class="was-validated">
-                          <div class="mb-3">
-                            <label for="validationTextarea2" class="form-label"
-                              >Mô tả <span class="batbuoc">*</span></label
-                            >
-                            <textarea
-                              rows="5"
-                              id="validationTextarea2"
-                              class="ptanh-text-area-custom form-control"
-                              placeholder="Nhập mô tả chung về bất động sản của bạn. Ví dụ: Khu nhà có vị trí thuận lợi, gần công viên, gần trường học ... "
-                            ></textarea>
-                            <p class="desc-required mt-2">
-                              Tối thiểu 30 ký tự, tối đa 3.000 ký tự
-                            </p>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row row-container-element">
-            <div class="card-body">
-              <div class="">
-                <div class="form-container">
-                  <div class="form-item-intro">
-                    <div class="title-collapse">
-                      <div class="introduce">Thông tin bất động sản</div>
-                      <p class="thugon">
-                        <a
-                          class="thugon"
-                          data-toggle="collapse"
-                          href="#thongtinbatdongsan"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="thongtinbatdongsan"
-                        >
-                          Thu gọn
-                        </a>
-                      </p>
-                    </div>
-                    <div class="collapse show" id="thongtinbatdongsan">
-                      <div
-                        class="card card-body"
-                        style="box-shadow: none; border: none; padding: 0"
-                      >
-                        <div class="dropdown-divider mt-4"></div>
-                        <div class="row row-bds mt-4">
-                          <div class="col-md-12">
-                            <label class="form-label">
-                              Diện tích <span class="batbuoc">*</span>
-                            </label>
-                            <div
-                              style="
-                                display: flex;
-                                background: #f9fafc;
-                                border: 1px solid #ecedf1;
-                                border-radius: 8px;
-                              "
-                            >
-                              <div class="col-md-11" style="padding: 0">
-                                <input
-                                  style="border-right: none !important"
-                                  type="text"
-                                  class="ptanh-custom-input form-control has-icon-after"
-                                  placeholder="Nhập diện tích"
-                                />
-                              </div>
-                              <div
-                                class="col-md-1"
-                                style="padding: 0; display: flex"
-                              >
-                                <img
-                                  src="./assets/img/m2.svg"
-                                  alt=""
-                                  style="
-                                    width: 19px;
-                                    height: 20px;
-                                    margin: auto;
-                                  "
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row row-bds">
-                          <div
-                            class="col-md-9"
-                            style="display: flex; flex-direction: column"
+            <div class="row row-container-element">
+              <div class="card-body">
+                <div class="">
+                  <div class="form-container">
+                    <div class="form-item-intro">
+                      <div class="title-collapse">
+                        <div class="introduce">Hình ảnh & Video</div>
+                        <p class="thugon">
+                          <a
+                            class="thugon"
+                            data-toggle="collapse"
+                            href="#hinhanh"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="hinhanh"
                           >
-                            <label class="form-label" style="padding-top: 3px">
-                              Mức giá <span class="batbuoc">*</span>
-                            </label>
-                            <input
-                              type="text"
-                              class="ptanh-custom-input form-control"
-                              placeholder="Nhập giá"
-                            />
-                          </div>
-                          <div class="col-md-3">
-                            <label class="form-label"> Đơn vị </label>
-                            <select
-                              class="selectpicker ptanh-custom-select form-control"
-                              title="Chọn đơn vị"
-                              data-live-search="true"
-                            >
-                              <option selected data-tokens="ketchup mustard">
-                                Thỏa thuận
-                              </option>
-                              <option data-tokens="mustard">
-                                Burger, Shake and a Smile
-                              </option>
-                              <option data-tokens="frosting">
-                                Sugar, Spice and all things nice
-                              </option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="row row-bds">
-                          <div class="col-md-12">
-                            <label class="form-label"> Giấy tờ pháp lý </label>
-                            <select
-                              class="selectpicker ptanh-custom-select form-control"
-                              data-live-search="true"
-                            >
-                              <option selected data-tokens="ketchup mustard">
-                                Không
-                              </option>
-                              <option data-tokens="mustard">
-                                Burger, Shake and a Smile
-                              </option>
-                              <option data-tokens="frosting">
-                                Sugar, Spice and all things nice
-                              </option>
-                            </select>
-                          </div>
-                        </div>
+                            Thu gọn
+                          </a>
+                        </p>
+                      </div>
+                      <div class="collapse show" id="hinhanh">
                         <div
-                          class="dropdown-divider"
-                          style="margin: 0 0 24px 0"
-                        ></div>
-                        <div class="row row-bds">
-                          <div class="col-md-9 title-count">Số phòng ngủ</div>
-                          <div class="col-md-3">
-                            <div
-                              class="count-container"
-                              style="
-                                background: #ecedf1;
-                                display: flex;
-                                padding: 3px 3px;
-                                border: 1px solid #ecedf1;
-                                border-radius: 8px;
-                              "
-                            >
-                              <div
-                                class="btn-minus"
-                                onclick="bedroom.minus('count-bedroom')"
-                              ></div>
-                              <span style="margin: auto" id="count-bedroom"
-                                >0</span
-                              >
-                              <div
-                                class="btn-plus active"
-                                onclick="bedroom.plus('count-bedroom')"
-                              ></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row row-bds">
-                          <div class="col-md-9 title-count">
-                            Số phòng tắm, vệ sinh
-                          </div>
-                          <div class="col-md-3">
-                            <div
-                              class="count-container"
-                              style="
-                                background: #ecedf1;
-                                display: flex;
-                                padding: 3px 3px;
-                                border: 1px solid #ecedf1;
-                                border-radius: 8px;
-                              "
-                            >
-                              <div
-                                class="btn-minus"
-                                onclick="bathroom.minus('count-bathroom')"
-                              ></div>
-                              <span style="margin: auto" id="count-bathroom"
-                                >0</span
-                              >
-                              <div
-                                class="btn-plus active"
-                                onclick="bathroom.plus('count-bathroom')"
-                              ></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row row-bds">
-                          <div class="col-md-9 title-count">Số tầng</div>
-                          <div class="col-md-3">
-                            <div
-                              class="count-container"
-                              style="
-                                background: #ecedf1;
-                                display: flex;
-                                padding: 3px 3px;
-                                border: 1px solid #ecedf1;
-                                border-radius: 8px;
-                              "
-                            >
-                              <div
-                                class="btn-minus"
-                                onclick="flat.minus('count-flat')"
-                              ></div>
-                              <span style="margin: auto" id="count-flat"
-                                >0</span
-                              >
-                              <div
-                                class="btn-plus active"
-                                onclick="flat.plus('count-flat')"
-                              ></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row row-bds">
-                          <div
-                            class="col-md-12"
-                            style="
-                              font-weight: 500;
-                              font-size: 12px;
-                              line-height: 18px;
-                              color: #646d84;
-                              text-transform: uppercase;
-                            "
-                          >
-                            Mô tả bổ sung
-                          </div>
-                        </div>
-                        <div class="row row-bds">
-                          <div class="col-md-6">
-                            <label class="form-label">Hướng nhà</label>
-                            <select
-                              class="selectpicker ptanh-custom-select form-control"
-                              data-live-search="true"
-                              title="Chọn hướng"
-                            >
-                              <option data-tokens="mustard">
-                                Burger, Shake and a Smile
-                              </option>
-                              <option data-tokens="frosting">
-                                Sugar, Spice and all things nice
-                              </option>
-                            </select>
-                          </div>
-                          <div class="col-md-6">
-                            <label class="form-label">Hướng ban công</label>
-                            <select
-                              class="selectpicker ptanh-custom-select form-control"
-                              data-live-search="true"
-                              title="Chọn hướng"
-                            >
-                              <option data-tokens="mustard">
-                                Burger, Shake and a Smile
-                              </option>
-                              <option data-tokens="frosting">
-                                Sugar, Spice and all things nice
-                              </option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="row row-bds">
-                          <div
-                            class="col-md-12"
-                            style="display: flex; flex-direction: column"
-                          >
-                            <label class="form-label" style="padding-top: 3px">
-                              Nội thất
-                            </label>
-                            <input
-                              type="text"
-                              class="ptanh-custom-input form-control"
-                              placeholder="Mô tả"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row row-container-element">
-            <div class="card-body">
-              <div class="">
-                <div class="form-container">
-                  <div class="form-item-intro">
-                    <div class="title-collapse">
-                      <div class="introduce">Hình ảnh & Video</div>
-                      <p class="thugon">
-                        <a
-                          class="thugon"
-                          data-toggle="collapse"
-                          href="#hinhanh"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="hinhanh"
+                          class="card card-body"
+                          style="box-shadow: none; border: none; padding: 0"
                         >
-                          Thu gọn
-                        </a>
-                      </p>
-                    </div>
-                    <div class="collapse show" id="hinhanh">
-                      <div
-                        class="card card-body"
-                        style="box-shadow: none; border: none; padding: 0"
-                      >
-                        <div class="detail">
-                          <div class="thongtin" style="margin: 0">
-                            Tin rao có ảnh sẽ được xem nhiều hơn gấp 10 lần và
-                            được nhiều người gọi gấp 5 lần so với tin rao không
-                            có ảnh. Hãy đăng ảnh để được giao dịch nhanh chóng!
-                          </div>
-                          <span
-                            style="
-                              margin-bottom: 23px;
-                              color: #646d84;
-                              font-weight: 400;
-                              font-size: 12px;
-                            "
-                            >Xem thêm
-                            <a
-                              href="#"
+                          <div class="detail">
+                            <div class="thongtin" style="margin: 0">
+                              Tin rao có ảnh sẽ được xem nhiều hơn gấp 10 lần và
+                              được nhiều người gọi gấp 5 lần so với tin rao
+                              không có ảnh. Hãy đăng ảnh để được giao dịch nhanh
+                              chóng!
+                            </div>
+                            <span
                               style="
-                                color: #d1193f;
-                                text-decoration: none;
+                                margin-bottom: 23px;
+                                color: #646d84;
                                 font-weight: 400;
                                 font-size: 12px;
                               "
-                              >Quy định đăng tin</a
+                              >Xem thêm
+                              <a
+                                href="#"
+                                style="
+                                  color: #d1193f;
+                                  text-decoration: none;
+                                  font-weight: 400;
+                                  font-size: 12px;
+                                "
+                                >Quy định đăng tin</a
+                              >
+                              Quy định đăng tin để biết thêm chi tiết.</span
                             >
-                            Quy định đăng tin để biết thêm chi tiết.</span
-                          >
-                        </div>
-                        <div class="dropdown-divider my-4"></div>
-                        <div id="upload-img">
-                          <div class="card">
-                            <div class="drag-area select" role="button">
-                              <span class="visible">
-                                <img
-                                  src="./assets/img/gallery-add.png"
-                                  alt=""
-                                  class="mr-2"
+                          </div>
+                          <div class="dropdown-divider my-4"></div>
+                          <div id="upload-img">
+                            <div class="card">
+                              <div class="drag-area select" role="button">
+                                <span class="visible">
+                                  <img
+                                    src="./assets/img/gallery-add.png"
+                                    alt=""
+                                    class="mr-2"
+                                  />
+                                  Bấm để chọn ảnh tải lên hoặc kéo thả ảnh vào
+                                </span>
+                                <span class="on-drop">Drop images here</span>
+                                <input
+                                  name="file"
+                                  type="file"
+                                  class="file"
+                                  multiple
                                 />
-                                Bấm để chọn ảnh tải lên hoặc kéo thả ảnh vào
-                              </span>
-                              <span class="on-drop">Drop images here</span>
-                              <input
-                                name="file"
-                                type="file"
-                                class="file"
-                                multiple
-                              />
-                            </div>
+                              </div>
 
-                            <!-- IMAGE PREVIEW CONTAINER -->
-                            <div class="img-container pb-3"></div>
-                            <div class="drag-area select mt-4" role="button">
-                              <span class="visible">
-                                <img
-                                  src="./assets/img/youtube.png"
-                                  alt=""
-                                  class="mr-2"
-                                />
-                                Tải video từ Youttube
-                              </span>
+                              <!-- IMAGE PREVIEW CONTAINER -->
+                              <div class="img-container pb-3"></div>
+                              <div class="drag-area select mt-4" role="button">
+                                <span class="visible">
+                                  <img
+                                    src="./assets/img/youtube.png"
+                                    alt=""
+                                    class="mr-2"
+                                  />
+                                  Tải video từ Youttube
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -883,220 +897,114 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row row-container-element">
-            <div class="card-body">
-              <div class="">
-                <div class="form-container">
-                  <div class="form-item-intro">
-                    <div class="title-collapse">
-                      <div class="introduce">Thông tin liên hệ</div>
-                      <p class="thugon">
-                        <a
-                          class="thugon"
-                          data-toggle="collapse"
-                          href="#thongtinlienhe"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="thongtinlienhe"
-                        >
-                          Thu gọn
-                        </a>
-                      </p>
-                    </div>
-                    <div class="collapse" id="thongtinlienhe">
-                      <div
-                        class="card card-body"
-                        style="box-shadow: none; border: none; padding: 0"
-                      >
-                        <div class="dropdown-divider"></div>
-                        <div class="col-md-12" style="padding: 0">
-                          <div class="row row-element">
-                            <div class="col-md-6 col-sm-12">
-                              <label
-                                for="validationCustom04"
-                                class="form-label"
-                              >
-                                Tên liên hệ <span class="batbuoc">*</span>
-                              </label>
-                              <input
-                                type="text"
-                                class="ptanh-custom-input form-control"
-                                placeholder="Nhập giá"
-                              />
-                              <div class="invalid-feedback">
-                                Please select a valid state.
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                              <label
-                                for="validationCustom04"
-                                class="form-label"
-                              >
-                                Số điện thoại <span class="batbuoc">*</span>
-                              </label>
-                              <input
-                                type="text"
-                                class="ptanh-custom-input form-control"
-                                placeholder="Nhập giá"
-                              />
-                              <div class="invalid-feedback">
-                                Please select a valid state.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row row-element">
-                            <div class="col-md-6 col-sm-12">
-                              <label
-                                for="validationCustom04"
-                                class="form-label"
-                              >
-                                Email <span class="batbuoc">*</span>
-                              </label>
-                              <input
-                                type="text"
-                                class="ptanh-custom-input form-control"
-                                placeholder="Nhập giá"
-                              />
-                              <div class="invalid-feedback">
-                                Please select a valid state.
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                              <label
-                                for="validationCustom04"
-                                class="form-label"
-                              >
-                                Website
-                              </label>
-                              <input
-                                type="text"
-                                class="ptanh-custom-input form-control"
-                                placeholder="Nhập giá"
-                              />
-                            </div>
-                          </div>
-                          <div class="row row-element">
-                            <div class="col-md-12 col-sm-12">
-                              <label
-                                for="validationCustom04"
-                                class="form-label"
-                              >
-                                Địa chỉ
-                              </label>
-                              <input
-                                type="text"
-                                class="ptanh-custom-input form-control"
-                                placeholder="Nhập giá"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row row-container-element">
-            <div class="card-body">
-              <div class="">
-                <div class="form-container">
-                  <div class="form-item-intro">
-                    <div class="title-collapse">
-                      <span class="introduce">Chọn gói tin đăng</span>
-                    </div>
-                    <div
-                      class="dropdown-divider mt-4 mb-3"
-                      style="margin-bottom: 16px"
-                    ></div>
-                    <div class="row pta-row" style="margin-bottom: 24px">
-                      <div class="col-md-3">
-                        <div class="dangtintuc-image active">
-                          <span class="title-imgage">Tin thường</span>
-                          <img
-                            src="./assets/img/chuyenmuc-house.svg"
-                            alt=""
-                            style="width: 90px; height: 80px"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="dangtintuc-image">
-                          <span class="title-imgage">Tin VIP 1</span>
-                          <img
-                            src="./assets/img/Frame.png"
-                            alt=""
-                            style="width: 90px; height: 80px"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="dangtintuc-image">
-                          <span class="title-imgage">Tin VIP 2</span>
-                          <img
-                            src="./assets/img/Frame-1.png"
-                            alt=""
-                            style="width: 90px; height: 80px"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="dangtintuc-image">
-                          <span class="title-imgage" style="margin-bottom: 16px"
-                            >Tin VIP 3</span
+            <div class="row row-container-element">
+              <div class="card-body">
+                <div class="">
+                  <div class="form-container">
+                    <div class="form-item-intro">
+                      <div class="title-collapse">
+                        <div class="introduce">Thông tin liên hệ</div>
+                        <p class="thugon">
+                          <a
+                            class="thugon"
+                            data-toggle="collapse"
+                            href="#thongtinlienhe"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="thongtinlienhe"
                           >
-                          <img
-                            src="./assets/img/Group 103.png"
-                            alt=""
-                            style="width: 140px"
-                          />
-                        </div>
+                            Thu gọn
+                          </a>
+                        </p>
                       </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6 col-sm-12">
-                        <label for="validationCustom04" class="form-label">
-                          Số ngày đăng
-                        </label>
-                        <select
-                          class="selectpicker ptanh-custom-select form-control"
-                          data-live-search="true"
-                        >
-                          <option selected data-tokens="ketchup mustard">
-                            10 ngày
-                          </option>
-                          <option data-tokens="mustard">
-                            Burger, Shake and a Smile
-                          </option>
-                          <option data-tokens="frosting">
-                            Sugar, Spice and all things nice
-                          </option>
-                        </select>
-                      </div>
-                      <div class="col-md-6">
-                        <label for="validationCustom04" class="form-label">
-                          Số ngày đăng
-                        </label>
+                      <div class="collapse" id="thongtinlienhe">
                         <div
-                          class="md-form md-outline input-with-post-icon datepicker"
-                          id="accLabels"
+                          class="card card-body"
+                          style="box-shadow: none; border: none; padding: 0"
                         >
-                          <input
-                            type="date"
-                            class="ptanh-custom-input form-control"
-                            height="42"
-                            style="height: 42px"
-                            placeholder="02/08/2022"
-                            value=""
-                            min="1997-01-01"
-                            max="2030-12-31"
-                          />
-                          <i
-                            class="fas fa-calendar input-prefix"
-                            tabindex="0"
-                          ></i>
+                          <div class="dropdown-divider"></div>
+                          <div class="col-md-12" style="padding: 0">
+                            <div class="row row-element">
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Tên liên hệ <span class="batbuoc">*</span>
+                                </label>
+                                <input
+                                  type="text"
+                                  class="ptanh-custom-input form-control"
+                                  placeholder="Nhập giá"
+                                />
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Số điện thoại <span class="batbuoc">*</span>
+                                </label>
+                                <input
+                                  type="text"
+                                  class="ptanh-custom-input form-control"
+                                  placeholder="Nhập giá"
+                                />
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row row-element">
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Email <span class="batbuoc">*</span>
+                                </label>
+                                <input
+                                  type="text"
+                                  class="ptanh-custom-input form-control"
+                                  placeholder="Nhập giá"
+                                />
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Website
+                                </label>
+                                <input
+                                  type="text"
+                                  class="ptanh-custom-input form-control"
+                                  placeholder="Nhập giá"
+                                />
+                              </div>
+                            </div>
+                            <div class="row row-element">
+                              <div class="col-md-12 col-sm-12">
+                                <label
+                                  for="validationCustom04"
+                                  class="form-label"
+                                >
+                                  Địa chỉ
+                                </label>
+                                <input
+                                  type="text"
+                                  class="ptanh-custom-input form-control"
+                                  placeholder="Nhập giá"
+                                />
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1104,156 +1012,265 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row row-container-element">
-            <div class="btn-footer-watching">
-              <div
-                style="display: flex; align-items: center"
-                class="btn-container"
-              >
-                <button class="btn btn-previous">Xem trước giao diện</button>
-                <div class="btn btn-container-footer">
-                  <button class="btn-next">Tiếp tục</button>
-                  <img
-                    src="./assets/img/btn-vector-footer.svg"
-                    alt=""
-                    style="width: 8px; height: 15px"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-12 right-element d-none d-lg-block">
-          <div class="container-left-side">
-            <div class="chart-container">
-              <div class="title" style="margin-top: 24px; margin-bottom: 24px">
-                Điểm uy tín
-              </div>
-              <div class="circular-progress">
-                <div class="value-container">0%</div>
-              </div>
-            </div>
-            <div class="content-container" style="padding: 0 24px 24px 24px">
-              <div
-                class="description"
-                style="text-align: center; margin-bottom: 15px"
-              >
-                Chưa đủ thông tin để người xem ra quyết định
-              </div>
-              <div class="accordion" id="accordionExample">
-                <div class="card card-element">
-                  <div class="card-header" id="headingOne">
-                    <h2 class="mb-0" style="display: flex">
-                      <button
-                        class="btn btn-link btn-block text-left btn-title"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
-                      >
-                        Thông tin cơ bản
-                      </button>
-                      <span class="title-desc">20%</span>
-                    </h2>
-                  </div>
-
-                  <div
-                    id="collapseOne"
-                    class="collapse show"
-                    aria-labelledby="headingOne"
-                    data-parent="#accordionExample"
-                  >
-                    <div class="card card-body" style="box-shadow: none">
-                      <div class="element-collapse" style="margin-top: 24px">
-                        <p class="element-collapse-title">Nhu cầu</p>
-                        <span class="element-collapse-value">+1</span>
+            <div class="row row-container-element">
+              <div class="card-body">
+                <div class="">
+                  <div class="form-container">
+                    <div class="form-item-intro">
+                      <div class="title-collapse">
+                        <span class="introduce">Chọn gói tin đăng</span>
                       </div>
-                      <div class="element-collapse">
-                        <p class="element-collapse-title">Loại bất động sản</p>
-                        <span class="element-collapse-value">+1</span>
+                      <div
+                        class="dropdown-divider mt-4 mb-3"
+                        style="margin-bottom: 16px"
+                      ></div>
+                      <div class="row pta-row" style="margin-bottom: 24px">
+                        <div class="col-md-3">
+                          <div class="dangtintuc-image active">
+                            <span class="title-imgage">Tin thường</span>
+                            <img
+                              src="./assets/img/chuyenmuc-house.svg"
+                              alt=""
+                              style="width: 90px; height: 80px"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="dangtintuc-image">
+                            <span class="title-imgage">Tin VIP 1</span>
+                            <img
+                              src="./assets/img/Frame.png"
+                              alt=""
+                              style="width: 90px; height: 80px"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="dangtintuc-image">
+                            <span class="title-imgage">Tin VIP 2</span>
+                            <img
+                              src="./assets/img/Frame-1.png"
+                              alt=""
+                              style="width: 90px; height: 80px"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="dangtintuc-image">
+                            <span class="title-imgage">Tin VIP 3</span>
+                            <img
+                              src="./assets/img/Frame-1.png"
+                              alt=""
+                              style="width: 90px; height: 80px"
+                            />
+                          </div>
+                        </div>
                       </div>
-                      <div class="element-collapse">
-                        <p class="element-collapse-title">Tỉnh/thành phố</p>
-                        <span class="element-collapse-value">+1</span>
-                      </div>
-                      <div class="element-collapse">
-                        <p class="element-collapse-title">Quận/huyện</p>
-                        <span class="element-collapse-value">+1</span>
-                      </div>
-                      <div class="element-collapse">
-                        <p class="element-collapse-title">Phường/xã</p>
-                        <span class="element-collapse-value">+1</span>
-                      </div>
-                      <div class="element-collapse">
-                        <p class="element-collapse-title">Đường, phố</p>
-                        <span class="element-collapse-value">+1</span>
+                      <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                          <label for="validationCustom04" class="form-label">
+                            Số ngày đăng
+                          </label>
+                          <select
+                            class="selectpicker ptanh-custom-select form-control"
+                            data-live-search="true"
+                          >
+                            <option selected data-tokens="ketchup mustard">
+                              10 ngày
+                            </option>
+                            <option data-tokens="mustard">
+                              Burger, Shake and a Smile
+                            </option>
+                            <option data-tokens="frosting">
+                              Sugar, Spice and all things nice
+                            </option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="validationCustom04" class="form-label">
+                            Số ngày đăng
+                          </label>
+                          <div
+                            class="md-form md-outline input-with-post-icon datepicker"
+                            id="accLabels"
+                          >
+                            <input
+                              type="date"
+                              class="ptanh-custom-input form-control"
+                              height="42"
+                              style="height: 42px"
+                              placeholder="02/08/2022"
+                              value=""
+                              min="1997-01-01"
+                              max="2030-12-31"
+                            />
+                            <i
+                              class="fas fa-calendar input-prefix"
+                              tabindex="0"
+                            ></i>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="card card-element">
-                  <div class="card-header" id="headingOne">
-                    <h2 class="mb-0" style="display: flex">
-                      <button
-                        class="btn btn-link btn-block text-left btn-title"
-                        type="button"
-                        data-toggle="collapse"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
-                      >
-                        Thông tin mô tả
-                      </button>
-                      <span class="title-desc">20%</span>
-                    </h2>
+              </div>
+            </div>
+            <div class="row row-container-element">
+              <div class="btn-footer-watching">
+                <div
+                  style="display: flex; align-items: center"
+                  class="btn-container"
+                >
+                  <button class="btn btn-previous">Xem trước giao diện</button>
+                  <div class="btn btn-container-footer">
+                    <button class="btn-next">Tiếp tục</button>
+                    <img
+                      src="./assets/img/btn-vector-footer.svg"
+                      alt=""
+                      style="width: 8px; height: 15px"
+                    />
                   </div>
                 </div>
-                <div class="dropdown-divider" style="margin: 0"></div>
-                <div class="card card-element">
-                  <div class="card-header" id="headingOne">
-                    <h2 class="mb-0" style="display: flex">
-                      <button
-                        class="btn btn-link btn-block text-left btn-title"
-                        type="button"
-                        data-toggle="collapse"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
-                      >
-                        Thông tin khác
-                      </button>
-                      <span class="title-desc">20%</span>
-                    </h2>
-                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-3 right-element d-none d-lg-block">
+            <div class="container-left-side">
+              <div class="chart-container">
+                <div
+                  class="title"
+                  style="margin-top: 24px; margin-bottom: 24px"
+                >
+                  Điểm uy tín
                 </div>
-                <div class="dropdown-divider" style="margin: 0"></div>
+                <div class="circular-progress">
+                  <div class="value-container">0%</div>
+                </div>
+              </div>
+              <div class="content-container" style="padding: 0 24px 24px 24px">
+                <div
+                  class="description"
+                  style="text-align: center; margin-bottom: 15px"
+                >
+                  Chưa đủ thông tin để người xem ra quyết định
+                </div>
+                <div class="accordion" id="accordionExample">
+                  <div class="card card-element">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0" style="display: flex">
+                        <button
+                          class="btn btn-link btn-block text-left btn-title"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          Thông tin cơ bản
+                        </button>
+                        <span class="title-desc">20%</span>
+                      </h2>
+                    </div>
 
-                <div class="card card-element">
-                  <div class="card-header" id="headingOne">
-                    <h2 class="mb-0" style="display: flex">
-                      <button
-                        class="btn btn-link btn-block text-left btn-title"
-                        type="button"
-                        data-toggle="collapse"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
-                      >
-                        Thông tin liên hệ
-                      </button>
-                      <span class="title-desc">20%</span>
-                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="collapse show"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordionExample"
+                    >
+                      <div class="card card-body" style="box-shadow: none">
+                        <div class="element-collapse" style="margin-top: 24px">
+                          <p class="element-collapse-title">Nhu cầu</p>
+                          <span class="element-collapse-value">+1</span>
+                        </div>
+                        <div class="element-collapse">
+                          <p class="element-collapse-title">
+                            Loại bất động sản
+                          </p>
+                          <span class="element-collapse-value">+1</span>
+                        </div>
+                        <div class="element-collapse">
+                          <p class="element-collapse-title">Tỉnh/thành phố</p>
+                          <span class="element-collapse-value">+1</span>
+                        </div>
+                        <div class="element-collapse">
+                          <p class="element-collapse-title">Quận/huyện</p>
+                          <span class="element-collapse-value">+1</span>
+                        </div>
+                        <div class="element-collapse">
+                          <p class="element-collapse-title">Phường/xã</p>
+                          <span class="element-collapse-value">+1</span>
+                        </div>
+                        <div class="element-collapse">
+                          <p class="element-collapse-title">Đường, phố</p>
+                          <span class="element-collapse-value">+1</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card card-element">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0" style="display: flex">
+                        <button
+                          class="btn btn-link btn-block text-left btn-title"
+                          type="button"
+                          data-toggle="collapse"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          Thông tin mô tả
+                        </button>
+                        <span class="title-desc">20%</span>
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="dropdown-divider" style="margin: 0"></div>
+                  <div class="card card-element">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0" style="display: flex">
+                        <button
+                          class="btn btn-link btn-block text-left btn-title"
+                          type="button"
+                          data-toggle="collapse"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          Thông tin khác
+                        </button>
+                        <span class="title-desc">20%</span>
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="dropdown-divider" style="margin: 0"></div>
+
+                  <div class="card card-element">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0" style="display: flex">
+                        <button
+                          class="btn btn-link btn-block text-left btn-title"
+                          type="button"
+                          data-toggle="collapse"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          Thông tin liên hệ
+                        </button>
+                        <span class="title-desc">20%</span>
+                      </h2>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="description">
-                Để tăng lượt xem tin và nâng cao tỷ lệ tiếp cận đến nhiều khách
-                hàng, sử dụng ngay các gói TIN ĐĂNG VIP và UPTIN lên top đầu tìm
-                kiếm
-              </div>
-              <div class="hotline">
-                <div style="padding: 8px 16px">
-                  <p class="hotline-title">Hotline tư vấn miễn phí</p>
-                  <button class="hotline-number">0976 212 555</button>
+                <div class="description">
+                  Để tăng lượt xem tin và nâng cao tỷ lệ tiếp cận đến nhiều
+                  khách hàng, sử dụng ngay các gói TIN ĐĂNG VIP và UPTIN lên top
+                  đầu tìm kiếm
+                </div>
+                <div class="hotline">
+                  <div style="padding: 8px 16px">
+                    <p class="hotline-title">Hotline tư vấn miễn phí</p>
+                    <button class="hotline-number">0976 212 555</button>
+                  </div>
                 </div>
               </div>
             </div>

@@ -32,6 +32,27 @@ body#dangtintuc {
       font-weight: 400;
       font-size: 12px;
       line-height: 18px;
+      &.collapsed {
+        position: relative;
+        display: block;
+        width: 80px;
+        color: transparent !important;
+        &::after {
+          content: 'Xem thêm';
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 18px;
+          position: absolute;
+          inset: 0;
+          color: #0091fe;
+          text-align: right;
+          display: inline-block;
+          right: 0;
+        }
+        &:hover::after {
+          color: #d1193f;
+        }
+      }
       .text-collapse {
         color: #0091fe;
         font-weight: 400;
