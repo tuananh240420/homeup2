@@ -433,6 +433,15 @@ label[dir=rtl] .range-slider {
   #header {
     padding-left: 0;
   }
+  #header > nav {
+    position: relative;
+  }
+  #header > nav > .navbar-brand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 #header .navbar {
   height: 100%;
