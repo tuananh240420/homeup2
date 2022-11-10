@@ -1,4 +1,5 @@
 // Swiper init
+
 (() => {
   new Swiper('.duanmoi-swiper', {
     navigation: {
@@ -412,3 +413,45 @@ const MAX_PROPERTY = '--value-b';
       });
   }
 })();
+
+document.querySelectorAll('.sub-checkbox').forEach((sub) => {
+  sub.onchange = () => {
+    const parent = sub.parentNode.querySelector(
+      '.form-checkbox[data-subcount]'
+    );
+    const length = sub.parentNode.querySelectorAll('.sub-checkbox').length;
+    const subInput = sub.querySelector('input[type="checkbox"');
+    const parentInput = parent.querySelector('input[type="checkbox"');
+    if (subInput.checked) {
+      parent.dataset.subcount = Number(parent.dataset.subcount) + 1;
+      if (Number(parent.dataset.subcount) === length)
+        parentInput.checked = true;
+    } else {
+      parent.dataset.subcount = Number(parent.dataset.subcount) - 1;
+      parentInput.checked = false;
+    }
+  };
+});
+
+document.querySelectorAll('.form-checkbox[data-subcount]').forEach((parent) => {
+  parent.onchange = () => {
+    const parentInput = parent.querySelector('input[type="checkbox"');
+    const subList = parent.parentNode.querySelectorAll(
+      '.sub-checkbox input[type="checkbox"'
+    );
+    if (parentInput.checked) {
+      subList.forEach((item) => (item.checked = true));
+      parent.dataset.subcount = subList.length;
+    } else {
+      subList.forEach((item) => (item.checked = false));
+      parent.dataset.subcount = 0;
+    }
+  };
+});
+
+window.addEventListener('click', (e) => {
+  const itemMenu = document.getElementById('profile-submenu')?.parentNode;
+  if (e.target.closest('.item-menu') !== itemMenu) {
+    document.getElementById('profile-submenu').style.display = 'none';
+  }
+});
