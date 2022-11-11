@@ -279,6 +279,31 @@
       gap: 30px;
       justify-content: flex-end;
       min-width: 200px;
+      .dropdown {
+        button {
+          padding: 0;
+          border: none;
+          outline: none;
+          background-color: #fff;
+          box-shadow: none !important;
+          &::after {
+            display: none;
+          }
+        }
+        .dropdown-item {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+          cursor: pointer;
+          img {
+            width: 24px;
+            height: 24px;
+          }
+          &:active {
+            background-color: var(--primary);
+          }
+        }
+      }
 
       img {
         cursor: pointer;
