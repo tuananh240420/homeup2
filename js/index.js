@@ -392,9 +392,10 @@ const MAX_PROPERTY = '--value-b';
         .forEach((item) => (item.checked = false));
     }
     if (!e.target.closest('.main-search-container > .dropdown-main')) {
-      document.querySelector(
+      const cb = document.querySelector(
         '.main-search-container > .dropdown-main > input[type="checkbox"]'
-      ).checked = false;
+      );
+      if (cb) cb.checked = false;
     }
   });
 })();
@@ -454,4 +455,44 @@ window.addEventListener('click', (e) => {
   if (e.target.closest('.item-menu') !== itemMenu) {
     document.getElementById('profile-submenu').style.display = 'none';
   }
+});
+
+document
+  .querySelectorAll('.dropdown.bootstrap-select .actions-btn.bs-select-all')
+  .forEach((item) => {
+    item.onclick = () => {
+      console.log(item.closest('.dropdown.bootstrap-select'));
+    };
+  });
+
+const titleArr = {
+  'Số phòng ngủ': 'phòng ngủ',
+  'Hướng nhà': 'Hướng',
+  'Nội dung tin có': 'Có',
+};
+document.querySelectorAll('.addition-filter').forEach((add) => {
+  const value = add.querySelector('.price-filter-value');
+  add.querySelector('.dropdown-btn > ul').onchange = () => {
+    const res = Array.from(add.querySelectorAll('.checkbox-container')).reduce(
+      (acc, container) => {
+        const title = container.previousElementSibling.innerText;
+        const values = Array.from(
+          container.querySelectorAll('input:checked + label')
+        ).map((item) => {
+          return item.innerText;
+        });
+        if (values.length === 0) return acc;
+        if (titleArr[title] === 'phòng ngủ')
+          return acc.concat(values.join(', ') + ' ' + titleArr[title]);
+        else return acc.concat(titleArr[title] + ': ' + values.join(', '));
+      },
+      []
+    );
+    value.innerText = res.join(', ');
+    add
+      .querySelector('.form-checkbox-resetall')
+      .addEventListener('click', () => {
+        value.innerText = 'Xem Thêm';
+      });
+  };
 });

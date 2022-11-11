@@ -527,16 +527,81 @@ label[dir='rtl'] .range-slider {
     transform: none !important;
   }
 }
-.dropdown.bootstrap-select {
-  & > .dropdown-menu.show {
-    // padding-top: 40px;
-    // position: relative;
-    // &::after {
-    //   content: 'Trở về';
-    //   position: fixed;
-    //   z-index: 999999;
-    // }
-    // .bs-searchbox {
-    // }
+
+@media screen and (min-width: 576px) {
+  .dropdown.bootstrap-select {
+    & > .dropdown-menu.show {
+      display: flex !important  ;
+      flex-direction: column;
+      .bs-actionsbox {
+        order: 2;
+        display: flex;
+        margin-top: auto;
+        padding-top: 16px;
+
+        & > .btn-group {
+          flex: 1;
+          justify-content: space-between;
+          position: relative;
+          &::after {
+            content: 'Áp dụng';
+            display: block;
+            position: absolute;
+            right: 8px;
+            bottom: 0;
+            background-color: #fff;
+            padding: 8px 12px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: #ffffff;
+            background-color: #d1193f;
+            border-radius: 19px;
+            cursor: pointer;
+
+            &:hover {
+              opacity: 0.8;
+              cursor: pointer;
+            }
+          }
+        }
+        .actions-btn.bs-select-all {
+          order: 2;
+          width: unset;
+          flex: none;
+          padding: 8px 12px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: #ffffff;
+          background-color: #d1193f;
+          border-radius: 19px;
+          display: none;
+        }
+        .actions-btn.bs-deselect-all {
+          display: inline-flex;
+          gap: 4px;
+          justify-content: center;
+          width: unset;
+          flex: none;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: #646d84;
+          align-items: center;
+          &::before {
+            content: '';
+            background-image: url(../assets/img/refresh-2.svg);
+            width: 24px;
+            height: 24px;
+            display: block;
+          }
+          background-color: #fff;
+          border: none !important;
+          outline: none !important;
+          box-shadow: none;
+        }
+      }
+    }
   }
 }
