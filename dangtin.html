@@ -2027,6 +2027,11 @@
           document.querySelector('.slide').dataset.zoom = '1';
         };
 
+      document.addEventListener('keydown', (e) => {
+        if (e.keyCode === 27)
+          document.querySelector('.slide').classList.remove('show');
+      });
+
       document.getElementById('copy').onclick = () => {
         var dummy = document.createElement('input'),
           text = window.location.href;
