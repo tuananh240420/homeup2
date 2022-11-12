@@ -608,3 +608,22 @@ label[dir='rtl'] .range-slider {
   }
   @include abc;
 }
+
+.dropdown.bootstrap-select.selected > button::after {
+  display: none;
+}
+.dropdown.bootstrap-select.show + .clear-select-bootstrap,
+.dropdown.bootstrap-select + .clear-select-bootstrap {
+  display: none;
+}
+.dropdown.bootstrap-select.selected + .clear-select-bootstrap {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}

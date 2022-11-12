@@ -1,4 +1,55 @@
 // Swiper init
+class ClassWatcher {
+  constructor(
+    targetNode,
+    classToWatch,
+    classAddedCallback,
+    classRemovedCallback
+  ) {
+    this.targetNode = targetNode;
+    this.classToWatch = classToWatch;
+    this.classAddedCallback = classAddedCallback;
+    this.classRemovedCallback = classRemovedCallback;
+    this.observer = null;
+    this.lastClassState = targetNode.classList.contains(this.classToWatch);
+
+    this.init();
+  }
+
+  init() {
+    this.observer = new MutationObserver(this.mutationCallback);
+    this.observe();
+  }
+
+  observe() {
+    this.observer.observe(this.targetNode, { attributes: true });
+  }
+
+  disconnect() {
+    this.observer.disconnect();
+  }
+
+  mutationCallback = (mutationsList) => {
+    for (let mutation of mutationsList) {
+      if (
+        mutation.type === 'attributes' &&
+        mutation.attributeName === 'class'
+      ) {
+        let currentClassState = mutation.target.classList.contains(
+          this.classToWatch
+        );
+        if (this.lastClassState !== currentClassState) {
+          this.lastClassState = currentClassState;
+          if (currentClassState) {
+            this.classAddedCallback();
+          } else {
+            this.classRemovedCallback();
+          }
+        }
+      }
+    }
+  };
+}
 
 (() => {
   new Swiper('.duanmoi-swiper', {
@@ -178,7 +229,6 @@
   $('#select-tinh-thanh').on(
     'changed.bs.select',
     function (e, clickedIndex, isSelected, previousValue) {
-      console.log(e.currentTarget);
       const selected = $(e.currentTarget).val();
       document.querySelectorAll('.location-filter-value').forEach((item) => {
         item.innerText =
@@ -384,8 +434,6 @@ const MAX_PROPERTY = '--value-b';
   });
 
   window.addEventListener('click', (e) => {
-    // console.log(e.target);
-
     if (!e.target.closest('.filter-container')) {
       document
         .querySelectorAll('.filter-container .switch')
@@ -496,3 +544,53 @@ document.querySelectorAll('.addition-filter').forEach((add) => {
       });
   };
 });
+
+let count = 0;
+$('.filter-select-boostrap').on(
+  'changed.bs.select',
+  function (e, clickedIndex, isSelected, previousValue) {
+    count++;
+    if (e.currentTarget.id === 'select-tinh-thanh')
+      document
+        .querySelectorAll(
+          'select.filter-select-boostrap:not(#select-tinh-thanh)'
+        )
+        .forEach((item) => {
+          $(item).selectpicker('deselectAll');
+        });
+
+    e.currentTarget.parentNode.classList.toggle(
+      'selected',
+      $(e.currentTarget).val()?.length !== 0
+    );
+
+    if (count === 1) {
+      document
+        .querySelectorAll('div.filter-select-boostrap')
+        .forEach((item) => {
+          new ClassWatcher(
+            item,
+            'show',
+            () => {
+              item.parentNode.classList.remove('position-relative');
+            },
+            () => {
+              item.parentNode.classList.add('position-relative');
+            }
+          );
+        });
+    }
+  }
+);
+
+document.querySelectorAll('.clear-select-bootstrap').forEach((item) => {
+  item.onclick = () => {
+    const select = item.previousElementSibling.querySelector('select');
+    $(select).selectpicker('val', '');
+  };
+});
+
+const clearFunction = () => {
+  const select = this.previousElementSibling.querySelector('select');
+  $(select).selectpicker('val', '');
+};

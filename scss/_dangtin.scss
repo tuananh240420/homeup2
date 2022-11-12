@@ -544,6 +544,9 @@
     margin-right: -15px;
     height: unset;
     margin-bottom: 40px;
+    .mySwiper:last-child {
+      display: none;
+    }
     &.show {
       margin-left: 0;
       margin-right: 0;
@@ -551,10 +554,16 @@
       // padding-right: 0;
       margin-bottom: 0;
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .mySwiper:last-child {
+        display: block;
+        height: 100px;
+        // margin-top: auto;
+      }
     }
-    .mySwiper:last-child {
-      display: none;
-    }
+
     .mySwiper2 {
       height: 300px !important;
     }
