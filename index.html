@@ -506,6 +506,7 @@
                       id="select-tinh-thanh"
                       data-live-search="true"
                       data-live-search-placeholder="Tìm tỉnh thành"
+                      data-dependance-name="tinhthanh"
                     >
                       <option>Hải Phòng</option>
                       <option>Thái Bình</option>
@@ -541,6 +542,8 @@
                       class="selectpicker filter-select-boostrap"
                       data-live-search="true"
                       multiple
+                      data-dependance-name="quanhuyen"
+                      data-dependance="tinhthanh"
                       data-live-search-placeholder="Tìm Quận/Huyện"
                       data-actions-box="true"
                       data-deselect-all-text="Đặt lại"
@@ -568,6 +571,7 @@
                   <li>
                     <select
                       title="Phương/Xã"
+                      data-dependance="quanhuyen"
                       class="selectpicker filter-select-boostrap"
                       multiple
                       data-live-search="true"
@@ -600,6 +604,7 @@
                       title="Đường/Phố"
                       class="selectpicker filter-select-boostrap"
                       data-live-search="true"
+                      data-dependance="quanhuyen"
                       data-live-search-placeholder="Tìm Đường/Phố"
                     >
                       <option>Hải Phòng</option>
@@ -627,6 +632,7 @@
                       class="selectpicker filter-select-boostrap"
                       data-live-search="true"
                       multiple
+                      data-dependance="tinhthanh"
                       data-live-search-placeholder="Tìm Dự án"
                       data-actions-box="true"
                       data-deselect-all-text="Đặt lại"

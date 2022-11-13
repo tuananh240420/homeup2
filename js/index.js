@@ -550,19 +550,32 @@ $('.filter-select-boostrap').on(
   'changed.bs.select',
   function (e, clickedIndex, isSelected, previousValue) {
     count++;
-    if (e.currentTarget.id === 'select-tinh-thanh')
-      document
-        .querySelectorAll(
-          'select.filter-select-boostrap:not(#select-tinh-thanh)'
-        )
-        .forEach((item) => {
-          $(item).selectpicker('deselectAll');
-        });
-
+    // if (e.currentTarget.id === 'select-tinh-thanh')
+    //   document
+    //     .querySelectorAll(
+    //       'select.filter-select-boostrap:not(#select-tinh-thanh)'
+    //     )
+    //     .forEach((item) => {
+    //       console.log(item);
+    //       $(item).selectpicker('deselectAll');
+    //       $(item).selectpicker('val', '');
+    //     });
     e.currentTarget.parentNode.classList.toggle(
       'selected',
       $(e.currentTarget).val()?.length !== 0
     );
+    const dependanceName = e.currentTarget.dataset.dependanceName;
+    if (dependanceName)
+      document
+        .querySelectorAll(
+          `select.filter-select-boostrap[data-dependance="${dependanceName}"]`
+        )
+        .forEach((item) => {
+          // $(item).selectpicker('deselectAll');
+          if (Array.isArray($(item).selectpicker('val')))
+            $(item).selectpicker('deselectAll');
+          else $(item).selectpicker('val', '');
+        });
 
     if (count === 1) {
       document
