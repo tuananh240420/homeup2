@@ -522,6 +522,21 @@ label[dir=rtl] .range-slider {
   opacity: 0.8;
 }
 
+.filter-option-inner-inner {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: none;
+  white-space: nowrap;
+  padding-right: 16px;
+}
+
+.loai-nha-dat-value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: none;
+  white-space: nowrap;
+}
+
 #header {
   border-bottom: 1px solid #ecedf1;
   height: 64px;
@@ -3227,6 +3242,21 @@ label[dir=rtl] .range-slider {
 .dropdown.bootstrap-select.selected + .clear-select-bootstrap:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+.filter-option-inner-inner {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: none;
+  white-space: nowrap;
+  padding-right: 16px;
+}
+
+.loai-nha-dat-value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: none;
+  white-space: nowrap;
 }
 
 #sub-filter {

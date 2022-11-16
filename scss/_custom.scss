@@ -627,3 +627,17 @@ label[dir='rtl'] .range-slider {
     opacity: 0.8;
   }
 }
+
+.filter-option-inner-inner {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: none;
+  white-space: nowrap;
+  padding-right: 16px;
+}
+.loai-nha-dat-value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: none;
+  white-space: nowrap;
+}
