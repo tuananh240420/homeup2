@@ -1374,7 +1374,6 @@ label[dir=rtl] .range-slider {
   right: 0;
   height: 40px;
   z-index: 98;
-  opacity: 0;
 }
 #main .filter-container .location-filter > input[type=checkbox]:checked + .dropdown-btn,
 #main .filter-container .price-filter > input[type=checkbox]:checked + .dropdown-btn {
