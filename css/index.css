@@ -4059,6 +4059,9 @@ label[dir=rtl] .range-slider {
   }
 }
 @media screen and (max-width: 576px) {
+  #main .inner.show {
+    max-height: unset !important;
+  }
   #main .search-mobile-main {
     flex: 1;
     background: #ecedf1;
@@ -4078,6 +4081,7 @@ label[dir=rtl] .range-slider {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+    pointer-events: none;
   }
   #main .search-mobile-main input::placeholder {
     color: #9399a9;
@@ -4211,9 +4215,11 @@ label[dir=rtl] .range-slider {
     border-radius: 24px;
     background-color: #fff;
     flex: unset;
+    min-height: 48px;
   }
   #main > .filter-container .mobile-nav + .search-mobile-main input {
     background-color: #fff;
+    pointer-events: initial;
   }
   #main > .filter-container .mobile-nav + .search-mobile-main button {
     background-color: #fff;
@@ -4225,7 +4231,7 @@ label[dir=rtl] .range-slider {
     margin-bottom: 8px;
   }
   #main > .filter-container .row.row-cols-lg-4 {
-    flex: unset !important;
+    overflow: scroll;
   }
   #main > .filter-container .row.row-cols-lg-4 > .col {
     height: 68px;
