@@ -483,7 +483,11 @@
               >Khu vực & Dự án</label
             >
             <div class="location-filter filter-dropdown">
-              <input class="switch" type="checkbox" />
+              <input
+                class="switch"
+                type="checkbox"
+                onclick="this.checked = !this.checked; console.log(123)"
+              />
               <div class="dropdown-btn">
                 <p>
                   <span class="location-filter-value">Toàn quốc</span>
