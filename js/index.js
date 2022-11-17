@@ -706,3 +706,8 @@ document
       }, 100);
     });
   });
+
+window.addEventListener('click', (e) => {
+  console.log(Array.from(e.target.classList).join(','));
+  alert(Array.from(e.target.classList).join(','));
+});
