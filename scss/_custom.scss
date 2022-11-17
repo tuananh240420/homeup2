@@ -645,8 +645,23 @@ label[dir='rtl'] .range-slider {
 @media screen and (min-width: 576px) {
   .main-search-container {
     .dropdown-container.form-checkbox-container {
-      max-height: 400px;
-      overflow-y: scroll;
+      max-height: 250px;
+      & > div {
+        &::-webkit-scrollbar {
+          background-color: transparent;
+          width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: #ddd;
+          border-radius: 4px;
+        }
+      }
+      & > div > li {
+        width: 100%;
+      }
     }
   }
 }
