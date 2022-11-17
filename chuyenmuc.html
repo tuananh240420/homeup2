@@ -242,12 +242,16 @@
                         />
                       </svg>
                     </span>
-                    <span class="category-filter-value">Tất cả</span>
+                    <span
+                      class="category-filter-value loai-nha-dat-value"
+                      data-default="Tất cả"
+                      >Tất cả</span
+                    >
                   </p>
                   <ul
                     class="dropdown-container dropdown-location-menu form-checkbox-container"
                   >
-                    <li class="form-checkbox">
+                    <li class="form-checkbox" data-count="0">
                       <label for="main-checkbox-sub-m-1">Tất cả nhà đất</label>
                       <input id="main-checkbox-sub-m-1" type="checkbox" />
                     </li>
@@ -326,22 +330,48 @@
                     <li>
                       <select
                         title="Tỉnh/Thành"
-                        class="selectpicker"
+                        class="selectpicker filter-select-boostrap"
                         id="select-tinh-thanh"
                         data-live-search="true"
                         data-live-search-placeholder="Tìm tỉnh thành"
+                        data-dependance-name="tinhthanh"
                       >
                         <option>Hải Phòng</option>
                         <option>Thái Bình</option>
                         <option>Nam Định</option>
+                        <option>Nam Định</option>
+                        <option>Nam Định</option>
+                        <option>Nam Định</option>
+                        <option>Nam Định</option>
+                        <option>Nam Định</option>
+                        <option>Nam Định</option>
+                        <option>Nam Định</option>
+                        <option>Nam Định</option>
                       </select>
+                      <div class="clear-select-bootstrap">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-x"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
                     </li>
+
                     <li>
                       <select
                         title="Quận/Huyện"
-                        class="selectpicker"
+                        class="selectpicker filter-select-boostrap"
                         data-live-search="true"
                         multiple
+                        data-dependance-name="quanhuyen"
+                        data-dependance="tinhthanh"
                         data-live-search-placeholder="Tìm Quận/Huyện"
                         data-actions-box="true"
                         data-deselect-all-text="Đặt lại"
@@ -351,11 +381,26 @@
                         <option>Thái Bình</option>
                         <option>Nam Định</option>
                       </select>
+                      <div class="clear-select-bootstrap">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-x"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
                     </li>
                     <li>
                       <select
                         title="Phương/Xã"
-                        class="selectpicker"
+                        data-dependance="quanhuyen"
+                        class="selectpicker filter-select-boostrap"
                         multiple
                         data-live-search="true"
                         data-live-search-placeholder="Tìm Phương/Xã"
@@ -367,25 +412,55 @@
                         <option>Thái Bình</option>
                         <option>Nam Định</option>
                       </select>
+                      <div class="clear-select-bootstrap">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-x"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
                     </li>
                     <li>
                       <select
                         title="Đường/Phố"
-                        class="selectpicker"
+                        class="selectpicker filter-select-boostrap"
                         data-live-search="true"
+                        data-dependance="quanhuyen"
                         data-live-search-placeholder="Tìm Đường/Phố"
                       >
                         <option>Hải Phòng</option>
                         <option>Thái Bình</option>
                         <option>Nam Định</option>
                       </select>
+                      <div class="clear-select-bootstrap">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-x"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
                     </li>
                     <li>
                       <select
                         title="Dự án"
-                        class="selectpicker"
+                        class="selectpicker filter-select-boostrap"
                         data-live-search="true"
                         multiple
+                        data-dependance="tinhthanh"
                         data-live-search-placeholder="Tìm Dự án"
                         data-actions-box="true"
                         data-deselect-all-text="Đặt lại"
@@ -395,6 +470,20 @@
                         <option>Thái Bình</option>
                         <option>Nam Định</option>
                       </select>
+                      <div class="clear-select-bootstrap">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-x"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
                     </li>
                     <li class="form-footer">
                       <p class="form-checkbox-resetall">

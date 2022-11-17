@@ -1,4 +1,56 @@
 // Swiper init
+$.fn.selectpicker.Constructor.DEFAULTS.virtualScroll = true;
+class ClassWatcher {
+  constructor(
+    targetNode,
+    classToWatch,
+    classAddedCallback,
+    classRemovedCallback
+  ) {
+    this.targetNode = targetNode;
+    this.classToWatch = classToWatch;
+    this.classAddedCallback = classAddedCallback;
+    this.classRemovedCallback = classRemovedCallback;
+    this.observer = null;
+    this.lastClassState = targetNode.classList.contains(this.classToWatch);
+
+    this.init();
+  }
+
+  init() {
+    this.observer = new MutationObserver(this.mutationCallback);
+    this.observe();
+  }
+
+  observe() {
+    this.observer.observe(this.targetNode, { attributes: true });
+  }
+
+  disconnect() {
+    this.observer.disconnect();
+  }
+
+  mutationCallback = (mutationsList) => {
+    for (let mutation of mutationsList) {
+      if (
+        mutation.type === 'attributes' &&
+        mutation.attributeName === 'class'
+      ) {
+        let currentClassState = mutation.target.classList.contains(
+          this.classToWatch
+        );
+        if (this.lastClassState !== currentClassState) {
+          this.lastClassState = currentClassState;
+          if (currentClassState) {
+            this.classAddedCallback();
+          } else {
+            this.classRemovedCallback();
+          }
+        }
+      }
+    }
+  };
+}
 
 (() => {
   new Swiper('.duanmoi-swiper', {
@@ -165,21 +217,27 @@
       if (checkbox) checkbox.checked = false;
     };
   });
+  // $('#select-tinh-thanh').on(
+  //   'changed.bs.select',
+  //   function (e, clickedIndex, isSelected, previousValue) {
+  //     // const selected = $(e.currentTarget).val();
+  //     const selected =
+  //       e.currentTarget.children[clickedIndex]?.innerText || undefined;
+  //     // console.dir(e.currentTarget.children[clickedIndex].innerText);
+  //     console.log(selected);
+  //     document.querySelector('.location-filter-value').innerText =
+  //       selected ||
+  //       document.querySelector('.location-filter-value').dataset.default ||
+  //       'Toàn quốc';
+  //   }
+  // );
   $('#select-tinh-thanh').on(
     'changed.bs.select',
     function (e, clickedIndex, isSelected, previousValue) {
-      const selected = $(e.currentTarget).val();
-      document.querySelector('.location-filter-value').innerText =
-        selected ||
-        document.querySelector('.location-filter-value').dataset.default ||
-        'Toàn quốc';
-    }
-  );
-  $('#select-tinh-thanh').on(
-    'changed.bs.select',
-    function (e, clickedIndex, isSelected, previousValue) {
-      console.log(e.currentTarget);
-      const selected = $(e.currentTarget).val();
+      // const selected = $(e.currentTarget).val();
+      const selected =
+        e.currentTarget.children[clickedIndex]?.innerText || undefined;
+
       document.querySelectorAll('.location-filter-value').forEach((item) => {
         item.innerText =
           selected ||
@@ -384,12 +442,11 @@ const MAX_PROPERTY = '--value-b';
   });
 
   window.addEventListener('click', (e) => {
-    // console.log(e.target);
-
     if (!e.target.closest('.filter-container')) {
-      document
-        .querySelectorAll('.filter-container .switch')
-        .forEach((item) => (item.checked = false));
+      if (!e.target.closest('.dropdown-menu'))
+        document
+          .querySelectorAll('.filter-container .switch')
+          .forEach((item) => (item.checked = false));
     }
     if (!e.target.closest('.main-search-container > .dropdown-main')) {
       const cb = document.querySelector(
@@ -421,15 +478,38 @@ document.querySelectorAll('.sub-checkbox').forEach((sub) => {
       '.form-checkbox[data-subcount]'
     );
     const length = sub.parentNode.querySelectorAll('.sub-checkbox').length;
-    const subInput = sub.querySelector('input[type="checkbox"');
+    const subInput = sub.querySelector('input[type="checkbox"]');
     const parentInput = parent.querySelector('input[type="checkbox"');
     if (subInput.checked) {
       parent.dataset.subcount = Number(parent.dataset.subcount) + 1;
-      if (Number(parent.dataset.subcount) === length)
+      if (Number(parent.dataset.subcount) === length) {
         parentInput.checked = true;
+        const parentNode = parent.parentNode.querySelector(
+          '.form-checkbox[data-count]'
+        );
+        const parentCount = parentNode.dataset.count;
+        parentNode.dataset.count = Number(parentCount) + 1;
+        if (Number(parentCount) === CHILD_LENGTH) {
+          const spans = document.querySelectorAll('.loai-nha-dat-value');
+          spans.forEach((item) => (item.innerText = 'Tất cả nhà đất'));
+
+          parentNode.querySelector('input[type="checkbox"]').checked = true;
+        }
+      }
     } else {
+      if (Number(parent.dataset.subcount) === 4)
+        parent.parentNode.querySelector(
+          '.form-checkbox[data-count]'
+        ).dataset.count =
+          Number(
+            parent.parentNode.querySelector('.form-checkbox[data-count]')
+              .dataset.count
+          ) - 1;
       parent.dataset.subcount = Number(parent.dataset.subcount) - 1;
       parentInput.checked = false;
+      parent.parentNode.querySelector(
+        '.form-checkbox[data-count] input'
+      ).checked = false;
     }
   };
 });
@@ -438,7 +518,7 @@ document.querySelectorAll('.form-checkbox[data-subcount]').forEach((parent) => {
   parent.onchange = () => {
     const parentInput = parent.querySelector('input[type="checkbox"');
     const subList = parent.parentNode.querySelectorAll(
-      '.sub-checkbox input[type="checkbox"'
+      '.sub-checkbox input[type="checkbox"]'
     );
     if (parentInput.checked) {
       subList.forEach((item) => (item.checked = true));
@@ -450,6 +530,58 @@ document.querySelectorAll('.form-checkbox[data-subcount]').forEach((parent) => {
   };
 });
 
+const CHILD_LENGTH = 3;
+document
+  .querySelectorAll(
+    '.dropdown-container.form-checkbox-container .form-checkbox:not(.sub-checkbox):not([data-count]) input[type="checkbox"]'
+  )
+  .forEach((sub, index, array) => {
+    sub.onchange = () => {
+      const parent = sub.parentNode.parentNode.querySelector(
+        '.form-checkbox[data-count]'
+      );
+      const spans = document.querySelectorAll('.loai-nha-dat-value');
+      const length = CHILD_LENGTH;
+      const subInput = sub;
+      const parentInput = parent.querySelector('input[type="checkbox"]');
+      if (subInput.checked) {
+        parent.dataset.count = Number(parent.dataset.count) + 1;
+        if (Number(parent.dataset.count) === length) {
+          parentInput.checked = true;
+          spans.forEach((item) => (item.innerText = 'Tất cả nhà đất'));
+        }
+      } else {
+        parent.dataset.count = Number(parent.dataset.count) - 1;
+        parentInput.checked = false;
+      }
+    };
+  });
+document.querySelectorAll('.form-checkbox[data-count]').forEach((parent) => {
+  parent.onchange = () => {
+    const parentInput = parent.querySelector('input[type="checkbox"');
+    const subList = parent.parentNode.querySelectorAll(
+      '.dropdown-container.form-checkbox-container .form-checkbox:not([data-count]) input[type="checkbox"]'
+    );
+    const spans = document.querySelectorAll('.loai-nha-dat-value');
+
+    if (parentInput.checked) {
+      spans.forEach((item) => (item.innerText = 'Tất cả nhà đất'));
+      subList.forEach((item) => (item.checked = true));
+      parent.dataset.count = CHILD_LENGTH;
+      parent.parentNode.querySelector(
+        '.form-checkbox[data-subcount]'
+      ).dataset.subcount = 4;
+    } else {
+      spans.forEach((item) => (item.innerText = item.dataset.default));
+
+      subList.forEach((item) => (item.checked = false));
+      parent.dataset.count = 0;
+      parent.parentNode.querySelector(
+        '.form-checkbox[data-subcount]'
+      ).dataset.subcount = 0;
+    }
+  };
+});
 window.addEventListener('click', (e) => {
   const itemMenu = document.getElementById('profile-submenu')?.parentNode;
   if (e.target.closest('.item-menu') !== itemMenu) {
@@ -496,3 +628,81 @@ document.querySelectorAll('.addition-filter').forEach((add) => {
       });
   };
 });
+
+let count = 0;
+$('.filter-select-boostrap').on(
+  'changed.bs.select',
+  function (e, clickedIndex, isSelected, previousValue) {
+    count++;
+
+    e.currentTarget.parentNode.classList.toggle(
+      'selected',
+      $(e.currentTarget).val()?.length !== 0
+    );
+    const dependanceName = e.currentTarget.dataset.dependanceName;
+    if (dependanceName)
+      document
+        .querySelectorAll(
+          `select.filter-select-boostrap[data-dependance="${dependanceName}"]`
+        )
+        .forEach((item) => {
+          // $(item).selectpicker('deselectAll');
+          if (Array.isArray($(item).selectpicker('val')))
+            $(item).selectpicker('deselectAll');
+          else $(item).selectpicker('val', '');
+        });
+
+    if (count === 1) {
+      document
+        .querySelectorAll('div.filter-select-boostrap')
+        .forEach((item) => {
+          new ClassWatcher(
+            item,
+            'show',
+            () => {
+              item.parentNode.classList.remove('position-relative');
+            },
+            () => {
+              item.parentNode.classList.add('position-relative');
+            }
+          );
+        });
+    }
+  }
+);
+
+document.querySelectorAll('.clear-select-bootstrap').forEach((item) => {
+  item.onclick = () => {
+    const select = item.previousElementSibling.querySelector('select');
+    $(select).selectpicker('val', '');
+  };
+});
+
+const clearFunction = () => {
+  const select = this.previousElementSibling.querySelector('select');
+  $(select).selectpicker('val', '');
+};
+
+document
+  .querySelectorAll(
+    '.dropdown-container.form-checkbox-container .form-checkbox:not([data-count]) input[type="checkbox"]'
+  )
+  .forEach((item, i, arr) => {
+    item.addEventListener('change', () => {
+      const spans = document.querySelectorAll('.loai-nha-dat-value');
+      const label = item.previousElementSibling.innerText;
+
+      setTimeout(() => {
+        const arrz = Array.from(
+          document.querySelectorAll(
+            '.dropdown-container.form-checkbox-container .form-checkbox:not([data-subcount]):not([data-count]) input[type="checkbox"]:checked'
+          )
+        ).map((itemz) => {
+          return itemz.previousElementSibling.innerText;
+        });
+        if (arrz.length === 0) {
+          spans.forEach((item) => (item.innerText = item.dataset.default));
+        } else spans.forEach((item) => (item.innerText = arrz.join(', ')));
+      }, 100);
+    });
+  });
