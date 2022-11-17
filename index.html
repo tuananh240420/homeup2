@@ -195,7 +195,7 @@
         </ul>
       </nav>
     </header>
-    <div id="main" class="mt-4 container">
+    <form id="main" class="mt-4 container">
       <h2 class="mb-3 d-none d-sm-block">Chào mừng đến với Homeup!</h2>
       <div class="desc d-none d-sm-flex" style="gap: 16px">
         <a>Tìm nhà phố, dự án, cho thuê và nhiều hơn nữa</a>
@@ -351,12 +351,12 @@
             </ul>
           </button>
         </div>
-        <form class="search-main">
+        <div class="search-main">
           <input type="text" placeholder="Tìm kiếm địa chỉ, khu vực..." />
-          <button>
+          <button type="submit">
             <img src="./assets/img/search-normal.svg" alt="" />
           </button>
-        </form>
+        </div>
       </div>
       <div
         class="search-mobile-main d-flex d-sm-none"
@@ -1031,8 +1031,8 @@
             <img src="./assets/img/refresh-2.svg" alt="" />
             <span>Đặt lại</span>
           </div>
-          <button
-            onclick="this.closest('.filter-container.show').classList.remove('show')"
+          <button type="submit"
+   
             class="apply-all-btn"
           >
             Áp dụng
@@ -1042,7 +1042,7 @@
           <img src="./assets/img/refresh-2.svg" alt="" />
         </div>
       </div>
-    </div>
+    </form>
     <div id="danhmuc-container " class="container mt-4 mb-5 pb-3">
       <h3 class="title">Tìm trong danh mục</h3>
       <div class="swiper danhmuc-swiper">
