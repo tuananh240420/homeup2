@@ -4039,7 +4039,7 @@ label[dir=rtl] .range-slider {
     line-height: 2;
   }
 }
-@media screen and (min-width: 425px) and (max-width: 992px) {
+@media (min-width: 425px) and (max-width: 992px) {
   #main .location-filter,
 #main .filter-container .filter-dropdown {
     height: 56px;
@@ -4058,7 +4058,7 @@ label[dir=rtl] .range-slider {
     z-index: 100;
   }
 }
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
   #main .inner.show {
     max-height: unset !important;
   }
