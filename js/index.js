@@ -706,8 +706,3 @@ document
       }, 100);
     });
   });
-
-window.addEventListener('click', (e) => {
-  // console.log(Array.from(e.target.classList).join(','));
-  alert(e.target.parentNode.classList);
-});

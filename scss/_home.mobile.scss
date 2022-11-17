@@ -101,7 +101,7 @@
   }
 }
 
-@media (min-width: 425px) and (max-width: 992px) {
+@media screen and (min-width: 425px) and (max-width: 992px) {
   #main {
     .location-filter,
     .filter-container .filter-dropdown {
@@ -132,7 +132,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   #main {
     .inner.show {
       max-height: unset !important;
