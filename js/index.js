@@ -707,7 +707,7 @@ document
     });
   });
 
-// window.addEventListener('click', (e) => {
-//   console.log(Array.from(e.target.classList).join(','));
-//   alert(Array.from(e.target.classList).join(','));
-// });
+window.addEventListener('click', (e) => {
+  // console.log(Array.from(e.target.classList).join(','));
+  alert(e.target);
+});
