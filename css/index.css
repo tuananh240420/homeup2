@@ -428,7 +428,7 @@ label[dir=rtl] .range-slider {
   transform: none !important;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 0px) {
   .dropdown.bootstrap-select > .dropdown-menu.show {
     display: flex !important;
     flex-direction: column;
@@ -537,6 +537,12 @@ label[dir=rtl] .range-slider {
   white-space: nowrap;
 }
 
+@media screen and (min-width: 576px) {
+  .main-search-container .dropdown-container.form-checkbox-container {
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+}
 #header {
   border-bottom: 1px solid #ecedf1;
   height: 64px;
@@ -1369,6 +1375,13 @@ label[dir=rtl] .range-slider {
   height: 40px;
   z-index: 98;
   opacity: 0;
+}
+@media screen and (max-width: 576px) {
+  #main .filter-container .location-filter > input[type=checkbox],
+#main .filter-container .price-filter > input[type=checkbox] {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
 }
 #main .filter-container .location-filter > input[type=checkbox]:checked + .dropdown-btn,
 #main .filter-container .price-filter > input[type=checkbox]:checked + .dropdown-btn {
@@ -3150,7 +3163,7 @@ label[dir=rtl] .range-slider {
   transform: none !important;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 0px) {
   .dropdown.bootstrap-select > .dropdown-menu.show {
     display: flex !important;
     flex-direction: column;
@@ -3259,6 +3272,12 @@ label[dir=rtl] .range-slider {
   white-space: nowrap;
 }
 
+@media screen and (min-width: 576px) {
+  .main-search-container .dropdown-container.form-checkbox-container {
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+}
 #sub-filter {
   background: #ffffff;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
@@ -4047,6 +4066,9 @@ label[dir=rtl] .range-slider {
   }
 }
 @media screen and (max-width: 576px) {
+  #main .inner.show {
+    max-height: unset !important;
+  }
   #main .search-mobile-main {
     flex: 1;
     background: #ecedf1;
@@ -4066,6 +4088,7 @@ label[dir=rtl] .range-slider {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+    pointer-events: none;
   }
   #main .search-mobile-main input::placeholder {
     color: #9399a9;
@@ -4199,9 +4222,11 @@ label[dir=rtl] .range-slider {
     border-radius: 24px;
     background-color: #fff;
     flex: unset;
+    min-height: 48px;
   }
   #main > .filter-container .mobile-nav + .search-mobile-main input {
     background-color: #fff;
+    pointer-events: initial;
   }
   #main > .filter-container .mobile-nav + .search-mobile-main button {
     background-color: #fff;
@@ -4213,7 +4238,7 @@ label[dir=rtl] .range-slider {
     margin-bottom: 8px;
   }
   #main > .filter-container .row.row-cols-lg-4 {
-    flex: unset !important;
+    overflow: scroll;
   }
   #main > .filter-container .row.row-cols-lg-4 > .col {
     height: 68px;

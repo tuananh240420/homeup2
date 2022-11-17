@@ -489,7 +489,7 @@ document.querySelectorAll('.sub-checkbox').forEach((sub) => {
         );
         const parentCount = parentNode.dataset.count;
         parentNode.dataset.count = Number(parentCount) + 1;
-        if (Number(parentCount) === 3) {
+        if (Number(parentCount) === CHILD_LENGTH) {
           const spans = document.querySelectorAll('.loai-nha-dat-value');
           spans.forEach((item) => (item.innerText = 'Tất cả nhà đất'));
 
@@ -530,6 +530,7 @@ document.querySelectorAll('.form-checkbox[data-subcount]').forEach((parent) => {
   };
 });
 
+const CHILD_LENGTH = 3;
 document
   .querySelectorAll(
     '.dropdown-container.form-checkbox-container .form-checkbox:not(.sub-checkbox):not([data-count]) input[type="checkbox"]'
@@ -540,7 +541,7 @@ document
         '.form-checkbox[data-count]'
       );
       const spans = document.querySelectorAll('.loai-nha-dat-value');
-      const length = 3;
+      const length = CHILD_LENGTH;
       const subInput = sub;
       const parentInput = parent.querySelector('input[type="checkbox"]');
       if (subInput.checked) {
@@ -566,7 +567,7 @@ document.querySelectorAll('.form-checkbox[data-count]').forEach((parent) => {
     if (parentInput.checked) {
       spans.forEach((item) => (item.innerText = 'Tất cả nhà đất'));
       subList.forEach((item) => (item.checked = true));
-      parent.dataset.count = 3;
+      parent.dataset.count = CHILD_LENGTH;
       parent.parentNode.querySelector(
         '.form-checkbox[data-subcount]'
       ).dataset.subcount = 4;

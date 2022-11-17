@@ -198,6 +198,10 @@
         height: 40px;
         z-index: 98;
         opacity: 0;
+        @media screen and (max-width: 576px) {
+          width: 100% !important;
+          min-width: 100% !important;
+        }
         &:checked {
           & + .dropdown-btn {
             background: #ffffff;

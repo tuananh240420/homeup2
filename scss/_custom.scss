@@ -528,7 +528,7 @@ label[dir='rtl'] .range-slider {
   }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 0px) {
   @mixin abc {
     .dropdown.bootstrap-select {
       & > .dropdown-menu.show {
@@ -640,4 +640,13 @@ label[dir='rtl'] .range-slider {
   text-overflow: ellipsis;
   word-wrap: none;
   white-space: nowrap;
+}
+
+@media screen and (min-width: 576px) {
+  .main-search-container {
+    .dropdown-container.form-checkbox-container {
+      max-height: 400px;
+      overflow-y: scroll;
+    }
+  }
 }
