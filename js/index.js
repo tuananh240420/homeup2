@@ -709,5 +709,5 @@ document
 
 window.addEventListener('click', (e) => {
   // console.log(Array.from(e.target.classList).join(','));
-  alert(e.target);
+  alert(e.target.parentNode.classList);
 });
