@@ -664,4 +664,25 @@ label[dir='rtl'] .range-slider {
       }
     }
   }
+  .dropdown-container.dropdown-location-menu.form-checkbox-container {
+    padding-right: 0 !important;
+    max-height: 250px;
+    & > div {
+      padding-right: 16px !important;
+      &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 8px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #ddd;
+        border-radius: 4px;
+      }
+    }
+    & > div > li {
+      width: 100%;
+    }
+  }
 }

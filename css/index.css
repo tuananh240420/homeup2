@@ -555,6 +555,27 @@ label[dir=rtl] .range-slider {
   .main-search-container .dropdown-container.form-checkbox-container > div > li {
     width: 100%;
   }
+  .dropdown-container.dropdown-location-menu.form-checkbox-container {
+    padding-right: 0 !important;
+    max-height: 250px;
+  }
+  .dropdown-container.dropdown-location-menu.form-checkbox-container > div {
+    padding-right: 16px !important;
+  }
+  .dropdown-container.dropdown-location-menu.form-checkbox-container > div::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+  }
+  .dropdown-container.dropdown-location-menu.form-checkbox-container > div::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  .dropdown-container.dropdown-location-menu.form-checkbox-container > div::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 4px;
+  }
+  .dropdown-container.dropdown-location-menu.form-checkbox-container > div > li {
+    width: 100%;
+  }
 }
 #header {
   border-bottom: 1px solid #ecedf1;
@@ -860,8 +881,20 @@ label[dir=rtl] .range-slider {
   color: rgba(0, 0, 0, 0.26);
 }
 
+@media screen and (min-width: 992px) {
+  .left-element {
+    flex: 1;
+    max-width: unset;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .right-element {
-  min-width: 250px;
+  flex: 0 0 300px;
+  max-width: 300px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .chuyenmuc .title {
@@ -1265,24 +1298,25 @@ label[dir=rtl] .range-slider {
   inset: 0;
   opacity: 0;
 }
-#main .main-search-container .dropdown-main > input:checked + button {
+#main .main-search-container .dropdown-main > input:checked + button, #main .main-search-container .dropdown-main > input:checked + div.fix {
   background-color: #fff;
   background: #ffffff;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
   border-radius: 28px 0px 28px 28px;
 }
-#main .main-search-container .dropdown-main > input:checked + button div {
+#main .main-search-container .dropdown-main > input:checked + button div, #main .main-search-container .dropdown-main > input:checked + div.fix div {
   border-bottom: 1px solid #ecedf1;
 }
 #main .main-search-container .dropdown-main > input:checked + button div > svg,
-#main .main-search-container .dropdown-main > input:checked + button div > span {
+#main .main-search-container .dropdown-main > input:checked + button div > span, #main .main-search-container .dropdown-main > input:checked + div.fix div > svg,
+#main .main-search-container .dropdown-main > input:checked + div.fix div > span {
   fill: #d1193f;
   color: #d1193f;
 }
-#main .main-search-container .dropdown-main > input:checked + button > .dropdown-container {
+#main .main-search-container .dropdown-main > input:checked + button > .dropdown-container, #main .main-search-container .dropdown-main > input:checked + div.fix > .dropdown-container {
   display: flex;
 }
-#main .main-search-container .dropdown-main > button {
+#main .main-search-container .dropdown-main > button, #main .main-search-container .dropdown-main > div.fix {
   border: none;
   outline: none;
   background: #d1193f;
@@ -1296,7 +1330,7 @@ label[dir=rtl] .range-slider {
   fill: #fff;
   overflow: hidden;
 }
-#main .main-search-container .dropdown-main > button div {
+#main .main-search-container .dropdown-main > button div, #main .main-search-container .dropdown-main > div.fix div {
   display: flex;
   padding: 0 24px;
   gap: 8px;
@@ -1304,29 +1338,29 @@ label[dir=rtl] .range-slider {
   height: 56px;
   align-items: center;
 }
-#main .main-search-container .dropdown-main > button div svg:last-child {
+#main .main-search-container .dropdown-main > button div svg:last-child, #main .main-search-container .dropdown-main > div.fix div svg:last-child {
   margin-left: auto;
 }
-#main .main-search-container .dropdown-main > button div span {
+#main .main-search-container .dropdown-main > button div span, #main .main-search-container .dropdown-main > div.fix div span {
   color: #fff;
 }
-#main .main-search-container .dropdown-main > button .dropdown-container {
+#main .main-search-container .dropdown-main > button .dropdown-container, #main .main-search-container .dropdown-main > div.fix .dropdown-container {
   display: none;
   z-index: 99;
   width: 100%;
   flex-direction: column;
 }
-#main .main-search-container .dropdown-main > button .dropdown-container li {
+#main .main-search-container .dropdown-main > button .dropdown-container li, #main .main-search-container .dropdown-main > div.fix .dropdown-container li {
   display: flex;
   padding: 0 16px;
   justify-content: space-between;
   background-color: #fff;
   border-bottom: 1px solid #ecedf1;
 }
-#main .main-search-container .dropdown-main > button .dropdown-container li:last-child {
+#main .main-search-container .dropdown-main > button .dropdown-container li:last-child, #main .main-search-container .dropdown-main > div.fix .dropdown-container li:last-child {
   padding: 8px 16px;
 }
-#main .main-search-container .dropdown-main > button .dropdown-container li label {
+#main .main-search-container .dropdown-main > button .dropdown-container li label, #main .main-search-container .dropdown-main > div.fix .dropdown-container li label {
   padding: 8px 0;
   margin-bottom: 0;
   font-weight: 400;
@@ -1335,14 +1369,14 @@ label[dir=rtl] .range-slider {
   flex: 1;
   text-align: left;
 }
-#main .main-search-container .dropdown-main > button .dropdown-container li:hover {
+#main .main-search-container .dropdown-main > button .dropdown-container li:hover, #main .main-search-container .dropdown-main > div.fix .dropdown-container li:hover {
   cursor: pointer;
 }
-#main .main-search-container .dropdown-main > button .dropdown-container li.sub-checkbox {
+#main .main-search-container .dropdown-main > button .dropdown-container li.sub-checkbox, #main .main-search-container .dropdown-main > div.fix .dropdown-container li.sub-checkbox {
   border-bottom: none;
   padding-left: 24px;
 }
-#main .main-search-container .dropdown-main > button .dropdown-container li.sub-checkbox label {
+#main .main-search-container .dropdown-main > button .dropdown-container li.sub-checkbox label, #main .main-search-container .dropdown-main > div.fix .dropdown-container li.sub-checkbox label {
   color: #646d84;
   font-weight: 400;
   font-size: 14px;
@@ -1363,12 +1397,14 @@ label[dir=rtl] .range-slider {
   border: none;
   cursor: text;
 }
-#main .main-search-container .search-main button {
+#main .main-search-container .search-main button,
+#main .main-search-container .search-main div.fix {
   outline: none;
   border: none;
   background-color: #fff;
 }
-#main .main-search-container .search-main button:hover {
+#main .main-search-container .search-main button:hover,
+#main .main-search-container .search-main div.fix:hover {
   opacity: 0.8;
 }
 #main .filter-container {
@@ -1451,8 +1487,9 @@ label[dir=rtl] .range-slider {
   width: 100%;
   position: initial !important;
 }
-#main .filter-container .location-filter .dropdown-btn .dropdown-location-menu li > .dropdown.bootstrap-select > button,
-#main .filter-container .price-filter .dropdown-btn .dropdown-location-menu li > .dropdown.bootstrap-select > button {
+#main .filter-container .location-filter .dropdown-btn .dropdown-location-menu li > .dropdown.bootstrap-select > button, #main .filter-container .location-filter .dropdown-btn .dropdown-location-menu li > .dropdown.bootstrap-select > div.fix,
+#main .filter-container .price-filter .dropdown-btn .dropdown-location-menu li > .dropdown.bootstrap-select > button,
+#main .filter-container .price-filter .dropdown-btn .dropdown-location-menu li > .dropdown.bootstrap-select > div.fix {
   padding: 8px;
   background-color: #fff;
   border-radius: 8px;
@@ -1462,8 +1499,9 @@ label[dir=rtl] .range-slider {
   line-height: 20px;
   color: #646d84;
 }
-#main .filter-container .location-filter .dropdown-btn .dropdown-location-menu li > .dropdown.bootstrap-select > button::after,
-#main .filter-container .price-filter .dropdown-btn .dropdown-location-menu li > .dropdown.bootstrap-select > button::after {
+#main .filter-container .location-filter .dropdown-btn .dropdown-location-menu li > .dropdown.bootstrap-select > button::after, #main .filter-container .location-filter .dropdown-btn .dropdown-location-menu li > .dropdown.bootstrap-select > div.fix::after,
+#main .filter-container .price-filter .dropdown-btn .dropdown-location-menu li > .dropdown.bootstrap-select > button::after,
+#main .filter-container .price-filter .dropdown-btn .dropdown-location-menu li > .dropdown.bootstrap-select > div.fix::after {
   background-image: url(../assets/icon/arrow-right.svg);
   width: 24px;
   height: 24px;
@@ -3303,6 +3341,27 @@ label[dir=rtl] .range-slider {
   .main-search-container .dropdown-container.form-checkbox-container > div > li {
     width: 100%;
   }
+  .dropdown-container.dropdown-location-menu.form-checkbox-container {
+    padding-right: 0 !important;
+    max-height: 250px;
+  }
+  .dropdown-container.dropdown-location-menu.form-checkbox-container > div {
+    padding-right: 16px !important;
+  }
+  .dropdown-container.dropdown-location-menu.form-checkbox-container > div::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+  }
+  .dropdown-container.dropdown-location-menu.form-checkbox-container > div::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  .dropdown-container.dropdown-location-menu.form-checkbox-container > div::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 4px;
+  }
+  .dropdown-container.dropdown-location-menu.form-checkbox-container > div > li {
+    width: 100%;
+  }
 }
 #sub-filter {
   background: #ffffff;
@@ -3384,8 +3443,13 @@ label[dir=rtl] .range-slider {
   margin-left: auto;
 }
 #sub-filter .right-controls .addition-filter {
-  min-width: 114px;
+  min-width: 142px;
   min-height: 36px;
+}
+@media screen and (max-width: 992px) {
+  #sub-filter .right-controls .addition-filter {
+    min-width: 142px;
+  }
 }
 #sub-filter .right-controls .addition-filter .dropdown-btn {
   margin-top: 0 !important;
@@ -3425,9 +3489,21 @@ label[dir=rtl] .range-slider {
   cursor: pointer;
   opacity: 0.8;
 }
+#sub-filter .right-controls .btn-filter .addition-count {
+  color: #fff;
+  display: block;
+  padding: 4px;
+  border-radius: 50%;
+  font-size: 10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
 @media screen and (max-width: 1440px) {
   #sub-filter .right-controls {
-    width: 220px;
     gap: 4px;
   }
   #sub-filter .right-controls .btn-filter {
@@ -3466,6 +3542,14 @@ label[dir=rtl] .range-slider {
   z-index: 98;
   opacity: 0;
 }
+@media screen and (max-width: 576px) {
+  #sub-filter .filter-container .location-filter > input[type=checkbox],
+#sub-filter .filter-container .category-filter > input[type=checkbox],
+#sub-filter .filter-container .price-filter > input[type=checkbox] {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+}
 #sub-filter .filter-container .location-filter > input[type=checkbox]:checked + .dropdown-btn,
 #sub-filter .filter-container .category-filter > input[type=checkbox]:checked + .dropdown-btn,
 #sub-filter .filter-container .price-filter > input[type=checkbox]:checked + .dropdown-btn {
@@ -3480,6 +3564,16 @@ label[dir=rtl] .range-slider {
     box-shadow: none;
     border-radius: 0;
     border-bottom-left-radius: 20px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  #sub-filter .filter-container .location-filter > input[type=checkbox]:checked + .dropdown-btn .overlay,
+#sub-filter .filter-container .category-filter > input[type=checkbox]:checked + .dropdown-btn .overlay,
+#sub-filter .filter-container .price-filter > input[type=checkbox]:checked + .dropdown-btn .overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
   }
 }
 #sub-filter .filter-container .location-filter > input[type=checkbox]:checked + .dropdown-btn p,
@@ -3678,6 +3772,27 @@ label[dir=rtl] .range-slider {
 #sub-filter .filter-container .category-filter .dropdown-btn .dropdown-location-menu li > .dropdown.bootstrap-select > .dropdown-menu.show ul .dropdown-item:active,
 #sub-filter .filter-container .price-filter .dropdown-btn .dropdown-location-menu li > .dropdown.bootstrap-select > .dropdown-menu.show ul .dropdown-item:active {
   background-color: #d1193f;
+}
+#sub-filter .filter-container .dropdown-menu-mobile-header {
+  padding-left: 20px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ecedf1;
+  padding-bottom: 24px;
+}
+#sub-filter .filter-container .dropdown-menu-mobile-header label {
+  margin: auto;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+#sub-filter .filter-container .dropdown-menu-mobile-header svg {
+  float: right;
+}
+#sub-filter .filter-container .dropdown-menu-mobile-header svg:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 #sub-filter .filter-container .area-filter .dropdown-btn > p {
   border: none;
@@ -3953,6 +4068,7 @@ label[dir=rtl] .range-slider {
     position: fixed !important;
     left: 0 !important;
     right: 0 !important;
+    bottom: 0 !important;
   }
   .right-container .right-controls {
     margin: 0 !important;

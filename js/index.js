@@ -204,6 +204,9 @@ class ClassWatcher {
       checkboxCotainer
         ?.querySelectorAll('.form-checkbox input[type="checkbox"]')
         .forEach((checkbox) => (checkbox.checked = false));
+      checkboxCotainer
+        ?.querySelectorAll('.form-custom-checkbox input[type="checkbox"]')
+        .forEach((checkbox) => (checkbox.checked = false));
       const selectPickerContainer = button.closest('.location-filter');
       if (selectPickerContainer)
         $('.location-filter .selectpicker').selectpicker('val', '');
@@ -420,9 +423,7 @@ const MAX_PROPERTY = '--value-b';
     filterResetAllbtn.forEach(
       (item) =>
         (item.onclick = () => {
-          const parentFilter = item.closest('.filter-container');
-          console.log(parentFilter);
-          parentFilter
+          document
             .querySelectorAll('.form-checkbox-resetall')
             .forEach((item) => item.click());
         })
@@ -498,15 +499,17 @@ const titleArr = {
 };
 document.querySelectorAll('.addition-filter').forEach((add) => {
   const value = add.querySelector('.price-filter-value');
+  const count = add.querySelector('.addition-count');
   add.querySelector('.dropdown-btn > ul').onchange = () => {
     const res = Array.from(add.querySelectorAll('.checkbox-container')).reduce(
       (acc, container) => {
         const title = container.previousElementSibling.innerText;
-        const values = Array.from(
-          container.querySelectorAll('input:checked + label')
-        ).map((item) => {
-          return item.innerText;
-        });
+        const checkboxContaienr = container.querySelectorAll(
+          'input:checked + label'
+        );
+        const values = Array.from(checkboxContaienr).map(
+          (item) => item.innerText
+        );
         if (values.length === 0) return acc;
         if (titleArr[title] === 'phòng ngủ')
           return acc.concat(values.join(', ') + ' ' + titleArr[title]);
@@ -514,12 +517,24 @@ document.querySelectorAll('.addition-filter').forEach((add) => {
       },
       []
     );
-    value.innerText = res.join(', ');
-    add
-      .querySelector('.form-checkbox-resetall')
-      .addEventListener('click', () => {
-        value.innerText = 'Xem Thêm';
-      });
+    if (count) {
+      if (res.length === 0) return count.classList.add('d-none');
+      count.classList.remove('d-none');
+      count.innerText = res.length;
+      add
+        .querySelector('.form-checkbox-resetall')
+        .addEventListener('click', () => {
+          count.classList.add('d-none');
+        });
+    }
+    if (value) {
+      value.innerText = res.join(', ');
+      add
+        .querySelector('.form-checkbox-resetall')
+        .addEventListener('click', () => {
+          value.innerText = 'Xem Thêm';
+        });
+    }
   };
 });
 
@@ -688,3 +703,11 @@ document
       });
     });
   });
+
+document.querySelectorAll('.form-checkbox').forEach((item) => {
+  item.onclick = (e) => {
+    // console.log(123);
+    // e.preventDefault();
+    // e.stopPropagation();
+  };
+});

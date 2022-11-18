@@ -144,8 +144,20 @@
     color: rgba(0, 0, 0, 0.26);
   }
 }
+.left-element {
+  @media screen and (min-width: 992px) {
+    flex: 1;
+    max-width: unset;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 .right-element {
-  min-width: 250px;
+  // min-width: 250px;
+  flex: 0 0 300px;
+  max-width: 300px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .chuyenmuc {
