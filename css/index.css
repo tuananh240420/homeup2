@@ -3502,6 +3502,9 @@ label[dir=rtl] .range-slider {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.8);
 }
+#sub-filter .right-controls .btn-filter .addition-count:not(.d-none) + img {
+  display: none;
+}
 @media screen and (max-width: 1440px) {
   #sub-filter .right-controls {
     gap: 4px;
