@@ -3557,6 +3557,13 @@ label[dir=rtl] .range-slider {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
+@media screen and (max-width: 992px) {
+  #sub-filter .filter-container .location-filter > input[type=checkbox]:checked + .dropdown-btn,
+#sub-filter .filter-container .category-filter > input[type=checkbox]:checked + .dropdown-btn,
+#sub-filter .filter-container .price-filter > input[type=checkbox]:checked + .dropdown-btn {
+    z-index: 9999;
+  }
+}
 @media screen and (max-width: 1440px) {
   #sub-filter .filter-container .location-filter > input[type=checkbox]:checked + .dropdown-btn,
 #sub-filter .filter-container .category-filter > input[type=checkbox]:checked + .dropdown-btn,
@@ -3573,7 +3580,14 @@ label[dir=rtl] .range-slider {
     position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
+    z-index: 99;
+  }
+}
+@media screen and (max-width: 992px) {
+  #sub-filter .filter-container .location-filter > input[type=checkbox]:checked + .dropdown-btn > ul,
+#sub-filter .filter-container .category-filter > input[type=checkbox]:checked + .dropdown-btn > ul,
+#sub-filter .filter-container .price-filter > input[type=checkbox]:checked + .dropdown-btn > ul {
+    z-index: 100;
   }
 }
 #sub-filter .filter-container .location-filter > input[type=checkbox]:checked + .dropdown-btn p,
