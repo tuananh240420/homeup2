@@ -487,6 +487,17 @@ label[dir='rtl'] .range-slider {
       }
     }
   }
+  &.selected {
+    & > button::after {
+      display: none;
+    }
+    & + .clear-select-bootstrap {
+      bottom: 12px;
+      right: 32px;
+      top: unset;
+      transform: none;
+    }
+  }
 }
 
 .ptanh-custom-input.form-control,

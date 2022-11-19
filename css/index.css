@@ -384,6 +384,15 @@ label[dir=rtl] .range-slider {
 .ptanh-custom-select.dropdown.bootstrap-select > .dropdown-menu.show ul .dropdown-item:active {
   background-color: #d1193f;
 }
+.ptanh-custom-select.dropdown.bootstrap-select.selected > button::after {
+  display: none;
+}
+.ptanh-custom-select.dropdown.bootstrap-select.selected + .clear-select-bootstrap {
+  bottom: 12px;
+  right: 32px;
+  top: unset;
+  transform: none;
+}
 
 .ptanh-custom-input.form-control,
 .ptanh-text-area-custom.form-control {
@@ -3169,6 +3178,15 @@ label[dir=rtl] .range-slider {
 }
 .ptanh-custom-select.dropdown.bootstrap-select > .dropdown-menu.show ul .dropdown-item:active {
   background-color: #d1193f;
+}
+.ptanh-custom-select.dropdown.bootstrap-select.selected > button::after {
+  display: none;
+}
+.ptanh-custom-select.dropdown.bootstrap-select.selected + .clear-select-bootstrap {
+  bottom: 12px;
+  right: 32px;
+  top: unset;
+  transform: none;
 }
 
 .ptanh-custom-input.form-control,
