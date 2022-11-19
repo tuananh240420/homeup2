@@ -464,19 +464,6 @@ const MAX_PROPERTY = '--value-b';
 
 // Resposive
 
-(() => {
-  const width = screen.width;
-  // is mobile
-  if (width < 576) {
-    document
-      .querySelectorAll('.price-filter.filter-dropdown .price-filter-value')
-      .forEach((item) => {
-        item.innerText = 'Tất cả';
-        item.dataset.default = 'Tất cả';
-      });
-  }
-})();
-
 window.addEventListener('click', (e) => {
   const itemMenu = document.getElementById('profile-submenu')?.parentNode;
   if (e.target.closest('.item-menu') !== itemMenu) {
