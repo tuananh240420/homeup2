@@ -586,6 +586,14 @@ label[dir=rtl] .range-slider {
     width: 100%;
   }
 }
+@media screen and (max-width: 992px) {
+  #sub-filter select[data-dependance-name=quanhuyen] ~ .dropdown-menu.show {
+    max-height: initial !important;
+  }
+  #sub-filter select[data-dependance-name=quanhuyen] ~ .dropdown-menu.show .inner.show {
+    max-height: initial !important;
+  }
+}
 #header {
   border-bottom: 1px solid #ecedf1;
   height: 64px;
@@ -3379,6 +3387,14 @@ label[dir=rtl] .range-slider {
   }
   .dropdown-container.dropdown-location-menu.form-checkbox-container > div > li {
     width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  #sub-filter select[data-dependance-name=quanhuyen] ~ .dropdown-menu.show {
+    max-height: initial !important;
+  }
+  #sub-filter select[data-dependance-name=quanhuyen] ~ .dropdown-menu.show .inner.show {
+    max-height: initial !important;
   }
 }
 #sub-filter {

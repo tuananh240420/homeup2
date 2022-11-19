@@ -697,3 +697,14 @@ label[dir='rtl'] .range-slider {
     }
   }
 }
+
+@media screen and (max-width: 992px) {
+  #sub-filter {
+    select[data-dependance-name='quanhuyen'] ~ .dropdown-menu.show {
+      max-height: initial !important;
+      .inner.show {
+        max-height: initial !important;
+      }
+    }
+  }
+}
