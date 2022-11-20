@@ -507,6 +507,7 @@ label[dir='rtl'] .range-slider {
   border: 1px solid #ecedf1 !important;
   border-radius: 8px;
   font-weight: 500;
+  resize: none;
   font-size: 14px;
   line-height: 20px;
   &[type='text'] {
@@ -707,4 +708,9 @@ label[dir='rtl'] .range-slider {
       }
     }
   }
+}
+.location-filter-value {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }

@@ -230,30 +230,39 @@ class ClassWatcher {
   //     // const selected = $(e.currentTarget).val();
   //     const selected =
   //       e.currentTarget.children[clickedIndex]?.innerText || undefined;
-  //     // console.dir(e.currentTarget.children[clickedIndex].innerText);
-  //     console.log(selected);
-  //     document.querySelector('.location-filter-value').innerText =
-  //       selected ||
-  //       document.querySelector('.location-filter-value').dataset.default ||
-  //       'Toàn quốc';
+
+  //     document.querySelectorAll('.location-filter-value').forEach((item) => {
+  //       item.innerText =
+  //         selected ||
+  //         document.querySelector('.location-filter-value').dataset.default ||
+  //         'Toàn quốc';
+  //     });
   //   }
   // );
-  $('#select-tinh-thanh').on(
-    'changed.bs.select',
-    function (e, clickedIndex, isSelected, previousValue) {
-      // const selected = $(e.currentTarget).val();
-      const selected =
-        e.currentTarget.children[clickedIndex]?.innerText || undefined;
-
+  const getValue = () => {
+    return Array.from(document.querySelectorAll('.location-filter select'))
+      .reduce(
+        (acc, item) =>
+          $(item).selectpicker('val')
+            ? acc.concat($(item).selectpicker('val'))
+            : acc,
+        []
+      )
+      .join(', ');
+  };
+  document.querySelectorAll('.location-filter select').forEach((select) => {
+    $(select).on('changed.bs.select', () => {
+      const selected = getValue() || undefined;
       document.querySelectorAll('.location-filter-value').forEach((item) => {
         item.innerText =
           selected ||
           document.querySelector('.location-filter-value').dataset.default ||
           'Toàn quốc';
       });
-    }
-  );
+    });
+  });
 })();
+
 const SELECT_RANGES_PRICE = [
   {
     MIN: 0,
@@ -462,8 +471,6 @@ const MAX_PROPERTY = '--value-b';
   });
 })();
 
-// Resposive
-
 window.addEventListener('click', (e) => {
   const itemMenu = document.getElementById('profile-submenu')?.parentNode;
   if (e.target.closest('.item-menu') !== itemMenu) {
@@ -579,32 +586,6 @@ const clearFunction = () => {
   $(select).selectpicker('val', '');
 };
 
-// document
-//   .querySelectorAll(
-//     '.dropdown-container.form-checkbox-container .form-checkbox:not([data-count]) input[type="checkbox"]'
-//   )
-//   .forEach((item, i, arr) => {
-//     item.addEventListener('change', () => {
-//       const spans = document.querySelectorAll('.loai-nha-dat-value');
-//       const label = item.previousElementSibling.innerText;
-
-//       setTimeout(() => {
-//       const spans = document.querySelectorAll('.loai-nha-dat-value');
-
-//         const arrz = Array.from(
-//           document.querySelectorAll(
-//             '.dropdown-container.form-checkbox-container .form-checkbox:not([data-subcount]):not([data-count]) input[type="checkbox"]:checked'
-//           )
-//         ).map((itemz) => {
-//           return itemz.previousElementSibling.innerText;
-//         });
-//         if (arrz.length === 0) {
-//           spans.forEach((item) => (item.innerText = item.dataset.default));
-//         } else spans.forEach((item) => (item.innerText = arrz.join(', ')));
-//       }, 100);
-//     });
-//   });
-
 // ========================== check all ===============================================
 const setCheckAll = (el) => {
   const ul = el.closest('ul');
@@ -691,10 +672,22 @@ document
     });
   });
 
-document.querySelectorAll('.form-checkbox').forEach((item) => {
-  item.onclick = (e) => {
-    // console.log(123);
-    // e.preventDefault();
-    // e.stopPropagation();
-  };
+document.querySelectorAll('.selectpicker').forEach((itemz) => {
+  const val = $(itemz).selectpicker('val');
+  if (val.length > 0) {
+    itemz.parentNode.classList.add('selected');
+    itemz.parentNode.parentNode.classList.add('position-relative');
+    document.querySelectorAll('div.filter-select-boostrap').forEach((item) => {
+      new ClassWatcher(
+        item,
+        'show',
+        () => {
+          item.parentNode.classList.remove('position-relative');
+        },
+        () => {
+          item.parentNode.classList.add('position-relative');
+        }
+      );
+    });
+  }
 });

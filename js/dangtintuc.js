@@ -115,3 +115,32 @@ document.querySelectorAll('input, textarea').forEach((input) => {
     changeProgress();
   });
 });
+
+const locationValue = document.getElementById('location-value');
+const setLoactionValue = () => {
+  const value = Array.from(
+    document.querySelectorAll('#collapseExample select:not(.skip)')
+  )
+    .reverse()
+    .reduce(
+      (acc, item) =>
+        $(item).selectpicker('val')
+          ? acc.concat($(item).selectpicker('val'))
+          : acc,
+      []
+    )
+    .join(', ');
+  locationValue.value = value;
+};
+document
+  .querySelectorAll('#collapseExample select:not(.skip)')
+  .forEach((select) => {
+    console.log($(select).selectpicker('val'));
+
+    $(select).on(
+      'changed.bs.select',
+      (e, clickedIndex, isSelected, previousValue) => {
+        setLoactionValue();
+      }
+    );
+  });

@@ -401,6 +401,7 @@ label[dir=rtl] .range-slider {
   border: 1px solid #ecedf1 !important;
   border-radius: 8px;
   font-weight: 500;
+  resize: none;
   font-size: 14px;
   line-height: 20px;
   background-image: none !important;
@@ -594,6 +595,12 @@ label[dir=rtl] .range-slider {
     max-height: initial !important;
   }
 }
+.location-filter-value {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 #header {
   border-bottom: 1px solid #ecedf1;
   height: 64px;
@@ -3204,6 +3211,7 @@ label[dir=rtl] .range-slider {
   border: 1px solid #ecedf1 !important;
   border-radius: 8px;
   font-weight: 500;
+  resize: none;
   font-size: 14px;
   line-height: 20px;
   background-image: none !important;
@@ -3397,6 +3405,12 @@ label[dir=rtl] .range-slider {
     max-height: initial !important;
   }
 }
+.location-filter-value {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 #sub-filter {
   background: #ffffff;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
