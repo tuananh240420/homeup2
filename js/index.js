@@ -240,26 +240,32 @@ class ClassWatcher {
   //   }
   // );
   const getValue = () => {
-    return Array.from(document.querySelectorAll('.location-filter select'))
-      .reduce(
-        (acc, item) =>
-          $(item).selectpicker('val')
-            ? acc.concat($(item).selectpicker('val'))
-            : acc,
-        []
+    return Array.from(
+      document.querySelectorAll(
+        '.location-filter .bootstrap-select.selected .filter-option-inner-inner'
       )
+    )
+      .map((item) => item.textContent)
       .join(', ');
   };
   document.querySelectorAll('.location-filter select').forEach((select) => {
-    $(select).on('changed.bs.select', () => {
-      const selected = getValue() || undefined;
-      document.querySelectorAll('.location-filter-value').forEach((item) => {
-        item.innerText =
-          selected ||
-          document.querySelector('.location-filter-value').dataset.default ||
-          'Toàn quốc';
-      });
-    });
+    $(select).on(
+      'changed.bs.select',
+      (e, clickedIndex, isSelected, previousValue) => {
+        setTimeout(() => {
+          const selected = getValue() || undefined;
+          document
+            .querySelectorAll('.location-filter-value')
+            .forEach((item) => {
+              item.innerText =
+                selected ||
+                document.querySelector('.location-filter-value').dataset
+                  .default ||
+                'Toàn quốc';
+            });
+        }, 100);
+      }
+    );
   });
 })();
 
