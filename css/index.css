@@ -915,8 +915,8 @@ label[dir=rtl] .range-slider {
 }
 
 .right-element {
-  flex: 0 0 300px;
-  max-width: 300px;
+  flex: 0 0 330px;
+  max-width: 330px;
   padding-left: 15px;
   padding-right: 15px;
 }
