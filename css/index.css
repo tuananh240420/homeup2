@@ -4374,6 +4374,10 @@ label[dir=rtl] .range-slider {
   #main > .filter-container .switch:checked + .dropdown-btn {
     overflow: hidden;
   }
+  #main > .filter-container .price-filter .switch:checked,
+#main > .filter-container .location-filter .switch:checked {
+    z-index: -10 !important;
+  }
   #main > .filter-container .price-filter .switch:not(:checked),
 #main > .filter-container .location-filter .switch:not(:checked) {
     z-index: 1;

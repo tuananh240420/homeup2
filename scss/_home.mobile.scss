@@ -236,6 +236,9 @@
       }
       .price-filter,
       .location-filter {
+        .switch:checked {
+          z-index: -10 !important;
+        }
         .switch:not(:checked) {
           z-index: 1;
           & + .dropdown-btn {

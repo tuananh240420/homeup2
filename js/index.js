@@ -593,91 +593,92 @@ const clearFunction = () => {
 };
 
 // ========================== check all ===============================================
-const setCheckAll = (el) => {
-  const ul = el.closest('ul');
-  const checkall = ul.querySelector('.form-checkbox:first-of-type input');
+const runCheckAll = () => {
+  const setCheckAll = (el) => {
+    const ul = el.closest('ul');
+    const checkall = ul.querySelector('.form-checkbox:first-of-type input');
 
-  if (
-    ul.querySelectorAll('.form-checkbox:not(:first-of-type) input').length ===
-    ul.querySelectorAll('.form-checkbox:not(:first-of-type) input:checked')
-      .length
-  ) {
-    checkall.checked = true;
-    const spans = document.querySelectorAll('.loai-nha-dat-value');
-    spans.forEach((item) => (item.innerText = 'Tất cả nhà đất'));
-  } else checkall.checked = false;
-};
+    if (
+      ul.querySelectorAll('.form-checkbox:not(:first-of-type) input').length ===
+      ul.querySelectorAll('.form-checkbox:not(:first-of-type) input:checked')
+        .length
+    ) {
+      checkall.checked = true;
+      const spans = document.querySelectorAll('.loai-nha-dat-value');
+      spans.forEach((item) => (item.innerText = 'Tất cả nhà đất'));
+    } else checkall.checked = false;
+  };
 
-document
-  .querySelectorAll('.form-checkbox:first-of-type input')
-  .forEach((el) => {
-    el.addEventListener('change', () => {
-      const ul = el.closest('ul');
-      ul.querySelectorAll('.form-checkbox:not(:first-of-type) input').forEach(
-        (item) => {
-          item.checked = el.checked;
-          const spans = document.querySelectorAll('.loai-nha-dat-value');
-          spans.forEach((item) =>
-            el.checked
-              ? (item.innerText = 'Tất cả nhà đất')
-              : (item.innerText = item.dataset.default)
-          );
-        }
-      );
-    });
-  });
-
-const getSubList = (el) => {
-  let sublist = [];
-  let nextEle = el.nextElementSibling;
-  while (nextEle?.classList.contains('sub-checkbox')) {
-    sublist.push(nextEle.querySelector('input'));
-    nextEle = nextEle.nextElementSibling;
-  }
-  return sublist;
-};
-const setCheckboxText = () => {
-  const spans = document.querySelectorAll('.loai-nha-dat-value');
-
-  const arrz = Array.from(
-    document.querySelectorAll(
-      '.dropdown-container.form-checkbox-container .form-checkbox:not([data-subcount]):not([data-count]) input[type="checkbox"]:checked'
-    )
-  ).map((itemz) => {
-    return itemz.previousElementSibling.innerText;
-  });
-  if (arrz.length === 0) {
-    spans.forEach((item) => (item.innerText = item.dataset.default));
-  } else spans.forEach((item) => (item.innerText = arrz.join(', ')));
-};
-document
-  .querySelectorAll(
-    '.form-checkbox:not(:first-child):not(.sub-checkbox):not([data-subcount]) input'
-  )
-  .forEach((el) => {
-    el.addEventListener('change', () => {
-      setCheckboxText();
-      setCheckAll(el);
-    });
-  });
-
-document
-  .querySelectorAll('.form-checkbox[data-subcount] input')
-  .forEach((subParent) => {
-    const subList = getSubList(subParent.parentNode);
-    subParent.addEventListener('change', () => {
-      subList.forEach((item) => (item.checked = subParent.checked));
-      setCheckboxText();
-    });
-    subList.forEach((item) => {
-      item.addEventListener('change', () => {
-        subParent.checked = subList.every((i) => i.checked);
-        setCheckboxText();
-        setCheckAll(item.parentNode);
+  document
+    .querySelectorAll('.form-checkbox:first-of-type input')
+    .forEach((el) => {
+      el.addEventListener('change', () => {
+        const ul = el.closest('ul');
+        ul.querySelectorAll('.form-checkbox:not(:first-of-type) input').forEach(
+          (item) => {
+            item.checked = el.checked;
+            const spans = document.querySelectorAll('.loai-nha-dat-value');
+            spans.forEach((item) =>
+              el.checked
+                ? (item.innerText = 'Tất cả nhà đất')
+                : (item.innerText = item.dataset.default)
+            );
+          }
+        );
       });
     });
-  });
 
+  const getSubList = (el) => {
+    let sublist = [];
+    let nextEle = el.nextElementSibling;
+    while (nextEle?.classList.contains('sub-checkbox')) {
+      sublist.push(nextEle.querySelector('input'));
+      nextEle = nextEle.nextElementSibling;
+    }
+    return sublist;
+  };
+  const setCheckboxText = () => {
+    const spans = document.querySelectorAll('.loai-nha-dat-value');
+
+    const arrz = Array.from(
+      document.querySelectorAll(
+        '.dropdown-container.form-checkbox-container .form-checkbox:not([data-subcount]):not([data-count]) input[type="checkbox"]:checked'
+      )
+    ).map((itemz) => {
+      return itemz.previousElementSibling.innerText;
+    });
+    if (arrz.length === 0) {
+      spans.forEach((item) => (item.innerText = item.dataset.default));
+    } else spans.forEach((item) => (item.innerText = arrz.join(', ')));
+  };
+  document
+    .querySelectorAll(
+      '.form-checkbox:not(:first-child):not(.sub-checkbox):not([data-subcount]) input'
+    )
+    .forEach((el) => {
+      el.addEventListener('change', () => {
+        setCheckboxText();
+        setCheckAll(el);
+      });
+    });
+  document
+    .querySelectorAll('.form-checkbox[data-subcount] input')
+    .forEach((subParent) => {
+      const subList = getSubList(subParent.parentNode);
+      subParent.addEventListener('change', () => {
+        subList.forEach((item) => (item.checked = subParent.checked));
+        setCheckboxText();
+      });
+      subList.forEach((item) => {
+        item.addEventListener('change', () => {
+          subParent.checked = subList.every((i) => i.checked);
+          setCheckboxText();
+          setCheckAll(item.parentNode);
+        });
+      });
+    });
+};
+runCheckAll();
 document.querySelectorAll('.selectpicker').forEach((itemz) => {
   const val = $(itemz).selectpicker('val');
   if (val.length > 0) {
@@ -696,4 +697,137 @@ document.querySelectorAll('.selectpicker').forEach((itemz) => {
       );
     });
   }
+});
+
+const DATA = [
+  [
+    {
+      label: 'test1',
+      value: '1',
+    },
+    {
+      label: 'test2',
+      value: '2',
+    },
+    {
+      label: 'test3',
+      value: '3',
+      isParent: true,
+    },
+    {
+      label: 'test4',
+      value: '4',
+      isChild: true,
+    },
+    {
+      label: 'test5',
+      value: '5',
+      isChild: true,
+    },
+    {
+      label: 'test6',
+      value: '6',
+      isChild: true,
+    },
+  ],
+  [
+    {
+      label: 'test12',
+      value: '1',
+    },
+    {
+      label: 'test22',
+      value: '2',
+    },
+    {
+      label: 'test32',
+      value: '3',
+      isParent: true,
+    },
+    {
+      label: 'test42',
+      value: '4',
+      isChild: true,
+    },
+    {
+      label: 'test52',
+      value: '5',
+      isChild: true,
+    },
+    {
+      label: 'test62',
+      value: '6',
+      isChild: true,
+    },
+  ],
+  [
+    {
+      label: 'test13',
+      value: '1',
+    },
+    {
+      label: 'test23',
+      value: '2',
+    },
+    {
+      label: 'test33',
+      value: '3',
+      isParent: true,
+    },
+    {
+      label: 'test43',
+      value: '4',
+      isChild: true,
+    },
+    {
+      label: 'test53',
+      value: '5',
+      isChild: true,
+    },
+    {
+      label: 'test63',
+      value: '6',
+      isChild: true,
+    },
+  ],
+];
+
+const formatHtml = (data, i) => {
+  return data
+    .map((item, index) => {
+      return `
+    <li class="form-checkbox ${item.isChild ? 'sub-checkbox' : ''}" ${
+        index === 0 ? 'data-count="0"' : ''
+      }  ${item.isParent ? 'data-subcount="0"' : ''}>
+    <label for="checkboxid${item.value}${i}">${item.label}</label>
+    <input id="checkboxid${item.value}${i}" type="checkbox" />
+   </li>
+    `;
+    })
+    .join('');
+};
+const resetText = () => {
+  document
+    .querySelectorAll('.location-filter .form-checkbox-resetall')
+    .forEach((item) => item.click());
+};
+document.querySelector('.main-radio')?.addEventListener('change', (e) => {
+  const checkedValue = e.target.value;
+  const data = DATA[Number(checkedValue) - 1];
+  const html = formatHtml(data);
+  document.querySelectorAll('.render-html').forEach((item) => {
+    item.innerHTML = html;
+  });
+  resetText();
+  runCheckAll();
+});
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
+  const checkedValue = event.target.dataset.value;
+  const data = DATA[Number(checkedValue) - 1];
+  document.querySelectorAll('.render-html').forEach((item, index) => {
+    const html = formatHtml(data, index);
+    item.innerHTML = html;
+  });
+  resetText();
+  runCheckAll();
 });
