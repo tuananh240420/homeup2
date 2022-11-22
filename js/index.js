@@ -224,21 +224,7 @@ class ClassWatcher {
       if (checkbox) checkbox.checked = false;
     };
   });
-  // $('#select-tinh-thanh').on(
-  //   'changed.bs.select',
-  //   function (e, clickedIndex, isSelected, previousValue) {
-  //     // const selected = $(e.currentTarget).val();
-  //     const selected =
-  //       e.currentTarget.children[clickedIndex]?.innerText || undefined;
 
-  //     document.querySelectorAll('.location-filter-value').forEach((item) => {
-  //       item.innerText =
-  //         selected ||
-  //         document.querySelector('.location-filter-value').dataset.default ||
-  //         'Toàn quốc';
-  //     });
-  //   }
-  // );
   const getValue = () => {
     return Array.from(
       document.querySelectorAll(
@@ -255,13 +241,9 @@ class ClassWatcher {
         setTimeout(() => {
           const selected = getValue() || undefined;
           document
-            .querySelectorAll('.location-filter-value')
+            .querySelectorAll('#location-filter-value')
             .forEach((item) => {
-              item.innerText =
-                selected ||
-                document.querySelector('.location-filter-value').dataset
-                  .default ||
-                'Toàn quốc';
+              item.innerText = selected || item.dataset.default || 'Toàn quốc';
             });
         }, 100);
       }
@@ -808,14 +790,14 @@ const formatHtml = (data, i) => {
 };
 const resetText = () => {
   document
-    .querySelectorAll('.location-filter .form-checkbox-resetall')
+    .querySelectorAll('.category-filter .form-checkbox-resetall')
     .forEach((item) => item.click());
 };
 document.querySelector('.main-radio')?.addEventListener('change', (e) => {
   const checkedValue = e.target.value;
   const data = DATA[Number(checkedValue) - 1];
-  const html = formatHtml(data);
-  document.querySelectorAll('.render-html').forEach((item) => {
+  document.querySelectorAll('.render-html').forEach((item, index) => {
+    const html = formatHtml(data, index);
     item.innerHTML = html;
   });
   resetText();

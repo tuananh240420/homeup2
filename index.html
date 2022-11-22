@@ -281,7 +281,9 @@
                 />
               </svg>
             </div>
-            <ul class="dropdown-container form-checkbox-container">
+            <ul
+              class="dropdown-container form-checkbox-container category-filter"
+            >
               <div
                 class="p-0 d-flex flex-grow-1 flex-column render-html"
                 style="flex: 1; overflow-y: scroll; background-color: #fff"
@@ -430,7 +432,7 @@
             <label class="mobile-filter-label d-flex d-sm-none"
               >Loại nhà đất</label
             >
-            <div class="location-filter">
+            <div class="location-filter category-filter">
               <input class="switch" type="checkbox" />
               <div class="dropdown-btn">
                 <p>
@@ -530,7 +532,10 @@
               <input class="switch" type="checkbox" />
               <div class="dropdown-btn">
                 <p>
-                  <span id="location-filter-value" class="location-filter-value"
+                  <span
+                    id="location-filter-value"
+                    data-default="Toàn quốc"
+                    class="location-filter-value"
                     >Toàn quốc</span
                   >
                   <svg
