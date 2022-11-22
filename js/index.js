@@ -782,7 +782,7 @@ const formatHtml = (data, i) => {
         index === 0 ? 'data-count="0"' : ''
       }  ${item.isParent ? 'data-subcount="0"' : ''}>
     <label for="checkboxid${item.value}${i}">${item.label}</label>
-    <input id="checkboxid${item.value}${i}" type="checkbox" />
+    <input id="checkboxid${item.value}${i}" type="checkbox" name="${item.name}" value="${item.value}" />
    </li>
     `;
     })
