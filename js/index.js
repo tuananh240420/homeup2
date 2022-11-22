@@ -211,7 +211,9 @@ class ClassWatcher {
       if (selectPickerContainer)
         $('.location-filter .selectpicker').selectpicker('val', '');
       if (checkboxCotainer) {
-        const spans = document.querySelectorAll('.loai-nha-dat-value');
+        const spans = checkboxCotainer.parentNode.querySelectorAll(
+          '.loai-nha-dat-value'
+        );
         spans.forEach((item) => (item.innerText = item.dataset.default));
       }
     };
