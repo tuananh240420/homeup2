@@ -4276,12 +4276,16 @@ label[dir=rtl] .range-slider {
   #main .inner.show {
     max-height: unset !important;
   }
+  #main .mobile-header {
+    width: 100%;
+  }
   #main .search-mobile-main {
     flex: 1;
     background: #ecedf1;
     border-radius: 20px;
     display: flex;
     height: 40px;
+    width: 100%;
     justify-content: space-between;
     overflow: hidden;
     padding: 10px 16px;
@@ -4486,6 +4490,7 @@ label[dir=rtl] .range-slider {
     border-top: 1px solid #ecedf1;
     display: flex;
     gap: 12px;
+    width: 100%;
   }
   #main > .filter-container .filter-mobile-footer .filter-reset-btn {
     display: flex;
