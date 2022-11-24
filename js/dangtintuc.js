@@ -138,3 +138,97 @@ document
       }
     );
   });
+
+const DATA = [
+  [
+    {
+      label: 'test1',
+      value: '1',
+    },
+    {
+      label: 'test2',
+      value: '2',
+    },
+    {
+      label: 'test3',
+      value: '3',
+    },
+    {
+      label: 'test4',
+      value: '4',
+    },
+    {
+      label: 'test5',
+      value: '5',
+    },
+    {
+      label: 'test6',
+      value: '6',
+    },
+  ],
+  [
+    {
+      label: 'test12',
+      value: '1',
+    },
+    {
+      label: 'test22',
+      value: '2',
+    },
+    {
+      label: 'test32',
+      value: '3',
+    },
+    {
+      label: 'test42',
+      value: '4',
+    },
+    {
+      label: 'test52',
+      value: '5',
+    },
+    {
+      label: 'test62',
+      value: '6',
+    },
+  ],
+  [
+    {
+      label: 'test13',
+      value: '1',
+    },
+    {
+      label: 'test23',
+      value: '2',
+    },
+    {
+      label: 'test33',
+      value: '3',
+    },
+    {
+      label: 'test43',
+      value: '4',
+    },
+    {
+      label: 'test53',
+      value: '5',
+    },
+    {
+      label: 'test63',
+      value: '6',
+    },
+  ],
+];
+
+const formatHtml = (data) => {
+  return data
+    .map((item) => `<option value=${item.value}>${item.label}</option>`)
+    .join('');
+};
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
+  const checkedValue = event.target.dataset.value;
+  const data = DATA[Number(checkedValue) - 1];
+  const html = formatHtml(data);
+  document.getElementById('render-html').innerHTML = html;
+  $('#render-html').selectpicker('refresh');
+});
