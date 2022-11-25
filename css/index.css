@@ -4109,8 +4109,6 @@ label[dir=rtl] .range-slider {
     width: 100%;
     margin-bottom: 8px;
   }
-}
-@media screen and (max-width: 992px) and (max-width: 992px) {
   .sub-filter-swiper {
     width: 100%;
     flex: 1;
@@ -4140,6 +4138,7 @@ label[dir=rtl] .range-slider {
     left: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
+    width: 100vw !important;
   }
   .right-container .right-controls {
     margin: 0 !important;
@@ -4152,17 +4151,16 @@ label[dir=rtl] .range-slider {
     border-left: none !important;
   }
 }
-@media screen and (max-width: 992px) {
-  .row-cols-2-5 {
-    flex-wrap: nowrap;
-    height: 40px;
-  }
-  .row-cols-2-5 > * {
-    -ms-flex: 0 0 30%;
-    flex: 0 0 30%;
-    max-width: 30%;
-  }
+.row-cols-2-5 {
+  flex-wrap: nowrap;
+  height: 40px;
 }
+.row-cols-2-5 > * {
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
 @media (max-width: 992px) {
   .navbar-collapse {
     position: absolute;
