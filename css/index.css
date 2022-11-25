@@ -4126,7 +4126,6 @@ label[dir=rtl] .range-slider {
   .right-container > .filter-container {
     overflow-x: scroll;
     margin-left: 0 !important;
-    overflow-y: hidden;
     height: auto !important;
   }
   .right-container > .filter-container > .row {
@@ -4138,7 +4137,6 @@ label[dir=rtl] .range-slider {
     left: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
-    width: 100vw !important;
   }
   .right-container .right-controls {
     margin: 0 !important;
