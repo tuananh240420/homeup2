@@ -823,7 +823,3 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
 });
 
 //
-
-window.addEventListener('click', (e) => {
-  alert(e.target.innerHTML);
-});
