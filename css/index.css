@@ -2826,6 +2826,12 @@ label[dir=rtl] .range-slider {
   padding: 0;
 }
 
+@media screen and (min-width: 992px) {
+  .col-lg-9.fix {
+    max-width: calc(100% - 330px);
+  }
+}
+
 .range-slider.grad {
   --progress-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) inset;
   --progress-flll-shadow: var(--progress-shadow);

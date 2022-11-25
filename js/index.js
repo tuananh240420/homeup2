@@ -523,6 +523,7 @@ document.querySelectorAll('.addition-filter').forEach((add) => {
 });
 
 let count = 0;
+let val = 1;
 $('.filter-select-boostrap').on(
   'changed.bs.select',
   function (e, clickedIndex, isSelected, previousValue) {
@@ -542,10 +543,13 @@ $('.filter-select-boostrap').on(
           // $(item).selectpicker('deselectAll');
           if (Array.isArray($(item).selectpicker('val')))
             $(item).selectpicker('deselectAll');
-          else $(item).selectpicker('val', '');
+          else {
+            $(item).selectpicker('val', '');
+            val++;
+          }
         });
 
-    if (count === 1) {
+    if (count === val) {
       document
         .querySelectorAll('div.filter-select-boostrap')
         .forEach((item) => {
@@ -784,7 +788,9 @@ const formatHtml = (data, i) => {
         index === 0 ? 'data-count="0"' : ''
       }  ${item.isParent ? 'data-subcount="0"' : ''}>
     <label for="checkboxid${item.value}${i}">${item.label}</label>
-    <input id="checkboxid${item.value}${i}" type="checkbox" name="${item.name}" value="${item.value}" />
+    <input id="checkboxid${item.value}${i}" type="checkbox" name="${
+        item.name
+      }" value="${item.value}" />
    </li>
     `;
     })

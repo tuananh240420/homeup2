@@ -808,3 +808,8 @@
     }
   }
 }
+.col-lg-9.fix {
+  @media screen and (min-width: 992px) {
+    max-width: calc(100% - 330px);
+  }
+}
