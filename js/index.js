@@ -204,9 +204,18 @@ class ClassWatcher {
       checkboxCotainer
         ?.querySelectorAll('.form-checkbox input[type="checkbox"]')
         .forEach((checkbox) => (checkbox.checked = false));
+      checkboxCotainer
+        ?.querySelectorAll('.form-custom-checkbox input[type="checkbox"]')
+        .forEach((checkbox) => (checkbox.checked = false));
       const selectPickerContainer = button.closest('.location-filter');
       if (selectPickerContainer)
         $('.location-filter .selectpicker').selectpicker('val', '');
+      if (checkboxCotainer) {
+        const spans = checkboxCotainer.parentNode.querySelectorAll(
+          '.loai-nha-dat-value'
+        );
+        spans.forEach((item) => (item.innerText = item.dataset.default));
+      }
     };
   });
   document.querySelectorAll('.form-close').forEach((button) => {
@@ -217,36 +226,33 @@ class ClassWatcher {
       if (checkbox) checkbox.checked = false;
     };
   });
-  // $('#select-tinh-thanh').on(
-  //   'changed.bs.select',
-  //   function (e, clickedIndex, isSelected, previousValue) {
-  //     // const selected = $(e.currentTarget).val();
-  //     const selected =
-  //       e.currentTarget.children[clickedIndex]?.innerText || undefined;
-  //     // console.dir(e.currentTarget.children[clickedIndex].innerText);
-  //     console.log(selected);
-  //     document.querySelector('.location-filter-value').innerText =
-  //       selected ||
-  //       document.querySelector('.location-filter-value').dataset.default ||
-  //       'Toàn quốc';
-  //   }
-  // );
-  $('#select-tinh-thanh').on(
-    'changed.bs.select',
-    function (e, clickedIndex, isSelected, previousValue) {
-      // const selected = $(e.currentTarget).val();
-      const selected =
-        e.currentTarget.children[clickedIndex]?.innerText || undefined;
 
-      document.querySelectorAll('.location-filter-value').forEach((item) => {
-        item.innerText =
-          selected ||
-          document.querySelector('.location-filter-value').dataset.default ||
-          'Toàn quốc';
-      });
-    }
-  );
+  const getValue = () => {
+    return Array.from(
+      document.querySelectorAll(
+        '.location-filter .bootstrap-select.selected .filter-option-inner-inner'
+      )
+    )
+      .map((item) => item.textContent)
+      .join(', ');
+  };
+  document.querySelectorAll('.location-filter select').forEach((select) => {
+    $(select).on(
+      'changed.bs.select',
+      (e, clickedIndex, isSelected, previousValue) => {
+        setTimeout(() => {
+          const selected = getValue() || undefined;
+          document
+            .querySelectorAll('#location-filter-value')
+            .forEach((item) => {
+              item.innerText = selected || item.dataset.default || 'Toàn quốc';
+            });
+        }, 100);
+      }
+    );
+  });
 })();
+
 const SELECT_RANGES_PRICE = [
   {
     MIN: 0,
@@ -416,9 +422,7 @@ const MAX_PROPERTY = '--value-b';
     filterResetAllbtn.forEach(
       (item) =>
         (item.onclick = () => {
-          const parentFilter = item.closest('.filter-container');
-          console.log(parentFilter);
-          parentFilter
+          document
             .querySelectorAll('.form-checkbox-resetall')
             .forEach((item) => item.click());
         })
@@ -457,131 +461,6 @@ const MAX_PROPERTY = '--value-b';
   });
 })();
 
-// Resposive
-
-(() => {
-  const width = screen.width;
-  // is mobile
-  if (width < 576) {
-    document
-      .querySelectorAll('.price-filter.filter-dropdown .price-filter-value')
-      .forEach((item) => {
-        item.innerText = 'Tất cả';
-        item.dataset.default = 'Tất cả';
-      });
-  }
-})();
-
-document.querySelectorAll('.sub-checkbox').forEach((sub) => {
-  sub.onchange = () => {
-    const parent = sub.parentNode.querySelector(
-      '.form-checkbox[data-subcount]'
-    );
-    const length = sub.parentNode.querySelectorAll('.sub-checkbox').length;
-    const subInput = sub.querySelector('input[type="checkbox"]');
-    const parentInput = parent.querySelector('input[type="checkbox"');
-    if (subInput.checked) {
-      parent.dataset.subcount = Number(parent.dataset.subcount) + 1;
-      if (Number(parent.dataset.subcount) === length) {
-        parentInput.checked = true;
-        const parentNode = parent.parentNode.querySelector(
-          '.form-checkbox[data-count]'
-        );
-        const parentCount = parentNode.dataset.count;
-        parentNode.dataset.count = Number(parentCount) + 1;
-        if (Number(parentCount) === CHILD_LENGTH) {
-          const spans = document.querySelectorAll('.loai-nha-dat-value');
-          spans.forEach((item) => (item.innerText = 'Tất cả nhà đất'));
-
-          parentNode.querySelector('input[type="checkbox"]').checked = true;
-        }
-      }
-    } else {
-      if (Number(parent.dataset.subcount) === 4)
-        parent.parentNode.querySelector(
-          '.form-checkbox[data-count]'
-        ).dataset.count =
-          Number(
-            parent.parentNode.querySelector('.form-checkbox[data-count]')
-              .dataset.count
-          ) - 1;
-      parent.dataset.subcount = Number(parent.dataset.subcount) - 1;
-      parentInput.checked = false;
-      parent.parentNode.querySelector(
-        '.form-checkbox[data-count] input'
-      ).checked = false;
-    }
-  };
-});
-
-document.querySelectorAll('.form-checkbox[data-subcount]').forEach((parent) => {
-  parent.onchange = () => {
-    const parentInput = parent.querySelector('input[type="checkbox"');
-    const subList = parent.parentNode.querySelectorAll(
-      '.sub-checkbox input[type="checkbox"]'
-    );
-    if (parentInput.checked) {
-      subList.forEach((item) => (item.checked = true));
-      parent.dataset.subcount = subList.length;
-    } else {
-      subList.forEach((item) => (item.checked = false));
-      parent.dataset.subcount = 0;
-    }
-  };
-});
-
-const CHILD_LENGTH = 3;
-document
-  .querySelectorAll(
-    '.dropdown-container.form-checkbox-container .form-checkbox:not(.sub-checkbox):not([data-count]) input[type="checkbox"]'
-  )
-  .forEach((sub, index, array) => {
-    sub.onchange = () => {
-      const parent = sub.parentNode.parentNode.querySelector(
-        '.form-checkbox[data-count]'
-      );
-      const spans = document.querySelectorAll('.loai-nha-dat-value');
-      const length = CHILD_LENGTH;
-      const subInput = sub;
-      const parentInput = parent.querySelector('input[type="checkbox"]');
-      if (subInput.checked) {
-        parent.dataset.count = Number(parent.dataset.count) + 1;
-        if (Number(parent.dataset.count) === length) {
-          parentInput.checked = true;
-          spans.forEach((item) => (item.innerText = 'Tất cả nhà đất'));
-        }
-      } else {
-        parent.dataset.count = Number(parent.dataset.count) - 1;
-        parentInput.checked = false;
-      }
-    };
-  });
-document.querySelectorAll('.form-checkbox[data-count]').forEach((parent) => {
-  parent.onchange = () => {
-    const parentInput = parent.querySelector('input[type="checkbox"');
-    const subList = parent.parentNode.querySelectorAll(
-      '.dropdown-container.form-checkbox-container .form-checkbox:not([data-count]) input[type="checkbox"]'
-    );
-    const spans = document.querySelectorAll('.loai-nha-dat-value');
-
-    if (parentInput.checked) {
-      spans.forEach((item) => (item.innerText = 'Tất cả nhà đất'));
-      subList.forEach((item) => (item.checked = true));
-      parent.dataset.count = CHILD_LENGTH;
-      parent.parentNode.querySelector(
-        '.form-checkbox[data-subcount]'
-      ).dataset.subcount = 4;
-    } else {
-      spans.forEach((item) => (item.innerText = item.dataset.default));
-
-      subList.forEach((item) => (item.checked = false));
-      parent.dataset.count = 0;
-      parent.parentNode.querySelector(
-        '.form-checkbox[data-subcount]'
-      ).dataset.subcount = 0;
-    }
-  };
-});
 window.addEventListener('click', (e) => {
   const itemMenu = document.getElementById('profile-submenu')?.parentNode;
   if (e.target.closest('.item-menu') !== itemMenu) {
@@ -604,15 +483,17 @@ const titleArr = {
 };
 document.querySelectorAll('.addition-filter').forEach((add) => {
   const value = add.querySelector('.price-filter-value');
+  const count = add.querySelector('.addition-count');
   add.querySelector('.dropdown-btn > ul').onchange = () => {
     const res = Array.from(add.querySelectorAll('.checkbox-container')).reduce(
       (acc, container) => {
         const title = container.previousElementSibling.innerText;
-        const values = Array.from(
-          container.querySelectorAll('input:checked + label')
-        ).map((item) => {
-          return item.innerText;
-        });
+        const checkboxContaienr = container.querySelectorAll(
+          'input:checked + label'
+        );
+        const values = Array.from(checkboxContaienr).map(
+          (item) => item.innerText
+        );
         if (values.length === 0) return acc;
         if (titleArr[title] === 'phòng ngủ')
           return acc.concat(values.join(', ') + ' ' + titleArr[title]);
@@ -620,16 +501,29 @@ document.querySelectorAll('.addition-filter').forEach((add) => {
       },
       []
     );
-    value.innerText = res.join(', ');
-    add
-      .querySelector('.form-checkbox-resetall')
-      .addEventListener('click', () => {
-        value.innerText = 'Xem Thêm';
-      });
+    if (count) {
+      if (res.length === 0) return count.classList.add('d-none');
+      count.classList.remove('d-none');
+      count.innerText = res.length;
+      add
+        .querySelector('.form-checkbox-resetall')
+        .addEventListener('click', () => {
+          count.classList.add('d-none');
+        });
+    }
+    if (value) {
+      value.innerText = res.join(', ');
+      add
+        .querySelector('.form-checkbox-resetall')
+        .addEventListener('click', () => {
+          value.innerText = 'Xem Thêm';
+        });
+    }
   };
 });
 
 let count = 0;
+let val = 1;
 $('.filter-select-boostrap').on(
   'changed.bs.select',
   function (e, clickedIndex, isSelected, previousValue) {
@@ -649,10 +543,13 @@ $('.filter-select-boostrap').on(
           // $(item).selectpicker('deselectAll');
           if (Array.isArray($(item).selectpicker('val')))
             $(item).selectpicker('deselectAll');
-          else $(item).selectpicker('val', '');
+          else {
+            $(item).selectpicker('val', '');
+            val++;
+          }
         });
 
-    if (count === 1) {
+    if (count === val) {
       document
         .querySelectorAll('div.filter-select-boostrap')
         .forEach((item) => {
@@ -683,26 +580,244 @@ const clearFunction = () => {
   $(select).selectpicker('val', '');
 };
 
-document
-  .querySelectorAll(
-    '.dropdown-container.form-checkbox-container .form-checkbox:not([data-count]) input[type="checkbox"]'
-  )
-  .forEach((item, i, arr) => {
-    item.addEventListener('change', () => {
-      const spans = document.querySelectorAll('.loai-nha-dat-value');
-      const label = item.previousElementSibling.innerText;
+// ========================== check all ===============================================
+const runCheckAll = () => {
+  const setCheckAll = (el) => {
+    const ul = el.closest('ul');
+    const checkall = ul.querySelector('.form-checkbox:first-of-type input');
 
-      setTimeout(() => {
-        const arrz = Array.from(
-          document.querySelectorAll(
-            '.dropdown-container.form-checkbox-container .form-checkbox:not([data-subcount]):not([data-count]) input[type="checkbox"]:checked'
-          )
-        ).map((itemz) => {
-          return itemz.previousElementSibling.innerText;
-        });
-        if (arrz.length === 0) {
-          spans.forEach((item) => (item.innerText = item.dataset.default));
-        } else spans.forEach((item) => (item.innerText = arrz.join(', ')));
-      }, 100);
+    if (
+      ul.querySelectorAll('.form-checkbox:not(:first-of-type) input').length ===
+      ul.querySelectorAll('.form-checkbox:not(:first-of-type) input:checked')
+        .length
+    ) {
+      checkall.checked = true;
+      const spans = document.querySelectorAll('.loai-nha-dat-value');
+      spans.forEach((item) => (item.innerText = 'Tất cả nhà đất'));
+    } else checkall.checked = false;
+  };
+
+  document
+    .querySelectorAll('.form-checkbox:first-of-type input')
+    .forEach((el) => {
+      el.addEventListener('change', () => {
+        const ul = el.closest('ul');
+        ul.querySelectorAll('.form-checkbox:not(:first-of-type) input').forEach(
+          (item) => {
+            item.checked = el.checked;
+            const spans = document.querySelectorAll('.loai-nha-dat-value');
+            spans.forEach((item) =>
+              el.checked
+                ? (item.innerText = 'Tất cả nhà đất')
+                : (item.innerText = item.dataset.default)
+            );
+          }
+        );
+      });
     });
+
+  const getSubList = (el) => {
+    let sublist = [];
+    let nextEle = el.nextElementSibling;
+    while (nextEle?.classList.contains('sub-checkbox')) {
+      sublist.push(nextEle.querySelector('input'));
+      nextEle = nextEle.nextElementSibling;
+    }
+    return sublist;
+  };
+  const setCheckboxText = () => {
+    const spans = document.querySelectorAll('.loai-nha-dat-value');
+
+    const arrz = Array.from(
+      document.querySelectorAll(
+        '.dropdown-container.form-checkbox-container .form-checkbox:not([data-subcount]):not([data-count]) input[type="checkbox"]:checked'
+      )
+    ).map((itemz) => {
+      return itemz.previousElementSibling.innerText;
+    });
+    if (arrz.length === 0) {
+      spans.forEach((item) => (item.innerText = item.dataset.default));
+    } else spans.forEach((item) => (item.innerText = arrz.join(', ')));
+  };
+  document
+    .querySelectorAll(
+      '.form-checkbox:not(:first-child):not(.sub-checkbox):not([data-subcount]) input'
+    )
+    .forEach((el) => {
+      el.addEventListener('change', () => {
+        setCheckboxText();
+        setCheckAll(el);
+      });
+    });
+  document
+    .querySelectorAll('.form-checkbox[data-subcount] input')
+    .forEach((subParent) => {
+      const subList = getSubList(subParent.parentNode);
+      subParent.addEventListener('change', () => {
+        subList.forEach((item) => (item.checked = subParent.checked));
+        setCheckboxText();
+      });
+      subList.forEach((item) => {
+        item.addEventListener('change', () => {
+          subParent.checked = subList.every((i) => i.checked);
+          setCheckboxText();
+          setCheckAll(item.parentNode);
+        });
+      });
+    });
+};
+runCheckAll();
+document.querySelectorAll('.selectpicker').forEach((itemz) => {
+  const val = $(itemz).selectpicker('val');
+  if (val.length > 0) {
+    itemz.parentNode.classList.add('selected');
+    itemz.parentNode.parentNode.classList.add('position-relative');
+    document.querySelectorAll('div.filter-select-boostrap').forEach((item) => {
+      new ClassWatcher(
+        item,
+        'show',
+        () => {
+          item.parentNode.classList.remove('position-relative');
+        },
+        () => {
+          item.parentNode.classList.add('position-relative');
+        }
+      );
+    });
+  }
+});
+
+const DATA = [
+  [
+    {
+      label: 'test1',
+      value: '1',
+    },
+    {
+      label: 'test2',
+      value: '2',
+    },
+    {
+      label: 'test3',
+      value: '3',
+      isParent: true,
+    },
+    {
+      label: 'test4',
+      value: '4',
+      isChild: true,
+    },
+    {
+      label: 'test5',
+      value: '5',
+      isChild: true,
+    },
+    {
+      label: 'test6',
+      value: '6',
+      isChild: true,
+    },
+  ],
+  [
+    {
+      label: 'test12',
+      value: '1',
+    },
+    {
+      label: 'test22',
+      value: '2',
+    },
+    {
+      label: 'test32',
+      value: '3',
+      isParent: true,
+    },
+    {
+      label: 'test42',
+      value: '4',
+      isChild: true,
+    },
+    {
+      label: 'test52',
+      value: '5',
+      isChild: true,
+    },
+    {
+      label: 'test62',
+      value: '6',
+      isChild: true,
+    },
+  ],
+  [
+    {
+      label: 'test13',
+      value: '1',
+    },
+    {
+      label: 'test23',
+      value: '2',
+    },
+    {
+      label: 'test33',
+      value: '3',
+      isParent: true,
+    },
+    {
+      label: 'test43',
+      value: '4',
+      isChild: true,
+    },
+    {
+      label: 'test53',
+      value: '5',
+      isChild: true,
+    },
+    {
+      label: 'test63',
+      value: '6',
+      isChild: true,
+    },
+  ],
+];
+
+const formatHtml = (data, i) => {
+  return data
+    .map((item, index) => {
+      return `
+    <li class="form-checkbox ${item.isChild ? 'sub-checkbox' : ''}" ${
+        index === 0 ? 'data-count="0"' : ''
+      }  ${item.isParent ? 'data-subcount="0"' : ''}>
+    <label for="checkboxid${item.value}${i}">${item.label}</label>
+    <input id="checkboxid${item.value}${i}" type="checkbox" name="${
+        item.name
+      }" value="${item.value}" />
+   </li>
+    `;
+    })
+    .join('');
+};
+const resetText = () => {
+  document
+    .querySelectorAll('.category-filter .form-checkbox-resetall')
+    .forEach((item) => item.click());
+};
+document.querySelector('.main-radio')?.addEventListener('change', (e) => {
+  const checkedValue = e.target.value;
+  const data = DATA[Number(checkedValue) - 1];
+  document.querySelectorAll('.render-html').forEach((item, index) => {
+    const html = formatHtml(data, index);
+    item.innerHTML = html;
   });
+  resetText();
+  runCheckAll();
+});
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
+  const checkedValue = event.target.dataset.value;
+  const data = DATA[Number(checkedValue) - 1];
+  document.querySelectorAll('.render-html').forEach((item, index) => {
+    const html = formatHtml(data, index);
+    item.innerHTML = html;
+  });
+  resetText();
+  runCheckAll();
+});

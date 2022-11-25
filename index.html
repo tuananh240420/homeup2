@@ -195,7 +195,7 @@
         </ul>
       </nav>
     </header>
-    <div id="main" class="mt-4 container">
+    <form id="main" class="mt-4 container">
       <h2 class="mb-3 d-none d-sm-block">Chào mừng đến với Homeup!</h2>
       <div class="desc d-none d-sm-flex" style="gap: 16px">
         <a>Tìm nhà phố, dự án, cho thuê và nhiều hơn nữa</a>
@@ -210,6 +210,7 @@
             id="home-radio1"
             name="home-radio"
             class="custom-radio"
+            value="1"
             checked
           />
           <label for="home-radio1" class="mb-0">Nhà đất bán</label>
@@ -220,6 +221,7 @@
             id="home-radio2"
             name="home-radio"
             class="custom-radio"
+            value="2"
           />
           <label for="home-radio2" class="mb-0">Cho thuê</label>
         </div>
@@ -229,6 +231,7 @@
             id="home-radio3"
             name="home-radio"
             class="custom-radio"
+            value="3"
           />
           <label for="home-radio3" class="mb-0">Sang nhượng</label>
         </div>
@@ -236,7 +239,7 @@
       <div class="main-search-container d-none d-sm-flex">
         <div class="dropdown-main filter-dropdown">
           <input type="checkbox" />
-          <button>
+          <div class="fix">
             <div>
               <svg
                 width="24"
@@ -278,41 +281,71 @@
                 />
               </svg>
             </div>
-            <ul class="dropdown-container form-checkbox-container">
-              <li class="form-checkbox" data-count="0">
-                <label for="main-checkbox-sub-m-1">Tất cả nhà đất</label>
-                <input id="main-checkbox-sub-m-1" type="checkbox" />
-              </li>
-              <li class="form-checkbox">
-                <label for="main-checkbox-sub-m-2">Căn hộ chung cư</label>
-                <input id="main-checkbox-sub-m-2" type="checkbox" />
-              </li>
-              <li class="form-checkbox" data-subcount="0">
-                <label for="main-checkbox-sub-m-3">Các loại nhà bán</label>
-                <input id="main-checkbox-sub-m-3" type="checkbox" />
-              </li>
-              <li class="form-checkbox sub-checkbox">
-                <label for="main-checkbox-sub-m-4">Nhà riêng</label>
-                <input id="main-checkbox-sub-m-4" type="checkbox" />
-              </li>
-              <li class="form-checkbox sub-checkbox">
-                <label for="main-checkbox-sub-m-5">Biệt thự liền kề</label>
-                <input id="main-checkbox-sub-m-5" type="checkbox" />
-              </li>
-              <li class="form-checkbox sub-checkbox">
-                <label for="main-checkbox-sub-m-6">Nhà mặt phố</label>
-                <input id="main-checkbox-sub-m-6" type="checkbox" />
-              </li>
-              <li class="form-checkbox sub-checkbox">
-                <label for="main-checkbox-sub-m-7"
-                  >Shopehouse, nhà phố thương mại</label
-                >
-                <input id="main-checkbox-sub-m-7" type="checkbox" />
-              </li>
-              <li class="form-checkbox">
-                <label for="main-checkbox-sub-m-8">Các loại đất bán</label>
-                <input id="main-checkbox-sub-m-8" type="checkbox" />
-              </li>
+            <ul
+              class="dropdown-container form-checkbox-container category-filter"
+            >
+              <div
+                class="p-0 d-flex flex-grow-1 flex-column render-html"
+                style="flex: 1; overflow-y: scroll; background-color: #fff"
+              >
+                <li class="form-checkbox" data-count="0">
+                  <label for="main-checkbox-sub-m-1">Tất cả nhà đất</label>
+                  <input id="main-checkbox-sub-m-1" type="checkbox" />
+                </li>
+                <li class="form-checkbox">
+                  <label for="main-checkbox-sub-m-2">Căn hộ chung cư</label>
+                  <input id="main-checkbox-sub-m-2" type="checkbox" />
+                </li>
+                <li class="form-checkbox" data-subcount="0">
+                  <label for="main-checkbox-sub-m-3">Các loại nhà bán</label>
+                  <input id="main-checkbox-sub-m-3" type="checkbox" />
+                </li>
+                <li class="form-checkbox sub-checkbox">
+                  <label for="main-checkbox-sub-m-4">Nhà riêng</label>
+                  <input id="main-checkbox-sub-m-4" type="checkbox" />
+                </li>
+                <li class="form-checkbox sub-checkbox">
+                  <label for="main-checkbox-sub-m-5">Biệt thự liền kề</label>
+                  <input id="main-checkbox-sub-m-5" type="checkbox" />
+                </li>
+                <li class="form-checkbox sub-checkbox">
+                  <label for="main-checkbox-sub-m-6">Nhà mặt phố</label>
+                  <input id="main-checkbox-sub-m-6" type="checkbox" />
+                </li>
+                <li class="form-checkbox sub-checkbox">
+                  <label for="main-checkbox-sub-m-7"
+                    >Shopehouse, nhà phố thương mại</label
+                  >
+                  <input id="main-checkbox-sub-m-7" type="checkbox" />
+                </li>
+                <li class="form-checkbox">
+                  <label for="main-checkbox-sub-m-8">Các loại đất bán</label>
+                  <input id="main-checkbox-sub-m-8" type="checkbox" />
+                </li>
+                <li class="form-checkbox" data-subcount="0">
+                  <label for="main-checkbox-sub-m-9">Các loại nhà bán</label>
+                  <input id="main-checkbox-sub-m-9" type="checkbox" />
+                </li>
+                <li class="form-checkbox sub-checkbox">
+                  <label for="main-checkbox-sub-m-10">Nhà riêng</label>
+                  <input id="main-checkbox-sub-m-10" type="checkbox" />
+                </li>
+                <li class="form-checkbox sub-checkbox">
+                  <label for="main-checkbox-sub-m-11">Biệt thự liền kề</label>
+                  <input id="main-checkbox-sub-m-11" type="checkbox" />
+                </li>
+                <li class="form-checkbox sub-checkbox">
+                  <label for="main-checkbox-sub-m-12">Nhà mặt phố</label>
+                  <input id="main-checkbox-sub-m-12" type="checkbox" />
+                </li>
+                <li class="form-checkbox sub-checkbox">
+                  <label for="main-checkbox-sub-m-13"
+                    >Shopehouse, nhà phố thương mại</label
+                  >
+                  <input id="main-checkbox-sub-m-13" type="checkbox" />
+                </li>
+              </div>
+
               <li class="form-footer">
                 <p class="form-checkbox-resetall">
                   <img src="./assets/img/refresh-2.svg" alt="" />
@@ -321,14 +354,14 @@
                 <span class="form-close">Áp dụng</span>
               </li>
             </ul>
-          </button>
+          </div>
         </div>
-        <form class="search-main">
+        <div class="search-main">
           <input type="text" placeholder="Tìm kiếm địa chỉ, khu vực..." />
-          <button>
+          <button type="submit">
             <img src="./assets/img/search-normal.svg" alt="" />
           </button>
-        </form>
+        </div>
       </div>
       <div
         class="search-mobile-main d-flex d-sm-none"
@@ -362,17 +395,28 @@
               class="nav-link active"
               href="#profile"
               role="tab"
+              data-value="1"
               data-toggle="tab"
               >Nhà đất bán</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#buzz" role="tab" data-toggle="tab"
+            <a
+              class="nav-link"
+              data-value="2"
+              href="#buzz"
+              role="tab"
+              data-toggle="tab"
               >Cho thuê</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#references" role="tab" data-toggle="tab"
+            <a
+              class="nav-link"
+              data-value="3"
+              href="#references"
+              role="tab"
+              data-toggle="tab"
               >Sang nhượng</a
             >
           </li>
@@ -388,7 +432,7 @@
             <label class="mobile-filter-label d-flex d-sm-none"
               >Loại nhà đất</label
             >
-            <div class="location-filter">
+            <div class="location-filter category-filter">
               <input class="switch" type="checkbox" />
               <div class="dropdown-btn">
                 <p>
@@ -428,40 +472,42 @@
                       />
                     </svg>
                   </div>
-                  <li class="form-checkbox" data-count="0">
-                    <label for="main-checkbox-sub-1">Tất cả nhà đất</label>
-                    <input id="main-checkbox-sub-1" type="checkbox" />
-                  </li>
-                  <li class="form-checkbox">
-                    <label for="main-checkbox-sub-2">Căn hộ chung cư</label>
-                    <input id="main-checkbox-sub-2" type="checkbox" />
-                  </li>
-                  <li class="form-checkbox" data-subcount="0">
-                    <label for="main-checkbox-sub-3">Các loại nhà bán</label>
-                    <input id="main-checkbox-sub-3" type="checkbox" />
-                  </li>
-                  <li class="form-checkbox sub-checkbox">
-                    <label for="main-checkbox-sub-4">Nhà riêng</label>
-                    <input id="main-checkbox-sub-4" type="checkbox" />
-                  </li>
-                  <li class="form-checkbox sub-checkbox">
-                    <label for="main-checkbox-sub-5">Biệt thự liền kề</label>
-                    <input id="main-checkbox-sub-5" type="checkbox" />
-                  </li>
-                  <li class="form-checkbox sub-checkbox">
-                    <label for="main-checkbox-sub-6">Nhà mặt phố</label>
-                    <input id="main-checkbox-sub-6" type="checkbox" />
-                  </li>
-                  <li class="form-checkbox sub-checkbox">
-                    <label for="main-checkbox-sub-7"
-                      >Shopehouse, nhà phố thương mại</label
-                    >
-                    <input id="main-checkbox-sub-7" type="checkbox" />
-                  </li>
-                  <li class="form-checkbox">
-                    <label for="main-checkbox-sub-8">Các loại đất bán</label>
-                    <input id="main-checkbox-sub-8" type="checkbox" />
-                  </li>
+                  <div class="render-html">
+                    <li class="form-checkbox" data-count="0">
+                      <label for="main-checkbox-sub-1">Tất cả nhà đất</label>
+                      <input id="main-checkbox-sub-1" type="checkbox" />
+                    </li>
+                    <li class="form-checkbox">
+                      <label for="main-checkbox-sub-2">Căn hộ chung cư</label>
+                      <input id="main-checkbox-sub-2" type="checkbox" />
+                    </li>
+                    <li class="form-checkbox" data-subcount="0">
+                      <label for="main-checkbox-sub-3">Các loại nhà bán</label>
+                      <input id="main-checkbox-sub-3" type="checkbox" />
+                    </li>
+                    <li class="form-checkbox sub-checkbox">
+                      <label for="main-checkbox-sub-4">Nhà riêng</label>
+                      <input id="main-checkbox-sub-4" type="checkbox" />
+                    </li>
+                    <li class="form-checkbox sub-checkbox">
+                      <label for="main-checkbox-sub-5">Biệt thự liền kề</label>
+                      <input id="main-checkbox-sub-5" type="checkbox" />
+                    </li>
+                    <li class="form-checkbox sub-checkbox">
+                      <label for="main-checkbox-sub-6">Nhà mặt phố</label>
+                      <input id="main-checkbox-sub-6" type="checkbox" />
+                    </li>
+                    <li class="form-checkbox sub-checkbox">
+                      <label for="main-checkbox-sub-7"
+                        >Shopehouse, nhà phố thương mại</label
+                      >
+                      <input id="main-checkbox-sub-7" type="checkbox" />
+                    </li>
+                    <li class="form-checkbox">
+                      <label for="main-checkbox-sub-8">Các loại đất bán</label>
+                      <input id="main-checkbox-sub-8" type="checkbox" />
+                    </li>
+                  </div>
 
                   <li class="form-footer">
                     <p class="form-checkbox-resetall">
@@ -486,7 +532,12 @@
               <input class="switch" type="checkbox" />
               <div class="dropdown-btn">
                 <p>
-                  <span class="location-filter-value">Toàn quốc</span>
+                  <span
+                    id="location-filter-value"
+                    data-default="Toàn quốc"
+                    class="location-filter-value"
+                    >Toàn quốc</span
+                  >
                   <svg
                     width="24"
                     height="24"
@@ -660,7 +711,6 @@
                       title="Dự án"
                       class="selectpicker filter-select-boostrap"
                       data-live-search="true"
-                      multiple
                       data-dependance="tinhthanh"
                       data-live-search-placeholder="Tìm Dự án"
                       data-actions-box="true"
@@ -914,19 +964,23 @@
                   <li>
                     <span class="title">Số phòng ngủ</span>
                     <div class="checkbox-container">
-                      <div class="form-custom-checkbox form-checkbox">
-                        <input type="checkbox" />
+                      <div class="form-custom-checkbox">
+                        <input value="23" type="checkbox" />
+                        <label for="">1</label>
+                      </div>
+                      <div class="form-custom-checkbox">
+                        <input value="2" type="checkbox" />
                         <label for="">2</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">3</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">4</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">5+</label>
                       </div>
@@ -935,35 +989,35 @@
                   <li>
                     <span class="title">Hướng nhà</span>
                     <div class="checkbox-container">
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Đông</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Tây</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Nam</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Bắc</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Đông - Bắc</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Tây - Bắc</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Tây - Nam</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Đông - Nam</label>
                       </div>
@@ -972,15 +1026,15 @@
                   <li>
                     <span class="title">Nội dung tin có</span>
                     <div class="checkbox-container">
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Hình ảnh</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Video</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">3D & 360o</label>
                       </div>
@@ -1003,18 +1057,13 @@
             <img src="./assets/img/refresh-2.svg" alt="" />
             <span>Đặt lại</span>
           </div>
-          <button
-            onclick="this.closest('.filter-container.show').classList.remove('show')"
-            class="apply-all-btn"
-          >
-            Áp dụng
-          </button>
+          <button type="submit" class="apply-all-btn">Áp dụng</button>
         </div>
         <div class="filter-reset-btn d-none d-sm-flex">
           <img src="./assets/img/refresh-2.svg" alt="" />
         </div>
       </div>
-    </div>
+    </form>
     <div id="danhmuc-container " class="container mt-4 mb-5 pb-3">
       <h3 class="title">Tìm trong danh mục</h3>
       <div class="swiper danhmuc-swiper">
@@ -2746,6 +2795,18 @@
 
     <!-- (Optional) Latest compiled and minified JavaScript translation files -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script> -->
+    <script>
+      var width = screen.width;
+      // is mobile
+      if (width < 576) {
+        document
+          .querySelectorAll('.price-filter.filter-dropdown .price-filter-value')
+          .forEach((item) => {
+            item.innerText = 'Tất cả';
+            item.dataset.default = 'Tất cả';
+          });
+      }
+    </script>
     <script src="./js/index.js"></script>
   </body>
 </html>

@@ -70,7 +70,8 @@
         position: absolute;
         inset: 0;
         opacity: 0;
-        &:checked + button {
+        &:checked + button,
+        &:checked + div.fix {
           background-color: #fff;
           background: #ffffff;
           box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
@@ -89,7 +90,8 @@
           }
         }
       }
-      & > button {
+      & > button,
+      & > div.fix {
         border: none;
         outline: none;
         background: #d1193f;
@@ -173,7 +175,8 @@
         border: none;
         cursor: text;
       }
-      button {
+      button,
+      div.fix {
         outline: none;
         border: none;
         background-color: #fff;
@@ -252,7 +255,8 @@
             width: 100%;
             // position: relative;
             position: initial !important;
-            & > button {
+            & > button,
+            & > div.fix {
               padding: 8px;
               background-color: #fff;
               border-radius: 8px;

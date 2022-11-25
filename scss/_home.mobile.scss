@@ -137,12 +137,16 @@
     .inner.show {
       max-height: unset !important;
     }
+    .mobile-header {
+      width: 100%;
+    }
     .search-mobile-main {
       flex: 1;
       background: #ecedf1;
       border-radius: 20px;
       display: flex;
       height: 40px;
+      width: 100%;
       justify-content: space-between;
       overflow: hidden;
       padding: 10px 16px;
@@ -236,6 +240,9 @@
       }
       .price-filter,
       .location-filter {
+        .switch:checked {
+          z-index: -10 !important;
+        }
         .switch:not(:checked) {
           z-index: 1;
           & + .dropdown-btn {
@@ -350,6 +357,7 @@
         border-top: 1px solid #ecedf1;
         display: flex;
         gap: 12px;
+        width: 100%;
         .filter-reset-btn {
           display: flex;
           gap: 4px;

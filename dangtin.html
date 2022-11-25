@@ -252,46 +252,76 @@
                   <ul
                     class="dropdown-container dropdown-location-menu form-checkbox-container"
                   >
-                    <li class="form-checkbox" data-count="0">
-                      <label for="main-checkbox-sub-m-1">Tất cả nhà đất</label>
-                      <input id="main-checkbox-sub-m-1" type="checkbox" />
-                    </li>
-                    <li class="form-checkbox">
-                      <label for="main-checkbox-sub-m-2">Căn hộ chung cư</label>
-                      <input id="main-checkbox-sub-m-2" type="checkbox" />
-                    </li>
-                    <li class="form-checkbox" data-subcount="0">
-                      <label for="main-checkbox-sub-m-3"
-                        >Các loại nhà bán</label
+                    <div class="dropdown-menu-mobile-header d-flex d-lg-none">
+                      <label>Loại dự án</label>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        class="bi bi-x"
+                        viewBox="0 0 16 16"
+                        onclick="this.parentNode.parentNode.querySelector('.form-close').click()"
                       >
-                      <input id="main-checkbox-sub-m-3" type="checkbox" />
-                    </li>
-                    <li class="form-checkbox sub-checkbox">
-                      <label for="main-checkbox-sub-m-4">Nhà riêng</label>
-                      <input id="main-checkbox-sub-m-4" type="checkbox" />
-                    </li>
-                    <li class="form-checkbox sub-checkbox">
-                      <label for="main-checkbox-sub-m-5"
-                        >Biệt thự liền kề</label
-                      >
-                      <input id="main-checkbox-sub-m-5" type="checkbox" />
-                    </li>
-                    <li class="form-checkbox sub-checkbox">
-                      <label for="main-checkbox-sub-m-6">Nhà mặt phố</label>
-                      <input id="main-checkbox-sub-m-6" type="checkbox" />
-                    </li>
-                    <li class="form-checkbox sub-checkbox">
-                      <label for="main-checkbox-sub-m-7"
-                        >Shopehouse, nhà phố thương mại</label
-                      >
-                      <input id="main-checkbox-sub-m-7" type="checkbox" />
-                    </li>
-                    <li class="form-checkbox">
-                      <label for="main-checkbox-sub-m-8"
-                        >Các loại đất bán</label
-                      >
-                      <input id="main-checkbox-sub-m-8" type="checkbox" />
-                    </li>
+                        <path
+                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="p-0 d-flex flex-grow-1 flex-column"
+                      style="
+                        flex: 1;
+                        overflow-y: scroll;
+                        background-color: #fff;
+                      "
+                    >
+                      <li class="form-checkbox" data-count="0">
+                        <label for="main-checkbox-sub-m-1"
+                          >Tất cả nhà đất</label
+                        >
+                        <input id="main-checkbox-sub-m-1" type="checkbox" />
+                      </li>
+                      <li class="form-checkbox">
+                        <label for="main-checkbox-sub-m-2"
+                          >Căn hộ chung cư</label
+                        >
+                        <input id="main-checkbox-sub-m-2" type="checkbox" />
+                      </li>
+                      <li class="form-checkbox" data-subcount="0">
+                        <label for="main-checkbox-sub-m-3"
+                          >Các loại nhà bán</label
+                        >
+                        <input id="main-checkbox-sub-m-3" type="checkbox" />
+                      </li>
+                      <li class="form-checkbox sub-checkbox">
+                        <label for="main-checkbox-sub-m-4">Nhà riêng</label>
+                        <input id="main-checkbox-sub-m-4" type="checkbox" />
+                      </li>
+                      <li class="form-checkbox sub-checkbox">
+                        <label for="main-checkbox-sub-m-5"
+                          >Biệt thự liền kề</label
+                        >
+                        <input id="main-checkbox-sub-m-5" type="checkbox" />
+                      </li>
+                      <li class="form-checkbox sub-checkbox">
+                        <label for="main-checkbox-sub-m-6">Nhà mặt phố</label>
+                        <input id="main-checkbox-sub-m-6" type="checkbox" />
+                      </li>
+                      <li class="form-checkbox sub-checkbox">
+                        <label for="main-checkbox-sub-m-7"
+                          >Shopehouse, nhà phố thương mại</label
+                        >
+                        <input id="main-checkbox-sub-m-7" type="checkbox" />
+                      </li>
+                      <li class="form-checkbox">
+                        <label for="main-checkbox-sub-m-8"
+                          >Các loại đất bán</label
+                        >
+                        <input id="main-checkbox-sub-m-8" type="checkbox" />
+                      </li>
+                    </div>
+
                     <li class="form-footer">
                       <p class="form-checkbox-resetall">
                         <img src="./assets/img/refresh-2.svg" alt="" />
@@ -300,6 +330,10 @@
                       <span class="form-close">Áp dụng</span>
                     </li>
                   </ul>
+                  <div
+                    class="overlay"
+                    onclick="this.previousElementSibling.querySelector('.form-close').click()"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -327,7 +361,23 @@
                     >
                   </p>
                   <ul class="dropdown-location-menu">
-                    <span>Khu vực & Dự án</span>
+                    <span class="d-none d-lg-block">Khu vực & Dự án</span>
+                    <div class="dropdown-menu-mobile-header d-flex d-lg-none">
+                      <label>Khu vực & Dự án</label>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        class="bi bi-x"
+                        viewBox="0 0 16 16"
+                        onclick="this.parentNode.parentNode.querySelector('.form-close').click()"
+                      >
+                        <path
+                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </div>
                     <li>
                       <select
                         title="Tỉnh/Thành"
@@ -494,6 +544,10 @@
                       <span class="form-close">Áp dụng</span>
                     </li>
                   </ul>
+                  <div
+                    class="overlay"
+                    onclick="this.previousElementSibling.querySelector('.form-close').click()"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -521,6 +575,22 @@
                     >
                   </p>
                   <ul class="dropdown-location-menu">
+                    <div class="dropdown-menu-mobile-header d-flex d-lg-none">
+                      <label>Mức giá</label>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        class="bi bi-x"
+                        viewBox="0 0 16 16"
+                        onclick="this.parentNode.parentNode.querySelector('.form-close').click()"
+                      >
+                        <path
+                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </div>
                     <div class="output-value">
                       <p class="item">
                         Từ <span class="from-value">0 Triệu</span>
@@ -574,6 +644,10 @@
                       </li>
                     </ul>
                   </ul>
+                  <div
+                    class="overlay"
+                    onclick="this.previousElementSibling.querySelector('.form-close').click()"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -601,6 +675,22 @@
                     >
                   </p>
                   <ul class="dropdown-location-menu">
+                    <div class="dropdown-menu-mobile-header d-flex d-lg-none">
+                      <label>Diện tích</label>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        class="bi bi-x"
+                        viewBox="0 0 16 16"
+                        onclick="this.parentNode.parentNode.querySelector('.form-close').click()"
+                      >
+                        <path
+                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </div>
                     <div class="output-value">
                       <p class="item">
                         Từ <span class="from-value">0 m²</span>
@@ -655,6 +745,10 @@
                       </li>
                     </ul>
                   </ul>
+                  <div
+                    class="overlay"
+                    onclick="this.previousElementSibling.querySelector('.form-close').click()"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -666,26 +760,43 @@
                 <div class="dropdown-btn">
                   <div>
                     <div class="btn-filter">
+                      <span class="addition-count d-none">0</span>
                       <img src="./assets/img/setting-5.svg" />Lọc thêm
                     </div>
                   </div>
                   <ul class="dropdown-location-menu form-checkbox-container">
+                    <div class="dropdown-menu-mobile-header d-flex d-lg-none">
+                      <label>Lọc thêm</label>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        class="bi bi-x"
+                        viewBox="0 0 16 16"
+                        onclick="this.parentNode.parentNode.querySelector('.form-close').click()"
+                      >
+                        <path
+                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </div>
                     <li>
                       <span class="title">Số phòng ngủ</span>
                       <div class="checkbox-container">
-                        <div class="form-custom-checkbox form-checkbox">
+                        <div class="form-custom-checkbox">
                           <input type="checkbox" />
                           <label for="">2</label>
                         </div>
-                        <div class="form-custom-checkbox form-checkbox">
+                        <div class="form-custom-checkbox">
                           <input type="checkbox" />
                           <label for="">3</label>
                         </div>
-                        <div class="form-custom-checkbox form-checkbox">
+                        <div class="form-custom-checkbox">
                           <input type="checkbox" />
                           <label for="">4</label>
                         </div>
-                        <div class="form-custom-checkbox form-checkbox">
+                        <div class="form-custom-checkbox">
                           <input type="checkbox" />
                           <label for="">5+</label>
                         </div>
@@ -694,35 +805,35 @@
                     <li>
                       <span class="title">Hướng nhà</span>
                       <div class="checkbox-container">
-                        <div class="form-custom-checkbox form-checkbox">
+                        <div class="form-custom-checkbox">
                           <input type="checkbox" />
                           <label for="">Đông</label>
                         </div>
-                        <div class="form-custom-checkbox form-checkbox">
+                        <div class="form-custom-checkbox">
                           <input type="checkbox" />
                           <label for="">Tây</label>
                         </div>
-                        <div class="form-custom-checkbox form-checkbox">
+                        <div class="form-custom-checkbox">
                           <input type="checkbox" />
                           <label for="">Nam</label>
                         </div>
-                        <div class="form-custom-checkbox form-checkbox">
+                        <div class="form-custom-checkbox">
                           <input type="checkbox" />
                           <label for="">Bắc</label>
                         </div>
-                        <div class="form-custom-checkbox form-checkbox">
+                        <div class="form-custom-checkbox">
                           <input type="checkbox" />
                           <label for="">Đông - Bắc</label>
                         </div>
-                        <div class="form-custom-checkbox form-checkbox">
+                        <div class="form-custom-checkbox">
                           <input type="checkbox" />
                           <label for="">Tây - Bắc</label>
                         </div>
-                        <div class="form-custom-checkbox form-checkbox">
+                        <div class="form-custom-checkbox">
                           <input type="checkbox" />
                           <label for="">Tây - Nam</label>
                         </div>
-                        <div class="form-custom-checkbox form-checkbox">
+                        <div class="form-custom-checkbox">
                           <input type="checkbox" />
                           <label for="">Đông - Nam</label>
                         </div>
@@ -731,15 +842,15 @@
                     <li>
                       <span class="title">Nội dung tin có</span>
                       <div class="checkbox-container">
-                        <div class="form-custom-checkbox form-checkbox">
+                        <div class="form-custom-checkbox">
                           <input type="checkbox" />
                           <label for="">Hình ảnh</label>
                         </div>
-                        <div class="form-custom-checkbox form-checkbox">
+                        <div class="form-custom-checkbox">
                           <input type="checkbox" />
                           <label for="">Video</label>
                         </div>
-                        <div class="form-custom-checkbox form-checkbox">
+                        <div class="form-custom-checkbox">
                           <input type="checkbox" />
                           <label for="">3D & 360o</label>
                         </div>
@@ -753,6 +864,10 @@
                       <span class="form-close">Áp dụng</span>
                     </li>
                   </ul>
+                  <div
+                    class="overlay"
+                    onclick="this.previousElementSibling.querySelector('.form-close').click()"
+                  ></div>
                 </div>
               </div>
               <div class="btn-filter filter-reset-btn d-none d-lg-flex">
@@ -768,6 +883,7 @@
               <div class="dropdown-btn">
                 <div>
                   <div class="btn-filter">
+                    <span class="addition-count d-none">0</span>
                     <img src="./assets/img/setting-5.svg" />Lọc thêm
                   </div>
                 </div>
@@ -775,19 +891,19 @@
                   <li>
                     <span class="title">Số phòng ngủ</span>
                     <div class="checkbox-container">
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">2</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">3</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">4</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">5+</label>
                       </div>
@@ -796,35 +912,35 @@
                   <li>
                     <span class="title">Hướng nhà</span>
                     <div class="checkbox-container">
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Đông</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Tây</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Nam</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Bắc</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Đông - Bắc</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Tây - Bắc</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Tây - Nam</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Đông - Nam</label>
                       </div>
@@ -833,15 +949,15 @@
                   <li>
                     <span class="title">Nội dung tin có</span>
                     <div class="checkbox-container">
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Hình ảnh</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">Video</label>
                       </div>
-                      <div class="form-custom-checkbox form-checkbox">
+                      <div class="form-custom-checkbox">
                         <input type="checkbox" />
                         <label for="">3D & 360o</label>
                       </div>
@@ -871,7 +987,7 @@
       <!-- Swiper -->
 
       <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-9 fix">
           <div class="slide" data-zoom="1">
             <div class="controls">
               <svg
@@ -1561,7 +1677,10 @@
           </div>
         </div>
 
-        <div class="col-md-3 left-element d-lg-block d-none">
+        <div
+          class="col-md-3 left-element d-lg-block d-none"
+          style="min-width: 330px; flex: 0 0 330px"
+        >
           <div class="profile-element">
             <div class="profile-avatar">
               <img src="./assets/img/Group 102.png" alt="" />
@@ -1581,7 +1700,7 @@
                   font-size: 14px;
                   line-height: 22px;
                 "
-                onclick=" this.innerText = this.classList.contains('show') ? this.dataset.show : this.dataset.hide; this.classList.toggle('show')"
+                onclick="showHide.call(this)"
               >
                 0978 123 *** - Hiện số
               </div>
@@ -1926,7 +2045,7 @@
           font-size: 14px;
           line-height: 22px;
         "
-        onclick=" this.innerText = this.classList.contains('show') ? this.dataset.show : this.dataset.hide; this.classList.toggle('show')"
+        onclick="showHide.call(this)"
       >
         0978 123 *** - Hiện số
       </div>
@@ -2311,6 +2430,13 @@
           document.body.removeChild(dummy);
         };
       });
+
+      function showHide() {
+        this.classList.toggle('show');
+        this.innerText = this.classList.contains('show')
+          ? this.dataset.show
+          : this.dataset.hide;
+      }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 
