@@ -4137,6 +4137,7 @@ label[dir=rtl] .range-slider {
     left: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
+    -webkit-transform: translateZ(0);
   }
   .right-container .right-controls {
     margin: 0 !important;
