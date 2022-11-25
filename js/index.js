@@ -821,3 +821,9 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
   resetText();
   runCheckAll();
 });
+
+//
+
+window.addEventListener('click', (e) => {
+  alert(e.target.innerHTML);
+});
