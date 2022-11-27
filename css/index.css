@@ -4249,9 +4249,13 @@ label[dir=rtl] .range-slider {
   .navbar-toggler {
     border: none;
   }
+  nav .item-menu {
+    margin-right: 0;
+  }
   .item-menu.dropdown.show {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start !important;
   }
   .item-menu.dropdown.show .nav-link.dropdown-toggle.item-nav-link {

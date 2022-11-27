@@ -77,9 +77,13 @@
   .navbar-toggler {
     border: none;
   }
+  nav .item-menu {
+    margin-right: 0;
+  }
   .item-menu.dropdown.show {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start !important;
     .nav-link.dropdown-toggle.item-nav-link {
       padding-bottom: 0 !important;
