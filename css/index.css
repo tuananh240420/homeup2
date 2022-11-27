@@ -2174,11 +2174,21 @@ label[dir=rtl] .range-slider {
   height: unset;
   padding: 32px;
 }
+@media (max-width: 991px) {
+  .dangtin .slide.show {
+    padding: 32px 0;
+  }
+}
 .dangtin .slide.show .controls {
   display: flex;
   justify-content: flex-end;
   gap: 32px;
   align-items: center;
+}
+@media (max-width: 991px) {
+  .dangtin .slide.show .controls {
+    padding: 0 32px;
+  }
 }
 .dangtin .slide.show .controls .close-btn {
   display: inline-block;

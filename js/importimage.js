@@ -19,7 +19,6 @@ input.addEventListener('change', () => {
     if (file[i].type.split('/')[0] != 'image') continue;
     if (!files.some((e) => e.name == file[i].name)) files.push(file[i]);
   }
-
   showImages();
 });
 
@@ -32,6 +31,12 @@ function showImages() {
 			    <img src="${URL.createObjectURL(curr)}" />
 			</div>`;
   }, '');
+  function FileListItems(files) {
+    var b = new ClipboardEvent('').clipboardData || new DataTransfer();
+    for (var i = 0, len = files.length; i < len; i++) b.items.add(files[i]);
+    return b.files;
+  }
+  input.files = new FileListItems(files);
 }
 
 /* DELETE IMAGE */
