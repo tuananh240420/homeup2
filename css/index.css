@@ -3435,7 +3435,7 @@ label[dir=rtl] .range-slider {
   align-items: center;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1919px) {
   #sub-filter {
     height: 70px;
   }
@@ -3518,7 +3518,7 @@ label[dir=rtl] .range-slider {
 #sub-filter .right-controls .addition-filter .dropdown-btn {
   margin-top: 0 !important;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1919px) {
   #sub-filter .right-controls .addition-filter .dropdown-btn {
     position: relative;
   }
@@ -3569,7 +3569,7 @@ label[dir=rtl] .range-slider {
 #sub-filter .right-controls .btn-filter .addition-count:not(.d-none) + img {
   display: none;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1919px) {
   #sub-filter .right-controls {
     gap: 4px;
   }
@@ -3577,7 +3577,7 @@ label[dir=rtl] .range-slider {
     padding: 0 8px;
   }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1919px) {
   #sub-filter .row {
     margin-left: -8px;
     margin-right: -8px;
@@ -3631,7 +3631,7 @@ label[dir=rtl] .range-slider {
     z-index: 9999;
   }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1919px) {
   #sub-filter .filter-container .location-filter > input[type=checkbox]:checked + .dropdown-btn,
 #sub-filter .filter-container .category-filter > input[type=checkbox]:checked + .dropdown-btn,
 #sub-filter .filter-container .price-filter > input[type=checkbox]:checked + .dropdown-btn {
@@ -3668,7 +3668,7 @@ label[dir=rtl] .range-slider {
 #sub-filter .filter-container .price-filter > input[type=checkbox]:checked + .dropdown-btn .dropdown-location-menu {
   display: flex;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1919px) {
   #sub-filter .filter-container .location-filter .dropdown-location-menu,
 #sub-filter .filter-container .category-filter .dropdown-location-menu,
 #sub-filter .filter-container .price-filter .dropdown-location-menu {
@@ -3711,7 +3711,7 @@ label[dir=rtl] .range-slider {
   border-radius: 0;
   border-right: 1px solid #ecedf1;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1919px) {
   #sub-filter .filter-container .location-filter .dropdown-btn > p,
 #sub-filter .filter-container .category-filter .dropdown-btn > p,
 #sub-filter .filter-container .price-filter .dropdown-btn > p {
@@ -3749,7 +3749,7 @@ label[dir=rtl] .range-slider {
   padding: 16px 16px 8px;
   gap: 8px;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1919px) {
   #sub-filter .filter-container .location-filter .dropdown-btn .dropdown-location-menu,
 #sub-filter .filter-container .category-filter .dropdown-btn .dropdown-location-menu,
 #sub-filter .filter-container .price-filter .dropdown-btn .dropdown-location-menu {
@@ -3993,7 +3993,7 @@ label[dir=rtl] .range-slider {
   width: 100%;
   flex-direction: column;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1919px) {
   #sub-filter .dropdown-container {
     min-width: 300px;
     min-width: 300px;
