@@ -306,7 +306,7 @@ const SELECT_RANGES_AREAS = [
     MAX: 50,
   },
 ];
-const MIN = 0; // 0 Trieu
+const MIN = 100; // 0 Trieu
 const MAX = 600; // 60 Ty
 const MIN_AREA = 0;
 const MAX_AREA = 500;

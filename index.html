@@ -787,16 +787,14 @@
                     </svg>
                   </div>
                   <div class="output-value">
-                    <p class="item">
-                      Từ <span class="from-value">0 Triệu</span>
-                    </p>
+                    <p class="item">Từ <span class="from-value">10 Tỉ</span></p>
                     <p class="item">Đến <span class="to-value">60 Tỷ</span></p>
                   </div>
                   <div
                     class="range-slider range-slider-home-price"
                     data-ticks-position="top"
                     style="
-                      --min: 0;
+                      --min: 100;
                       --max: 600;
                       --value-a: 0;
                       --value-b: 400;
@@ -808,14 +806,16 @@
                     <input
                       class="input-min"
                       type="range"
-                      min="0"
+                      min="100"
                       max="600"
+                      step="10"
                       value="0"
                     />
                     <input
                       type="range"
                       class="input-max"
-                      min="0"
+                      step="10"
+                      min="100"
                       max="600"
                       value="400"
                       oninput="this.parentNode.style.setProperty('--value-b',this.value); this.parentNode.style.setProperty('--text-value-b', JSON.stringify(this.value))"
