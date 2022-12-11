@@ -2169,7 +2169,7 @@ label[dir=rtl] .range-slider {
 .dangtin .slide.show {
   position: fixed;
   inset: 0;
-  z-index: 1000;
+  z-index: 50;
   background: rgb(0, 0, 0) !important;
   height: unset;
   padding: 32px;
@@ -2763,7 +2763,7 @@ label[dir=rtl] .range-slider {
   top: unset;
   height: 260px;
   min-height: unset;
-  z-index: 100000;
+  z-index: 50;
 }
 #nav-footer-mobile .navbar-collapse.show + .nav-overlay {
   position: fixed;
