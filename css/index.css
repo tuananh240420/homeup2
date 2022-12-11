@@ -2716,7 +2716,6 @@ label[dir=rtl] .range-slider {
   left: 0;
   right: 0;
   z-index: 50;
-  display: none !important;
   will-change: transform;
   transform: translateZ(0);
   display: flex;
@@ -2862,6 +2861,12 @@ label[dir=rtl] .range-slider {
   .col-lg-9.fix {
     max-width: calc(100% - 330px);
   }
+}
+
+.slide {
+  position: relative;
+  z-index: -1;
+  display: none;
 }
 
 .range-slider.grad {
