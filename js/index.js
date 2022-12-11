@@ -830,3 +830,7 @@ document.querySelectorAll('.switch').forEach((item) => {
     console.log(e.target.checked);
   });
 });
+
+document.addEventListener('click,', (e) => {
+  alert(e.target.tagName);
+});
