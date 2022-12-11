@@ -8,6 +8,7 @@
         position: relative;
         .card-image {
           width: auto;
+          margin-top: 60px;
           & > img {
             width: 90px;
             height: 80px;
@@ -27,6 +28,9 @@
           padding-right: 16px;
           gap: 4px;
           .title {
+            position: absolute;
+            top: 8px;
+            left: 8px;
             & > div {
               font-weight: 600;
               font-size: 14px;
@@ -38,18 +42,23 @@
               line-clamp: 2;
               -webkit-box-orient: vertical;
             }
+            & + div {
+              position: absolute;
+              top: 60px;
+            }
           }
           .description-tag {
             position: absolute;
             left: 8px;
-            top: 88px;
+            top: initial;
+            width: 216px;
             font-weight: 600;
             font-size: 12px;
             line-height: 18px;
           }
           .content-footer {
             position: absolute;
-            left: 8px;
+            left: 98px;
             top: 110px;
             right: 8px;
             .price {

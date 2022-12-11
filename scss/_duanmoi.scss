@@ -69,6 +69,8 @@
       & > input {
         position: absolute;
         inset: 0;
+        width: 100% !important;
+        height: 100% !important;
         opacity: 0;
         &:checked + button,
         &:checked + div.fix {
@@ -398,6 +400,8 @@
             width: 100% !important;
             height: 100% !important;
             z-index: 1;
+            width: 100% !important;
+            height: 100% !important;
             &:checked + label {
               background: #f6d1d9;
               color: #d1193f;
@@ -709,6 +713,8 @@
     & > img {
       position: absolute;
       inset: 0;
+      width: 100% !important;
+      height: 100% !important;
       border-radius: 8px;
       z-index: -1;
     }
