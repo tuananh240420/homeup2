@@ -3659,6 +3659,10 @@ label[dir=rtl] .range-slider {
 #sub-filter .filter-container .price-filter > input[type=checkbox]:checked + .dropdown-btn .overlay {
     position: fixed;
     inset: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     width: 100% !important;
     height: 100% !important;
     background-color: rgba(0, 0, 0, 0.5);
@@ -3669,7 +3673,7 @@ label[dir=rtl] .range-slider {
   #sub-filter .filter-container .location-filter > input[type=checkbox]:checked + .dropdown-btn > ul,
 #sub-filter .filter-container .category-filter > input[type=checkbox]:checked + .dropdown-btn > ul,
 #sub-filter .filter-container .price-filter > input[type=checkbox]:checked + .dropdown-btn > ul {
-    z-index: 100;
+    z-index: 99999999999;
   }
 }
 #sub-filter .filter-container .location-filter > input[type=checkbox]:checked + .dropdown-btn p,
@@ -3949,6 +3953,10 @@ label[dir=rtl] .range-slider {
   opacity: 0;
   position: absolute;
   inset: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100% !important;
   height: 100% !important;
   z-index: 1;
@@ -4023,6 +4031,7 @@ label[dir=rtl] .range-slider {
 }
 #sub-filter .dropdown-container li {
   display: flex;
+  align-items: center !important;
   justify-content: space-between;
   background-color: #fff;
 }
@@ -4362,10 +4371,12 @@ label[dir=rtl] .range-slider {
     display: none !important;
     position: fixed;
     top: 0;
+    max-width: 100vw !important;
     left: 0;
     right: 0;
     bottom: 0;
     overflow: auto;
+    overflow-x: hidden;
     background: #fff;
     margin-top: 0;
     z-index: 10000;
@@ -4617,6 +4628,15 @@ label[dir=rtl] .range-slider {
     line-height: 22px;
   }
 }
+.render-html .form-checkbox {
+  align-items: center;
+}
+.render-html .form-checkbox input[type=checkbox] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .login-form {
   background-color: #ffffff;
   padding: 16px 80px;
