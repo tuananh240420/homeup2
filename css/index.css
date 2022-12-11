@@ -4028,6 +4028,7 @@ label[dir=rtl] .range-slider {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
     margin-top: 16px;
     will-change: position, left, top, right;
+    will-change: transform;
   }
 }
 #sub-filter .dropdown-container li {
