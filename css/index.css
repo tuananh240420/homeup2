@@ -3670,7 +3670,7 @@ label[dir=rtl] .range-slider {
   #sub-filter .filter-container .location-filter > input[type=checkbox]:checked + .dropdown-btn > ul,
 #sub-filter .filter-container .category-filter > input[type=checkbox]:checked + .dropdown-btn > ul,
 #sub-filter .filter-container .price-filter > input[type=checkbox]:checked + .dropdown-btn > ul {
-    z-index: 100;
+    z-index: 99999999999;
   }
 }
 #sub-filter .filter-container .location-filter > input[type=checkbox]:checked + .dropdown-btn p,
