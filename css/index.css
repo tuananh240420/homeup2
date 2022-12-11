@@ -4614,6 +4614,9 @@ label[dir=rtl] .range-slider {
     line-height: 22px;
   }
 }
+.render-html .form-checkbox {
+  align-items: center;
+}
 .render-html .form-checkbox input[type=checkbox] {
   display: flex;
   justify-content: center;
