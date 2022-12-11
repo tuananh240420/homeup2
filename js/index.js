@@ -365,11 +365,19 @@ const MAX_PROPERTY = '--value-b';
       setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);
       setInnerText(minDisplayValueEl, formatFunction(inputMin.value));
       removeActivedClassOfEl(parentNode, '.value-item');
+      filterValue.innerText =
+        formatFunction(inputMin.value) +
+        ' đến ' +
+        formatFunction(inputMax.value);
     };
     inputMax.oninput = () => {
       setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
       setInnerText(maxDisplayValueEl, formatFunction(inputMax.value));
       removeActivedClassOfEl(parentNode, '.value-item');
+      filterValue.innerText =
+        formatFunction(inputMin.value) +
+        ' đến ' +
+        formatFunction(inputMax.value);
     };
     selecteListEl.forEach((item, index) => {
       item.onclick = () => {
@@ -823,3 +831,14 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
 });
 
 //
+
+document.querySelectorAll('select[data-live-search="true"]').forEach((item) => {
+  $(item).on(
+    'changed.bs.select',
+    (e, clickedIndex, isSelected, previousValue) => {
+      e.target.nextElementSibling.nextElementSibling
+        .querySelector('input[type="search"]')
+        ?.blur();
+    }
+  );
+});
