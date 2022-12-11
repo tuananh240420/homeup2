@@ -306,7 +306,7 @@ const SELECT_RANGES_AREAS = [
     MAX: 50,
   },
 ];
-const MIN = 0; // 0 Trieu
+const MIN = 100; // 0 Trieu
 const MAX = 600; // 60 Ty
 const MIN_AREA = 0;
 const MAX_AREA = 500;
@@ -365,11 +365,19 @@ const MAX_PROPERTY = '--value-b';
       setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);
       setInnerText(minDisplayValueEl, formatFunction(inputMin.value));
       removeActivedClassOfEl(parentNode, '.value-item');
+      filterValue.innerText =
+        formatFunction(inputMin.value) +
+        ' đến ' +
+        formatFunction(inputMax.value);
     };
     inputMax.oninput = () => {
       setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
       setInnerText(maxDisplayValueEl, formatFunction(inputMax.value));
       removeActivedClassOfEl(parentNode, '.value-item');
+      filterValue.innerText =
+        formatFunction(inputMin.value) +
+        ' đến ' +
+        formatFunction(inputMax.value);
     };
     selecteListEl.forEach((item, index) => {
       item.onclick = () => {
@@ -824,12 +832,13 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
 
 //
 
-document.querySelectorAll('.switch').forEach((item) => {
-  item.addEventListener('change', (e) => {
-    console.log(e.target.checked);
-  });
-});
-
-document.addEventListener('click', (e) => {
-  alert(e.target.tagName);
+document.querySelectorAll('select[data-live-search="true"]').forEach((item) => {
+  $(item).on(
+    'changed.bs.select',
+    (e, clickedIndex, isSelected, previousValue) => {
+      e.target.nextElementSibling.nextElementSibling
+        .querySelector('input[type="search"]')
+        ?.blur();
+    }
+  );
 });

@@ -40,11 +40,9 @@
         <a class="navbar-brand ml-lg-0 ml-auto" href="#"
           ><img src="./assets/img/logo.png" alt="" width="125"
         /></a>
-        <img
-          class="d-lg-none d-block ml-lg-4 ml-auto"
-          src="./assets/img/like-bt.png"
-          alt=""
-        />
+        <a href="" class="d-lg-none d-block ml-lg-4 ml-auto"
+          ><img class="" src="./assets/img/like-bt.png" alt=""
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -66,16 +64,16 @@
           </div>
           <ul class="navbar-nav mr-auto d-lg-flex">
             <li class="item-menu dropdown">
+              <a href="">Nhà đất bán</a>
               <a
-                class="nav-link dropdown-toggle item-nav-link"
+                class="nav-link dropdown-toggle item-nav-link ml-auto"
                 href="#"
                 id="navbarDropdown"
                 role="button"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
-                >Nhà đất bán</a
-              >
+              ></a>
               <!-- Sub-Menu -->
               <ul
                 class="sub-menu dropdown-menu"
@@ -91,16 +89,16 @@
             </li>
 
             <li class="item-menu dropdown">
+              <a href="#">Nhà đất cho thuê</a>
               <a
-                class="nav-link dropdown-toggle item-nav-link"
+                class="nav-link dropdown-toggle item-nav-link ml-auto"
                 href="#"
                 id="navbarDropdown2"
                 role="button"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
-                >Nhà đất cho thuê</a
-              >
+              ></a>
 
               <ul
                 class="sub-menu dropdown-menu"
@@ -365,7 +363,7 @@
       </div>
       <div
         class="search-mobile-main d-flex d-sm-none"
-        onclick="this.nextElementSibling.classList.add('show'); document.body.classList.add('show') "
+        onclick="this.nextElementSibling .classList.add('show')"
       >
         <input type="text" placeholder="Tìm kiếm địa chỉ, khu vực..." />
         <button>
@@ -382,7 +380,7 @@
             fill="currentColor"
             class="bi bi-x"
             viewBox="0 0 16 16"
-            onclick="this.closest('.filter-container.show').classList.remove('show'); document.body.classList.remove('show')"
+            onclick="this.closest('.filter-container.show').classList.remove('show')"
           >
             <path
               d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
@@ -789,16 +787,14 @@
                     </svg>
                   </div>
                   <div class="output-value">
-                    <p class="item">
-                      Từ <span class="from-value">0 Triệu</span>
-                    </p>
+                    <p class="item">Từ <span class="from-value">10 Tỉ</span></p>
                     <p class="item">Đến <span class="to-value">60 Tỷ</span></p>
                   </div>
                   <div
                     class="range-slider range-slider-home-price"
                     data-ticks-position="top"
                     style="
-                      --min: 0;
+                      --min: 100;
                       --max: 600;
                       --value-a: 0;
                       --value-b: 400;
@@ -810,14 +806,16 @@
                     <input
                       class="input-min"
                       type="range"
-                      min="0"
+                      min="100"
                       max="600"
+                      step="10"
                       value="0"
                     />
                     <input
                       type="range"
                       class="input-max"
-                      min="0"
+                      step="10"
+                      min="100"
                       max="600"
                       value="400"
                       oninput="this.parentNode.style.setProperty('--value-b',this.value); this.parentNode.style.setProperty('--text-value-b', JSON.stringify(this.value))"
