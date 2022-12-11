@@ -3709,6 +3709,13 @@ label[dir=rtl] .range-slider {
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
 }
+@media screen and (max-width: 992px) {
+  #sub-filter .filter-container .location-filter .dropdown-btn,
+#sub-filter .filter-container .category-filter .dropdown-btn,
+#sub-filter .filter-container .price-filter .dropdown-btn {
+    position: initial;
+  }
+}
 #sub-filter .filter-container .location-filter .dropdown-btn > p,
 #sub-filter .filter-container .category-filter .dropdown-btn > p,
 #sub-filter .filter-container .price-filter .dropdown-btn > p {

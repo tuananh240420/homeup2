@@ -237,6 +237,9 @@
         // overflow: hidden;
         // background: #ecedf1;
         position: absolute;
+        @media screen and (max-width: 992px) {
+          position: initial;
+        }
         z-index: 97;
         width: 100%;
         padding-top: 8px;
