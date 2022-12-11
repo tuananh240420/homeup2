@@ -660,7 +660,9 @@
     }
   }
 }
-
+.swiper-slide {
+  -webkit-transform: translate3d(0, 0, 0);
+}
 #nav-footer-mobile {
   position: fixed;
   bottom: 0;

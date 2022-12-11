@@ -2701,6 +2701,10 @@ label[dir=rtl] .range-slider {
   color: #d1193f;
 }
 
+.swiper-slide {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
 #nav-footer-mobile {
   position: fixed;
   bottom: 0;
@@ -4180,7 +4184,6 @@ label[dir=rtl] .range-slider {
     -webkit-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    will-change: display;
   }
   .right-container .right-controls {
     margin: 0 !important;
