@@ -4028,6 +4028,7 @@ label[dir=rtl] .range-slider {
 }
 #sub-filter .dropdown-container li {
   display: flex;
+  align-items: center !important;
   justify-content: space-between;
   background-color: #fff;
 }
