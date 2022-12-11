@@ -5303,6 +5303,10 @@ body#dangtintuc .container-left-side .hotline .hotline-number {
     line-height: 18px;
   }
 }
+body.show {
+  overflow: hidden !important;
+}
+
 .gap-8 {
   gap: 8px;
 }

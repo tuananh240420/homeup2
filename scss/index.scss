@@ -29,6 +29,9 @@ a:hover {
 @import 'dangtintuc';
 @import 'chuyenmuc.mobile';
 
+body.show {
+  overflow: hidden !important;
+}
 .gap-8 {
   gap: 8px;
 }
