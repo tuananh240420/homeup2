@@ -825,12 +825,11 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
 //
 
 document.querySelectorAll('.switch').forEach((item) => {
-  console.log(item);
   item.addEventListener('change', (e) => {
     console.log(e.target.checked);
   });
 });
 
-document.addEventListener('click,', (e) => {
+document.addEventListener('click', (e) => {
   alert(e.target.tagName);
 });
