@@ -1320,6 +1320,8 @@ label[dir=rtl] .range-slider {
 #main .main-search-container .dropdown-main > input {
   position: absolute;
   inset: 0;
+  width: 100% !important;
+  height: 100% !important;
   opacity: 0;
 }
 #main .main-search-container .dropdown-main > input:checked + button, #main .main-search-container .dropdown-main > input:checked + div.fix {
@@ -1654,7 +1656,11 @@ label[dir=rtl] .range-slider {
   opacity: 0;
   position: absolute;
   inset: 0;
+  width: 100% !important;
+  height: 100% !important;
   z-index: 1;
+  width: 100% !important;
+  height: 100% !important;
 }
 #main .filter-container .addition-filter .checkbox-container .form-custom-checkbox input:checked + label {
   background: #f6d1d9;
@@ -1948,6 +1954,8 @@ label[dir=rtl] .range-slider {
 #bao-tri-container .bao-tri-item > img {
   position: absolute;
   inset: 0;
+  width: 100% !important;
+  height: 100% !important;
   border-radius: 8px;
   z-index: -1;
 }
@@ -2169,6 +2177,8 @@ label[dir=rtl] .range-slider {
 .dangtin .slide.show {
   position: fixed;
   inset: 0;
+  width: 100% !important;
+  height: 100% !important;
   z-index: 1000;
   background: rgb(0, 0, 0) !important;
   height: unset;
@@ -3646,6 +3656,8 @@ label[dir=rtl] .range-slider {
 #sub-filter .filter-container .price-filter > input[type=checkbox]:checked + .dropdown-btn .overlay {
     position: fixed;
     inset: 0;
+    width: 100% !important;
+    height: 100% !important;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 99;
   }
@@ -3934,6 +3946,8 @@ label[dir=rtl] .range-slider {
   opacity: 0;
   position: absolute;
   inset: 0;
+  width: 100% !important;
+  height: 100% !important;
   z-index: 1;
 }
 #sub-filter .filter-container .addition-filter .checkbox-container .form-custom-checkbox input:checked + label {
@@ -4226,6 +4240,8 @@ label[dir=rtl] .range-slider {
   .navbar-collapse.show + .nav-overlay {
     position: fixed;
     inset: 0;
+    width: 100% !important;
+    height: 100% !important;
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.5);
   }
@@ -4393,6 +4409,8 @@ label[dir=rtl] .range-slider {
   #main > .filter-container .switch:checked + .dropdown-btn .overlay {
     position: fixed;
     inset: 0;
+    width: 100% !important;
+    height: 100% !important;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
   }
@@ -4596,6 +4614,12 @@ label[dir=rtl] .range-slider {
     line-height: 22px;
   }
 }
+.render-html .form-checkbox input[type=checkbox] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .login-form {
   background-color: #ffffff;
   padding: 16px 80px;
@@ -4803,6 +4827,8 @@ body#dangtintuc .title-collapse .thugon.collapsed::after {
   line-height: 18px;
   position: absolute;
   inset: 0;
+  width: 100% !important;
+  height: 100% !important;
   color: #0091fe;
   text-align: right;
   display: inline-block;
