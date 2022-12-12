@@ -257,26 +257,32 @@ const SELECT_RANGES_PRICE = [
   {
     MIN: 0,
     MAX: 5,
+    LABEL: '< 500 Triệu',
   },
   {
     MIN: 5,
     MAX: 8,
+    LABEL: '500 - 800 triệu',
   },
   {
     MIN: 8,
     MAX: 10,
+    LABEL: '800 triệu - 1 tỷ',
   },
   {
     MIN: 10,
     MAX: 20,
+    LABEL: '1 - 2 tỷ',
   },
   {
     MIN: 20,
     MAX: 30,
+    LABEL: '2 - 3 tỷ',
   },
   {
     MIN: 30,
     MAX: 50,
+    LABEL: '3 - 5 tỷ',
   },
 ];
 
@@ -306,168 +312,206 @@ const SELECT_RANGES_AREAS = [
     MAX: 50,
   },
 ];
-const MIN = 100; // 0 Trieu
+const MIN = 0; // 0 Trieu
 const MAX = 600; // 60 Ty
 const MIN_AREA = 0;
 const MAX_AREA = 500;
 const MIN_PROPERTY = '--value-a';
 const MAX_PROPERTY = '--value-b';
 // Slice Range
-(() => {
-  const setStyleProperty = (node, property, value) => {
-    if (node) node.style.setProperty(property, value);
-  };
-  const setInnerText = (node, text) => {
-    if (node) node.innerText = text;
-  };
-  const removeActivedClassOfEl = (parentNode, classSelector) => {
-    if (parentNode) {
-      const activeNode = parentNode.querySelector(`${classSelector}.active`);
-      if (activeNode) activeNode.classList.remove('active');
-    }
-  };
-  const rangeSlideEvent = (options) => {
-    const {
-      parentNode,
-      formatFunction,
-      defaultText,
-      minValue,
-      maxValue,
-      selectRangesArr,
-    } = options;
-    const priceRangeEl = parentNode.querySelector('.range-slider-home-price');
-    const inputMin = parentNode.querySelector('.input-min');
-    const inputMax = parentNode.querySelector('.input-max');
-    const minDisplayValueEl = parentNode.querySelector('.from-value');
-    const maxDisplayValueEl = parentNode.querySelector('.to-value');
-    const selecteListEl = parentNode.querySelectorAll('.value-item');
-    const applyBtn = parentNode.querySelector('.form-close');
-    const filterValue = parentNode.querySelector('.price-filter-value');
-    const resetBtn = parentNode.querySelector('.form-checkbox-resetall');
-    const switchBtn = parentNode.querySelector('.switch');
-    applyBtn.addEventListener('click', () => {
-      filterValue.innerText =
-        formatFunction(inputMin.value) +
-        ' đến ' +
-        formatFunction(inputMax.value);
-    });
-    resetBtn.addEventListener('click', () => {
-      inputMin.value = minValue;
-      setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);
-      setInnerText(minDisplayValueEl, formatFunction(inputMin.value));
-      removeActivedClassOfEl(parentNode, '.value-item');
-      inputMax.value = maxValue;
-      setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
-      setInnerText(maxDisplayValueEl, formatFunction(inputMax.value));
-      filterValue.innerText = filterValue.dataset.default || defaultText;
-    });
-    inputMin.oninput = () => {
-      setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);
-      setInnerText(minDisplayValueEl, formatFunction(inputMin.value));
-      removeActivedClassOfEl(parentNode, '.value-item');
-      filterValue.innerText =
-        formatFunction(inputMin.value) +
-        ' đến ' +
-        formatFunction(inputMax.value);
-    };
-    inputMax.oninput = () => {
-      setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
-      setInnerText(maxDisplayValueEl, formatFunction(inputMax.value));
-      removeActivedClassOfEl(parentNode, '.value-item');
-      filterValue.innerText =
-        formatFunction(inputMin.value) +
-        ' đến ' +
-        formatFunction(inputMax.value);
-    };
-    selecteListEl.forEach((item, index) => {
-      item.onclick = () => {
-        removeActivedClassOfEl(parentNode, '.value-item');
-        item.classList.add('active');
-        inputMin.value = selectRangesArr[index].MIN;
-        setInnerText(minDisplayValueEl, formatFunction(inputMin.value));
-        setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);
-        inputMax.value = selectRangesArr[index].MAX;
-        setInnerText(maxDisplayValueEl, formatFunction(inputMax.value));
-        setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
-        filterValue.innerText =
-          formatFunction(inputMin.value) +
-          ' đến ' +
-          formatFunction(inputMax.value);
-        switchBtn.checked = false;
-      };
-    });
-  };
 
-  const areaOptions = {
-    parentNode: document.querySelector('.area-filter'),
-    formatFunction: (value) => {
-      if (value == 0) return '0 m²';
-      else return value + ' m²';
-    },
-    defaultText: 'Diện tích',
-    minValue: MIN_AREA,
-    maxValue: MAX_AREA,
-    selectRangesArr: SELECT_RANGES_AREAS,
-  };
-  const priceOptions = {
-    parentNode: document.querySelector('.price-filter'),
-    formatFunction: (value) => {
-      if (value < 10)
-        if (value == 0) return '0 Triệu';
-        else return value + '00 Triệu';
-      return Number(value) / 10 + ' Tỷ';
-    },
-    defaultText: 'Mức giá',
-    minValue: MIN,
-    maxValue: MAX,
-    selectRangesArr: SELECT_RANGES_PRICE,
-  };
-  rangeSlideEvent(areaOptions);
-  rangeSlideEvent(priceOptions);
-
-  const filterResetAllbtn = document.querySelectorAll('.filter-reset-btn');
-  if (filterResetAllbtn) {
-    filterResetAllbtn.forEach(
-      (item) =>
-        (item.onclick = () => {
-          document
-            .querySelectorAll('.form-checkbox-resetall')
-            .forEach((item) => item.click());
-        })
-    );
+const setStyleProperty = (node, property, value) => {
+  if (node) node.style.setProperty(property, value);
+};
+const setInnerText = (node, text) => {
+  if (node) node.innerText = text;
+};
+const removeActivedClassOfEl = (parentNode, classSelector) => {
+  if (parentNode) {
+    const activeNode = parentNode.querySelector(`${classSelector}.active`);
+    if (activeNode) activeNode.classList.remove('active');
   }
-
-  const checkboxList = document.querySelectorAll('.filter-container .switch');
-  checkboxList.forEach((item) => {
-    item.onchange = () => {
-      // console.log(item);
-      checkboxList.forEach((itemz) => {
-        if (itemz !== item) {
-          // itemz.checked = false;
-          const applyBtn = itemz.parentNode.querySelector('.form-close');
-          if (itemz.checked === true) {
-            applyBtn.click();
-          }
-        }
-      });
+};
+const rangeSlideEvent = (options) => {
+  const {
+    parentNode,
+    formatFunction,
+    defaultText,
+    minValue,
+    maxValue,
+    selectRangesArr,
+    step,
+  } = options;
+  const priceRangeEl = parentNode.querySelector('.range-slider-home-price');
+  const inputMin = parentNode.querySelector('.input-min');
+  const inputMax = parentNode.querySelector('.input-max');
+  const minDisplayValueEl = parentNode.querySelector('.from-value');
+  const maxDisplayValueEl = parentNode.querySelector('.to-value');
+  const listValueEl = parentNode.querySelector('.list-value');
+  listValueEl.innerHTML = selectRangesArr
+    .map(
+      (item) => `
+  <li class="value-item">${item.LABEL}</li>
+  `
+    )
+    .concat(
+      `<li class="form-footer">
+    <p class="form-checkbox-resetall">
+      <img src="./assets/img/refresh-2.svg" alt="">
+      Đặt lại
+    </p>
+    <span class="form-close">Áp dụng</span>
+  </li>`
+    )
+    .join('');
+  const selecteListEl = parentNode.querySelectorAll('.value-item');
+  const applyBtn = parentNode.querySelector('.form-close');
+  const filterValue = parentNode.querySelector('.price-filter-value');
+  const resetBtn = parentNode.querySelector('.form-checkbox-resetall');
+  const switchBtn = parentNode.querySelector('.switch');
+  setStyleProperty(priceRangeEl, '--min', minValue);
+  setStyleProperty(priceRangeEl, '--max', maxValue);
+  inputMin.min = minValue;
+  inputMax.min = minValue;
+  inputMax.max = maxValue;
+  inputMin.max = maxValue;
+  inputMin.value = minValue;
+  inputMax.value = maxValue;
+  if (step) {
+    inputMin.step = step;
+    inputMax.step = step;
+  }
+  setStyleProperty(priceRangeEl, MIN_PROPERTY, minValue);
+  setStyleProperty(priceRangeEl, MAX_PROPERTY, maxValue);
+  minDisplayValueEl.innerText = formatFunction(minValue);
+  maxDisplayValueEl.innerText = formatFunction(maxValue);
+  applyBtn.addEventListener('click', () => {
+    filterValue.innerText =
+      formatFunction(inputMin.value) + ' đến ' + formatFunction(inputMax.value);
+  });
+  resetBtn.addEventListener('click', () => {
+    inputMin.value = minValue;
+    setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);
+    setInnerText(minDisplayValueEl, formatFunction(inputMin.value));
+    removeActivedClassOfEl(parentNode, '.value-item');
+    inputMax.value = maxValue;
+    setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
+    setInnerText(maxDisplayValueEl, formatFunction(inputMax.value));
+    filterValue.innerText = filterValue.dataset.default || defaultText;
+  });
+  inputMin.oninput = () => {
+    setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);
+    setInnerText(minDisplayValueEl, formatFunction(inputMin.value));
+    removeActivedClassOfEl(parentNode, '.value-item');
+    filterValue.innerText =
+      formatFunction(inputMin.value) + ' đến ' + formatFunction(inputMax.value);
+  };
+  inputMax.oninput = () => {
+    setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
+    setInnerText(maxDisplayValueEl, formatFunction(inputMax.value));
+    removeActivedClassOfEl(parentNode, '.value-item');
+    filterValue.innerText =
+      formatFunction(inputMin.value) + ' đến ' + formatFunction(inputMax.value);
+  };
+  selecteListEl.forEach((item, index) => {
+    item.innerText = selectRangesArr[index].LABEL;
+    item.onclick = () => {
+      removeActivedClassOfEl(parentNode, '.value-item');
+      item.classList.add('active');
+      inputMin.value = selectRangesArr[index].MIN;
+      setInnerText(
+        minDisplayValueEl,
+        formatFunction(selectRangesArr[index].MIN)
+      );
+      setStyleProperty(priceRangeEl, MIN_PROPERTY, inputMin.value);
+      inputMax.value = selectRangesArr[index].MAX;
+      setInnerText(
+        maxDisplayValueEl,
+        formatFunction(selectRangesArr[index].MAX)
+      );
+      setStyleProperty(priceRangeEl, MAX_PROPERTY, inputMax.value);
+      if (index === 0) {
+        filterValue.innerText =
+          'Dưới ' + formatFunction(selectRangesArr[index].MAX);
+      } else
+        filterValue.innerText =
+          formatFunction(selectRangesArr[index].MIN) +
+          ' đến ' +
+          formatFunction(selectRangesArr[index].MAX);
+      switchBtn.checked = false;
     };
   });
+};
 
-  window.addEventListener('click', (e) => {
-    if (!e.target.closest('.filter-container')) {
-      if (!e.target.closest('.dropdown-menu'))
+const areaOptions = {
+  parentNode: document.querySelector('.area-filter'),
+  formatFunction: (value) => {
+    if (value == 0) return '0 m²';
+    else return value + ' m²';
+  },
+  defaultText: 'Diện tích',
+  minValue: MIN_AREA,
+  maxValue: MAX_AREA,
+  selectRangesArr: SELECT_RANGES_AREAS,
+};
+const priceOptions = {
+  parentNode: document.querySelector('.price-filter'),
+  formatFunction: (value) => {
+    if (value < 10)
+      if (value == 0) return '0 Triệu';
+      else return value + '00 Triệu';
+    return Number(value) / 10 + ' Tỷ';
+  },
+  defaultText: 'Mức giá',
+  minValue: MIN,
+  maxValue: MAX,
+  selectRangesArr: SELECT_RANGES_PRICE,
+};
+rangeSlideEvent(areaOptions);
+rangeSlideEvent(priceOptions);
+
+const filterResetAllbtn = document.querySelectorAll('.filter-reset-btn');
+if (filterResetAllbtn) {
+  filterResetAllbtn.forEach(
+    (item) =>
+      (item.onclick = () => {
         document
-          .querySelectorAll('.filter-container .switch')
-          .forEach((item) => (item.checked = false));
-    }
-    if (!e.target.closest('.main-search-container > .dropdown-main')) {
-      const cb = document.querySelector(
-        '.main-search-container > .dropdown-main > input[type="checkbox"]'
-      );
-      if (cb) cb.checked = false;
-    }
-  });
-})();
+          .querySelectorAll('.form-checkbox-resetall')
+          .forEach((item) => item.click());
+      })
+  );
+}
+
+const checkboxList = document.querySelectorAll('.filter-container .switch');
+checkboxList.forEach((item) => {
+  item.onchange = () => {
+    // console.log(item);
+    checkboxList.forEach((itemz) => {
+      if (itemz !== item) {
+        // itemz.checked = false;
+        const applyBtn = itemz.parentNode.querySelector('.form-close');
+        if (itemz.checked === true) {
+          applyBtn.click();
+        }
+      }
+    });
+  };
+});
+
+window.addEventListener('click', (e) => {
+  if (!e.target.closest('.filter-container')) {
+    if (!e.target.closest('.dropdown-menu'))
+      document
+        .querySelectorAll('.filter-container .switch')
+        .forEach((item) => (item.checked = false));
+  }
+  if (!e.target.closest('.main-search-container > .dropdown-main')) {
+    const cb = document.querySelector(
+      '.main-search-container > .dropdown-main > input[type="checkbox"]'
+    );
+    if (cb) cb.checked = false;
+  }
+});
 
 window.addEventListener('click', (e) => {
   const itemMenu = document.getElementById('profile-submenu')?.parentNode;
@@ -475,14 +519,6 @@ window.addEventListener('click', (e) => {
     document.getElementById('profile-submenu').style.display = 'none';
   }
 });
-
-document
-  .querySelectorAll('.dropdown.bootstrap-select .actions-btn.bs-select-all')
-  .forEach((item) => {
-    item.onclick = () => {
-      console.log(item.closest('.dropdown.bootstrap-select'));
-    };
-  });
 
 const titleArr = {
   'Số phòng ngủ': 'phòng ngủ',
@@ -809,9 +845,147 @@ const resetText = () => {
     .querySelectorAll('.category-filter .form-checkbox-resetall')
     .forEach((item) => item.click());
 };
+
+// Mức giá range
+const PRICE_OPTIONS = [
+  // NDB
+  {
+    minValue: 0,
+    maxValue: 600,
+    formatFunction: (value) => {
+      if (value < 10)
+        if (value == 0) return '0 Triệu';
+        else return value + '00 Triệu';
+      return Number(value) / 10 + ' Tỷ';
+    },
+    selectRangesArr: [
+      {
+        MIN: 0,
+        MAX: 5,
+        LABEL: '< 500 Triệu',
+      },
+      {
+        MIN: 5,
+        MAX: 8,
+        LABEL: '500 - 800 triệu',
+      },
+      {
+        MIN: 8,
+        MAX: 10,
+        LABEL: '800 triệu - 1 tỷ',
+      },
+      {
+        MIN: 10,
+        MAX: 20,
+        LABEL: '1 - 2 tỷ',
+      },
+      {
+        MIN: 20,
+        MAX: 30,
+        LABEL: '2 - 3 tỷ',
+      },
+      {
+        MIN: 30,
+        MAX: 50,
+        LABEL: '3 - 5 tỷ',
+      },
+    ],
+
+    step: 10,
+  },
+  // CT
+  {
+    minValue: 0,
+    maxValue: 100,
+    formatFunction: (value) => {
+      return value + ' Triệu';
+    },
+    selectRangesArr: [
+      {
+        MIN: 0,
+        MAX: 1,
+        LABEL: 'Dưới 1 triệu',
+      },
+      {
+        MIN: 1,
+        MAX: 3,
+        LABEL: '1-3 Triệu',
+      },
+      {
+        MIN: 3,
+        MAX: 5,
+        LABEL: '3-5 Triệu',
+      },
+      {
+        MIN: 5,
+        MAX: 10,
+        LABEL: '5-10 Triệu',
+      },
+      {
+        MIN: 10,
+        MAX: 40,
+        LABEL: '10-40 Triệu',
+      },
+      {
+        MIN: 40,
+        MAX: 70,
+        LABEL: '40-70 Triệu',
+      },
+      {
+        MIN: 70,
+        MAX: 100,
+        LABEL: '70-100 Triệu',
+      },
+    ],
+    step: 1,
+  },
+  // SN
+  {
+    minValue: 0,
+    maxValue: 100,
+    formatFunction: (value) => {
+      return value + ' Triệu';
+    },
+    selectRangesArr: [
+      {
+        MIN: 0,
+        MAX: 1,
+      },
+      {
+        MIN: 1,
+        MAX: 3,
+      },
+      {
+        MIN: 3,
+        MAX: 5,
+      },
+      {
+        MIN: 5,
+        MAX: 10,
+      },
+      {
+        MIN: 10,
+        MAX: 40,
+      },
+      {
+        MIN: 40,
+        MAX: 70,
+      },
+      {
+        MIN: 70,
+        MAX: 100,
+      },
+    ],
+    step: 10,
+  },
+];
 document.querySelector('.main-radio')?.addEventListener('change', (e) => {
   const checkedValue = e.target.value;
   const data = DATA[Number(checkedValue) - 1];
+  rangeSlideEvent({
+    ...priceOptions,
+    ...PRICE_OPTIONS[Number(checkedValue) - 1],
+  });
   document.querySelectorAll('.render-html').forEach((item, index) => {
     const html = formatHtml(data, index);
     item.innerHTML = html;
@@ -819,6 +993,7 @@ document.querySelector('.main-radio')?.addEventListener('change', (e) => {
   resetText();
   runCheckAll();
 });
+
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
   const checkedValue = event.target.dataset.value;
   const data = DATA[Number(checkedValue) - 1];
@@ -829,8 +1004,6 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
   resetText();
   runCheckAll();
 });
-
-//
 
 document.querySelectorAll('select[data-live-search="true"]').forEach((item) => {
   $(item).on(
