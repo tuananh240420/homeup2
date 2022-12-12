@@ -187,7 +187,7 @@
             box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
             border-radius: 20px;
             @media screen and (max-width: 992px) {
-              z-index: 9999;
+              z-index: 9999999999999;
             }
             @media screen and (max-width: 1919px) {
               box-shadow: none;
@@ -546,6 +546,8 @@
       border-bottom-right-radius: 20px;
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
       margin-top: 16px;
+      will-change: position, left, top, right;
+      will-change: transform;
     }
     li {
       display: flex;
@@ -708,6 +710,7 @@
           -webkit-transform: translate3d(0, 0, 0);
           -o-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+          -webkit-backface-visibility: hidden;
         }
       }
     }
